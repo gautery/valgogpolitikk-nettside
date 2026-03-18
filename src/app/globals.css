@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Rosa-basert profesjonelt tema for @valgogpolitikk */
+  --color-background: #ffffff;
+  --color-surface: #faf8f6;
+  --color-surface-light: #f3f0ed;
+  --color-border: #e8e4e0;
+  --color-border-light: #d9d4cf;
+  --color-text-primary: #1a1a2e;
+  --color-text-secondary: #4a4a5a;
+  --color-text-muted: #8a8a96;
+  --color-text-faint: #b0b0ba;
+  --color-accent: #d6336c;
+  --color-accent-light: #fce4ec;
+  --color-accent-dark: #a61e4d;
+  --color-accent-green: #2d6a4f;
+  --color-accent-blue: #1864ab;
+  --color-accent-orange: #e67700;
+  --color-accent-purple: #7048e8;
+  --color-hero: #1a1a2e;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: #d6336c25;
+  color: var(--color-text-primary);
+}
+
+html {
+  scroll-behavior: smooth;
+}
