@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { subscribeToNewsletter } from "@/lib/buttondown";
+import { subscribeToNewsletter } from "@/lib/beehiiv";
 
 export async function POST(req: NextRequest) {
   try {

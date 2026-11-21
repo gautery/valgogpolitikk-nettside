@@ -27,6 +27,12 @@ export default function Header() {
           >
             Analyser
           </Link>
+          <Link
+            href="/kilder"
+            className="text-[13px] font-medium text-text-secondary hover:text-accent transition-colors"
+          >
+            Kilder
+          </Link>
           <a
             href="https://instagram.com/valgogpolitikk"
             target="_blank"
@@ -61,6 +67,9 @@ export default function Header() {
           <div className="flex flex-col gap-3">
             <Link href="/" className="text-sm text-text-secondary">
               Analyser
+            </Link>
+            <Link href="/kilder" className="text-sm text-text-secondary">
+              Kilder
             </Link>
             <a
               href="https://instagram.com/valgogpolitikk"
