@@ -3,8 +3,22 @@
 import { useState } from "react";
 import Link from "next/link";
 import BookSpines from "./BookSpines";
+import type { Lenke } from "@/lib/sider";
 
-export default function Header() {
+function MenyLenke({ lenke, className }: { lenke: Lenke; className: string }) {
+  const href = lenke.lenke || "/";
+  return /^https?:\/\//.test(href) ? (
+    <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+      {lenke.tekst}
+    </a>
+  ) : (
+    <Link href={href} className={className}>
+      {lenke.tekst}
+    </Link>
+  );
+}
+
+export default function Header({ meny }: { meny: Lenke[] }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -21,34 +35,13 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-8 md:flex">
-          <Link
-            href="/"
-            className="text-[13px] font-medium text-text-secondary hover:text-accent transition-colors"
-          >
-            Analyser
-          </Link>
-          <Link
-            href="/kilder"
-            className="text-[13px] font-medium text-text-secondary hover:text-accent transition-colors"
-          >
-            Kilder
-          </Link>
-          <a
-            href="https://instagram.com/valgogpolitikk"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[13px] font-medium text-text-secondary hover:text-accent transition-colors"
-          >
-            Instagram
-          </a>
-          <a
-            href="https://tiktok.com/@valgogpolitikk"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[13px] font-medium text-text-secondary hover:text-accent transition-colors"
-          >
-            TikTok
-          </a>
+          {meny.map((m) => (
+            <MenyLenke
+              key={m.tekst}
+              lenke={m}
+              className="text-[13px] font-medium text-text-secondary hover:text-accent transition-colors"
+            />
+          ))}
         </nav>
 
         {/* Mobile hamburger */}
@@ -56,6 +49,7 @@ export default function Header() {
           onClick={() => setMenuOpen(!menuOpen)}
           className="flex h-9 w-9 items-center justify-center rounded-md text-text-secondary md:hidden"
           aria-label="Meny"
+          aria-expanded={menuOpen}
         >
           {menuOpen ? "\u2715" : "\u2630"}
         </button>
@@ -65,28 +59,9 @@ export default function Header() {
       {menuOpen && (
         <div className="border-t border-border px-6 py-4 md:hidden">
           <div className="flex flex-col gap-3">
-            <Link href="/" className="text-sm text-text-secondary">
-              Analyser
-            </Link>
-            <Link href="/kilder" className="text-sm text-text-secondary">
-              Kilder
-            </Link>
-            <a
-              href="https://instagram.com/valgogpolitikk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-text-secondary"
-            >
-              Instagram
-            </a>
-            <a
-              href="https://tiktok.com/@valgogpolitikk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-text-secondary"
-            >
-              TikTok
-            </a>
+            {meny.map((m) => (
+              <MenyLenke key={m.tekst} lenke={m} className="text-sm text-text-secondary" />
+            ))}
           </div>
         </div>
       )}

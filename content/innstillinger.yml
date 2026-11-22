@@ -1,0 +1,27 @@
+meny:
+  - tekst: Analyser
+    lenke: /
+  - tekst: Kilder
+    lenke: /kilder
+  - tekst: Instagram
+    lenke: https://instagram.com/valgogpolitikk
+  - tekst: TikTok
+    lenke: https://tiktok.com/@valgogpolitikk
+bunntekst:
+  beskrivelse: Datadrevet analyse av norsk politikk. Posisjonert til venstre, men alltid med kilder.
+  grupper:
+    - overskrift: Følg oss
+      lenker:
+        - tekst: Instagram
+          lenke: https://instagram.com/valgogpolitikk
+        - tekst: TikTok
+          lenke: https://tiktok.com/@valgogpolitikk
+    - overskrift: Kilder
+      lenker:
+        - tekst: OECD
+        - tekst: SSB
+        - tekst: Eurostat
+  merknad: Alle analyser basert på offentlig tilgjengelig data. Ikke finansiell eller juridisk rådgivning.
+om:
+  tittel: Om @valgogpolitikk
+  tekst: Datadrevet analyse av norsk politikk. Posisjonert til venstre, men alltid med kilder. Alt innhold basert på offentlig statistikk fra OECD, SSB, Eurostat og forskningslitteratur.
