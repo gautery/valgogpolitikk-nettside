@@ -8,9 +8,10 @@ import NewsletterForm from "./NewsletterForm";
 
 interface PostListProps {
   posts: Post[];
+  sidebarEkstra?: React.ReactNode;
 }
 
-export default function PostList({ posts }: PostListProps) {
+export default function PostList({ posts, sidebarEkstra }: PostListProps) {
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState<"newest" | "oldest">("newest");
@@ -77,6 +78,8 @@ export default function PostList({ posts }: PostListProps) {
             </button>
           ))}
         </div>
+
+        {sidebarEkstra}
 
         {/* Sort */}
         <div>

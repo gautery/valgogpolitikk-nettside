@@ -1,9 +1,14 @@
 import { getAllPosts } from "@/lib/posts";
 import PostList from "@/components/PostList";
 import BookSpines from "@/components/BookSpines";
+import { hentKildeoversikt } from "@/lib/kilder";
+import { KildePanel } from "@/components/SisteFraKildene";
 
-export default function Home() {
+export const revalidate = 3600;
+
+export default async function Home() {
   const posts = getAllPosts();
+  const kilder = await hentKildeoversikt();
 
   return (
     <>
@@ -26,8 +31,15 @@ export default function Home() {
                 Alt med OECD, SSB og Eurostat som kilde.
               </p>
             </div>
-            {/* Book spines decoration */}
-            <BookSpines className="hidden h-24 w-auto opacity-40 md:block" />
+            {kilder ? (
+              <KildePanel
+                saker={kilder.saker}
+                oppdatert={kilder.oppdatert}
+                totalt={kilder.saker.length}
+              />
+            ) : (
+              <BookSpines className="hidden h-24 w-auto opacity-40 md:block" />
+            )}
           </div>
         </div>
       </div>
