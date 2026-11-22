@@ -20,8 +20,12 @@ export function getAllPosts(): Post[] {
 
       if (frontmatter.draft) return null;
 
+      // Redigeringsverktøyet kan lagre datoen uten anførselstegn, og da blir den et Date-objekt.
+      const dato = data.date instanceof Date ? data.date.toISOString().slice(0, 10) : String(data.date ?? "");
+
       return {
         ...frontmatter,
+        date: dato,
         slug: frontmatter.slug || filename.replace(/\.mdx$/, ""),
         content,
         readTime: readingTime(content).text.replace("read", "lesing"),
