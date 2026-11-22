@@ -212,6 +212,74 @@ content:
         description: Vises nederst. La en tom linje skille avsnittene.
         type: text
 
+  - name: skraablikk
+    label: Skråblikk
+    description: Karuseller med en spøk på hver slide og en forklaring som rulles ut. Adresse valgogpolitikk.no/skraablikk/<filnavn>.
+    type: collection
+    path: content/skraablikk
+    format: yaml-frontmatter
+    filename:
+      template: "{tittel}.md"
+      field: create
+    view:
+      primary: tittel
+      fields: [tittel, dato, utkast]
+      default:
+        sort: dato
+        order: desc
+    fields:
+      - name: tittel
+        label: Tittel
+        type: string
+        required: true
+      - name: ingress
+        label: Ingress
+        type: text
+      - name: utkast
+        label: Utkast
+        description: Huk av så lenge forklaringene ikke er klare. Utkast vises ikke i oversikten.
+        type: boolean
+        default: true
+      - name: dato
+        label: Dato
+        type: date
+      - name: instagram
+        label: Lenke til karusellen på Instagram
+        type: string
+      - name: slides
+        label: Slides
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{{index}}. {{tekst}}"
+        fields:
+          - name: bilde
+            label: Bilde av sliden
+            type: image
+          - name: tekst
+            label: Teksten på sliden
+            description: Skriv av teksten. Den leses opp for blinde og svaksynte.
+            type: text
+          - name: forklaring
+            label: Forklaring
+            description: Vises når man trykker «Se forklaringen». Første avsnitt vises litt større. La stå tomt for slides uten forklaring.
+            type: rich-text
+          - name: kilder
+            label: Kilder
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{{navn}}"
+            fields:
+              - name: navn
+                label: Navn
+                type: string
+              - name: lenke
+                label: Lenke
+                type: string
+
   - name: tema
     label: Temasider
     description: Temasider på adressen valgogpolitikk.no/tema/<filnavn>.
@@ -567,6 +635,19 @@ components:
           - name: antall
             label: Hvor mange
             description: Tomt gir 8.
+            type: number
+          - name: bakgrunn
+            component: bakgrunn
+
+      - name: skraablikk
+        label: Skråblikk
+        fields:
+          - name: overskrift
+            label: Overskrift
+            type: string
+          - name: antall
+            label: Hvor mange
+            description: Tomt gir 4.
             type: number
           - name: bakgrunn
             component: bakgrunn

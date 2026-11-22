@@ -13,7 +13,7 @@ export const dynamicParams = false;
 export const revalidate = 3600;
 
 // Adresser som allerede brukes av faste sider.
-const OPPTATT = new Set(["kilder", "innlegg", "tema", "kommer-snart", "kontrollsenter", "klosser", "api", "bilder"]);
+const OPPTATT = new Set(["kilder", "innlegg", "tema", "kommer-snart", "kontrollsenter", "klosser", "api", "bilder", "skraablikk", "statsbudsjett"]);
 
 export function generateStaticParams() {
   const slugs = new Set([
