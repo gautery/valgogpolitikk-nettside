@@ -12,6 +12,7 @@ import { hentAlleKaruseller } from "@/lib/karuseller";
 import { getAllPosts } from "@/lib/posts";
 import { erEkstern, lesInnstillinger } from "@/lib/sider";
 import { hentAlleTema } from "@/lib/tema";
+import { hentAlleSkraablikk } from "@/lib/skraablikk";
 
 // Tegner en side bygd av byggeklosser. Hver kloss er en seksjon i full bredde.
 
@@ -67,7 +68,7 @@ function Lenke({ href, className, children }: { href: string; className?: string
 }
 
 // Markdown fra rik tekst-feltet i Pages CMS. «md» betyr ren markdown: ingen kode kjøres.
-async function Markdown({ kilde }: { kilde: string }) {
+export async function Markdown({ kilde, klasse }: { kilde: string; klasse?: string }) {
   const { content } = await compileMDX({
     source: kilde,
     options: { mdxOptions: { format: "md" } },
@@ -86,7 +87,7 @@ async function Markdown({ kilde }: { kilde: string }) {
       blockquote: (p) => <blockquote className="mb-4 border-l-2 border-accent pl-4 italic" {...p} />,
     },
   });
-  return <div className="max-w-[680px] text-[16px] leading-[1.8] text-text-secondary">{content}</div>;
+  return <div className={klasse ?? "max-w-[680px] text-[16px] leading-[1.8] text-text-secondary"}>{content}</div>;
 }
 
 async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
@@ -297,6 +298,44 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
               </li>
             ))}
           </ul>
+        </Seksjon>
+      );
+    }
+
+    case "skraablikk": {
+      const liste = hentAlleSkraablikk()
+        .filter((s) => ktx.visUtkast || !s.utkast)
+        .slice(0, kloss.antall || 4);
+      if (liste.length === 0) return null;
+      return (
+        <Seksjon bakgrunn={kloss.bakgrunn}>
+          <Overskrift>{kloss.overskrift}</Overskrift>
+          <ul className="grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 lg:grid-cols-4">
+            {liste.map((s) => (
+              <li key={s.slug}>
+                <Link href={`/skraablikk/${s.slug}`} className="group block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
+                  {s.slides[0]?.bilde && (
+                    <Image
+                      src={s.slides[0].bilde}
+                      alt=""
+                      width={1080}
+                      height={1350}
+                      sizes="(min-width: 1024px) 260px, (min-width: 640px) 33vw, 50vw"
+                      className="w-full rounded-[4px] border border-border transition-transform group-hover:-translate-y-0.5"
+                    />
+                  )}
+                  <div className="mt-3 text-[15px] font-semibold leading-snug text-text-primary group-hover:text-accent">{s.tittel}</div>
+                  <div className="mt-1 text-[12.5px] text-text-muted">
+                    Med forklaringer
+                    {s.utkast && <span className="ml-2 rounded bg-amber-100 px-1.5 py-0.5 text-amber-900">Utkast</span>}
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <Link href="/skraablikk" className="mt-6 inline-block text-[13px] font-semibold text-accent hover:underline">
+            Alle skråblikk
+          </Link>
         </Seksjon>
       );
     }

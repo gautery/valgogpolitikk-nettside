@@ -78,6 +78,13 @@ export type SisteNytt = {
   bakgrunn?: Bakgrunn;
 };
 
+export type SkraablikkKloss = {
+  type: "skraablikk";
+  overskrift?: string;
+  antall?: number;
+  bakgrunn?: Bakgrunn;
+};
+
 export type Kildeband = { type: "kildeband" };
 
 export type Analyser = { type: "analyser" };
@@ -105,6 +112,7 @@ export type Kloss =
   | Kildeliste
   | Knapp
   | Karuseller
+  | SkraablikkKloss
   | Temaoversikt
   | SisteNytt
   | Kildeband

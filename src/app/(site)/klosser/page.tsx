@@ -84,6 +84,12 @@ function katalog(): Oppføring[] {
       kloss: { type: "karuseller", overskrift: "Karuseller" },
     },
     {
+      navn: "Skråblikk",
+      bruk: "De nyeste skråblikkene, med forsidebilde. Fylles ut automatisk.",
+      felt: "Overskrift, antall, bakgrunn",
+      kloss: { type: "skraablikk", overskrift: "Skråblikk" },
+    },
+    {
       navn: "Temaoversikt",
       bruk: "Alle temasidene. Fylles ut automatisk.",
       felt: "Overskrift, bakgrunn",
