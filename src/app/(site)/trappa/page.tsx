@@ -3,6 +3,7 @@ import Trappa from "@/components/trappa/Trappa";
 import Formuevegg from "@/components/trappa/Formuevegg";
 import { hentTrappa } from "@/lib/trappa";
 import { hentBudsjett, hentOversikt, standardId } from "@/lib/statsbudsjett";
+import { avsnitt, fyllAlt, lesTrappaTekst, type TrappaTekst } from "@/lib/trappa-tekst";
 
 // Tallene ligger i public/data/trappa og lages med scripts/trappa.py.
 
@@ -22,6 +23,27 @@ export default function TrappaSide() {
   const budsjett = hentBudsjett(standardId(hentOversikt()));
   const k = data.kapital;
 
+  // Tall som kan brukes i teksten som {navn}. Lista vises også i Pages CMS.
+  const verdier: Record<string, string> = {
+    aar: String(data.aar),
+    forskningsaar: String(data.forskningsaar),
+    topp01_snitt_offisiell: nf0.format(t01.offisiell!.snittinntekt / 1e6),
+    topp01_snitt_med: nf0.format(t01.med_overskudd!.snittinntekt / 1e6),
+    topp001_aar: data.vegg.topp001.aar,
+    topp001_per_aar: Object.entries(data.vegg.topp001.per_aar)
+      .map(([aar, v]) => `${nf0.format(v / 1e6)} millioner i ${aar}`)
+      .join(", "),
+    budsjett_mrd: budsjett ? nf0.format(Math.round(budsjett.sum_utgifter / 1000)) : "",
+    budsjett_aar: budsjett ? String(budsjett.aar) : "",
+    fra_utlandet_prosent: nf0.format(k.fra_utlandet_andel * 100),
+    skattbar_formue_prosent: nf0.format(Math.round(data.skattbar_formue_andel * 20) * 5),
+    topp100_skatt: nf1.format(data.topp100.skatt_av_inntekt),
+    topp100_inntektsskatt: nf1.format(data.topp100.personlig_inntektsskatt),
+    kapital_aar: String(k.aar),
+    formue_aar: String(data.formue.aar),
+  };
+  const t = fyllAlt(lesTrappaTekst(), verdier) as unknown as TrappaTekst;
+
   return (
     <>
       <div className="border-b border-amber-300 bg-amber-50 px-6 py-3">
@@ -30,18 +52,16 @@ export default function TrappaSide() {
         </p>
       </div>
 
-      <Trappa data={data} />
+      <Trappa data={data} tekst={{ topp: t.topp, inntektstrappa: t.inntektstrappa }} />
 
       {/* ── Helt på toppen ── */}
       <section aria-labelledby="toppen" className="border-t border-border px-6 py-14">
         <div className="mx-auto max-w-[1100px]">
           <h2 id="toppen" className="font-[family-name:var(--font-playfair)] text-2xl font-bold sm:text-[28px]">
-            Jo rikere, jo mindre havner i skattemeldingen
+            {t.toppen.tittel}
           </h2>
           <p className="mt-3 max-w-[660px] text-[16px] leading-relaxed text-text-secondary">
-            Ring, Seim og Zucman har fulgt inntektene helt opp til de rundt 20 personene med høyest inntekt i Norge. For
-            folk flest står nesten hele inntekten i skattemeldingen. Helt på toppen blir nesten alt liggende i
-            selskapene, og da faller også skatten.
+            {t.toppen.ingress}
           </p>
 
           <div className="mt-8">
@@ -69,9 +89,7 @@ export default function TrappaSide() {
             </ul>
           </div>
           <p className="mt-3 max-w-[760px] text-[13px] text-text-muted">
-            Norge, snitt 2018–2020. Inntekt er her alt som tjenes, også overskudd som blir liggende i selskaper personen
-            eier. Skatten omfatter inntektsskatt, trygdeavgift, arbeidsgiveravgift, moms, selskapsskatt, formuesskatt og
-            eiendomsskatt. Antall personer er omtrentlig. Kilde: Ring, Seim og Zucman (2026), figur 2 og 5.
+            {t.toppen.fotnote}
           </p>
         </div>
       </section>
@@ -80,62 +98,46 @@ export default function TrappaSide() {
       <section aria-labelledby="formue" className="border-t border-border bg-hero px-6 py-14 text-white">
         <div className="mx-auto max-w-[1100px]">
           <h2 id="formue" className="font-[family-name:var(--font-playfair)] text-2xl font-bold sm:text-[28px]">
-            Hvor rike er de rikeste?
+            {t.formue.tittel}
           </h2>
           <p className="mt-3 max-w-[660px] text-[16px] leading-relaxed text-white/75">
-            Inntekt er én ting. Formue er noe annet. Magasinet Kapital anslår hvert år hva de 400 rikeste i Norge er
-            verdt, og forskerne bruker lista til å sjekke sine egne tall.
+            {t.formue.ingress}
           </p>
           <dl className="mt-9 grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-4 [&>div]:flex [&>div]:flex-col">
             <div>
-              <dt className="text-[14px] text-white/65">eier de 400 rikeste til sammen</dt>
+              <dt className="text-[14px] text-white/65">{t.formue.etikett_samlet}</dt>
               <dd className="order-first font-[family-name:var(--font-playfair)] text-4xl font-bold tabular-nums">
                 {nf0.format(k.samlet_mrd)} mrd.
               </dd>
             </div>
             <div>
-              <dt className="text-[14px] text-white/65">i snitt per person på lista</dt>
+              <dt className="text-[14px] text-white/65">{t.formue.etikett_snitt}</dt>
               <dd className="order-first font-[family-name:var(--font-playfair)] text-4xl font-bold tabular-nums">
                 {nf1.format(k.samlet_mrd / 400)} mrd.
               </dd>
             </div>
             <div>
-              <dt className="text-[14px] text-white/65">nordmenn er milliardærer</dt>
+              <dt className="text-[14px] text-white/65">{t.formue.etikett_milliardaerer}</dt>
               <dd className="order-first font-[family-name:var(--font-playfair)] text-4xl font-bold tabular-nums">
                 {nf0.format(k.milliardaerer)}
               </dd>
             </div>
             <div>
-              <dt className="text-[14px] text-white/65">eier den rikeste alene</dt>
+              <dt className="text-[14px] text-white/65">{t.formue.etikett_rikeste}</dt>
               <dd className="order-first font-[family-name:var(--font-playfair)] text-4xl font-bold tabular-nums">
                 {nf0.format(k.rikeste_mrd)} mrd.
               </dd>
             </div>
           </dl>
-          <Formuevegg data={data} />
+          <Formuevegg data={data} tekst={t.formue} />
 
           <div className="mt-12 grid max-w-[980px] gap-6 text-[16px] leading-relaxed text-white/80 md:grid-cols-2">
-            <p>
-              {budsjett && (
-                <>
-                  Det er mer enn hele statsbudsjettet: Regjeringen foreslår å bruke{" "}
-                  {nf0.format(Math.round(budsjett.sum_utgifter / 1000))} milliarder kroner i {budsjett.aar}.{" "}
-                </>
-              )}
-              Nesten {nf0.format(k.fra_utlandet_andel * 100)} prosent av verdiene på lista styres nå helt eller delvis
-              fra utlandet.
-            </p>
-            <p>
-              I skattelistene ser de rikeste mye fattigere ut. Den skattbare formuen deres er bare rundt{" "}
-              {nf0.format(Math.round(data.skattbar_formue_andel * 20) * 5)} prosent av det Kapital anslår. De 100 rikeste familiene betalte
-              i 2020 til sammen {nf1.format(data.topp100.skatt_av_inntekt)} prosent av inntekten sin i skatt. Bare{" "}
-              {nf1.format(data.topp100.personlig_inntektsskatt)} prosent var inntektsskatt de betalte selv. Resten var
-              selskapsskatt og formuesskatt.
-            </p>
+            {avsnitt(t.formue.tekst).map((a) => (
+              <p key={a}>{a}</p>
+            ))}
           </div>
           <p className="mt-6 text-[13px] text-white/55">
-            Kapital 400 for {k.aar}. Lista tar med nordmenn som bor i utlandet. Forskernes tall gjelder bare dem som bor i
-            Norge, og topp 100-familiene i Kapital 400 i 2020.
+            {t.formue.fotnote}
           </p>
         </div>
       </section>
@@ -144,58 +146,21 @@ export default function TrappaSide() {
         <div className="mx-auto grid max-w-[1100px] gap-12 md:grid-cols-2">
           <div className="max-w-[560px]">
             <h2 id="hvorfor" className="font-[family-name:var(--font-playfair)] text-2xl font-bold">
-              Hvorfor to tall?
+              {t.hvorfor.tittel}
             </h2>
             <div className="mt-4 space-y-4 text-[16px] leading-relaxed text-text-secondary">
-              <p>
-                Den offisielle statistikken regner bare med det folk får utbetalt til seg selv: lønn, pensjon, trygd,
-                renter, utbytte og gevinster de har tatt ut. Penger som tjenes i et aksjeselskap og blir stående der,
-                kommer ikke med.
-              </p>
-              <p>
-                Det betyr lite for folk flest. Men de som eier mest, tar ofte ut lite og lar overskuddet bli liggende i
-                selskapet, gjerne i et holdingselskap. Da ser de mindre rike ut i statistikken enn de er.
-              </p>
-              <p>
-                Forskere i SSB har derfor regnet hver eiers andel av overskuddet i selskapene som en del av inntekten.
-                Arbeidet ble gjort på oppdrag fra Finansdepartementet. For 99 prosent av befolkningen endrer det
-                nesten ingenting. Helt på toppen blir forskjellen stor: snittinntekten til de 0,1 prosent øverst går
-                fra {nf0.format(t01.offisiell!.snittinntekt / 1e6)} til {nf0.format(t01.med_overskudd!.snittinntekt / 1e6)}{" "}
-                millioner kroner i året.
-              </p>
+              {avsnitt(t.hvorfor.tekst).map((a) => (
+                <p key={a}>{a}</p>
+              ))}
             </div>
           </div>
 
           <div className="max-w-[560px]">
-            <h2 className="font-[family-name:var(--font-playfair)] text-2xl font-bold">Slik er tallene regnet</h2>
+            <h2 className="font-[family-name:var(--font-playfair)] text-2xl font-bold">{t.metode.tittel}</h2>
             <ul className="mt-4 list-disc space-y-2.5 pl-5 text-[15px] leading-relaxed text-text-secondary">
-              <li>
-                Alle tall gjelder personer som er 25 år eller eldre, og bruttoinntekt: inntekt før skatt, inkludert
-                pensjon, trygd og kapitalinntekter.
-              </li>
-              <li>
-                Kalkulatoren og grensene bygger på SSBs skattestatistikk for {data.aar}. SSB oppgir hvor mange som
-                tjener innenfor hvert inntektsintervall og hva de tjener i snitt. Innenfor hvert intervall har vi
-                regnet oss fram til grensene.
-              </li>
-              <li>
-                Grensa for de 0,01 prosent ligger langt over det høyeste intervallet i statistikken (7,5 millioner
-                og over), og er derfor et anslag.
-              </li>
-              <li>
-                Andelene og snittinntektene er fra Vestad (2024) og gjelder {data.forskningsaar}. Rapporten viser
-                tallene i figurer, ikke tabeller, så vi har lest dem ut av figurene. Samme avlesning av en annen figur i
-                rapporten gir nøyaktig de tallene Finansdepartementet oppgir i nasjonalbudsjettet for 2027.
-              </li>
-              <li>
-                Tallene helt på toppen, finere grupper og skatten til de 100 rikeste familiene er fra Ring, Seim og
-                Zucman (2026), lest ut av figurene på samme måte. Som kontroll summerer de tre toppgruppene seg til
-                nøyaktig det forskerne oppgir for hele den øverste prosenten, hvert år.
-              </li>
-              <li>
-                Forskningen viser ikke hvor grensene går når overskuddet er med. Forskerne bruker ulike inntektsbegreper
-                og år, så tallene fra de to studiene er ikke helt sammenlignbare.
-              </li>
+              {(t.metode.punkter ?? []).filter(Boolean).map((p) => (
+                <li key={p}>{p}</li>
+              ))}
             </ul>
             <h3 className="mt-8 text-[15px] font-semibold">Kilder</h3>
             <ul className="mt-2 space-y-1.5 text-[14px]">

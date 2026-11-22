@@ -1,0 +1,95 @@
+# Teksten på siden /trappa. Redigeres i Pages CMS under «Trappa til toppen».
+# Ord i krøllparentes, som {aar}, byttes ut med tall fra datafila. Se lista i Pages CMS.
+# Tom linje mellom to avsnitt gir nytt avsnitt.
+
+topp:
+  overlinje: Inntekt og ulikhet
+  tittel: Trappa til toppen
+  ingress: >-
+    Hvor høyt opp står du? Skriv inn inntekten din og se hvor mange som tjener mer enn deg. Lenger ned ser du
+    hvor mye som havner helt på toppen, og hvor mye mer det blir når vi regner med pengene som blir liggende i
+    selskapene.
+  sporsmal: Hva var inntekten din i {aar}, før skatt?
+  hjelpetekst: Lønn, pensjon, trygd og kapitalinntekter til sammen.
+
+inntektstrappa:
+  tittel: Trappa i riktig målestokk
+  ingress: >-
+    Hver søyle er like høy som snittinntekten i gruppa, regnet med overskuddet i selskapene de eier. Den grå delen
+    viser hva den offisielle statistikken får med seg. Målestokken er den samme hele veien ned. Scroll ned for å
+    komme til bakken, der 99 prosent av oss står.
+  fotnote: >-
+    Snittinntekter for personer 25 år og eldre i {forskningsaar}. «Midt på» er medianen: halvparten tjener mer,
+    halvparten mindre. Topp 0,01 prosent er snittet for {topp001_aar}, regnet ut fra andelen av all inntekt i Ring,
+    Seim og Zucman og nasjonalinntekten for Fastlands-Norge fra SSB. Det svinger mye fra år til år:
+    {topp001_per_aar}. Det offisielle tallet for topp 0,01 prosent er et anslag ut fra skattestatistikken for {aar}.
+
+toppen:
+  tittel: Jo rikere, jo mindre havner i skattemeldingen
+  ingress: >-
+    Ring, Seim og Zucman har fulgt inntektene helt opp til de rundt 20 personene med høyest inntekt i Norge. For
+    folk flest står nesten hele inntekten i skattemeldingen. Helt på toppen blir nesten alt liggende i selskapene,
+    og da faller også skatten.
+  fotnote: >-
+    Norge, snitt 2018–2020. Inntekt er her alt som tjenes, også overskudd som blir liggende i selskaper personen
+    eier. Skatten omfatter inntektsskatt, trygdeavgift, arbeidsgiveravgift, moms, selskapsskatt, formuesskatt og
+    eiendomsskatt. Antall personer er omtrentlig. Kilde: Ring, Seim og Zucman (2026), figur 2 og 5.
+
+formue:
+  tittel: Hvor rike er de rikeste?
+  ingress: >-
+    Inntekt er én ting. Formue er noe annet. Magasinet Kapital anslår hvert år hva de 400 rikeste i Norge er verdt,
+    og forskerne bruker lista til å sjekke sine egne tall.
+  etikett_samlet: eier de 400 rikeste til sammen
+  etikett_snitt: i snitt per person på lista
+  etikett_milliardaerer: nordmenn er milliardærer
+  etikett_rikeste: eier den rikeste alene
+  trapp_tittel: Formuestrappa i riktig målestokk
+  trapp_ingress: >-
+    Én piksel er to millioner kroner. Husholdningen midt på er én piksel. Søylene henger nedover, så du må scrolle
+    for å se hvor langt de rikeste strekker seg.
+  trapp_slutt: Her slutter formuen til den rikeste.
+  trapp_fotnote: >-
+    Husholdningene: SSB, beregnet nettoformue {formue_aar}, husholdninger bosatt i Norge. Kapital 400 og de tre
+    rikeste: Kapitals anslag for {kapital_aar}, personer og familier, også de som har flyttet ut. SSB måler
+    husholdninger, Kapital personer, så trinnene er ikke helt sammenlignbare.
+  tekst: |-
+    Det er mer enn hele statsbudsjettet: Regjeringen foreslår å bruke {budsjett_mrd} milliarder kroner i {budsjett_aar}. Nesten {fra_utlandet_prosent} prosent av verdiene på lista styres nå helt eller delvis fra utlandet.
+
+    I skattelistene ser de rikeste mye fattigere ut. Den skattbare formuen deres er bare rundt {skattbar_formue_prosent} prosent av det Kapital anslår. De 100 rikeste familiene betalte i 2020 til sammen {topp100_skatt} prosent av inntekten sin i skatt. Bare {topp100_inntektsskatt} prosent var inntektsskatt de betalte selv. Resten var selskapsskatt og formuesskatt.
+  fotnote: >-
+    Kapital 400 for {kapital_aar}. Lista tar med nordmenn som bor i utlandet. Forskernes tall gjelder bare dem som
+    bor i Norge, og topp 100-familiene i Kapital 400 i 2020.
+
+hvorfor:
+  tittel: Hvorfor to tall?
+  tekst: |-
+    Den offisielle statistikken regner bare med det folk får utbetalt til seg selv: lønn, pensjon, trygd, renter, utbytte og gevinster de har tatt ut. Penger som tjenes i et aksjeselskap og blir stående der, kommer ikke med.
+
+    Det betyr lite for folk flest. Men de som eier mest, tar ofte ut lite og lar overskuddet bli liggende i selskapet, gjerne i et holdingselskap. Da ser de mindre rike ut i statistikken enn de er.
+
+    Forskere i SSB har derfor regnet hver eiers andel av overskuddet i selskapene som en del av inntekten. Arbeidet ble gjort på oppdrag fra Finansdepartementet. For 99 prosent av befolkningen endrer det nesten ingenting. Helt på toppen blir forskjellen stor: snittinntekten til de 0,1 prosent øverst går fra {topp01_snitt_offisiell} til {topp01_snitt_med} millioner kroner i året.
+
+metode:
+  tittel: Slik er tallene regnet
+  punkter:
+    - >-
+      Alle tall gjelder personer som er 25 år eller eldre, og bruttoinntekt: inntekt før skatt, inkludert pensjon,
+      trygd og kapitalinntekter.
+    - >-
+      Kalkulatoren og grensene bygger på SSBs skattestatistikk for {aar}. SSB oppgir hvor mange som tjener innenfor
+      hvert inntektsintervall og hva de tjener i snitt. Innenfor hvert intervall har vi regnet oss fram til grensene.
+    - >-
+      Grensa for de 0,01 prosent ligger langt over det høyeste intervallet i statistikken (7,5 millioner og over),
+      og er derfor et anslag.
+    - >-
+      Andelene og snittinntektene er fra Vestad (2024) og gjelder {forskningsaar}. Rapporten viser tallene i figurer,
+      ikke tabeller, så vi har lest dem ut av figurene. Samme avlesning av en annen figur i rapporten gir nøyaktig de
+      tallene Finansdepartementet oppgir i nasjonalbudsjettet for 2027.
+    - >-
+      Tallene helt på toppen, finere grupper og skatten til de 100 rikeste familiene er fra Ring, Seim og Zucman
+      (2026), lest ut av figurene på samme måte. Som kontroll summerer de tre toppgruppene seg til nøyaktig det
+      forskerne oppgir for hele den øverste prosenten, hvert år.
+    - >-
+      Forskningen viser ikke hvor grensene går når overskuddet er med. Forskerne bruker ulike inntektsbegreper og år,
+      så tallene fra de to studiene er ikke helt sammenlignbare.

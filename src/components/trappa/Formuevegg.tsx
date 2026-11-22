@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { TrappaData } from "@/lib/trappa-felles";
+import type { TrappaTekst } from "@/lib/trappa-tekst";
 
 // Formuen i riktig målestokk: én piksel per to millioner kroner, søylene henger nedover.
 
@@ -18,7 +19,7 @@ function belop(mill: number) {
 type Soyle = { id: string; navn: string; mill: number };
 type Milepael = { mill: number; tekst: string };
 
-export default function Formuevegg({ data }: { data: TrappaData }) {
+export default function Formuevegg({ data, tekst }: { data: TrappaData; tekst: TrappaTekst["formue"] }) {
   const f = data.formue;
   const k = data.kapital;
   const median = f.median / 1e6;
@@ -90,10 +91,9 @@ export default function Formuevegg({ data }: { data: TrappaData }) {
 
   return (
     <div className="mt-14">
-      <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-bold">Formuestrappa i riktig målestokk</h3>
+      <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-bold">{tekst.trapp_tittel}</h3>
       <p className="mt-3 max-w-[640px] text-[16px] leading-relaxed text-white/75">
-        Én piksel er to millioner kroner. Husholdningen midt på er én piksel. Søylene henger nedover, så du må scrolle for
-        å se hvor langt de rikeste strekker seg.{" "}
+        {tekst.trapp_ingress}{" "}
         <a href="#etter-formuestrappa" className="font-medium text-white underline underline-offset-2">
           Hopp over
         </a>
@@ -183,15 +183,13 @@ export default function Formuevegg({ data }: { data: TrappaData }) {
         </tbody>
       </table>
       <p className="mb-4 text-[15px] font-semibold">
-        Her slutter formuen til den rikeste.{" "}
+        {tekst.trapp_slutt}{" "}
         <a href="#formue" className="font-normal underline underline-offset-2">
           Tilbake til toppen av trappa
         </a>
       </p>
       <p id="etter-formuestrappa" className="scroll-mt-24 text-[13px] text-white/55">
-        Husholdningene: SSB, beregnet nettoformue {f.aar}, husholdninger bosatt i Norge. Kapital 400 og de tre rikeste:
-        Kapitals anslag for {k.aar}, personer og familier, også de som har flyttet ut. SSB måler husholdninger, Kapital
-        personer, så trinnene er ikke helt sammenlignbare.
+        {tekst.trapp_fotnote}
       </p>
     </div>
   );

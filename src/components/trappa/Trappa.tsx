@@ -2,6 +2,7 @@
 
 import { useId, useMemo, useState } from "react";
 import { andelUnder, type Trinn, type TrappaData } from "@/lib/trappa-felles";
+import type { TrappaTekst } from "@/lib/trappa-tekst";
 
 // ── Formatering ────────────────────────────────────────────────
 
@@ -27,7 +28,13 @@ function plassering(andel: number) {
 
 // ── Komponent ──────────────────────────────────────────────────
 
-export default function Trappa({ data }: { data: TrappaData }) {
+export default function Trappa({
+  data,
+  tekst: t,
+}: {
+  data: TrappaData;
+  tekst: Pick<TrappaTekst, "topp" | "inntektstrappa">;
+}) {
   const [tekst, setTekst] = useState("");
   const inputId = useId();
   const hintId = useId();
@@ -54,24 +61,22 @@ export default function Trappa({ data }: { data: TrappaData }) {
         <div className="mx-auto max-w-[1100px]">
           <div className="mb-3 flex items-center gap-2">
             <div className="h-4 w-1 rounded-full bg-accent" />
-            <span className="text-[13px] font-medium text-white/50">Inntekt og ulikhet</span>
+            <span className="text-[13px] font-medium text-white/50">{t.topp.overlinje}</span>
           </div>
           <h1 className="font-[family-name:var(--font-playfair)] text-4xl font-bold leading-tight text-white sm:text-5xl">
-            Trappa til toppen
+            {t.topp.tittel}
           </h1>
           <p className="mt-5 max-w-[620px] text-[17px] leading-relaxed text-white/75">
-            Hvor høyt opp står du? Skriv inn inntekten din og se hvor mange som tjener mer enn deg. Lenger ned ser du
-            hvor mye som havner helt på toppen, og hvor mye mer det blir når vi regner med pengene som blir liggende i
-            selskapene.
+            {t.topp.ingress}
           </p>
 
           <div className="mt-9 grid gap-8 md:grid-cols-[minmax(0,420px)_1fr] md:items-end">
             <div>
               <label htmlFor={inputId} className="block text-[15px] font-semibold text-white">
-                Hva var inntekten din i {data.aar}, før skatt?
+                {t.topp.sporsmal}
               </label>
               <p id={hintId} className="mt-1 text-[13px] leading-snug text-white/60">
-                Lønn, pensjon, trygd og kapitalinntekter til sammen.
+                {t.topp.hjelpetekst}
               </p>
               <div className="mt-3 flex items-center rounded-lg border border-white/25 bg-white/10 focus-within:border-white focus-within:ring-2 focus-within:ring-white/40">
                 <input
@@ -116,7 +121,7 @@ export default function Trappa({ data }: { data: TrappaData }) {
         </div>
       </div>
 
-      <Vegg data={data} inntekt={inntekt} />
+      <Vegg data={data} inntekt={inntekt} tekst={t.inntektstrappa} />
     </>
   );
 }
@@ -133,7 +138,15 @@ type Soyle = {
   merknad?: string;
 };
 
-function Vegg({ data, inntekt }: { data: TrappaData; inntekt: number | null }) {
+function Vegg({
+  data,
+  inntekt,
+  tekst,
+}: {
+  data: TrappaData;
+  inntekt: number | null;
+  tekst: TrappaTekst["inntektstrappa"];
+}) {
   const t = (id: Trinn["id"]) => data.trinn.find((x) => x.id === id)!;
   const soyler: Soyle[] = [
     { id: "median", navn: "Midt på", med: data.vegg.median.med_overskudd, off: data.vegg.median.offisiell },
@@ -157,12 +170,10 @@ function Vegg({ data, inntekt }: { data: TrappaData; inntekt: number | null }) {
     <section id="trappa" aria-labelledby="vegg-tittel" className="scroll-mt-6 px-6 py-14">
       <div className="mx-auto max-w-[1100px]">
         <h2 id="vegg-tittel" className="font-[family-name:var(--font-playfair)] text-2xl font-bold sm:text-[28px]">
-          Trappa i riktig målestokk
+          {tekst.tittel}
         </h2>
         <p className="mt-3 max-w-[640px] text-[16px] leading-relaxed text-text-secondary">
-          Hver søyle er like høy som snittinntekten i gruppa, regnet med overskuddet i selskapene de eier. Den grå delen
-          viser hva den offisielle statistikken får med seg. Målestokken er den samme hele veien ned. Scroll ned for å
-          komme til bakken, der 99 prosent av oss står.
+          {tekst.ingress}
         </p>
 
         <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-[14px]" aria-hidden="true">
@@ -231,13 +242,7 @@ function Vegg({ data, inntekt }: { data: TrappaData; inntekt: number | null }) {
 
         <div className="mt-8 grid gap-6 text-[14px] leading-relaxed text-text-secondary md:grid-cols-2">
           <p>
-            Snittinntekter for personer 25 år og eldre i {data.forskningsaar}. «Midt på» er medianen: halvparten
-            tjener mer, halvparten mindre. Topp 0,01 prosent er snittet for {data.vegg.topp001.aar}, regnet ut fra
-            andelen av all inntekt i Ring, Seim og Zucman og nasjonalinntekten for Fastlands-Norge fra SSB. Det svinger
-            mye fra år til år: {Object.entries(data.vegg.topp001.per_aar)
-              .map(([aar, v]) => `${nf0.format(v / 1e6)} millioner i ${aar}`)
-              .join(", ")}
-            . Det offisielle tallet for topp 0,01 prosent er et anslag ut fra skattestatistikken for {data.aar}.
+            {tekst.fotnote}
           </p>
           <Andelstabell data={data} />
         </div>

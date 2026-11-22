@@ -128,6 +128,69 @@ content:
             label: Tekst
             type: text
 
+  - name: trappa
+    label: Trappa til toppen
+    description: >-
+      Teksten på siden /trappa. Tallene kommer fra datafila og oppdateres ikke her. Ord i krøllparentes byttes ut
+      med tall: {aar}, {forskningsaar}, {topp01_snitt_offisiell}, {topp01_snitt_med}, {topp001_aar},
+      {topp001_per_aar}, {budsjett_mrd}, {budsjett_aar}, {fra_utlandet_prosent}, {skattbar_formue_prosent},
+      {topp100_skatt}, {topp100_inntektsskatt}, {kapital_aar}, {formue_aar}. Tom linje gir nytt avsnitt.
+    type: file
+    path: content/trappa.yml
+    format: yaml
+    fields:
+      - name: topp
+        label: Toppen av siden og kalkulatoren
+        type: object
+        fields:
+          - { name: overlinje, label: Liten tekst over tittelen, type: string }
+          - { name: tittel, label: Tittel, type: string }
+          - { name: ingress, label: Ingress, type: text }
+          - { name: sporsmal, label: Spørsmål over feltet, type: string }
+          - { name: hjelpetekst, label: Hjelpetekst under spørsmålet, type: string }
+      - name: inntektstrappa
+        label: Inntektstrappa
+        type: object
+        fields:
+          - { name: tittel, label: Tittel, type: string }
+          - { name: ingress, label: Ingress, type: text }
+          - { name: fotnote, label: Fotnote under søylene, type: text }
+      - name: toppen
+        label: «Jo rikere, jo mindre havner i skattemeldingen»
+        type: object
+        fields:
+          - { name: tittel, label: Tittel, type: string }
+          - { name: ingress, label: Ingress, type: text }
+          - { name: fotnote, label: Fotnote, type: text }
+      - name: formue
+        label: Formue og Kapital 400
+        type: object
+        fields:
+          - { name: tittel, label: Tittel, type: string }
+          - { name: ingress, label: Ingress, type: text }
+          - { name: etikett_samlet, label: Tekst under samlet formue, type: string }
+          - { name: etikett_snitt, label: Tekst under snitt per person, type: string }
+          - { name: etikett_milliardaerer, label: Tekst under antall milliardærer, type: string }
+          - { name: etikett_rikeste, label: Tekst under den rikeste, type: string }
+          - { name: trapp_tittel, label: Tittel på formuestrappa, type: string }
+          - { name: trapp_ingress, label: Ingress til formuestrappa, type: text }
+          - { name: trapp_slutt, label: Tekst nederst i formuestrappa, type: string }
+          - { name: trapp_fotnote, label: Fotnote til formuestrappa, type: text }
+          - { name: tekst, label: Tekst etter formuestrappa, type: text }
+          - { name: fotnote, label: Fotnote, type: text }
+      - name: hvorfor
+        label: «Hvorfor to tall?»
+        type: object
+        fields:
+          - { name: tittel, label: Tittel, type: string }
+          - { name: tekst, label: Tekst, type: text }
+      - name: metode
+        label: «Slik er tallene regnet»
+        type: object
+        fields:
+          - { name: tittel, label: Tittel, type: string }
+          - { name: punkter, label: Punkter, type: text, list: true }
+
   - name: karuseller
     label: Karusellsider
     description: Én kildeside per karusell, på adressen valgogpolitikk.no/<filnavn>.
