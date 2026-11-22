@@ -39,7 +39,24 @@ export type TrappaData = {
   }[];
   topp100: { skatt_av_inntekt: number; personlig_inntektsskatt: number; skatt_av_formue: number };
   skattbar_formue_andel: number;
-  kapital: { aar: number; samlet_mrd: number; milliardaerer: number; rikeste_mrd: number; fra_utlandet_andel: number };
+  kapital: {
+    aar: number;
+    samlet_mrd: number;
+    milliardaerer: number;
+    rikeste_mrd: number;
+    fra_utlandet_andel: number;
+    topp3: { plass: number; navn: string; mrd: number }[];
+  };
+  formue: {
+    aar: number;
+    median: number;
+    topp10_grense: number;
+    topp1_snitt: number;
+    topp1_grense: number;
+    topp01_snitt: number;
+    topp01_grense: number;
+    topp01_antall: number;
+  };
   kilder: { navn: string; lenke: string }[];
 };
 

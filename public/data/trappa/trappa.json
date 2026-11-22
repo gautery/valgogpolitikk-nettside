@@ -264,7 +264,34 @@
   "samlet_mrd": 2699,
   "milliardaerer": 518,
   "rikeste_mrd": 325,
-  "fra_utlandet_andel": 0.6
+  "fra_utlandet_andel": 0.6,
+  "topp3": [
+   {
+    "plass": 1,
+    "navn": "John Fredriksen",
+    "mrd": 325
+   },
+   {
+    "plass": 2,
+    "navn": "Torstein Hagen",
+    "mrd": 210
+   },
+   {
+    "plass": 3,
+    "navn": "Kjell Inge Røkke",
+    "mrd": 84.3
+   }
+  ]
+ },
+ "formue": {
+  "aar": 2024,
+  "median": 1955700,
+  "topp10_grense": 8454200,
+  "topp1_snitt": 84551200,
+  "topp1_grense": 28250400,
+  "topp01_snitt": 402084700,
+  "topp01_grense": 133425400,
+  "topp01_antall": 2617
  },
  "kilder": [
   {

@@ -225,7 +225,30 @@ TOPP100_2020 = {"skatt_av_inntekt": 15.6, "personlig_inntektsskatt": 2.6, "skatt
 SKATTBAR_FORMUE_ANDEL = 0.29
 
 # ── 4. Kapital 400 (2026), slik NTB gjenga lista ──────────────
-KAPITAL = {"aar": 2026, "samlet_mrd": 2699, "milliardaerer": 518, "rikeste_mrd": 325, "fra_utlandet_andel": 0.6}
+KAPITAL = {"aar": 2026, "samlet_mrd": 2699, "milliardaerer": 518, "rikeste_mrd": 325, "fra_utlandet_andel": 0.6,
+           "topp3": [{"plass": 1, "navn": "John Fredriksen", "mrd": 325},
+                     {"plass": 2, "navn": "Torstein Hagen", "mrd": 210},
+                     {"plass": 3, "navn": "Kjell Inge Røkke", "mrd": 84.3}]}
+
+# ── 5. Husholdningenes formue (SSB tabell 10318, beregnet nettoformue) ──
+t10318 = hent(
+    "10318",
+    [
+        {"code": "Desiler", "selection": {"filter": "item", "values": ["06", "10", "01b", "01c"]}},
+        {"code": "Tid", "selection": {"filter": "item", "values": [AAR]}},
+    ],
+)
+FORMUE = {
+    "aar": int(AAR),
+    "median": t10318[("06", "Grenseverdi", AAR)],  # laveste verdi i desil 6 = medianen
+    "topp10_grense": t10318[("10", "Grenseverdi", AAR)],
+    "topp1_snitt": t10318[("01b", "BereknFormue", AAR)],
+    "topp1_grense": t10318[("01b", "Grenseverdi", AAR)],
+    "topp01_snitt": t10318[("01c", "BereknFormue", AAR)],
+    "topp01_grense": t10318[("01c", "Grenseverdi", AAR)],
+    "topp01_antall": t10318[("01c", "Hushald", AAR)],
+}
+print("Formue:", FORMUE)
 
 data = {
     "aar": int(AAR),
@@ -245,6 +268,7 @@ data = {
     "topp100": TOPP100_2020,
     "skattbar_formue_andel": SKATTBAR_FORMUE_ANDEL,
     "kapital": KAPITAL,
+    "formue": FORMUE,
     "kilder": [
         {"navn": f"SSB, tabell 06655 og 07006: Bruttoinntekt etter intervaller ({AAR})",
          "lenke": "https://www.ssb.no/statbank/table/07006/"},

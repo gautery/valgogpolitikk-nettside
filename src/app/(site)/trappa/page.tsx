@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Trappa from "@/components/trappa/Trappa";
+import Formuevegg from "@/components/trappa/Formuevegg";
 import { hentTrappa } from "@/lib/trappa";
 import { hentBudsjett, hentOversikt, standardId } from "@/lib/statsbudsjett";
 
@@ -111,7 +112,9 @@ export default function TrappaSide() {
               </dd>
             </div>
           </dl>
-          <div className="mt-10 grid max-w-[980px] gap-6 text-[16px] leading-relaxed text-white/80 md:grid-cols-2">
+          <Formuevegg data={data} />
+
+          <div className="mt-12 grid max-w-[980px] gap-6 text-[16px] leading-relaxed text-white/80 md:grid-cols-2">
             <p>
               {budsjett && (
                 <>
