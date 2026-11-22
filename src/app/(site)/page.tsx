@@ -1,9 +1,14 @@
 import { getAllPosts } from "@/lib/posts";
 import PostList from "@/components/PostList";
 import BookSpines from "@/components/BookSpines";
+import { hentKildeoversikt } from "@/lib/kilder";
+import { KildeBand } from "@/components/SisteFraKildene";
 
-export default function Home() {
+export const revalidate = 3600;
+
+export default async function Home() {
   const posts = getAllPosts();
+  const kilder = await hentKildeoversikt();
 
   return (
     <>
@@ -31,6 +36,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {kilder && <KildeBand saker={kilder.saker} oppdatert={kilder.oppdatert} />}
 
       {/* Post listing with sidebar */}
       <PostList posts={posts} />
