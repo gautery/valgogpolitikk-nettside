@@ -17,6 +17,7 @@ export type Sak = {
   dato: string;
   viktig: boolean;
   temaer: string[];
+  spor?: "rapporter" | "tall" | "lopende";
 };
 
 export type KalenderPost = {
