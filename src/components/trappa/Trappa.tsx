@@ -186,6 +186,7 @@ export default function Trappa({ data }: { data: TrappaData }) {
                 erHer={mittTrinn === t.id}
                 aar={data.aar}
                 forskningsaar={data.forskningsaar}
+                snittAlle={data.snitt[maal]}
               />
             ))}
           </ol>
@@ -215,6 +216,7 @@ function TrinnRad({
   erHer,
   aar,
   forskningsaar,
+  snittAlle,
 }: {
   trinn: Trinn;
   niva: number;
@@ -222,6 +224,7 @@ function TrinnRad({
   erHer: boolean;
   aar: number;
   forskningsaar: number;
+  snittAlle: number;
 }) {
   const tall = t[maal];
   const off = t.offisiell;
@@ -243,17 +246,21 @@ function TrinnRad({
               {t.anslag ? `rundt ${nf0.format(t.grense / 1e6)} mill. kr` : kroner(t.grense)}
             </strong>
           </p>
+          {maal === "med_overskudd" && tall && (
+            <p className="mt-0.5 text-[13px] text-text-muted">Grensa i offisiell statistikk</p>
+          )}
         </div>
 
         <div className="md:pt-1">
           {tall && off ? (
             <>
               <p className="text-[15px] leading-snug">
-                Får{" "}
+                Tjente i snitt{" "}
                 <strong className={`tabular-nums ${maal === "med_overskudd" ? "text-accent-dark" : ""}`}>
-                  {nf1.format(tall.andel)} prosent
+                  {kroner(tall.snittinntekt)}
                 </strong>{" "}
-                av alle inntektene, {ganger(tall.andel / (t.topp * 100))} ganger så mye som om alle fikk like mye.
+                i {forskningsaar}, {ganger(tall.snittinntekt / snittAlle)} ganger snittet for alle voksne (
+                {kroner(snittAlle)}).
               </p>
               <div className="relative mt-3 h-3 w-full rounded-full bg-surface-light" aria-hidden="true">
                 <div
@@ -271,10 +278,9 @@ function TrinnRad({
                 )}
               </div>
               <p className="mt-2 text-[13px] text-text-muted">
-                {maal === "med_overskudd"
-                  ? `Streken viser den offisielle statistikken (${nf1.format(off.andel)} prosent). `
-                  : ""}
-                Snittinntekt i gruppa: {kroner(tall.snittinntekt)} ({forskningsaar}-kroner).
+                Får {nf1.format(tall.andel)} prosent av alle inntektene
+                {maal === "med_overskudd" ? `. Streken viser den offisielle statistikken (${nf1.format(off.andel)} prosent)` : ""}
+                .
               </p>
             </>
           ) : t.id === "median" ? (
