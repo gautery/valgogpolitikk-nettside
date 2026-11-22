@@ -37,3 +37,8 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Trappa til toppen: hvert trinn flyttes mot høyre jo høyere opp det står */
+.trinn {
+  margin-left: calc(var(--niva) * clamp(10px, 5vw, 64px));
+}

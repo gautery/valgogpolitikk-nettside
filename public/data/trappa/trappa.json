@@ -1,0 +1,193 @@
+{
+ "aar": 2024,
+ "forskningsaar": 2022,
+ "antall": 3954031,
+ "intervaller": [
+  {
+   "a": 0,
+   "b": 100000.0,
+   "k": -2.0,
+   "n": 111768
+  },
+  {
+   "a": 100000.0,
+   "b": 200000.0,
+   "k": 0.9816189816189818,
+   "n": 90909
+  },
+  {
+   "a": 200000.0,
+   "b": 300000.0,
+   "k": 1.1539656565238112,
+   "n": 289662
+  },
+  {
+   "a": 300000.0,
+   "b": 400000.0,
+   "k": 0.20743021651909865,
+   "n": 524157
+  },
+  {
+   "a": 400000.0,
+   "b": 500000.0,
+   "k": 0.053426593136801426,
+   "n": 539282
+  },
+  {
+   "a": 500000.0,
+   "b": 750000.0,
+   "k": -0.36819059445666524,
+   "n": 1233698
+  },
+  {
+   "a": 750000.0,
+   "b": 1000000.0,
+   "k": -0.9061676898824014,
+   "n": 612774
+  },
+  {
+   "a": 1250000.0,
+   "b": 1500000.0,
+   "k": -0.6911999999999998,
+   "n": 259409
+  },
+  {
+   "a": 1500000.0,
+   "b": 1750000.0,
+   "k": -0.5999999999999999,
+   "n": 135998
+  },
+  {
+   "a": 1750000.0,
+   "b": 2000000.0,
+   "k": -0.5471999999999997,
+   "n": 76666
+  },
+  {
+   "a": 2000000.0,
+   "b": 2250000.0,
+   "k": -0.5039999999999998,
+   "n": 21098
+  },
+  {
+   "a": 2250000.0,
+   "b": 2500000.0,
+   "k": -0.43679999999999986,
+   "n": 13604
+  },
+  {
+   "a": 2500000.0,
+   "b": 3000000.0,
+   "k": -0.6768000000000001,
+   "n": 15491
+  },
+  {
+   "a": 3000000.0,
+   "b": 4000000.0,
+   "k": -0.9767999999999997,
+   "n": 13362
+  },
+  {
+   "a": 4000000.0,
+   "b": 5000000.0,
+   "k": -0.7176000000000002,
+   "n": 5730
+  },
+  {
+   "a": 5000000.0,
+   "b": 7500000.0,
+   "k": -1.1793599999999997,
+   "n": 5533
+  },
+  {
+   "a": 7500000.0,
+   "b": null,
+   "alfa": 1.9120537017219574,
+   "n": 4891
+  }
+ ],
+ "trinn": [
+  {
+   "id": "median",
+   "topp": 0.5,
+   "navn": "Halvparten",
+   "grense": 576000.0,
+   "antall": 1977016,
+   "anslag": false
+  },
+  {
+   "id": "topp10",
+   "topp": 0.1,
+   "navn": "De 10 prosent",
+   "grense": 1379000.0,
+   "antall": 395403,
+   "anslag": false,
+   "offisiell": {
+    "andel": 27.5,
+    "snittinntekt": 1680000.0
+   },
+   "med_overskudd": {
+    "andel": 37.1,
+    "snittinntekt": 2470000.0
+   }
+  },
+  {
+   "id": "topp1",
+   "topp": 0.01,
+   "navn": "Den ene prosenten",
+   "grense": 2642000.0,
+   "antall": 39540,
+   "anslag": false,
+   "offisiell": {
+    "andel": 7.8,
+    "snittinntekt": 4750000.0
+   },
+   "med_overskudd": {
+    "andel": 18.2,
+    "snittinntekt": 12110000.0
+   }
+  },
+  {
+   "id": "topp01",
+   "topp": 0.001,
+   "navn": "De 0,1 prosent",
+   "grense": 8400000.0,
+   "antall": 3954,
+   "anslag": false,
+   "offisiell": {
+    "andel": 2.6,
+    "snittinntekt": 15840000.0
+   },
+   "med_overskudd": {
+    "andel": 11.1,
+    "snittinntekt": 73870000.0
+   }
+  },
+  {
+   "id": "topp001",
+   "topp": 0.0001,
+   "navn": "De 0,01 prosent",
+   "grense": 27900000.0,
+   "antall": 395,
+   "anslag": true
+  }
+ ],
+ "snitt": {
+  "offisiell": 609160,
+  "med_overskudd": 665470
+ },
+ "kilder": [
+  {
+   "navn": "SSB, tabell 06655 og 07006: Bruttoinntekt etter intervaller (2024)",
+   "lenke": "https://www.ssb.no/statbank/table/07006/"
+  },
+  {
+   "navn": "Vestad (2024): Utviklingen i inntektsulikhet i perioden 2016–2022. SSB Rapporter 2024/32",
+   "lenke": "https://www.ssb.no/inntekt-og-forbruk/inntekt-og-formue/artikler/utviklingen-i-inntektsulikhet-i-perioden-20162022"
+  },
+  {
+   "navn": "Aaberge, Modalsli og Vestad (2020): Ulikheten – betydelig større enn statistikken viser. SSB analyse 2020/13",
+   "lenke": "https://www.ssb.no/inntekt-og-forbruk/artikler-og-publikasjoner/ulikheten-betydelig-storre-enn-statistikken-viser"
+  }
+ ]
+}
