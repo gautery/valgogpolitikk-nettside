@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestBanner from "@/components/TestBanner";
+import { lesInnstillinger } from "@/lib/sider";
 
 export default function SiteLayout({
   children,
@@ -10,7 +11,7 @@ export default function SiteLayout({
   return (
     <>
       <TestBanner />
-      <Header />
+      <Header meny={lesInnstillinger().meny} />
       {children}
       <Footer />
     </>

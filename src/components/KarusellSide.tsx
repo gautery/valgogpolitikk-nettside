@@ -1,14 +1,9 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
-import { hentAlleKaruseller, lesKarusell, type Sikkerhet } from "@/lib/karuseller";
+import type { Karusell, Sikkerhet } from "@/lib/karuseller";
 import { hentKildeoversikt } from "@/lib/kilder";
 
-// Én kildeside per karusell, på toppnivå: valgogpolitikk.no/<slug>.
-// Bare slugs som finnes i content/karuseller blir sider; alt annet gir 404.
-export const dynamicParams = false;
-export const revalidate = 3600;
+// Kildesiden for én karusell. Vises på valgogpolitikk.no/<adresse> via app/(site)/[side].
 
 const NIVA: Record<Sikkerhet, number> = {
   sikkert: 4,
@@ -21,26 +16,6 @@ const MND = ["jan", "feb", "mar", "apr", "mai", "jun", "jul", "aug", "sep", "okt
 function datoTekst(iso: string) {
   const d = new Date(new Date(iso).toLocaleString("en-US", { timeZone: "Europe/Oslo" }));
   return `${d.getDate()}. ${MND[d.getMonth()]}`;
-}
-
-export function generateStaticParams() {
-  return hentAlleKaruseller().map((k) => ({ karusell: k.slug }));
-}
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ karusell: string }>;
-}): Promise<Metadata> {
-  const { karusell } = await params;
-  const k = lesKarusell(karusell);
-  if (!k) return {};
-  return {
-    title: `${k.tittel} — valg og politikk`,
-    description: k.ingress,
-    robots: k.utkast ? { index: false, follow: false } : undefined,
-    openGraph: { images: k.slides[0]?.bilde ? [k.slides[0].bilde] : undefined },
-  };
 }
 
 function Sikkerhetsmaler({ niva }: { niva: Sikkerhet }) {
@@ -63,15 +38,7 @@ function Sikkerhetsmaler({ niva }: { niva: Sikkerhet }) {
   );
 }
 
-export default async function KarusellSide({
-  params,
-}: {
-  params: Promise<{ karusell: string }>;
-}) {
-  const { karusell } = await params;
-  const k = lesKarusell(karusell);
-  if (!k) notFound();
-
+export default async function KarusellSide({ k }: { k: Karusell }) {
   const medTall = k.slides.filter((s) => s.tall).length;
 
   const oversikt = await hentKildeoversikt();

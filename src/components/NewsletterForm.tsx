@@ -57,6 +57,7 @@ export default function NewsletterForm() {
       <div className="flex gap-2">
         <input
           type="email"
+          aria-label="E-postadresse"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="din@epost.no"

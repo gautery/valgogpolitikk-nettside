@@ -2,6 +2,10 @@
 # når han redigerer nettsiden. Hver lagring blir en endring i GitHub, og Vercel
 # bygger siden på nytt etter et par minutter.
 
+settings:
+  content:
+    merge: true
+
 media:
   input: public/bilder
   output: /bilder
@@ -9,6 +13,121 @@ media:
   rename: safe
 
 content:
+  - name: forside
+    label: Forsiden
+    description: Sett sammen forsiden av byggeklosser. Se alle klossene på /klosser.
+    type: file
+    path: content/forside.md
+    format: yaml-frontmatter
+    fields:
+      - name: tittel
+        label: Navn (vises ikke)
+        type: string
+        hidden: true
+      - name: seksjoner
+        label: Seksjoner
+        component: seksjoner
+
+  - name: sider
+    label: Sider
+    description: Egne sider bygd av byggeklosser, på adressen valgogpolitikk.no/<filnavn>.
+    type: collection
+    path: content/sider
+    exclude: [.gitkeep]
+    format: yaml-frontmatter
+    filename:
+      template: "{tittel}.md"
+      field: create
+    view:
+      primary: tittel
+      fields: [tittel, utkast]
+    fields:
+      - name: tittel
+        label: Tittel
+        description: Vises i nettleserfanen og i søkeresultater.
+        type: string
+        required: true
+      - name: beskrivelse
+        label: Beskrivelse for søkemotorer
+        type: text
+      - name: utkast
+        label: Utkast
+        description: Huk av så lenge siden ikke er klar.
+        type: boolean
+        default: true
+      - name: seksjoner
+        label: Seksjoner
+        component: seksjoner
+
+  - name: innstillinger
+    label: Innstillinger
+    description: Menyen, bunnteksten og «Om»-boksen.
+    type: file
+    path: content/innstillinger.yml
+    format: yaml
+    fields:
+      - name: meny
+        label: Meny
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{tekst}"
+        fields:
+          - name: tekst
+            label: Tekst
+            type: string
+          - name: lenke
+            label: Lenke
+            description: For sider på nettsiden, f.eks. /kilder. For andre nettsteder, hele adressen.
+            type: string
+      - name: bunntekst
+        label: Bunntekst
+        type: object
+        fields:
+          - name: beskrivelse
+            label: Beskrivelse
+            type: text
+          - name: grupper
+            label: Lenkegrupper
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{overskrift}"
+            fields:
+              - name: overskrift
+                label: Overskrift
+                type: string
+              - name: lenker
+                label: Lenker
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{tekst}"
+                fields:
+                  - name: tekst
+                    label: Tekst
+                    type: string
+                  - name: lenke
+                    label: Lenke
+                    description: Valgfri. Uten lenke vises bare teksten.
+                    type: string
+          - name: merknad
+            label: Merknad nederst
+            type: text
+      - name: om
+        label: «Om»-boksen ved innleggslista
+        type: object
+        fields:
+          - name: tittel
+            label: Tittel
+            type: string
+          - name: tekst
+            label: Tekst
+            type: text
+
   - name: karuseller
     label: Karusellsider
     description: Én kildeside per karusell, på adressen valgogpolitikk.no/<filnavn>.
@@ -277,3 +396,238 @@ content:
         type: code
         options:
           format: markdown
+
+components:
+  bakgrunn:
+    label: Bakgrunn
+    type: select
+    default: hvit
+    options:
+      values: [hvit, lys]
+
+  seksjoner:
+    label: Seksjoner
+    description: Seksjonene vises i denne rekkefølgen. Dra for å flytte dem.
+    type: block
+    blockKey: type
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{index}. {type} {tittel}{overskrift}"
+    blocks:
+      - name: toppfelt
+        label: Toppfelt
+        fields:
+          - name: overlinje
+            label: Overlinje
+            description: Liten tekst over tittelen.
+            type: string
+          - name: tittel
+            label: Tittel
+            type: string
+          - name: ingress
+            label: Ingress
+            type: text
+          - name: bilde
+            label: Bilde til høyre
+            type: image
+          - name: bokrygger
+            label: Vis bokryggene til høyre (når det ikke er bilde)
+            type: boolean
+
+      - name: tekst
+        label: Tekst
+        fields:
+          - name: overskrift
+            label: Overskrift
+            type: string
+          - name: tekst
+            label: Tekst
+            type: rich-text
+          - name: bakgrunn
+            component: bakgrunn
+
+      - name: nokkeltall
+        label: Nøkkeltall
+        fields:
+          - name: overskrift
+            label: Overskrift
+            type: string
+          - name: tall
+            label: Tall
+            description: Fire eller færre ser best ut.
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{tall}"
+            fields:
+              - name: tall
+                label: Tallet
+                type: string
+              - name: tekst
+                label: Forklaring
+                type: text
+              - name: kilde
+                label: Kilde
+                type: string
+              - name: lenke
+                label: Lenke til kilden
+                type: string
+          - name: bakgrunn
+            component: bakgrunn
+
+      - name: bilde
+        label: Bilde
+        fields:
+          - name: bilde
+            label: Bilde
+            type: image
+          - name: alt
+            label: Beskrivelse for skjermlesere
+            description: Hva bildet viser. Er det en graf, skriv hovedpoenget.
+            type: text
+          - name: bildetekst
+            label: Bildetekst
+            type: text
+          - name: bredde
+            label: Bredde
+            type: select
+            default: normal
+            options:
+              values: [normal, bred]
+          - name: bakgrunn
+            component: bakgrunn
+
+      - name: sitat
+        label: Sitat
+        fields:
+          - name: sitat
+            label: Sitat
+            type: text
+          - name: kilde
+            label: Hvem sa det
+            type: string
+          - name: bakgrunn
+            component: bakgrunn
+
+      - name: kildeliste
+        label: Kildeliste
+        fields:
+          - name: overskrift
+            label: Overskrift
+            type: string
+          - name: kilder
+            label: Kilder
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{navn}"
+            fields:
+              - name: navn
+                label: Navn
+                type: string
+              - name: utgiver
+                label: Utgiver
+                type: string
+              - name: lenke
+                label: Lenke
+                type: string
+              - name: kommentar
+                label: Kommentar
+                type: text
+              - name: bruk
+                label: Bruk den til
+                type: text
+          - name: bakgrunn
+            component: bakgrunn
+
+      - name: knapp
+        label: Knapp
+        fields:
+          - name: forklaring
+            label: Setning foran knappen
+            type: text
+          - name: tekst
+            label: Knappetekst
+            type: string
+          - name: lenke
+            label: Lenke
+            type: string
+          - name: bakgrunn
+            component: bakgrunn
+
+      - name: karuseller
+        label: Karuseller
+        fields:
+          - name: overskrift
+            label: Overskrift
+            type: string
+          - name: antall
+            label: Hvor mange
+            description: Tomt gir 8.
+            type: number
+          - name: bakgrunn
+            component: bakgrunn
+
+      - name: temaoversikt
+        label: Temaoversikt
+        fields:
+          - name: overskrift
+            label: Overskrift
+            type: string
+          - name: bakgrunn
+            component: bakgrunn
+
+      - name: siste_nytt
+        label: Siste nytt fra kildene
+        fields:
+          - name: overskrift
+            label: Overskrift
+            type: string
+          - name: tema
+            label: Tema
+            description: Tomt gir alle temaer.
+            type: select
+            options:
+              values: [Skatt, Ulikhet og fordeling, Markedsmakt og konkurranse, Offentlige finanser, Arbeid og trygd, Bolig, Energi og strøm, EU og EØS, Velferd og privatisering]
+          - name: antall
+            label: Hvor mange
+            description: Tomt gir 6.
+            type: number
+          - name: bakgrunn
+            component: bakgrunn
+
+      - name: kildeband
+        label: Kildebånd (Utvalgt og Løpende)
+        fields: []
+
+      - name: siste_analyser
+        label: Siste analyser
+        fields:
+          - name: overskrift
+            label: Overskrift
+            type: string
+          - name: antall
+            label: Hvor mange
+            description: Tomt gir 3.
+            type: number
+          - name: bakgrunn
+            component: bakgrunn
+
+      - name: analyser
+        label: Alle analyser (arkiv med søk)
+        fields: []
+
+      - name: nyhetsbrev
+        label: Nyhetsbrev
+        fields:
+          - name: overskrift
+            label: Overskrift
+            type: string
+          - name: tekst
+            label: Tekst
+            type: text
+          - name: bakgrunn
+            component: bakgrunn

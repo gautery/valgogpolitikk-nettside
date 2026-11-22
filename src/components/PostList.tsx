@@ -9,9 +9,10 @@ import NewsletterForm from "./NewsletterForm";
 interface PostListProps {
   posts: Post[];
   sidebarEkstra?: React.ReactNode;
+  om?: { tittel: string; tekst: string };
 }
 
-export default function PostList({ posts, sidebarEkstra }: PostListProps) {
+export default function PostList({ posts, sidebarEkstra, om }: PostListProps) {
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState<"newest" | "oldest">("newest");
@@ -107,16 +108,14 @@ export default function PostList({ posts, sidebarEkstra }: PostListProps) {
         <NewsletterForm />
 
         {/* About */}
-        <div className="rounded-md border border-border bg-surface p-5">
-          <div className="mb-2 text-[13px] font-semibold text-text-primary">
-            Om @valgogpolitikk
+        {om?.tekst && (
+          <div className="rounded-md border border-border bg-surface p-5">
+            {om.tittel && (
+              <div className="mb-2 text-[13px] font-semibold text-text-primary">{om.tittel}</div>
+            )}
+            <p className="m-0 text-[12px] leading-relaxed text-text-secondary">{om.tekst}</p>
           </div>
-          <p className="m-0 text-[12px] leading-relaxed text-text-secondary">
-            Datadrevet analyse av norsk politikk. Posisjonert til venstre, men
-            alltid med kilder. Alt innhold basert på offentlig statistikk
-            fra OECD, SSB, Eurostat og forskningslitteratur.
-          </p>
-        </div>
+        )}
       </aside>
 
       {/* Post Feed */}
