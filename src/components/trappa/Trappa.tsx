@@ -145,7 +145,7 @@ function Vegg({ data, inntekt }: { data: TrappaData; inntekt: number | null }) {
       navn: "Topp 0,01 %",
       med: data.vegg.topp001.med_overskudd,
       off: data.vegg.topp001.offisiell,
-      merknad: "beregnet",
+      merknad: `snitt ${data.vegg.topp001.aar}`,
     },
   ];
   const maks = Math.max(...soyler.map((s) => s.med));
@@ -231,10 +231,13 @@ function Vegg({ data, inntekt }: { data: TrappaData; inntekt: number | null }) {
 
         <div className="mt-8 grid gap-6 text-[14px] leading-relaxed text-text-secondary md:grid-cols-2">
           <p>
-            Snittinntekter i {data.forskningsaar}-kroner for personer 25 år og eldre. «Midt på» er medianen: halvparten
-            tjener mer, halvparten mindre. Topp 0,01 prosent er beregnet: snittet for topp 0,1 prosent ganger forholdet
-            mellom gruppene hos Ring, Seim og Zucman ({nf1.format(data.vegg.topp001.forhold)}). Det offisielle tallet for
-            topp 0,01 prosent er et anslag ut fra skattestatistikken for {data.aar}.
+            Snittinntekter for personer 25 år og eldre i {data.forskningsaar}. «Midt på» er medianen: halvparten
+            tjener mer, halvparten mindre. Topp 0,01 prosent er snittet for {data.vegg.topp001.aar}, regnet ut fra
+            andelen av all inntekt i Ring, Seim og Zucman og nasjonalinntekten for Fastlands-Norge fra SSB. Det svinger
+            mye fra år til år: {Object.entries(data.vegg.topp001.per_aar)
+              .map(([aar, v]) => `${nf0.format(v / 1e6)} millioner i ${aar}`)
+              .join(", ")}
+            . Det offisielle tallet for topp 0,01 prosent er et anslag ut fra skattestatistikken for {data.aar}.
           </p>
           <Andelstabell data={data} />
         </div>
@@ -309,8 +312,18 @@ function Andelstabell({ data }: { data: TrappaData }) {
               </td>
             </tr>
           ))}
+          <tr className="border-b border-border">
+            <td className="py-1.5">Topp 0,01 %*</td>
+            <td className="py-1.5 text-right text-text-muted">–</td>
+            <td className="py-1.5 text-right font-semibold tabular-nums text-accent-dark">
+              {nf1.format(data.vegg.topp001.andel)} %
+            </td>
+          </tr>
         </tbody>
       </table>
+      <p className="mt-2 text-[12px] text-text-muted">
+        *Snitt {data.vegg.topp001.aar}, Ring, Seim og Zucman. Rundt 400 personer.
+      </p>
     </div>
   );
 }

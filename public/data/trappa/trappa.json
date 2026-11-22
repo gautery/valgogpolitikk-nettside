@@ -182,9 +182,16 @@
    "med_overskudd": 510800
   },
   "topp001": {
-   "med_overskudd": 380000000.0,
+   "med_overskudd": 340000000.0,
    "offisiell": 58000000.0,
-   "forhold": 5.2
+   "forhold": 5.2,
+   "aar": "2018–2020",
+   "andel": 5.3,
+   "per_aar": {
+    "2018": 286000000.0,
+    "2019": 320000000.0,
+    "2020": 403000000.0
+   }
   }
  },
  "fingrupper": [

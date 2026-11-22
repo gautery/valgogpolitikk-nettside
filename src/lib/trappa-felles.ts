@@ -27,7 +27,7 @@ export type TrappaData = {
   snitt: { offisiell: number; med_overskudd: number };
   vegg: {
     median: { offisiell: number; med_overskudd: number };
-    topp001: { offisiell: number; med_overskudd: number; forhold: number };
+    topp001: { offisiell: number; med_overskudd: number; forhold: number; aar: string; andel: number; per_aar: Record<string, number> };
   };
   fingrupper: {
     id: string;

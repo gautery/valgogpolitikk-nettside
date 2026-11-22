@@ -198,7 +198,40 @@ s_001 = sum(v[2] for v in RSZ_ANDELER.values()) / 3
 # Snittet i topp 0,01 delt på snittet i topp 0,1 (gjennomsnitt 2018–2020)
 forhold_001 = (s_001 / 0.0001) / ((s_mid + s_001) / 0.001)
 topp01 = next(t for t in trinn if t["id"] == "topp01")
-snitt_001 = round(topp01["med_overskudd"]["snittinntekt"] * forhold_001, -7)
+snitt_001_via_vestad = round(topp01["med_overskudd"]["snittinntekt"] * forhold_001, -7)  # kontrolltall
+
+# Snittinntekt i kroner: andel × all inntekt / antall personer i gruppa.
+# All inntekt = nasjonalinntekten for Fastlands-Norge (nasjonalinntekt skalert med BNP Fastlands-Norge / BNP),
+# slik Ring, Seim og Zucman gjør (fotnote 25). Antall = voksne (20 år og eldre), snitt av 1. januar i året og året etter.
+ARS = ["2018", "2019", "2020"]
+t09842 = hent("09842", [{"code": "ContentsCode", "selection": {"filter": "item", "values": ["NI"]}},
+                        {"code": "Tid", "selection": {"filter": "item", "values": ARS}}])
+t09189 = hent("09189", [{"code": "Makrost", "selection": {"filter": "item", "values": ["bnpb.nr23_9", "bnpb.nr23_9fn"]}},
+                        {"code": "ContentsCode", "selection": {"filter": "item", "values": ["Priser"]}},
+                        {"code": "Tid", "selection": {"filter": "item", "values": ARS}}])
+t07459 = hent("07459", [{"code": "Region", "selection": {"filter": "vs:Landet", "values": ["0"]}},
+                        {"code": "Kjonn", "selection": {"filter": "item", "values": ["1", "2"]}},
+                        {"code": "Alder", "selection": {"filter": "all", "values": ["*"]}},
+                        {"code": "ContentsCode", "selection": {"filter": "item", "values": ["Personer1"]}},
+                        {"code": "Tid", "selection": {"filter": "item", "values": ARS + ["2021"]}}])
+
+
+def folk(aar, fra_alder=0):
+    return sum(v or 0 for (reg, kj, alder, c, t), v in t07459.items()
+               if t == aar and int(alder.rstrip("+")) >= fra_alder)
+
+
+snitt_per_aar = {}
+for a in ARS:
+    neste = str(int(a) + 1)
+    innbyggere = (folk(a) + folk(neste)) / 2
+    voksne = (folk(a, 20) + folk(neste, 20)) / 2
+    fastland = t09189[("bnpb.nr23_9fn", "Priser", a)] / t09189[("bnpb.nr23_9", "Priser", a)]
+    all_inntekt = t09842[("NI", a)] * innbyggere * fastland
+    snitt_per_aar[a] = RSZ_ANDELER[int(a)][2] / 100 * all_inntekt / (0.0001 * voksne)
+snitt_001 = round(sum(snitt_per_aar.values()) / len(ARS), -7)
+print("Topp 0,01 % per år (mill.):", {a: round(v / 1e6) for a, v in snitt_per_aar.items()},
+      "kontroll via Vestad:", snitt_001_via_vestad / 1e6)
 
 # Offisiell snittinntekt over grensa for topp 0,01 (Pareto, skattestatistikken for AAR)
 topp_iv = next(p for p in tabell if p["b"] is None)
@@ -259,7 +292,8 @@ data = {
     "snitt": SNITT,
     "vegg": {
         "median": MEDIAN_2022,
-        "topp001": {"med_overskudd": snitt_001, "offisiell": snitt_001_off, "forhold": round(forhold_001, 2)},
+        "topp001": {"med_overskudd": snitt_001, "offisiell": snitt_001_off, "forhold": round(forhold_001, 2),
+                    "aar": "2018–2020", "andel": round(s_001, 1), "per_aar": {a: round(v, -6) for a, v in snitt_per_aar.items()}},
     },
     "fingrupper": [
         {"id": i, "navn": n, "antall": a, "skattbar": s, "skattesats": r, "i_selskaper": h}
@@ -296,4 +330,4 @@ for t in trinn:
     print(f"{t['navn']:20s} grense {t['grense']:>12,.0f}  antall {t['antall']:>9,}{' (anslag)' if t['anslag'] else ''}{ekstra}")
 for x in (300e3, 500e3, 750e3, 1e6, 2e6, 5e6):
     print(f"  {x:>10,.0f} kr: tjener mer enn {100*andel_under(x):.1f} %")
-print(f"Topp 0,01 %: snitt med overskudd ≈ {snitt_001:,.0f} (forhold {forhold_001:.2f} × topp 0,1), offisielt anslag ≈ {snitt_001_off:,.0f}")
+print(f"Topp 0,01 %: snitt med overskudd ≈ {snitt_001:,.0f} (2018–2020), offisielt anslag ≈ {snitt_001_off:,.0f}")
