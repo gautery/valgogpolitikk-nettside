@@ -3,9 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import type { TrappaData } from "@/lib/trappa-felles";
 
-// Formuen i riktig målestokk: én piksel per million kroner, søylene henger nedover.
+// Formuen i riktig målestokk: én piksel per to millioner kroner, søylene henger nedover.
 
-const PX_PER_MILL = 1;
+const PX_PER_MILL = 0.5;
 const nf0 = new Intl.NumberFormat("nb-NO", { maximumFractionDigits: 0 });
 const nf1 = new Intl.NumberFormat("nb-NO", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 
@@ -58,7 +58,7 @@ export default function Formuevegg({ data }: { data: TrappaData }) {
     plass.push(Math.max(m.mill * PX_PER_MILL, i ? plass[i - 1] + 120 : 90));
   });
   const hjelpelinjer: number[] = [];
-  for (let v = 25000; v < dybde / PX_PER_MILL; v += 25000) hjelpelinjer.push(v);
+  for (let v = 50000; v < dybde / PX_PER_MILL; v += 50000) hjelpelinjer.push(v);
 
   // Teller: hvor langt ned leseren er kommet
   const flate = useRef<HTMLDivElement>(null);
@@ -92,7 +92,7 @@ export default function Formuevegg({ data }: { data: TrappaData }) {
     <div className="mt-14">
       <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-bold">Formuestrappa i riktig målestokk</h3>
       <p className="mt-3 max-w-[640px] text-[16px] leading-relaxed text-white/75">
-        Én piksel er én million kroner. Husholdningen midt på er to piksler. Søylene henger nedover, så du må scrolle for
+        Én piksel er to millioner kroner. Husholdningen midt på er én piksel. Søylene henger nedover, så du må scrolle for
         å se hvor langt de rikeste strekker seg.{" "}
         <a href="#etter-formuestrappa" className="font-medium text-white underline underline-offset-2">
           Hopp over
@@ -162,7 +162,7 @@ export default function Formuevegg({ data }: { data: TrappaData }) {
                 <div key={s.id} className="flex-1">
                   <div
                     className={`w-full rounded-b-[4px] ${s.id.startsWith("nr") || s.id === "k400" ? "bg-accent" : "bg-white/70"}`}
-                    style={{ height: Math.max(2, s.mill * PX_PER_MILL) }}
+                    style={{ height: Math.max(1, s.mill * PX_PER_MILL) }}
                   />
                 </div>
               ))}
