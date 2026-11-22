@@ -1,0 +1,128 @@
+[
+ {
+  "id": "2014-vedtatt",
+  "aar": 2014,
+  "versjon": "vedtatt",
+  "tittel": "Vedtatt budsjett 2014",
+  "sum_utgifter": 1086400.0,
+  "sum_inntekter": 948895.7,
+  "fra_oljefondet": 137504.3
+ },
+ {
+  "id": "2015-vedtatt",
+  "aar": 2015,
+  "versjon": "vedtatt",
+  "tittel": "Vedtatt budsjett 2015",
+  "sum_utgifter": 1163783.9,
+  "sum_inntekter": 989559.3,
+  "fra_oljefondet": 174224.5
+ },
+ {
+  "id": "2016-vedtatt",
+  "aar": 2016,
+  "versjon": "vedtatt",
+  "tittel": "Vedtatt budsjett 2016",
+  "sum_utgifter": 1228397.4,
+  "sum_inntekter": 1019403.0,
+  "fra_oljefondet": 208994.4
+ },
+ {
+  "id": "2017-vedtatt",
+  "aar": 2017,
+  "versjon": "vedtatt",
+  "tittel": "Vedtatt budsjett 2017",
+  "sum_utgifter": 1276306.1,
+  "sum_inntekter": 1016800.0,
+  "fra_oljefondet": 259506.1
+ },
+ {
+  "id": "2018-vedtatt",
+  "aar": 2018,
+  "versjon": "vedtatt",
+  "tittel": "Vedtatt budsjett 2018",
+  "sum_utgifter": 1302981.8,
+  "sum_inntekter": 1047615.8,
+  "fra_oljefondet": 255366.0
+ },
+ {
+  "id": "2019-vedtatt",
+  "aar": 2019,
+  "versjon": "vedtatt",
+  "tittel": "Vedtatt budsjett 2019",
+  "sum_utgifter": 1351900.3,
+  "sum_inntekter": 1119405.9,
+  "fra_oljefondet": 232494.4
+ },
+ {
+  "id": "2020-vedtatt",
+  "aar": 2020,
+  "versjon": "vedtatt",
+  "tittel": "Vedtatt budsjett 2020",
+  "sum_utgifter": 1414611.3,
+  "sum_inntekter": 1173527.1,
+  "fra_oljefondet": 241084.2
+ },
+ {
+  "id": "2021-vedtatt",
+  "aar": 2021,
+  "versjon": "vedtatt",
+  "tittel": "Vedtatt budsjett 2021",
+  "sum_utgifter": 1514901.0,
+  "sum_inntekter": 1118301.2,
+  "fra_oljefondet": 396599.8
+ },
+ {
+  "id": "2022-vedtatt",
+  "aar": 2022,
+  "versjon": "vedtatt",
+  "tittel": "Vedtatt budsjett 2022",
+  "sum_utgifter": 1555062.8,
+  "sum_inntekter": 1254986.3,
+  "fra_oljefondet": 300076.5
+ },
+ {
+  "id": "2023-vedtatt",
+  "aar": 2023,
+  "versjon": "vedtatt",
+  "tittel": "Vedtatt budsjett 2023",
+  "sum_utgifter": 1725519.3,
+  "sum_inntekter": 1468642.6,
+  "fra_oljefondet": 256876.7
+ },
+ {
+  "id": "2024-vedtatt",
+  "aar": 2024,
+  "versjon": "vedtatt",
+  "tittel": "Vedtatt budsjett 2024",
+  "sum_utgifter": 1866961.0,
+  "sum_inntekter": 1530476.8,
+  "fra_oljefondet": 336484.2
+ },
+ {
+  "id": "2025-vedtatt",
+  "aar": 2025,
+  "versjon": "vedtatt",
+  "tittel": "Vedtatt budsjett 2025",
+  "sum_utgifter": 2023202.7,
+  "sum_inntekter": 1577358.5,
+  "fra_oljefondet": 445844.1
+ },
+ {
+  "id": "2026-vedtatt",
+  "aar": 2026,
+  "versjon": "vedtatt",
+  "tittel": "Vedtatt budsjett 2026",
+  "sum_utgifter": 2174062.1,
+  "sum_inntekter": 1717238.2,
+  "fra_oljefondet": 456823.9
+ },
+ {
+  "id": "2027-forslag",
+  "aar": 2027,
+  "versjon": "forslag",
+  "tittel": "Regjeringens forslag 2027",
+  "sum_utgifter": 2286797.6,
+  "sum_inntekter": 1725056.6,
+  "fra_oljefondet": 561741.0
+ }
+]
