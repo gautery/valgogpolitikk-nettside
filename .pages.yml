@@ -1,0 +1,279 @@
+# Oppsett for Pages CMS (app.pagescms.org): bestemmer hvilke skjemaer Gaute ser
+# når han redigerer nettsiden. Hver lagring blir en endring i GitHub, og Vercel
+# bygger siden på nytt etter et par minutter.
+
+media:
+  input: public/bilder
+  output: /bilder
+  categories: [image]
+  rename: safe
+
+content:
+  - name: karuseller
+    label: Karusellsider
+    description: Én kildeside per karusell, på adressen valgogpolitikk.no/<filnavn>.
+    type: collection
+    path: content/karuseller
+    format: yaml-frontmatter
+    filename:
+      template: "{tittel}.md"
+      field: create
+    view:
+      primary: tittel
+      fields: [tittel, utkast]
+    fields:
+      - name: tittel
+        label: Tittel
+        type: string
+        required: true
+      - name: ingress
+        label: Ingress
+        description: Én eller to setninger under tittelen.
+        type: text
+      - name: utkast
+        label: Utkast
+        description: Huk av så lenge siden ikke er klar. Utkast vises med et gult merke og skjules for søkemotorer.
+        type: boolean
+        default: true
+      - name: instagram
+        label: Lenke til karusellen på Instagram
+        type: string
+      - name: tema
+        label: Tema for «Siste nytt»
+        type: select
+        options:
+          values: [Skatt, Ulikhet og fordeling, Markedsmakt og konkurranse, Offentlige finanser, Arbeid og trygd, Bolig, Energi og strøm, EU og EØS, Velferd og privatisering]
+      - name: slides
+        label: Slides
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{index}. {tittel}"
+        fields:
+          - name: bilde
+            label: Bilde av sliden
+            type: image
+          - name: tittel
+            label: Overskrift
+            type: string
+          - name: tekst
+            label: Teksten på sliden
+            description: Skriv av hele teksten. Den leses opp for blinde og svaksynte.
+            type: text
+          - name: tall
+            label: Tallet
+            description: La stå tomt hvis sliden ikke har noe nytt tall.
+            type: string
+          - name: sikkerhet
+            label: Hvor sikkert er tallet?
+            type: select
+            options:
+              values: [sikkert, ganske sikkert, middels, usikkert]
+          - name: kilder
+            label: Kilder
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{navn}"
+            fields:
+              - name: navn
+                label: Navn på kilden
+                type: string
+              - name: lenke
+                label: Lenke
+                type: string
+              - name: merknad
+                label: Merknad
+                description: Hva tallet bygger på, eller hvordan det er regnet ut.
+                type: text
+      - name: body
+        label: Slik regnet vi
+        description: Vises nederst. La en tom linje skille avsnittene.
+        type: text
+
+  - name: tema
+    label: Temasider
+    description: Temasider på adressen valgogpolitikk.no/tema/<filnavn>.
+    type: collection
+    path: content/tema
+    format: yaml-frontmatter
+    filename:
+      template: "{tittel}.md"
+      field: create
+    view:
+      primary: tittel
+      fields: [tittel, utkast]
+    fields:
+      - name: tittel
+        label: Tittel
+        type: string
+        required: true
+      - name: ingress
+        label: Ingress
+        type: text
+      - name: utkast
+        label: Utkast
+        description: Huk av så lenge siden ikke er klar.
+        type: boolean
+        default: true
+      - name: temaer
+        label: Temaer for «Siste nytt»
+        type: select
+        options:
+          multiple: true
+          values: [Skatt, Ulikhet og fordeling, Markedsmakt og konkurranse, Offentlige finanser, Arbeid og trygd, Bolig, Energi og strøm, EU og EØS, Velferd og privatisering]
+      - name: nokkeltall
+        label: Nøkkeltall
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{tall}"
+        fields:
+          - name: tall
+            label: Tallet
+            type: string
+          - name: tekst
+            label: Forklaring
+            type: text
+          - name: kilde
+            label: Kilde
+            type: string
+          - name: lenke
+            label: Lenke til kilden
+            type: string
+      - name: kilder
+        label: Kilder
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{navn}"
+        fields:
+          - name: navn
+            label: Navn
+            type: string
+          - name: utgiver
+            label: Utgiver
+            type: string
+          - name: lenke
+            label: Lenke
+            type: string
+          - name: kommentar
+            label: Kommentar
+            type: text
+          - name: bruk
+            label: Bruk den til
+            type: text
+      - name: analyser
+        label: Analyser
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{tittel}"
+        fields:
+          - name: tittel
+            label: Tittel
+            type: string
+          - name: lenke
+            label: Lenke
+            description: For innlegg på nettsiden, f.eks. /innlegg/norge-har-ikke-verdens-hoyeste-skatter
+            type: string
+          - name: type
+            label: Type
+            description: Står under tittelen. Tomt gir «Analyse».
+            type: string
+      - name: karuseller
+        label: Karuseller
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{tittel}"
+        fields:
+          - name: tittel
+            label: Tittel
+            type: string
+          - name: lenke
+            label: Lenke
+            type: string
+      - name: body
+        label: Innledning
+        description: Vises over kildelista. La en tom linje skille avsnittene.
+        type: text
+
+  - name: innlegg
+    label: Innlegg
+    description: Analyser på valgogpolitikk.no/innlegg/<slug>.
+    type: collection
+    path: content/innlegg
+    format: yaml-frontmatter
+    filename:
+      template: "{fields.slug}.mdx"
+      field: create
+    view:
+      primary: title
+      fields: [title, date, draft]
+      sort: [date]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Tittel
+        type: string
+        required: true
+      - name: slug
+        label: Adresse
+        description: Små bokstaver og bindestrek, f.eks. norge-har-ikke-verdens-hoyeste-skatter
+        type: string
+        required: true
+      - name: date
+        label: Dato
+        type: date
+      - name: draft
+        label: Skjult
+        description: Huk av for å skjule innlegget fra nettsiden.
+        type: boolean
+      - name: category
+        label: Kategori
+        type: select
+        options:
+          values: [skatt, arbeid, ulikhet, velferd, sammenligning, faktasjekk]
+      - name: tags
+        label: Stikkord
+        type: string
+        list: true
+      - name: summary
+        label: Sammendrag
+        type: text
+      - name: accentColor
+        label: Farge
+        description: Fargekode, f.eks. #d6336c
+        type: string
+      - name: image
+        label: Bilde
+        type: image
+      - name: sources
+        label: Kilder
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name}"
+        fields:
+          - name: name
+            label: Navn
+            type: string
+          - name: url
+            label: Lenke
+            type: string
+      - name: body
+        label: Tekst
+        description: Markdown. Diagrammer skrives som <Chart ... />, se eksisterende innlegg.
+        type: code
+        options:
+          format: markdown

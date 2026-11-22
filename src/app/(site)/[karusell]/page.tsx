@@ -39,7 +39,7 @@ export async function generateMetadata({
     title: `${k.tittel} — valg og politikk`,
     description: k.ingress,
     robots: k.utkast ? { index: false, follow: false } : undefined,
-    openGraph: { images: k.slides[0] ? [k.slides[0].bilde] : undefined },
+    openGraph: { images: k.slides[0]?.bilde ? [k.slides[0].bilde] : undefined },
   };
 }
 
@@ -115,7 +115,7 @@ export default async function KarusellSide({
               </a>
             )}
           </div>
-          {k.slides[0] && (
+          {k.slides[0]?.bilde && (
             <Image
               src={k.slides[0].bilde}
               alt=""
@@ -152,20 +152,26 @@ export default async function KarusellSide({
           <ol>
             {k.slides.map((s, i) => (
               <li
-                key={s.bilde}
+                key={i}
                 className="grid gap-5 border-t border-border py-8 sm:grid-cols-[150px_minmax(0,1fr)] sm:gap-8 lg:grid-cols-[190px_minmax(0,1fr)]"
               >
                 <div className="flex items-start gap-4 sm:block">
+                  {s.bilde ? (
                   <a href={s.bilde} className="shrink-0 rounded-[4px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
-                  <Image
-                    src={s.bilde}
-                    alt={`Slide ${i + 1}, åpner i full størrelse: ${s.tekst}`}
-                    width={1080}
-                    height={1350}
-                    sizes="(min-width: 1024px) 190px, 150px"
-                    className="w-[110px] rounded-[4px] border border-border sm:w-full"
-                  />
-                  </a>
+                    <Image
+                      src={s.bilde}
+                      alt={`Slide ${i + 1}, åpner i full størrelse: ${s.tekst}`}
+                      width={1080}
+                      height={1350}
+                      sizes="(min-width: 1024px) 190px, 150px"
+                      className="w-[110px] rounded-[4px] border border-border sm:w-full"
+                    />
+                    </a>
+                  ) : (
+                    <div className="flex aspect-[4/5] w-[110px] items-center justify-center rounded-[4px] border border-dashed border-border-light text-[12px] text-text-muted sm:w-full">
+                      Bilde mangler
+                    </div>
+                  )}
                   <span className="text-[13px] text-text-muted sm:mt-2 sm:block">
                     Slide {i + 1} av {k.slides.length}
                   </span>

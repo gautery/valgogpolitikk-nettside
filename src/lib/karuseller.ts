@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 
 // Kildesider for karuseller leses fra content/karuseller/<slug>.md.
-// Bildene ligger i public/karuseller/<mappe>/01.webp, 02.webp osv.
+// Filene redigeres i Pages CMS (se .pages.yml). Bildene lastes opp til public/bilder.
 
 const DIR = path.join(process.cwd(), "content", "karuseller");
 
@@ -42,7 +42,6 @@ export function lesKarusell(slug: string): Karusell | null {
   const fil = path.join(DIR, `${slug}.md`);
   if (!fs.existsSync(fil)) return null;
   const { data, content } = matter(fs.readFileSync(fil, "utf-8"));
-  const mappe = data.mappe ?? slug;
   return {
     slug,
     tittel: data.tittel,
@@ -50,11 +49,16 @@ export function lesKarusell(slug: string): Karusell | null {
     utkast: data.utkast !== false,
     instagram: data.instagram ?? "",
     tema: data.tema ?? "",
-    slides: (data.slides ?? []).map((s: Omit<Slide, "bilde">, i: number) => ({
-      ...s,
-      kilder: s.kilder ?? [],
-      bilde: `/karuseller/${mappe}/${String(i + 1).padStart(2, "0")}.webp`,
-    })),
+    slides: (data.slides ?? [])
+      .filter(Boolean)
+      .map((s: Partial<Slide>) => ({
+        tittel: s.tittel ?? "",
+        tekst: s.tekst ?? "",
+        tall: s.tall || undefined,
+        sikkerhet: s.sikkerhet || undefined,
+        kilder: (s.kilder ?? []).filter((k) => k && k.navn),
+        bilde: s.bilde ?? "",
+      })),
     avsnitt: content
       .split(/\n\s*\n/)
       .map((a) => a.trim())
