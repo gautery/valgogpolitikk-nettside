@@ -1,11 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import type { Sak } from "@/lib/kilder";
+import { useState } from "react";
+import type { Sak, Utvalgt } from "@/lib/kilder";
 
-// Felles byggeklosser for å vise de siste sakene fra kildeovervåkningen
-// på forsiden. Tre visninger: bånd under hero, panel i hero, og
-// boks i sidekolonnen.
+// Båndet «Nytt fra kildene» på forsiden. To faner:
+//  – Utvalgt: saker Gaute har valgt ut i kildeovervåkningens utvalgt.yaml, med kommentar
+//  – Løpende: de nyeste sakene, én per kilde
+// Utvalgt er standard når det finnes utvalgte saker fra de siste 14 dagene.
 
 export const TEMAFARGER: Record<string, string> = {
   Skatt: "#c1121f",
@@ -80,18 +82,59 @@ function Kildelinje({ sak, lys = false }: { sak: Sak; lys?: boolean }) {
   );
 }
 
-/* ───────────────────────── A: Bånd under hero ───────────────────────── */
+/* ───────────────────────── Båndet ───────────────────────── */
 
-export function KildeBand({ saker, oppdatert }: { saker: Sak[]; oppdatert: string }) {
-  const utvalg = velgSaker(saker, 4);
-  if (!utvalg.length) return null;
+const FERSK_DAGER = 14;
+
+export function KildeBand({
+  saker,
+  utvalgt,
+  oppdatert,
+}: {
+  saker: Sak[];
+  utvalgt: Utvalgt[];
+  oppdatert: string;
+}) {
+  const løpende = velgSaker(saker, 4);
+  const valgte = utvalgt.slice(0, 4);
+  const grense = Date.now() - FERSK_DAGER * 86400000;
+  const harFerske = valgte.some((u) => new Date(u.dato).getTime() >= grense);
+  const [fane, setFane] = useState<"utvalgt" | "lopende">(harFerske ? "utvalgt" : "lopende");
+
+  if (!løpende.length && !valgte.length) return null;
+  const visUtvalgt = fane === "utvalgt" && valgte.length > 0;
+
+  const faneKnapp = (id: "utvalgt" | "lopende", tekst: string) => (
+    <button
+      type="button"
+      role="tab"
+      id={`fane-${id}`}
+      aria-selected={fane === id}
+      aria-controls="kildebaand-innhold"
+      onClick={() => setFane(id)}
+      className={`border-b-2 pb-1 text-[13px] font-semibold transition-colors ${
+        fane === id ? "border-accent text-text-primary" : "border-transparent text-text-muted hover:text-text-primary"
+      }`}
+    >
+      {tekst}
+    </button>
+  );
+
   return (
-    <section aria-labelledby="kildebaand" className="border-b border-border bg-surface">
-      <div className="mx-auto max-w-[1100px] px-6 py-7">
-        <div className="mb-4 flex items-baseline justify-between gap-4">
-          <h2 id="kildebaand" className="font-[family-name:var(--font-playfair)] text-[19px] font-bold text-text-primary">
-            Nytt fra kildene
-          </h2>
+    <section aria-labelledby="kildebaand" className="border-b border-border bg-surface px-6">
+      <div className="mx-auto max-w-[1100px] py-7">
+        <div className="mb-4 flex flex-wrap items-end justify-between gap-x-6 gap-y-3">
+          <div className="flex flex-wrap items-end gap-x-6 gap-y-2">
+            <h2 id="kildebaand" className="font-[family-name:var(--font-playfair)] text-[19px] font-bold text-text-primary">
+              Nytt fra kildene
+            </h2>
+            {valgte.length > 0 && (
+              <div role="tablist" aria-label="Velg visning" className="flex gap-4">
+                {faneKnapp("utvalgt", "Utvalgt")}
+                {faneKnapp("lopende", "Løpende")}
+              </div>
+            )}
+          </div>
           <div className="flex items-baseline gap-4 text-[12px]">
             <span className="hidden text-text-muted sm:inline" suppressHydrationWarning>
               Oppdatert {oppdatertTekst(oppdatert)}
@@ -101,116 +144,58 @@ export function KildeBand({ saker, oppdatert }: { saker: Sak[]; oppdatert: strin
             </Link>
           </div>
         </div>
-        <ol className="-mx-6 flex snap-x gap-4 overflow-x-auto px-6 pb-1 lg:mx-0 lg:grid lg:grid-cols-4 lg:overflow-visible lg:px-0">
-          {utvalg.map((s) => (
-            <li
-              key={s.id}
-              className="w-[260px] flex-shrink-0 snap-start border-l-[3px] bg-white py-3 pl-4 pr-3 lg:w-auto"
-              style={{ borderLeftColor: TEMAFARGER[s.temaer[0]] ?? "#8a8a96" }}
-            >
-              <Kildelinje sak={s} />
-              <a
-                href={s.lenke}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-1.5 line-clamp-3 text-[14px] font-semibold leading-snug text-text-primary hover:text-accent"
-              >
-                {s.tittel}
-              </a>
-              <div className="mt-2 text-[11px] font-medium" style={{ color: TEMAFARGER[s.temaer[0]] }}>
-                {s.temaer[0]}
-              </div>
-            </li>
-          ))}
+
+        <ol
+          id="kildebaand-innhold"
+          role={valgte.length > 0 ? "tabpanel" : undefined}
+          aria-labelledby={valgte.length > 0 ? `fane-${fane}` : undefined}
+          className="-mx-6 flex snap-x gap-4 overflow-x-auto px-6 pb-1 lg:mx-0 lg:grid lg:grid-cols-4 lg:overflow-visible lg:px-0"
+        >
+          {visUtvalgt
+            ? valgte.map((u) => (
+                <li
+                  key={u.id}
+                  className="flex w-[260px] flex-shrink-0 snap-start flex-col border-l-[3px] border-accent bg-white py-3 pl-4 pr-3 lg:w-auto"
+                >
+                  <div className="text-[11.5px] text-text-muted">
+                    <span>{u.kilde}</span> <span aria-hidden="true">/</span>{" "}
+                    <span suppressHydrationWarning>{nårTekst(u.dato)}</span>
+                  </div>
+                  <a
+                    href={u.lenke}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1.5 line-clamp-3 text-[14px] font-semibold leading-snug text-text-primary hover:text-accent"
+                  >
+                    {u.tittel}
+                  </a>
+                  {u.kommentar && (
+                    <p className="mt-2 text-[13px] leading-snug text-text-secondary">{u.kommentar}</p>
+                  )}
+                </li>
+              ))
+            : løpende.map((s) => (
+                <li
+                  key={s.id}
+                  className="w-[260px] flex-shrink-0 snap-start border-l-[3px] bg-white py-3 pl-4 pr-3 lg:w-auto"
+                  style={{ borderLeftColor: TEMAFARGER[s.temaer[0]] ?? "#8a8a96" }}
+                >
+                  <Kildelinje sak={s} />
+                  <a
+                    href={s.lenke}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1.5 line-clamp-3 text-[14px] font-semibold leading-snug text-text-primary hover:text-accent"
+                  >
+                    {s.tittel}
+                  </a>
+                  <div className="mt-2 text-[11px] font-medium" style={{ color: TEMAFARGER[s.temaer[0]] }}>
+                    {s.temaer[0]}
+                  </div>
+                </li>
+              ))}
         </ol>
       </div>
-    </section>
-  );
-}
-
-/* ───────────────────────── B: Panel i hero ───────────────────────── */
-
-export function KildePanel({
-  saker,
-  oppdatert,
-  totalt,
-}: {
-  saker: Sak[];
-  oppdatert: string;
-  totalt: number;
-}) {
-  const utvalg = velgSaker(saker, 5);
-  if (!utvalg.length) return null;
-  return (
-    <section
-      aria-labelledby="kildepanel"
-      className="w-full rounded-lg border border-white/10 bg-white/[0.04] p-5 md:max-w-[400px]"
-    >
-      <div className="mb-3 flex items-center justify-between gap-3">
-        <h2 id="kildepanel" className="flex items-center gap-2 text-[14px] font-semibold text-white">
-          <span className="relative flex h-2 w-2" aria-hidden="true">
-            <span className="absolute inline-flex h-full w-full rounded-full bg-accent opacity-60 motion-safe:animate-ping" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
-          </span>
-          Nytt fra kildene
-        </h2>
-        <span className="text-[11.5px] text-white/45" suppressHydrationWarning>
-          Oppdatert {oppdatertTekst(oppdatert)}
-        </span>
-      </div>
-      <ol>
-        {utvalg.map((s) => (
-          <li key={s.id} className="border-t border-white/10 py-2.5 first:border-0 first:pt-0">
-            <Kildelinje sak={s} lys />
-            <a
-              href={s.lenke}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-0.5 line-clamp-2 text-[13.5px] font-medium leading-snug text-white/90 hover:text-white hover:underline"
-            >
-              {s.tittel}
-            </a>
-          </li>
-        ))}
-      </ol>
-      <Link
-        href="/kilder"
-        className="mt-3 inline-block text-[12.5px] font-semibold text-accent hover:underline"
-      >
-        Se alle {totalt} saker fra regjering, Storting, SSB og flere
-      </Link>
-    </section>
-  );
-}
-
-/* ───────────────────────── C: Boks i sidekolonnen ───────────────────────── */
-
-export function KildeBoks({ saker }: { saker: Sak[] }) {
-  const utvalg = velgSaker(saker, 5);
-  if (!utvalg.length) return null;
-  return (
-    <section aria-labelledby="kildeboks" className="rounded-md border border-border bg-white p-5">
-      <h2 id="kildeboks" className="mb-3 font-[family-name:var(--font-playfair)] text-[16px] font-bold text-text-primary">
-        Nytt fra kildene
-      </h2>
-      <ol>
-        {utvalg.map((s) => (
-          <li key={s.id} className="border-t border-border py-2.5 first:border-0 first:pt-0">
-            <Kildelinje sak={s} />
-            <a
-              href={s.lenke}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-0.5 line-clamp-3 text-[13px] font-medium leading-snug text-text-primary hover:text-accent"
-            >
-              {s.tittel}
-            </a>
-          </li>
-        ))}
-      </ol>
-      <Link href="/kilder" className="mt-2 inline-block text-[12px] font-semibold text-accent hover:underline">
-        Alle saker
-      </Link>
     </section>
   );
 }

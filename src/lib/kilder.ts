@@ -26,10 +26,21 @@ export type KalenderPost = {
   temaer: string[];
 };
 
+export type Utvalgt = {
+  id: string;
+  tittel: string;
+  lenke: string;
+  kilde: string;
+  kommentar: string;
+  dato: string;
+  temaer: string[];
+};
+
 export type KildeStatus = { navn: string; ok: boolean; feil: string | null };
 
 export type Kildeoversikt = {
   oppdatert: string;
+  utvalgt: Utvalgt[];
   saker: Sak[];
   kalender: KalenderPost[];
   status: KildeStatus[];
@@ -43,6 +54,7 @@ export async function hentKildeoversikt(): Promise<Kildeoversikt | null> {
     const grense = Date.now() - MAKS_DAGER * 24 * 60 * 60 * 1000;
     return {
       ...data,
+      utvalgt: data.utvalgt ?? [],
       saker: data.saker.filter((s) => new Date(s.dato).getTime() >= grense),
       kalender: data.kalender.filter((k) => k.temaer.length > 0).slice(0, 15),
     };

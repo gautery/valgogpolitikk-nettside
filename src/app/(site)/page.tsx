@@ -37,7 +37,9 @@ export default async function Home() {
         </div>
       </div>
 
-      {kilder && <KildeBand saker={kilder.saker} oppdatert={kilder.oppdatert} />}
+      {kilder && (
+        <KildeBand saker={kilder.saker} utvalgt={kilder.utvalgt} oppdatert={kilder.oppdatert} />
+      )}
 
       {/* Post listing with sidebar */}
       <PostList posts={posts} />
