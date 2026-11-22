@@ -176,6 +176,96 @@
   "offisiell": 609160,
   "med_overskudd": 665470
  },
+ "vegg": {
+  "median": {
+   "offisiell": 513500,
+   "med_overskudd": 510800
+  },
+  "topp001": {
+   "med_overskudd": 380000000.0,
+   "offisiell": 58000000.0,
+   "forhold": 5.2
+  }
+ },
+ "fingrupper": [
+  {
+   "id": "p50",
+   "navn": "Midt på (50–60 %)",
+   "antall": null,
+   "skattbar": 90.7,
+   "skattesats": 47.4,
+   "i_selskaper": 0.0
+  },
+  {
+   "id": "p90",
+   "navn": "90–95 %",
+   "antall": null,
+   "skattbar": 86.6,
+   "skattesats": 54.4,
+   "i_selskaper": 1.4
+  },
+  {
+   "id": "p95",
+   "navn": "95–99 %",
+   "antall": null,
+   "skattbar": 82.1,
+   "skattesats": 55.9,
+   "i_selskaper": 6.7
+  },
+  {
+   "id": "p99",
+   "navn": "Topp 1–0,1 %",
+   "antall": 37000,
+   "skattbar": 53.6,
+   "skattesats": 46.7,
+   "i_selskaper": 40.5
+  },
+  {
+   "id": "p999",
+   "navn": "Topp 0,1–0,01 %",
+   "antall": 3700,
+   "skattbar": 18.5,
+   "skattesats": 32.3,
+   "i_selskaper": 80.0
+  },
+  {
+   "id": "p9999",
+   "navn": "Topp 0,01–0,001 %",
+   "antall": 370,
+   "skattbar": 7.0,
+   "skattesats": 23.6,
+   "i_selskaper": 92.6
+  },
+  {
+   "id": "p99999",
+   "navn": "Topp 0,001–0,0005 %",
+   "antall": 20,
+   "skattbar": 4.7,
+   "skattesats": 24.6,
+   "i_selskaper": 94.7
+  },
+  {
+   "id": "p999995",
+   "navn": "Topp 0,0005 %",
+   "antall": 20,
+   "skattbar": 1.9,
+   "skattesats": 22.2,
+   "i_selskaper": 97.6
+  }
+ ],
+ "topp100": {
+  "skatt_av_inntekt": 15.6,
+  "personlig_inntektsskatt": 2.6,
+  "skatt_av_formue": 1.37
+ },
+ "skattbar_formue_andel": 0.29,
+ "kapital": {
+  "aar": 2026,
+  "samlet_mrd": 2699,
+  "milliardaerer": 518,
+  "rikeste_mrd": 325,
+  "fra_utlandet_andel": 0.6
+ },
  "kilder": [
   {
    "navn": "SSB, tabell 06655 og 07006: Bruttoinntekt etter intervaller (2024)",
@@ -188,6 +278,14 @@
   {
    "navn": "Aaberge, Modalsli og Vestad (2020): Ulikheten – betydelig større enn statistikken viser. SSB analyse 2020/13",
    "lenke": "https://www.ssb.no/inntekt-og-forbruk/artikler-og-publikasjoner/ulikheten-betydelig-storre-enn-statistikken-viser"
+  },
+  {
+   "navn": "Ring, Seim og Zucman (2026): Personal Holding Companies, Tax Progressivity, and Inequality. NBER Working Paper 35534",
+   "lenke": "https://www.nber.org/papers/w35534"
+  },
+  {
+   "navn": "Kapital 400 (2026), gjengitt av NTB",
+   "lenke": "https://www.tu.no/nyhetsstudio/john-fredriksen-fortsatt-norges-rikeste-formuen-oekte-med-63-milliarder/131999"
   }
  ]
 }

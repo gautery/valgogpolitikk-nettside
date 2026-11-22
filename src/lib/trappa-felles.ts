@@ -25,6 +25,21 @@ export type TrappaData = {
   intervaller: Intervall[];
   trinn: Trinn[];
   snitt: { offisiell: number; med_overskudd: number };
+  vegg: {
+    median: { offisiell: number; med_overskudd: number };
+    topp001: { offisiell: number; med_overskudd: number; forhold: number };
+  };
+  fingrupper: {
+    id: string;
+    navn: string;
+    antall: number | null;
+    skattbar: number;
+    skattesats: number;
+    i_selskaper: number;
+  }[];
+  topp100: { skatt_av_inntekt: number; personlig_inntektsskatt: number; skatt_av_formue: number };
+  skattbar_formue_andel: number;
+  kapital: { aar: number; samlet_mrd: number; milliardaerer: number; rikeste_mrd: number; fra_utlandet_andel: number };
   kilder: { navn: string; lenke: string }[];
 };
 

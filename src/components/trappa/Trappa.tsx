@@ -9,6 +9,7 @@ const nf0 = new Intl.NumberFormat("nb-NO", { maximumFractionDigits: 0 });
 const nf1 = new Intl.NumberFormat("nb-NO", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 
 function kroner(n: number) {
+  if (n >= 1e8) return `${nf0.format(n / 1e6)} mill. kr`;
   if (n >= 1e6) return `${nf1.format(n / 1e6)} mill. kr`;
   return `${nf0.format(Math.round(n / 1000) * 1000)} kr`;
 }
@@ -24,17 +25,10 @@ function plassering(andel: number) {
   return nf0.format(Math.floor(p));
 }
 
-function ganger(x: number) {
-  return x < 10 ? nf1.format(x) : nf0.format(x);
-}
-
-type Maalvalg ="offisiell" | "med_overskudd";
-
 // ── Komponent ──────────────────────────────────────────────────
 
 export default function Trappa({ data }: { data: TrappaData }) {
   const [tekst, setTekst] = useState("");
-  const [maal, setMaal] = useState<Maalvalg>("offisiell");
   const inputId = useId();
   const hintId = useId();
 
@@ -45,13 +39,8 @@ export default function Trappa({ data }: { data: TrappaData }) {
 
   // Trinnene fra toppen og ned
   const trinn = useMemo(() => [...data.trinn].sort((a, b) => a.topp - b.topp), [data.trinn]);
-  const mittTrinn = inntekt === null ? null : (trinn.find((t) => inntekt >= t.grense)?.id ?? "gulv");
   const nesteTrinn =
     inntekt === null ? null : [...trinn].reverse().find((t) => inntekt < t.grense) ?? null;
-
-  const t01 = data.trinn.find((t) => t.id === "topp01")!;
-  const t1 = data.trinn.find((t) => t.id === "topp1")!;
-  const median = data.trinn.find((t) => t.id === "median")!;
 
   function formaterInntekt(verdi: string) {
     const siffer = verdi.replace(/[^\d]/g, "").slice(0, 10);
@@ -127,183 +116,201 @@ export default function Trappa({ data }: { data: TrappaData }) {
         </div>
       </div>
 
-      {/* ── Trappa ── */}
-      <section id="trappa" aria-labelledby="trappa-tittel" className="scroll-mt-6 px-6 py-14">
-        <div className="mx-auto max-w-[1100px]">
-          <h2 id="trappa-tittel" className="font-[family-name:var(--font-playfair)] text-2xl font-bold sm:text-[28px]">
-            Hvor mye får de på toppen?
-          </h2>
-
-          <div className="mt-5 inline-flex rounded-full border border-border bg-surface p-1" role="group" aria-label="Velg tall">
-            {(
-              [
-                ["offisiell", "Offisiell statistikk"],
-                ["med_overskudd", "Med overskuddet i selskapene"],
-              ] as const
-            ).map(([verdi, etikett]) => (
-              <button
-                key={verdi}
-                type="button"
-                aria-pressed={maal === verdi}
-                onClick={() => setMaal(verdi)}
-                className={`rounded-full px-4 py-2 text-[14px] font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
-                  maal === verdi
-                    ? verdi === "offisiell"
-                      ? "bg-text-primary text-white"
-                      : "bg-accent text-white"
-                    : "text-text-secondary hover:text-text-primary"
-                }`}
-              >
-                {etikett}
-              </button>
-            ))}
-          </div>
-
-          <p aria-live="polite" className="mt-5 max-w-[680px] text-[17px] leading-relaxed text-text-primary">
-            {maal === "offisiell" ? (
-              <>
-                Ifølge den offisielle statistikken får de 0,1 prosent med høyest inntekt{" "}
-                <strong>{nf1.format(t01.offisiell!.andel)} prosent</strong> av alle inntektene.
-              </>
-            ) : (
-              <>
-                Regner vi med overskuddet i selskapene de eier, får de 0,1 prosent med høyest inntekt{" "}
-                <strong className="text-accent-dark">{nf1.format(t01.med_overskudd!.andel)} prosent</strong> av alle
-                inntektene.
-                {t01.med_overskudd!.andel > t1.offisiell!.andel &&
-                  ` Det er mer enn den offisielle statistikken sier at hele den øverste prosenten får (${nf1.format(t1.offisiell!.andel)} prosent).`}
-              </>
-            )}
-          </p>
-
-          <ol className="mt-10" aria-label="Trinnene fra toppen og ned">
-            {trinn.map((t, i) => (
-              <TrinnRad
-                key={t.id}
-                trinn={t}
-                niva={trinn.length - 1 - i}
-                maal={maal}
-                erHer={mittTrinn === t.id}
-                aar={data.aar}
-                forskningsaar={data.forskningsaar}
-                snittAlle={data.snitt[maal]}
-              />
-            ))}
-          </ol>
-          <div className="relative border-t-[3px] border-text-primary pt-4">
-            {mittTrinn === "gulv" && <DuErHer />}
-            <p className="text-[15px] text-text-secondary">
-              <span className="font-semibold text-text-primary">Den nederste halvparten</span>,{" "}
-              {nf0.format(data.antall - median.antall)} personer, tjener under {kroner(median.grense)}.
-            </p>
-          </div>
-          <p className="mt-6 text-[13px] text-text-muted">
-            Personer 25 år og eldre. Grensene gjelder bruttoinntekt i {data.aar}. Andelene og snittinntektene gjelder{" "}
-            {data.forskningsaar}, siste år forskningen dekker.
-          </p>
-        </div>
-      </section>
+      <Vegg data={data} inntekt={inntekt} />
     </>
   );
 }
 
-// ── Ett trinn ──────────────────────────────────────────────────
+// ── Veggen: snittinntekt i hver gruppe, i samme målestokk hele veien ──
 
-function TrinnRad({
-  trinn: t,
-  niva,
-  maal,
-  erHer,
-  aar,
-  forskningsaar,
-  snittAlle,
-}: {
-  trinn: Trinn;
-  niva: number;
-  maal: Maalvalg;
-  erHer: boolean;
-  aar: number;
-  forskningsaar: number;
-  snittAlle: number;
-}) {
-  const tall = t[maal];
-  const off = t.offisiell;
-  const navn = t.id === "median" ? "Den øverste halvparten" : `Topp ${prosentTopp(t.topp)} prosent`;
+const PX_PER_MILL = 6;
+
+type Soyle = {
+  id: string;
+  navn: string;
+  med: number;
+  off: number | null;
+  merknad?: string;
+};
+
+function Vegg({ data, inntekt }: { data: TrappaData; inntekt: number | null }) {
+  const t = (id: Trinn["id"]) => data.trinn.find((x) => x.id === id)!;
+  const soyler: Soyle[] = [
+    { id: "median", navn: "Midt på", med: data.vegg.median.med_overskudd, off: data.vegg.median.offisiell },
+    { id: "topp10", navn: "Topp 10 %", med: t("topp10").med_overskudd!.snittinntekt, off: t("topp10").offisiell!.snittinntekt },
+    { id: "topp1", navn: "Topp 1 %", med: t("topp1").med_overskudd!.snittinntekt, off: t("topp1").offisiell!.snittinntekt },
+    { id: "topp01", navn: "Topp 0,1 %", med: t("topp01").med_overskudd!.snittinntekt, off: t("topp01").offisiell!.snittinntekt },
+    {
+      id: "topp001",
+      navn: "Topp 0,01 %",
+      med: data.vegg.topp001.med_overskudd,
+      off: data.vegg.topp001.offisiell,
+      merknad: "beregnet",
+    },
+  ];
+  const maks = Math.max(...soyler.map((s) => s.med));
+  const hoyde = (kr: number) => Math.max(1, (kr / 1e6) * PX_PER_MILL);
+  const linjer = [];
+  for (let v = 50e6; v < maks; v += 50e6) linjer.push(v);
 
   return (
-    <li
-      className="trinn relative border-l-[3px] border-t-[3px] border-text-primary pb-7 pl-5 pt-4 sm:pl-7"
-      style={{ ["--niva" as string]: niva }}
-    >
-      {erHer && <DuErHer />}
-      <div className="grid gap-x-8 gap-y-4 md:grid-cols-[15rem_minmax(0,1fr)]">
-        <div>
-          <h3 className="text-[19px] font-bold leading-tight">{navn}</h3>
-          <p className="mt-1 text-[14px] text-text-secondary">{nf0.format(t.antall)} personer</p>
-          <p className="mt-2 text-[15px]">
-            Tjener over{" "}
-            <strong className="tabular-nums">
-              {t.anslag ? `rundt ${nf0.format(t.grense / 1e6)} mill. kr` : kroner(t.grense)}
-            </strong>
-          </p>
-          {maal === "med_overskudd" && tall && (
-            <p className="mt-0.5 text-[13px] text-text-muted">Grensa i offisiell statistikk</p>
-          )}
+    <section id="trappa" aria-labelledby="vegg-tittel" className="scroll-mt-6 px-6 py-14">
+      <div className="mx-auto max-w-[1100px]">
+        <h2 id="vegg-tittel" className="font-[family-name:var(--font-playfair)] text-2xl font-bold sm:text-[28px]">
+          Trappa i riktig målestokk
+        </h2>
+        <p className="mt-3 max-w-[640px] text-[16px] leading-relaxed text-text-secondary">
+          Hver søyle er like høy som snittinntekten i gruppa, regnet med overskuddet i selskapene de eier. Den grå delen
+          viser hva den offisielle statistikken får med seg. Målestokken er den samme hele veien ned. Scroll ned for å
+          komme til bakken, der 99 prosent av oss står.
+        </p>
+
+        <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-[14px]" aria-hidden="true">
+          <span className="flex items-center gap-2">
+            <span className="h-3 w-3 rounded-[3px] bg-accent" /> Med overskuddet i selskapene
+          </span>
+          <span className="flex items-center gap-2">
+            <span className="h-3 w-3 rounded-[3px] bg-text-muted" /> Offisiell statistikk
+          </span>
         </div>
 
-        <div className="md:pt-1">
-          {tall && off ? (
-            <>
-              <p className="text-[15px] leading-snug">
-                Tjente i snitt{" "}
-                <strong className={`tabular-nums ${maal === "med_overskudd" ? "text-accent-dark" : ""}`}>
-                  {kroner(tall.snittinntekt)}
-                </strong>{" "}
-                i {forskningsaar}, {ganger(tall.snittinntekt / snittAlle)} ganger snittet for alle voksne (
-                {kroner(snittAlle)}).
-              </p>
-              <div className="relative mt-3 h-3 w-full rounded-full bg-surface-light" aria-hidden="true">
-                <div
-                  className={`absolute inset-y-0 left-0 rounded-full motion-safe:transition-[width,background-color] motion-safe:duration-500 ${
-                    maal === "med_overskudd" ? "bg-accent" : "bg-text-muted"
-                  }`}
-                  style={{ width: `${tall.andel}%` }}
-                />
-                {maal === "med_overskudd" && (
-                  <div
-                    className="absolute -inset-y-1 w-[2px] bg-text-primary"
-                    style={{ left: `calc(${off.andel}% - 1px)` }}
-                    title="Offisiell statistikk"
-                  />
-                )}
+        <div className="relative mt-10 pl-14 sm:pl-20" aria-hidden="true">
+          <div className="relative flex items-end gap-2 border-b-[3px] border-text-primary sm:gap-6">
+            {/* Hjelpelinjer */}
+            <div className="pointer-events-none absolute inset-x-0 bottom-0" style={{ height: hoyde(maks) }}>
+              {linjer.map((v) => (
+                <div key={v} className="absolute inset-x-0 border-t border-dashed border-border" style={{ bottom: hoyde(v) }}>
+                  <span className="absolute -left-14 -translate-y-1/2 text-[12px] tabular-nums text-text-muted sm:-left-20">
+                    {nf0.format(v / 1e6)} mill.
+                  </span>
+                </div>
+              ))}
+            </div>
+            {inntekt !== null && (
+              <Stolpe verdi={inntekt} hoyde={hoyde(inntekt)} erDu />
+            )}
+            {soyler.map((s) => (
+              <Stolpe
+                key={s.id}
+                verdi={s.med}
+                hoyde={hoyde(s.med)}
+                offHoyde={s.off ? hoyde(s.off) : undefined}
+                merknad={s.merknad}
+              />
+            ))}
+          </div>
+          <div className="flex gap-2 pt-2 sm:gap-6">
+            {inntekt !== null && <div className="min-w-0 flex-1 text-[12px] font-semibold text-accent-dark sm:text-[14px]">Du</div>}
+            {soyler.map((s) => (
+              <div key={s.id} className="min-w-0 flex-1 text-[12px] font-semibold leading-tight sm:text-[14px]">
+                {s.navn}
               </div>
-              <p className="mt-2 text-[13px] text-text-muted">
-                Får {nf1.format(tall.andel)} prosent av alle inntektene
-                {maal === "med_overskudd" ? `. Streken viser den offisielle statistikken (${nf1.format(off.andel)} prosent)` : ""}
-                .
-              </p>
-            </>
-          ) : t.id === "median" ? (
-            <p className="max-w-[460px] text-[15px] leading-snug text-text-secondary">
-              Halvparten av alle voksne over 25 år tjente mer enn {kroner(t.grense)} i {aar}. Her endrer overskuddet i
-              selskapene nesten ingenting.
-            </p>
-          ) : (
-            <p className="max-w-[460px] text-[15px] leading-snug text-text-secondary">
-              For de aller rikeste finnes det ikke forskningstall med overskuddet i selskapene. Grensa er et anslag ut
-              fra skattestatistikken.
-            </p>
-          )}
+            ))}
+          </div>
+        </div>
+
+        <table className="sr-only">
+          <caption>Snittinntekt per gruppe ({data.forskningsaar})</caption>
+          <thead>
+            <tr>
+              <th>Gruppe</th>
+              <th>Med overskuddet i selskapene</th>
+              <th>Offisiell statistikk</th>
+            </tr>
+          </thead>
+          <tbody>
+            {soyler.map((s) => (
+              <tr key={s.id}>
+                <td>{s.navn}</td>
+                <td>{kroner(s.med)}</td>
+                <td>{s.off ? kroner(s.off) : "–"}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        <div className="mt-8 grid gap-6 text-[14px] leading-relaxed text-text-secondary md:grid-cols-2">
+          <p>
+            Snittinntekter i {data.forskningsaar}-kroner for personer 25 år og eldre. «Midt på» er medianen: halvparten
+            tjener mer, halvparten mindre. Topp 0,01 prosent er beregnet: snittet for topp 0,1 prosent ganger forholdet
+            mellom gruppene hos Ring, Seim og Zucman ({nf1.format(data.vegg.topp001.forhold)}). Det offisielle tallet for
+            topp 0,01 prosent er et anslag ut fra skattestatistikken for {data.aar}.
+          </p>
+          <Andelstabell data={data} />
         </div>
       </div>
-    </li>
+    </section>
   );
 }
 
-function DuErHer() {
+/** Kort beløp til søyleetikettene: «650 000», «2,5 mill.», «380 mill.». */
+function kort(n: number) {
+  if (n >= 1e8) return `${nf0.format(n / 1e6)} mill.`;
+  if (n >= 1e6) return `${nf1.format(n / 1e6)} mill.`;
+  return nf0.format(Math.round(n / 1000) * 1000);
+}
+
+function Stolpe({
+  verdi,
+  hoyde,
+  offHoyde,
+  merknad,
+  erDu = false,
+}: {
+  verdi: number;
+  hoyde: number;
+  offHoyde?: number;
+  merknad?: string;
+  erDu?: boolean;
+}) {
   return (
-    <span className="absolute -top-[15px] right-0 rounded-full bg-accent px-3 py-1 text-[12px] font-semibold text-white">
-      Du er her
-    </span>
+    <div className="flex min-w-0 flex-1 flex-col justify-end">
+      <p className={`mb-1.5 text-[11px] leading-tight sm:text-[14px] ${erDu ? "text-accent-dark" : ""}`}>
+        <span className="block font-bold tabular-nums">{kort(verdi)}</span>
+        {merknad && <span className="block text-text-muted">{merknad}</span>}
+      </p>
+      <div
+        className={`relative w-full rounded-t-[4px] ${erDu ? "bg-text-primary" : "bg-accent"}`}
+        style={{ height: hoyde }}
+      >
+        {offHoyde !== undefined && (
+          <div
+            className="absolute inset-x-[18%] bottom-0 rounded-t-[3px] bg-text-muted ring-2 ring-background"
+            style={{ height: Math.min(offHoyde, hoyde) }}
+          />
+        )}
+      </div>
+    </div>
+  );
+}
+
+function Andelstabell({ data }: { data: TrappaData }) {
+  const rader = data.trinn.filter((t) => t.offisiell && t.med_overskudd);
+  return (
+    <div>
+      <table className="w-full text-left text-[14px]">
+        <caption className="mb-2 text-left font-semibold text-text-primary">
+          Hvor stor del av alle inntektene får de? ({data.forskningsaar})
+        </caption>
+        <thead>
+          <tr className="border-b border-border text-[13px] text-text-muted">
+            <th className="py-1.5 font-medium">Gruppe</th>
+            <th className="py-1.5 text-right font-medium">Offisielt</th>
+            <th className="py-1.5 text-right font-medium">Med overskudd</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rader.map((t) => (
+            <tr key={t.id} className="border-b border-border">
+              <td className="py-1.5">Topp {prosentTopp(t.topp)} %</td>
+              <td className="py-1.5 text-right tabular-nums">{nf1.format(t.offisiell!.andel)} %</td>
+              <td className="py-1.5 text-right font-semibold tabular-nums text-accent-dark">
+                {nf1.format(t.med_overskudd!.andel)} %
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
