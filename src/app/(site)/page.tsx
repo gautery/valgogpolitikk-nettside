@@ -1,9 +1,14 @@
 import { getAllPosts } from "@/lib/posts";
 import PostList from "@/components/PostList";
 import BookSpines from "@/components/BookSpines";
+import { hentKildeoversikt } from "@/lib/kilder";
+import { KildeBoks } from "@/components/SisteFraKildene";
 
-export default function Home() {
+export const revalidate = 3600;
+
+export default async function Home() {
   const posts = getAllPosts();
+  const kilder = await hentKildeoversikt();
 
   return (
     <>
@@ -33,7 +38,10 @@ export default function Home() {
       </div>
 
       {/* Post listing with sidebar */}
-      <PostList posts={posts} />
+      <PostList
+        posts={posts}
+        sidebarEkstra={kilder ? <KildeBoks saker={kilder.saker} /> : null}
+      />
     </>
   );
 }
