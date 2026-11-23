@@ -1,12 +1,14 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { hentBudsjett, hentOversikt } from "@/lib/statsbudsjett";
 
 // Siden /offentlig-sektor.
 // Tall: public/data/offentlig-sektor/offentlig-sektor.json, lages med scripts/offentlig_sektor.py.
 // Tekst: content/offentlig-sektor.yml, redigeres i Pages CMS under «Hvor stor er offentlig sektor?».
 
-export type Post = { navn: string; mrd: number };
+/** En post. «deler» er underpostene som kan åpnes på siden (SSBs inndeling). */
+export type Post = { navn: string; mrd: number; deler?: (Post & { kode: string })[] };
 export type Land = {
   kode: string;
   navn: string;
@@ -28,6 +30,7 @@ export type OffentligSektorData = {
   brukerbetalinger_mrd: number;
   fellesgoder: Post[];
   naeringsstotte_mrd: number;
+  kommunene: { inntekter_mrd: number; fra_staten_mrd: number; egne_mrd: number; poster: Post[] };
   land: Land[];
   eu: Land;
   kilder: { navn: string; lenke: string }[];
@@ -36,7 +39,7 @@ export type OffentligSektorData = {
 /** Hvem som har skrevet avsnittet. Bare «gaute» er godkjent tekst. */
 export type AvsnittType = "gaute" | "forslag" | "tall" | "vurder" | "mangler" | "figur";
 export type Avsnitt = { type: AvsnittType; tekst: string };
-export type Figur = "tre-typer" | "overforinger" | "velferd" | "fellesgoder" | "land" | "";
+export type Figur = "tre-typer" | "overforinger" | "velferd" | "fellesgoder" | "land" | "statsbudsjett" | "";
 export type Seksjon = { figur: Figur; tittel: string; avsnitt: Avsnitt[] };
 
 export type OffentligSektorTekst = {
@@ -70,4 +73,25 @@ export function lesOffentligSektorTekst(): OffentligSektorTekst {
     gjenstar: (d.gjenstar ?? []).filter(Boolean),
     metode: (d.metode ?? []).filter(Boolean),
   };
+}
+
+// ── Kobling til statsbudsjettsiden ───────────────────────────────
+// NB: /offentlig-sektor lenker til /statsbudsjett og bruker tall fra datafilene der
+// (public/data/statsbudsjett/<år>-vedtatt.json: «aar», «sum_utgifter», og utgiftene med omr_id "13",
+// Kommunal- og distriktsdepartementet). Endres filnavn, felt eller programområde-id der, må dette oppdateres.
+// Den samme merknaden står i src/app/(site)/statsbudsjett/page.tsx.
+
+const KOMMUNALDEPARTEMENTET = "13";
+
+export type StatsbudsjettTall = { aar: number; utgifter_mrd: number; kdd_mrd: number };
+
+/** Vedtatt statsbudsjett for samme år som SSB-tallene, eller det nyeste vedtatte før det. */
+export function hentStatsbudsjettTall(aar: number): StatsbudsjettTall | null {
+  const vedtatte = hentOversikt()
+    .filter((o) => o.id.endsWith("-vedtatt") && o.aar <= aar)
+    .sort((a, b) => b.aar - a.aar);
+  const b = vedtatte[0] ? hentBudsjett(vedtatte[0].id) : null;
+  if (!b) return null;
+  const kdd = b.utgifter.filter((u) => u.omr_id === KOMMUNALDEPARTEMENTET).reduce((s, u) => s + u.b, 0);
+  return { aar: b.aar, utgifter_mrd: b.sum_utgifter / 1000, kdd_mrd: kdd / 1000 };
 }

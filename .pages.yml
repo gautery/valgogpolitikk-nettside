@@ -198,6 +198,8 @@ content:
       Hvert avsnitt har en type: «Gautes tekst» er godkjent tekst. «Forslag» og «Tall» er lagt inn av Claude, og
       «Til vurdering» og «Mangler» er spørsmål som bare vises mens siden er utkast. Bytt type til «Gautes tekst»
       når du godkjenner et avsnitt. «Figur» viser hvor landfiguren står. Lenker skrives som [tekst](https://…).
+      Ord i krøllparentes byttes ut med tall: {aar}, {statsbudsjett_aar}, {statsbudsjett_mrd}, {kdd_mrd},
+      {kommune_egne_mrd}, {kommune_fra_staten_mrd}, {kommune_inntekter_mrd}.
     type: file
     path: content/offentlig-sektor.yml
     format: yaml
@@ -218,7 +220,7 @@ content:
             label: Figur ved seksjonen
             type: select
             options:
-              values: [tre-typer, overforinger, velferd, fellesgoder, land, ""]
+              values: [tre-typer, overforinger, velferd, fellesgoder, land, statsbudsjett, ""]
           - { name: tittel, label: Overskrift, type: string }
           - name: avsnitt
             label: Avsnitt

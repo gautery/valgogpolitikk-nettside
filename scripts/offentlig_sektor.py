@@ -81,14 +81,23 @@ def eurostat(datasett: str, parametre: str) -> dict[tuple, float]:
         return jsonstat(json.load(r))
 
 
+# Noen av SSBs navn er gjort enklere eller rettet. Alle andre navn er SSBs egne.
+NAVN = {
+    "Arbeidsløshetsstønader": "Dagpenger",
+    "FoU Ffritid, kultur og religion": "FoU fritid, kultur og religion",
+}
+
+
 def mrd(mill: float) -> float:
     return round(mill / 1000, 1)
 
 
 def main() -> None:
     # ── SSB: utgifter etter art og formål ─────────────────────────
-    formaal = ["0", "01", "012", "017", "02", "023", "03", "04", "05", "06", "07", "08", "09", "10"]
-    u = ssb("14669", {"Sektor": ["C_OFF"], "Art": ["E", "B6", "B7"], "Formaal": formaal, "Tid": [AAR]})
+    meta14669 = json.load(urllib.request.urlopen(SSB + "14669", timeout=60))
+    fvar = next(v for v in meta14669["variables"] if v["code"] == "Formaal")
+    formaalnavn = dict(zip(fvar["values"], fvar["valueTexts"]))
+    u = ssb("14669", {"Sektor": ["C_OFF"], "Art": ["E", "B6", "B7"], "Formaal": fvar["values"], "Tid": [AAR]})
 
     def g(art: str, f: str) -> float:
         return u.get(("C_OFF", art, f, "Belop", AAR), 0.0)
@@ -109,10 +118,32 @@ def main() -> None:
     fellesgoder = forvaltning + forsvar + orden + naering + miljo_bolig + kultur
     assert abs(overforinger + velferd + fellesgoder + annet - totalt) < 5, "Gruppene summerer ikke til totalen"
 
-    # ── SSB: kontantstønader og brukerbetalinger ──────────────────
-    arter = ["B611", "B612", "B613", "B62", "B63", "B64", "B65", "B66", "A611"]
+    def under(*foreldre: str, minus: tuple[str, ...] = (), uten_kontanter: bool = False) -> list[dict]:
+        """Underformål (ett siffer mer) med SSBs navn, sortert etter størrelse."""
+        ut = []
+        for f, navn in formaalnavn.items():
+            if f[:-1] in foreldre and len(f) == len(foreldre[0]) + 1 and f not in minus:
+                v = g("E", f) - (g("B6", f) if uten_kontanter else 0)
+                if v >= 50:  # under 50 mill. kr vises ikke
+                    ut.append({"navn": NAVN.get(navn, navn), "mrd": mrd(v), "kode": f})
+        return sorted(ut, key=lambda p: -p["mrd"])
+
+    # ── SSB: kontantstønader, brukerbetalinger og kommunenes inntekter ─
+    m14668 = json.load(urllib.request.urlopen(SSB + "14668", timeout=60))
+    avar = next(v for v in m14668["variables"] if v["code"] == "Art")
+    artnavn = dict(zip(avar["values"], avar["valueTexts"]))
+    arter = ["B611", "B612", "B613", "B62", "B621", "B622", "B623", "B624", "B625", "B629", "B63", "B631", "B632",
+             "B633", "B64", "B65", "B651", "B652", "B655", "B656", "B659", "B66", "A611"]
     k = ssb("14668", {"Art": arter, "Sektor": ["C_OFF"], "Tid": [AAR]})
-    kk = {a: k[(a, "C_OFF", "Belop", AAR)] for a in arter}
+    kk = {a: k.get((a, "C_OFF", "Belop", AAR), 0.0) for a in arter}
+
+    def arter_under(*koder: str) -> list[dict]:
+        ut = [{"navn": NAVN.get(artnavn[a], artnavn[a]), "mrd": mrd(kk[a]), "kode": a} for a in koder if kk[a] >= 50]
+        return sorted(ut, key=lambda p: -p["mrd"])
+
+    kom_arter = ["A", "A1", "A27", "A5", "A611", "A612", "A62", "A711"]
+    km = ssb("14668", {"Art": kom_arter, "Sektor": ["6500"], "Tid": [AAR]})
+    kom = {a: km.get((a, "6500", "Belop", AAR), 0.0) for a in kom_arter}
 
     # ── SSB: BNP for Fastlands-Norge ──────────────────────────────
     b = ssb("09189", {"Makrost": ["bnpb.nr23_9fn"], "ContentsCode": ["Priser"], "Tid": [AAR]})
@@ -153,27 +184,48 @@ def main() -> None:
         ],
         "overforinger": [
             {"navn": "Alderspensjon", "mrd": mrd(kk["B611"])},
-            {"navn": "Uførepensjon", "mrd": mrd(kk["B612"])},
-            {"navn": "Sykepenger, AAP, dagpenger og foreldrepenger", "mrd": mrd(kk["B62"])},
-            {"navn": "Barnetrygd og kontantstøtte", "mrd": mrd(kk["B63"])},
-            {"navn": "Sosialhjelp, bostøtte mv.", "mrd": mrd(kk["B65"])},
+            # SSB kaller posten «Uførepensjoner». Den er for det meste uføretrygd fra folketrygden,
+            # pluss uførepensjon fra offentlige tjenestepensjonsordninger.
+            {"navn": "Uføretrygd", "mrd": mrd(kk["B612"])},
+            {"navn": "Sykepenger, AAP, dagpenger og foreldrepenger", "mrd": mrd(kk["B62"]),
+             "deler": arter_under("B621", "B622", "B623", "B624", "B625", "B629")},
+            {"navn": "Barnetrygd og kontantstøtte", "mrd": mrd(kk["B63"]), "deler": arter_under("B631", "B632", "B633")},
+            {"navn": "Sosialhjelp, bostøtte mv.", "mrd": mrd(kk["B65"]),
+             "deler": arter_under("B651", "B652", "B655", "B656", "B659")},
             {"navn": "Utdanningsstipend", "mrd": mrd(kk["B64"])},
             {"navn": "Andre pensjoner og stønader", "mrd": mrd(kk["B613"] + kk["B66"])},
         ],
         "velferd": [
-            {"navn": "Helse", "mrd": mrd(helse)},
-            {"navn": "Utdanning", "mrd": mrd(utdanning)},
-            {"navn": "Omsorg, barnehage og andre sosiale tjenester", "mrd": mrd(sosial)},
+            {"navn": "Helse", "mrd": mrd(helse), "deler": under("07", uten_kontanter=True)},
+            {"navn": "Utdanning", "mrd": mrd(utdanning), "deler": under("09", uten_kontanter=True)},
+            {"navn": "Omsorg, barnehage og andre sosiale tjenester", "mrd": mrd(sosial),
+             "deler": under("10", uten_kontanter=True)},
         ],
         "brukerbetalinger_mrd": mrd(kk["A611"]),
         "fellesgoder": [
-            {"navn": "Næring og samferdsel", "mrd": mrd(naering)},
-            {"navn": "Sentral og lokal forvaltning", "mrd": mrd(forvaltning)},
-            {"navn": "Forsvar (uten Ukraina-støtten)", "mrd": mrd(forsvar)},
-            {"navn": "Kultur og fritid", "mrd": mrd(kultur)},
-            {"navn": "Politi, domstoler, fengsler og brannvesen", "mrd": mrd(orden)},
-            {"navn": "Miljø, bolig og nærmiljø", "mrd": mrd(miljo_bolig)},
+            {"navn": "Næring og samferdsel", "mrd": mrd(naering), "deler": under("04")},
+            {"navn": "Sentral og lokal forvaltning", "mrd": mrd(forvaltning), "deler": under("01", minus=("012", "017"))},
+            {"navn": "Forsvar (uten Ukraina-støtten)", "mrd": mrd(forsvar), "deler": under("02", minus=("023",))},
+            {"navn": "Kultur og fritid", "mrd": mrd(kultur), "deler": under("08", uten_kontanter=True)},
+            {"navn": "Politi, domstoler, fengsler og brannvesen", "mrd": mrd(orden), "deler": under("03")},
+            {"navn": "Miljø, bolig og nærmiljø", "mrd": mrd(miljo_bolig), "deler": under("05", "06")},
         ],
+        "kommunene": {
+            "inntekter_mrd": mrd(kom["A"]),
+            "fra_staten_mrd": mrd(kom["A711"]),
+            "egne_mrd": mrd(kom["A"] - kom["A711"]),
+            "poster": sorted([
+                {"navn": "Inntekts- og formuesskatt", "mrd": mrd(kom["A1"])},
+                {"navn": "Salgsinntekter", "mrd": mrd(kom["A62"])},
+                {"navn": "Gebyrer (vann, avløp, renovasjon mv.)", "mrd": mrd(kom["A612"])},
+                {"navn": "Utbytte og renter", "mrd": mrd(kom["A5"])},
+                {"navn": "Eiendomsskatt", "mrd": mrd(kom["A27"])},
+                {"navn": "Brukerbetaling", "mrd": mrd(kom["A611"])},
+            ], key=lambda p: -p["mrd"]) + [
+                {"navn": "Annet", "mrd": mrd(kom["A"] - kom["A711"] - kom["A1"] - kom["A62"] - kom["A612"] - kom["A5"]
+                                             - kom["A27"] - kom["A611"])},
+            ],
+        },
         "naeringsstotte_mrd": mrd(g("B7", "04")),
         "land": land,
         "eu": eu,

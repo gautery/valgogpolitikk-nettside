@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Link from "next/link";
 import type {
   Avsnitt,
   Land,
@@ -6,6 +7,7 @@ import type {
   OffentligSektorTekst,
   Post,
   Seksjon,
+  StatsbudsjettTall,
 } from "@/lib/offentlig-sektor";
 
 // «Hvor stor er offentlig sektor?»
@@ -25,14 +27,22 @@ const TYPE = {
 // Mørk oransje for tekst på hvit bakgrunn (accent-orange er for lys til liten tekst).
 const ORANSJE_TEKST = "text-[#9a4d00]";
 
-export default function OffentligSektor({ data, tekst }: { data: OffentligSektorData; tekst: OffentligSektorTekst }) {
+export default function OffentligSektor({
+  data,
+  tekst,
+  statsbudsjett,
+}: {
+  data: OffentligSektorData;
+  tekst: OffentligSektorTekst;
+  statsbudsjett: StatsbudsjettTall | null;
+}) {
   const [topp, ...resten] = tekst.seksjoner;
   return (
     <>
       {tekst.utkast && <Utkastlinje />}
       <Topp seksjon={topp} tittel={tekst.tittel} data={data} utkast={tekst.utkast} />
       {resten.map((s, i) => (
-        <SeksjonVis key={`${s.figur}-${i}`} s={s} data={data} utkast={tekst.utkast} />
+        <SeksjonVis key={`${s.figur}-${i}`} s={s} data={data} utkast={tekst.utkast} statsbudsjett={statsbudsjett} />
       ))}
       <Bunn tekst={tekst} data={data} />
     </>
@@ -233,8 +243,22 @@ function hundrelapp(andeler: number[]): number[] {
 
 /* ── Seksjonene ─────────────────────────────────────────────────── */
 
-function SeksjonVis({ s, data, utkast }: { s: Seksjon; data: OffentligSektorData; utkast: boolean }) {
+function SeksjonVis({
+  s,
+  data,
+  utkast,
+  statsbudsjett,
+}: {
+  s: Seksjon;
+  data: OffentligSektorData;
+  utkast: boolean;
+  statsbudsjett: StatsbudsjettTall | null;
+}) {
   const id = s.figur || "konklusjon";
+
+  if (s.figur === "statsbudsjett") {
+    return <StatsbudsjettBoks s={s} data={data} utkast={utkast} statsbudsjett={statsbudsjett} />;
+  }
   const typeFigur = s.figur === "overforinger" || s.figur === "velferd" || s.figur === "fellesgoder";
 
   if (s.figur === "land") {
@@ -314,26 +338,136 @@ function delVedFigur(avsnitt: Avsnitt[]): [Avsnitt[], Avsnitt[]] {
 function Poster({ tittel, poster, farge, merknad }: { tittel: string; poster: Post[]; farge: string; merknad?: string }) {
   const sortert = [...poster].sort((a, b) => b.mrd - a.mrd);
   const maks = sortert[0]?.mrd ?? 1;
+  const kanApnes = sortert.some((p) => p.deler?.length);
   return (
     <figure className="self-start rounded-lg border border-border p-5 md:mt-14">
       <figcaption className="text-[14px] font-semibold">
         {tittel} <span className="font-normal text-text-muted">(mrd. kr)</span>
       </figcaption>
+      {kanApnes && <p className="mt-1 text-[12px] text-text-muted">Trykk på en post med pil for å se hva den består av.</p>}
       <ul className="mt-4 space-y-3">
-        {sortert.map((p) => (
-          <li key={p.navn}>
-            <div className="flex items-baseline justify-between gap-3 text-[13px]">
-              <span className="text-text-secondary">{p.navn}</span>
-              <span className="tabular-nums font-medium">{nf0.format(p.mrd)}</span>
-            </div>
-            <div className="mt-1 h-2 rounded-full bg-surface-light" aria-hidden="true">
-              <div className={`h-2 rounded-full ${farge}`} style={{ width: `${(p.mrd / maks) * 100}%` }} />
-            </div>
-          </li>
-        ))}
+        {sortert.map((p) =>
+          p.deler?.length ? (
+            <li key={p.navn}>
+              <details className="group">
+                <summary className="cursor-pointer list-none rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-orange [&::-webkit-details-marker]:hidden">
+                  <PostLinje p={p} maks={maks} farge={farge} pil />
+                </summary>
+                <ul className="mb-1 mt-2.5 space-y-1.5 border-l border-border pl-3">
+                  {p.deler.map((d) => (
+                    <li key={d.kode} className="text-[12px]">
+                      <div className="flex items-baseline justify-between gap-3">
+                        <span className="text-text-secondary">{d.navn}</span>
+                        <span className="tabular-nums text-text-secondary">{nf1.format(d.mrd)}</span>
+                      </div>
+                      <div className="mt-0.5 h-1 rounded-full bg-surface-light" aria-hidden="true">
+                        <div className={`h-1 rounded-full opacity-60 ${farge}`} style={{ width: `${(d.mrd / maks) * 100}%` }} />
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            </li>
+          ) : (
+            <li key={p.navn}>
+              <PostLinje p={p} maks={maks} farge={farge} />
+            </li>
+          ),
+        )}
       </ul>
       {merknad && <p className="mt-4 text-[12px] leading-snug text-text-muted">{merknad}</p>}
     </figure>
+  );
+}
+
+function PostLinje({ p, maks, farge, pil = false }: { p: Post; maks: number; farge: string; pil?: boolean }) {
+  return (
+    <>
+      <div className="flex items-baseline justify-between gap-3 text-[13px]">
+        <span className="flex items-baseline gap-1.5 text-text-secondary">
+          {pil && (
+            <svg
+              viewBox="0 0 10 10"
+              className="h-2.5 w-2.5 shrink-0 translate-y-[1px] text-text-muted transition-transform group-open:rotate-90"
+              aria-hidden="true"
+            >
+              <path d="M3 1.5 L7 5 L3 8.5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          )}
+          <span className={pil ? "underline decoration-border-light decoration-dotted underline-offset-4" : ""}>{p.navn}</span>
+        </span>
+        <span className="tabular-nums font-medium">{nf0.format(p.mrd)}</span>
+      </div>
+      <div className="mt-1 h-2 rounded-full bg-surface-light" aria-hidden="true">
+        <div className={`h-2 rounded-full ${farge}`} style={{ width: `${(p.mrd / maks) * 100}%` }} />
+      </div>
+    </>
+  );
+}
+
+/* ── Boksen om statsbudsjettet og kommunene ───────────────────────
+   Lenker til /statsbudsjett. Tallene derfra hentes i lib/offentlig-sektor.ts (hentStatsbudsjettTall). */
+
+function StatsbudsjettBoks({
+  s,
+  data,
+  utkast,
+  statsbudsjett,
+}: {
+  s: Seksjon;
+  data: OffentligSektorData;
+  utkast: boolean;
+  statsbudsjett: StatsbudsjettTall | null;
+}) {
+  const k = data.kommunene;
+  const maks = Math.max(k.fra_staten_mrd, ...k.poster.map((p) => p.mrd));
+  return (
+    <section aria-labelledby="statsbudsjettet" className="border-t border-border px-6 py-14">
+      <div className="mx-auto grid max-w-[1100px] gap-10 rounded-xl border border-border-light bg-surface p-6 sm:p-9 md:grid-cols-[minmax(0,1fr)_360px] md:gap-14">
+        <div className="max-w-[640px]">
+          <h2 id="statsbudsjettet" className="font-[family-name:var(--font-playfair)] text-2xl font-bold">
+            {s.tittel}
+          </h2>
+          <div className="mt-5 space-y-4 text-[16px] leading-relaxed text-text-secondary">
+            {s.avsnitt.map((a, i) => (
+              <AvsnittVis key={i} a={a} utkast={utkast} />
+            ))}
+          </div>
+          <Link
+            href="/statsbudsjett"
+            className="mt-7 inline-block rounded-md bg-text-primary px-4 py-2.5 text-[14px] font-semibold text-white hover:bg-accent-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-orange"
+          >
+            Se hva staten bruker penger på
+          </Link>
+          {statsbudsjett && (
+            <p className="mt-3 text-[12px] text-text-muted">
+              Statsbudsjettet {statsbudsjett.aar} (vedtatt): {nf0.format(statsbudsjett.utgifter_mrd)} mrd. kr i utgifter
+              utenom petroleumsvirksomheten.
+            </p>
+          )}
+        </div>
+        <figure className="self-start">
+          <figcaption className="text-[14px] font-semibold">
+            Kommunenes inntekter {data.aar} <span className="font-normal text-text-muted">(mrd. kr)</span>
+          </figcaption>
+          <p className="mt-1 text-[12px] text-text-muted">
+            Til sammen {nf0.format(k.inntekter_mrd)} mrd. kr, hvorav {nf0.format(k.egne_mrd)} mrd. er egne inntekter.
+          </p>
+          <ul className="mt-4 space-y-3">
+            <li>
+              <PostLinje p={{ navn: "Overføringer fra staten", mrd: k.fra_staten_mrd }} maks={maks} farge="bg-border-light" />
+            </li>
+            <li className="pt-1 text-[12px] font-medium text-text-muted">Egne inntekter</li>
+            {k.poster.map((p) => (
+              <li key={p.navn}>
+                <PostLinje p={p} maks={maks} farge="bg-text-primary" />
+              </li>
+            ))}
+          </ul>
+          <p className="mt-4 text-[12px] leading-snug text-text-muted">Kilde: SSB, tabell 14668 (kommuneforvaltningen).</p>
+        </figure>
+      </div>
+    </section>
   );
 }
 

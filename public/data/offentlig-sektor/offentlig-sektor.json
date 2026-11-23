@@ -32,20 +32,91 @@
       "mrd": 365.5
     },
     {
-      "navn": "Uførepensjon",
+      "navn": "Uføretrygd",
       "mrd": 139.3
     },
     {
       "navn": "Sykepenger, AAP, dagpenger og foreldrepenger",
-      "mrd": 179.5
+      "mrd": 179.5,
+      "deler": [
+        {
+          "navn": "Sykepenger",
+          "mrd": 79.8,
+          "kode": "B624"
+        },
+        {
+          "navn": "Arbeidsavklaringspenger",
+          "mrd": 51.7,
+          "kode": "B622"
+        },
+        {
+          "navn": "Foreldrepenger",
+          "mrd": 29.7,
+          "kode": "B625"
+        },
+        {
+          "navn": "Dagpenger",
+          "mrd": 15.5,
+          "kode": "B621"
+        },
+        {
+          "navn": "Andre arbeidsrelaterte stønader",
+          "mrd": 2.8,
+          "kode": "B629"
+        }
+      ]
     },
     {
       "navn": "Barnetrygd og kontantstøtte",
-      "mrd": 31.7
+      "mrd": 31.7,
+      "deler": [
+        {
+          "navn": "Barnetrygd",
+          "mrd": 28.8,
+          "kode": "B631"
+        },
+        {
+          "navn": "Andre forsørgerstønader",
+          "mrd": 2.2,
+          "kode": "B633"
+        },
+        {
+          "navn": "Kontantstøtte",
+          "mrd": 0.8,
+          "kode": "B632"
+        }
+      ]
     },
     {
       "navn": "Sosialhjelp, bostøtte mv.",
-      "mrd": 25.7
+      "mrd": 25.7,
+      "deler": [
+        {
+          "navn": "Sosialhjelp",
+          "mrd": 12.3,
+          "kode": "B651"
+        },
+        {
+          "navn": "Bostøtte",
+          "mrd": 5.1,
+          "kode": "B652"
+        },
+        {
+          "navn": "Introduksjonsstønad for innvandrere mv.",
+          "mrd": 4.9,
+          "kode": "B655"
+        },
+        {
+          "navn": "Andre sosiale stønader",
+          "mrd": 2.9,
+          "kode": "B659"
+        },
+        {
+          "navn": "Naturaliastønad til ikke-bosatte",
+          "mrd": 0.5,
+          "kode": "B656"
+        }
+      ]
     },
     {
       "navn": "Utdanningsstipend",
@@ -59,44 +130,407 @@
   "velferd": [
     {
       "navn": "Helse",
-      "mrd": 389.4
+      "mrd": 389.4,
+      "deler": [
+        {
+          "navn": "Sykehustjenester",
+          "mrd": 215.6,
+          "kode": "073"
+        },
+        {
+          "navn": "Legetjenester mv.",
+          "mrd": 104.8,
+          "kode": "072"
+        },
+        {
+          "navn": "Legemidler, hjelpemidler og utstyr",
+          "mrd": 25.8,
+          "kode": "071"
+        },
+        {
+          "navn": "Helse ellers",
+          "mrd": 18.0,
+          "kode": "076"
+        },
+        {
+          "navn": "Forebyggende helsearbeid",
+          "mrd": 15.3,
+          "kode": "074"
+        },
+        {
+          "navn": "FoU Helse",
+          "mrd": 9.8,
+          "kode": "075"
+        }
+      ]
     },
     {
       "navn": "Utdanning",
-      "mrd": 244.1
+      "mrd": 244.1,
+      "deler": [
+        {
+          "navn": "Førskole og barneskole",
+          "mrd": 112.5,
+          "kode": "091"
+        },
+        {
+          "navn": "Universitets- og høgskoleutdanning",
+          "mrd": 51.1,
+          "kode": "094"
+        },
+        {
+          "navn": "Ungdomsskole og videregående skole",
+          "mrd": 48.8,
+          "kode": "092"
+        },
+        {
+          "navn": "Utdanning, udefinert nivå",
+          "mrd": 14.1,
+          "kode": "095"
+        },
+        {
+          "navn": "Støttetjenester tilknyttet utdanning",
+          "mrd": 10.8,
+          "kode": "096"
+        },
+        {
+          "navn": "Utdanning ellers",
+          "mrd": 4.8,
+          "kode": "098"
+        },
+        {
+          "navn": "FoU utdanning",
+          "mrd": 1.1,
+          "kode": "097"
+        },
+        {
+          "navn": "Påbygging til utdanning på videregående nivå",
+          "mrd": 1.0,
+          "kode": "093"
+        }
+      ]
     },
     {
       "navn": "Omsorg, barnehage og andre sosiale tjenester",
-      "mrd": 296.3
+      "mrd": 296.3,
+      "deler": [
+        {
+          "navn": "Barn og familie",
+          "mrd": 106.8,
+          "kode": "104"
+        },
+        {
+          "navn": "Alderdom",
+          "mrd": 90.1,
+          "kode": "102"
+        },
+        {
+          "navn": "Sykdom og uførhet",
+          "mrd": 67.4,
+          "kode": "101"
+        },
+        {
+          "navn": "Sosial inkludering ellers",
+          "mrd": 22.0,
+          "kode": "107"
+        },
+        {
+          "navn": "Sosial beskyttelse ellers",
+          "mrd": 4.8,
+          "kode": "109"
+        },
+        {
+          "navn": "Arbeidsledighet",
+          "mrd": 1.9,
+          "kode": "105"
+        },
+        {
+          "navn": "FoU Sosial beskyttelse",
+          "mrd": 1.9,
+          "kode": "108"
+        },
+        {
+          "navn": "Bostøtte",
+          "mrd": 0.8,
+          "kode": "106"
+        },
+        {
+          "navn": "Etterlatte",
+          "mrd": 0.7,
+          "kode": "103"
+        }
+      ]
     }
   ],
   "brukerbetalinger_mrd": 19.5,
   "fellesgoder": [
     {
       "navn": "Næring og samferdsel",
-      "mrd": 313.9
+      "mrd": 313.9,
+      "deler": [
+        {
+          "navn": "Transport",
+          "mrd": 201.7,
+          "kode": "045"
+        },
+        {
+          "navn": "Jordbruk, skogbruk, fiske og fangst",
+          "mrd": 35.9,
+          "kode": "042"
+        },
+        {
+          "navn": "Generelle næringsøkonomiske formål og arbeidsmarkedformål",
+          "mrd": 28.6,
+          "kode": "041"
+        },
+        {
+          "navn": "FoU Næringsøkonomiske formål",
+          "mrd": 15.2,
+          "kode": "048"
+        },
+        {
+          "navn": "Brensel og energi",
+          "mrd": 13.3,
+          "kode": "043"
+        },
+        {
+          "navn": "Bergverksdrift, industri og bygge- og anleggsvirksomhet",
+          "mrd": 7.5,
+          "kode": "044"
+        },
+        {
+          "navn": "Næringsøkonomiske formål ellers",
+          "mrd": 7.5,
+          "kode": "049"
+        },
+        {
+          "navn": "Post og telekommunikasjoner",
+          "mrd": 3.9,
+          "kode": "046"
+        },
+        {
+          "navn": "Andre næringer",
+          "mrd": 0.2,
+          "kode": "047"
+        }
+      ]
     },
     {
       "navn": "Sentral og lokal forvaltning",
-      "mrd": 140.2
+      "mrd": 140.2,
+      "deler": [
+        {
+          "navn": "Utøvende og lovgivende organer, finansielle og fiskale formål, utenrikssaker",
+          "mrd": 91.7,
+          "kode": "011"
+        },
+        {
+          "navn": "Generell tjenesteyting",
+          "mrd": 32.4,
+          "kode": "013"
+        },
+        {
+          "navn": "Grunnforskning",
+          "mrd": 12.5,
+          "kode": "014"
+        },
+        {
+          "navn": "FoU Alminnelig tjenesteyting",
+          "mrd": 2.8,
+          "kode": "015"
+        },
+        {
+          "navn": "Alminnelig tjenesteyting ellers",
+          "mrd": 0.9,
+          "kode": "016"
+        }
+      ]
     },
     {
       "navn": "Forsvar (uten Ukraina-støtten)",
-      "mrd": 117.6
+      "mrd": 117.6,
+      "deler": [
+        {
+          "navn": "Militært forsvar",
+          "mrd": 112.3,
+          "kode": "021"
+        },
+        {
+          "navn": "Sivilforsvar",
+          "mrd": 2.4,
+          "kode": "022"
+        },
+        {
+          "navn": "FoU Forsvar",
+          "mrd": 1.6,
+          "kode": "024"
+        },
+        {
+          "navn": "Forsvar ellers",
+          "mrd": 1.3,
+          "kode": "025"
+        }
+      ]
     },
     {
       "navn": "Kultur og fritid",
-      "mrd": 78.2
+      "mrd": 78.2,
+      "deler": [
+        {
+          "navn": "Kultur",
+          "mrd": 28.3,
+          "kode": "082"
+        },
+        {
+          "navn": "Fritid og sport",
+          "mrd": 21.3,
+          "kode": "081"
+        },
+        {
+          "navn": "Religiøse og fellesskapsaktiviteter",
+          "mrd": 13.3,
+          "kode": "084"
+        },
+        {
+          "navn": "Kringkasting og forlagsvirksomhet",
+          "mrd": 7.9,
+          "kode": "083"
+        },
+        {
+          "navn": "Fritid, kultur og religion ellers",
+          "mrd": 4.1,
+          "kode": "086"
+        },
+        {
+          "navn": "FoU fritid, kultur og religion",
+          "mrd": 3.3,
+          "kode": "085"
+        }
+      ]
     },
     {
       "navn": "Politi, domstoler, fengsler og brannvesen",
-      "mrd": 59.1
+      "mrd": 59.1,
+      "deler": [
+        {
+          "navn": "Politi",
+          "mrd": 30.6,
+          "kode": "031"
+        },
+        {
+          "navn": "Brannvern og redningstjenester",
+          "mrd": 12.6,
+          "kode": "032"
+        },
+        {
+          "navn": "Domstoler",
+          "mrd": 7.5,
+          "kode": "033"
+        },
+        {
+          "navn": "Fengsler",
+          "mrd": 6.5,
+          "kode": "034"
+        },
+        {
+          "navn": "Offentlig orden og trygghet ellers",
+          "mrd": 1.0,
+          "kode": "036"
+        },
+        {
+          "navn": "FoU offentlig orden og trygghet",
+          "mrd": 0.9,
+          "kode": "035"
+        }
+      ]
     },
     {
       "navn": "Miljø, bolig og nærmiljø",
-      "mrd": 91.1
+      "mrd": 91.1,
+      "deler": [
+        {
+          "navn": "Vannforsyning",
+          "mrd": 23.2,
+          "kode": "063"
+        },
+        {
+          "navn": "Boligutvikling",
+          "mrd": 21.3,
+          "kode": "061"
+        },
+        {
+          "navn": "Avløp og spillvann",
+          "mrd": 20.7,
+          "kode": "052"
+        },
+        {
+          "navn": "Avfallshåndtering",
+          "mrd": 12.8,
+          "kode": "051"
+        },
+        {
+          "navn": "Forurensningsbekjempelse",
+          "mrd": 4.2,
+          "kode": "053"
+        },
+        {
+          "navn": "Miljøvern ellers",
+          "mrd": 4.0,
+          "kode": "056"
+        },
+        {
+          "navn": "Landskapsvern og biologisk mangfold",
+          "mrd": 2.7,
+          "kode": "054"
+        },
+        {
+          "navn": "FoU Miljøvern",
+          "mrd": 1.7,
+          "kode": "055"
+        },
+        {
+          "navn": "Nærmiljøutvikling",
+          "mrd": 0.4,
+          "kode": "062"
+        }
+      ]
     }
   ],
+  "kommunene": {
+    "inntekter_mrd": 828.5,
+    "fra_staten_mrd": 365.1,
+    "egne_mrd": 463.4,
+    "poster": [
+      {
+        "navn": "Inntekts- og formuesskatt",
+        "mrd": 284.8
+      },
+      {
+        "navn": "Salgsinntekter",
+        "mrd": 51.2
+      },
+      {
+        "navn": "Gebyrer (vann, avløp, renovasjon mv.)",
+        "mrd": 43.8
+      },
+      {
+        "navn": "Utbytte og renter",
+        "mrd": 30.7
+      },
+      {
+        "navn": "Eiendomsskatt",
+        "mrd": 18.0
+      },
+      {
+        "navn": "Brukerbetaling",
+        "mrd": 17.0
+      },
+      {
+        "navn": "Annet",
+        "mrd": 18.0
+      }
+    ]
+  },
   "naeringsstotte_mrd": 96.0,
   "land": [
     {

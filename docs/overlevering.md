@@ -93,7 +93,11 @@ Svakheter som står på siden:
   Gautes egne formuleringer skal stå ordrett. Avsnittene er merket med hvem som har skrevet dem
   (Gaute, forslag fra Claude, tall fra Claude, til vurdering, mangler). Tekst: `content/offentlig-sektor.yml`
   (Pages CMS). Tall: `scripts/offentlig_sektor.py` lager `public/data/offentlig-sektor/offentlig-sektor.json`.
-  Tallene i brødteksten er skrevet inn for hånd og oppdateres ikke av skriptet. Mangler tall for private pensjoner (OECD).
+  Tallene i brødteksten er skrevet inn for hånd og oppdateres ikke av skriptet, bortsett fra ord i krøllparentes
+  i boksen om statsbudsjettet. Postene i fordelingsboksene kan åpnes og viser SSBs underposter.
+  Boksen «Hvorfor stemmer ikke tallene med statsbudsjettet?» lenker til /statsbudsjett og leser tall fra
+  datafilene der (`hentStatsbudsjettTall` i `src/lib/offentlig-sektor.ts`). Merknad om dette står i begge sidene.
+  Mangler tall for private pensjoner (OECD).
 - **/statsbudsjett:** hva pengene går til og hvor de kommer fra. Bygger på Gul bok 2027 og vedtatte budsjetter fra DFØ
   (`scripts/statsbudsjett.py`).
 - **/skraablikk/rare-ting-90-tallet:** Skråblikk-karusell med forklaringer som rulles ut.

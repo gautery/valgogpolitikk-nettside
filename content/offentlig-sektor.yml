@@ -22,7 +22,7 @@ seksjoner:
     avsnitt:
       - type: tall
         tekst: |-
-          I 2025 betalte det offentlige ut 766 milliarder kroner i kontanter til husholdningene. To av tre kroner er pensjoner: 365 milliarder i alderspensjon og 139 milliarder i uførepensjon. Deretter kommer sykepenger, AAP, dagpenger og foreldrepenger med til sammen 179 milliarder.
+          I 2025 betalte det offentlige ut 766 milliarder kroner i kontanter til husholdningene. To av tre kroner er pensjoner: 365 milliarder i alderspensjon og 139 milliarder i uføretrygd. Deretter kommer sykepenger, AAP, dagpenger og foreldrepenger med til sammen 179 milliarder.
       - type: forslag
         tekst: |-
           Pengene forsvinner ikke ut av økonomien. Pensjonisten bruker dem i butikken, og da teller de som privat forbruk. Det offentlige flytter kjøpekraft, men bruker den ikke selv.
@@ -117,6 +117,22 @@ seksjoner:
         tekst: |-
           Ta motargumentet selv før andre gjør det: En tjeneste er ikke helt det samme som penger. Du kan ikke bruke barnehageplassen på noe annet, og den som ikke har barn, får ingenting. Det er nettopp derfor tjenester omfordeler, men det er også grunnen til at noen foretrekker kontanter. I tillegg viser en SSB-studie at kommunale tjenester [utjevner mindre enn kontantoverføringer](https://ssb.brage.unit.no/ssb-xmlui/handle/11250/2627476).
 
+  - figur: statsbudsjett
+    tittel: Hvorfor stemmer ikke tallene med statsbudsjettet?
+    avsnitt:
+      - type: forslag
+        tekst: |-
+          Statsbudsjettet viser bare statens pengebruk. Tallene på denne siden gjelder hele offentlig sektor: stat og kommune samlet.
+      - type: forslag
+        tekst: |-
+          Mye av pengene i statsbudsjettet sendes videre til kommunene. I det vedtatte budsjettet for {statsbudsjett_aar} gikk {kdd_mrd} milliarder kroner gjennom Kommunal- og distriktsdepartementet, for det meste som rammetilskudd. I statsbudsjettet står det som én stor post. Her på siden dukker pengene opp som skole, barnehage og omsorg, fordi det er kommunene som bruker dem.
+      - type: forslag
+        tekst: |-
+          Kommunene har i tillegg egne inntekter som aldri går gjennom statskassa: {kommune_egne_mrd} milliarder kroner i {aar}. Den største er kommunenes andel av inntektsskatten. Stortinget bestemmer satsen, men skatten går rett til kommunene.
+      - type: forslag
+        tekst: |-
+          Penger som bare flyttes fra staten til kommunene, telles én gang på denne siden. Derfor kan du ikke legge sammen statsbudsjettet og kommunenes budsjetter for å finne størrelsen på offentlig sektor.
+
 gjenstar:
   - Hente OECD-tall for offentlige og private pensjoner (Pensions at a Glance), så påstanden om privat finansiering har tall bak seg
   - Velge mellom «statsbudsjettet» og «offentlige budsjetter» i innledningen
@@ -133,4 +149,6 @@ metode:
   - Velferdstjenester er utgiftene til helse, utdanning og sosial beskyttelse, minus kontantstønadene i disse formålene.
   - Fellesgoder er alminnelig tjenesteyting (uten bistand og renter), forsvar (uten Ukraina-støtten), orden og trygghet, næring og samferdsel, miljø, bolig og nærmiljø og kultur.
   - Annet er internasjonal bistand, støtte til Ukraina og renter på offentlig gjeld.
+  - Uføretrygd er SSBs post «uførepensjoner». Den er for det meste uføretrygd fra folketrygden, pluss uførepensjon fra offentlige tjenestepensjonsordninger.
+  - Underpostene som kan åpnes, bruker SSBs egne navn. Dagpenger heter «arbeidsløshetsstønader» hos SSB.
   - 'Offentlig betalt andel av forbruket (Eurostat): offentlig individuelt konsum delt på summen av offentlig individuelt konsum og husholdningenes konsum. Utregningen er vår egen, ut fra Eurostats tall.'

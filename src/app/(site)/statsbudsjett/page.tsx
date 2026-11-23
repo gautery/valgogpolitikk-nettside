@@ -11,6 +11,9 @@ import {
 } from "@/lib/statsbudsjett";
 
 // Tallene ligger i public/data/statsbudsjett og lages med scripts/statsbudsjett.py.
+// NB: /offentlig-sektor lenker hit og leser tall fra de samme datafilene (vedtatte budsjett: «aar»,
+// «sum_utgifter» og programområde «13», Kommunal- og distriktsdepartementet). Endres adressen /statsbudsjett,
+// filnavnene eller programområde-id-ene, må src/lib/offentlig-sektor.ts (hentStatsbudsjettTall) oppdateres.
 
 export const metadata: Metadata = {
   title: "Statsbudsjettet: hva pengene går til — valg og politikk",
