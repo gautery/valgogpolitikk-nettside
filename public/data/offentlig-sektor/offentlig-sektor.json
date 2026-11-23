@@ -1,0 +1,241 @@
+{
+  "aar": 2025,
+  "hentet": "2026-11-23",
+  "totalt_mrd": 2684.6,
+  "fastlands_bnp_mrd": 4397.7,
+  "andel_av_fastlands_bnp": 61.0,
+  "typer": [
+    {
+      "id": "overforinger",
+      "navn": "Overføringer",
+      "mrd": 766.2
+    },
+    {
+      "id": "velferd",
+      "navn": "Velferdstjenester",
+      "mrd": 929.8
+    },
+    {
+      "id": "fellesgoder",
+      "navn": "Fellesgoder",
+      "mrd": 800.0
+    },
+    {
+      "id": "annet",
+      "navn": "Annet",
+      "mrd": 188.6
+    }
+  ],
+  "overforinger": [
+    {
+      "navn": "Alderspensjon",
+      "mrd": 365.5
+    },
+    {
+      "navn": "Uførepensjon",
+      "mrd": 139.3
+    },
+    {
+      "navn": "Sykepenger, AAP, dagpenger og foreldrepenger",
+      "mrd": 179.5
+    },
+    {
+      "navn": "Barnetrygd og kontantstøtte",
+      "mrd": 31.7
+    },
+    {
+      "navn": "Sosialhjelp, bostøtte mv.",
+      "mrd": 25.7
+    },
+    {
+      "navn": "Utdanningsstipend",
+      "mrd": 10.3
+    },
+    {
+      "navn": "Andre pensjoner og stønader",
+      "mrd": 14.3
+    }
+  ],
+  "velferd": [
+    {
+      "navn": "Helse",
+      "mrd": 389.4
+    },
+    {
+      "navn": "Utdanning",
+      "mrd": 244.1
+    },
+    {
+      "navn": "Omsorg, barnehage og andre sosiale tjenester",
+      "mrd": 296.3
+    }
+  ],
+  "brukerbetalinger_mrd": 19.5,
+  "fellesgoder": [
+    {
+      "navn": "Næring og samferdsel",
+      "mrd": 313.9
+    },
+    {
+      "navn": "Sentral og lokal forvaltning",
+      "mrd": 140.2
+    },
+    {
+      "navn": "Forsvar (uten Ukraina-støtten)",
+      "mrd": 117.6
+    },
+    {
+      "navn": "Kultur og fritid",
+      "mrd": 78.2
+    },
+    {
+      "navn": "Politi, domstoler, fengsler og brannvesen",
+      "mrd": 59.1
+    },
+    {
+      "navn": "Miljø, bolig og nærmiljø",
+      "mrd": 91.1
+    }
+  ],
+  "naeringsstotte_mrd": 96.0,
+  "land": [
+    {
+      "kode": "SE",
+      "navn": "Sverige",
+      "norden": true,
+      "offentlig_betalt_andel": 28.7,
+      "fellesgoder_pst_bnp": 7.6,
+      "kontantytelser_pst_bnp": 11.5
+    },
+    {
+      "kode": "NL",
+      "navn": "Nederland",
+      "norden": false,
+      "offentlig_betalt_andel": 28.7,
+      "fellesgoder_pst_bnp": 8.5,
+      "kontantytelser_pst_bnp": 10.7
+    },
+    {
+      "kode": "NO",
+      "navn": "Norge",
+      "norden": true,
+      "offentlig_betalt_andel": 26.7,
+      "fellesgoder_pst_bnp": 7.3,
+      "kontantytelser_pst_bnp": 13.9
+    },
+    {
+      "kode": "DK",
+      "navn": "Danmark",
+      "norden": true,
+      "offentlig_betalt_andel": 26.7,
+      "fellesgoder_pst_bnp": 7.3,
+      "kontantytelser_pst_bnp": 14.1
+    },
+    {
+      "kode": "FI",
+      "navn": "Finland",
+      "norden": true,
+      "offentlig_betalt_andel": 26.6,
+      "fellesgoder_pst_bnp": 7.6,
+      "kontantytelser_pst_bnp": 18.9
+    },
+    {
+      "kode": "IE",
+      "navn": "Irland",
+      "norden": false,
+      "offentlig_betalt_andel": 24.4,
+      "fellesgoder_pst_bnp": 3.9,
+      "kontantytelser_pst_bnp": 5.3
+    },
+    {
+      "kode": "BE",
+      "navn": "Belgia",
+      "norden": false,
+      "offentlig_betalt_andel": 23.1,
+      "fellesgoder_pst_bnp": 8.5,
+      "kontantytelser_pst_bnp": 17.6
+    },
+    {
+      "kode": "FR",
+      "navn": "Frankrike",
+      "norden": false,
+      "offentlig_betalt_andel": 22.4,
+      "fellesgoder_pst_bnp": 8.4,
+      "kontantytelser_pst_bnp": 19.4
+    },
+    {
+      "kode": "AT",
+      "navn": "Østerrike",
+      "norden": false,
+      "offentlig_betalt_andel": 21.3,
+      "fellesgoder_pst_bnp": 7.6,
+      "kontantytelser_pst_bnp": 19.9
+    },
+    {
+      "kode": "DE",
+      "navn": "Tyskland",
+      "norden": false,
+      "offentlig_betalt_andel": 20.5,
+      "fellesgoder_pst_bnp": 8.4,
+      "kontantytelser_pst_bnp": 16.5
+    },
+    {
+      "kode": "PL",
+      "navn": "Polen",
+      "norden": false,
+      "offentlig_betalt_andel": 17.3,
+      "fellesgoder_pst_bnp": 9.3,
+      "kontantytelser_pst_bnp": 17.3
+    },
+    {
+      "kode": "ES",
+      "navn": "Spania",
+      "norden": false,
+      "offentlig_betalt_andel": 17.2,
+      "fellesgoder_pst_bnp": 7.7,
+      "kontantytelser_pst_bnp": 16.9
+    },
+    {
+      "kode": "IT",
+      "navn": "Italia",
+      "norden": false,
+      "offentlig_betalt_andel": 15.7,
+      "fellesgoder_pst_bnp": 7.3,
+      "kontantytelser_pst_bnp": 20.3
+    }
+  ],
+  "eu": {
+    "kode": "EU27_2020",
+    "navn": "EU-snitt",
+    "norden": false,
+    "offentlig_betalt_andel": 20.3,
+    "fellesgoder_pst_bnp": 8.1,
+    "kontantytelser_pst_bnp": 16.4
+  },
+  "kilder": [
+    {
+      "navn": "SSB tabell 14669: Offentlig forvaltnings utgifter etter art og formål",
+      "lenke": "https://www.ssb.no/statbank/table/14669"
+    },
+    {
+      "navn": "SSB tabell 14668: Offentlig forvaltnings inntekter og utgifter",
+      "lenke": "https://www.ssb.no/statbank/table/14668"
+    },
+    {
+      "navn": "SSB tabell 09189: Makroøkonomiske hovedstørrelser",
+      "lenke": "https://www.ssb.no/statbank/table/09189"
+    },
+    {
+      "navn": "Eurostat nama_10_gdp: BNP og konsum",
+      "lenke": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table"
+    },
+    {
+      "navn": "Eurostat gov_10a_main: Offentlige inntekter og utgifter",
+      "lenke": "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table"
+    },
+    {
+      "navn": "Eurostat: Actual individual consumption (ordforklaring)",
+      "lenke": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Actual_individual_consumption_(AIC)"
+    }
+  ]
+}

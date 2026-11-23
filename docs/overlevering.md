@@ -88,6 +88,12 @@ Svakheter som står på siden:
 
 ### Andre sider
 
+- **/offentlig-sektor:** «Hvor stor er offentlig sektor?» (laget 23. november). Tre typer offentlig pengebruk
+  (overføringer, velferdstjenester, fellesgoder), hundrelappen øverst og en landfigur fra Eurostat.
+  Gautes egne formuleringer skal stå ordrett. Avsnittene er merket med hvem som har skrevet dem
+  (Gaute, forslag fra Claude, tall fra Claude, til vurdering, mangler). Tekst: `content/offentlig-sektor.yml`
+  (Pages CMS). Tall: `scripts/offentlig_sektor.py` lager `public/data/offentlig-sektor/offentlig-sektor.json`.
+  Tallene i brødteksten er skrevet inn for hånd og oppdateres ikke av skriptet. Mangler tall for private pensjoner (OECD).
 - **/statsbudsjett:** hva pengene går til og hvor de kommer fra. Bygger på Gul bok 2027 og vedtatte budsjetter fra DFØ
   (`scripts/statsbudsjett.py`).
 - **/skraablikk/rare-ting-90-tallet:** Skråblikk-karusell med forklaringer som rulles ut.

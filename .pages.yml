@@ -191,6 +191,55 @@ content:
           - { name: tittel, label: Tittel, type: string }
           - { name: punkter, label: Punkter, type: text, list: true }
 
+  - name: offentlig-sektor
+    label: Hvor stor er offentlig sektor?
+    description: >-
+      Teksten på siden /offentlig-sektor. Tallene i figurene kommer fra datafila og oppdateres ikke her.
+      Hvert avsnitt har en type: «Gautes tekst» er godkjent tekst. «Forslag» og «Tall» er lagt inn av Claude, og
+      «Til vurdering» og «Mangler» er spørsmål som bare vises mens siden er utkast. Bytt type til «Gautes tekst»
+      når du godkjenner et avsnitt. «Figur» viser hvor landfiguren står. Lenker skrives som [tekst](https://…).
+    type: file
+    path: content/offentlig-sektor.yml
+    format: yaml
+    fields:
+      - { name: utkast, label: Utkast (skjult for søkemotorer), type: boolean, default: true }
+      - { name: tittel, label: Tittel, type: string }
+      - { name: beskrivelse, label: Beskrivelse for søkemotorer, type: text }
+      - name: seksjoner
+        label: Seksjoner
+        description: Den første seksjonen er toppen av siden med hundrelappen.
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.tittel}"
+        fields:
+          - name: figur
+            label: Figur ved seksjonen
+            type: select
+            options:
+              values: [tre-typer, overforinger, velferd, fellesgoder, land, ""]
+          - { name: tittel, label: Overskrift, type: string }
+          - name: avsnitt
+            label: Avsnitt
+            type: object
+            list: true
+            fields:
+              - name: type
+                label: Type
+                type: select
+                options:
+                  values:
+                    - { value: gaute, label: Gautes tekst }
+                    - { value: forslag, label: Forslag fra Claude }
+                    - { value: tall, label: Tall lagt inn av Claude }
+                    - { value: vurder, label: Til vurdering }
+                    - { value: mangler, label: Mangler }
+                    - { value: figur, label: Figur (landfiguren står her) }
+              - { name: tekst, label: Tekst, type: text }
+      - { name: gjenstar, label: Gjenstår før publisering, type: string, list: true }
+      - { name: metode, label: «Slik er tallene regnet», type: text, list: true }
+
   - name: karuseller
     label: Karusellsider
     description: Én kildeside per karusell, på adressen valgogpolitikk.no/<filnavn>.

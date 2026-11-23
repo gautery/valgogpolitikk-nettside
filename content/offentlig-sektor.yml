@@ -1,0 +1,136 @@
+utkast: true
+tittel: Hvor stor er offentlig sektor?
+beskrivelse: >-
+  Stat og kommune brukte 2 685 milliarder kroner i 2025. Men pengebruken er av tre helt ulike typer: overføringer,
+  velferdstjenester og fellesgoder. Slik ser det ut, og slik er det i andre land.
+seksjoner:
+  - figur: tre-typer
+    tittel: ''
+    avsnitt:
+      - type: forslag
+        tekst: |-
+          I 2025 brukte stat og kommune til sammen 2 685 milliarder kroner. Det tilsvarer 61 prosent av BNP for Fastlands-Norge. Men det betyr ikke at det offentlige «tar» 61 prosent av økonomien.
+      - type: gaute
+        tekst: |-
+          Alle typer forbruk som går gjennom statsbudsjettet teller likt, men i realiteten er de veldig forskjellige typer forbruk:
+      - type: vurder
+        tekst: |-
+          «Statsbudsjettet» i setningen din bør trolig bli «offentlige budsjetter», siden tallene gjelder stat og kommune samlet. Vurder også «pengebruk» eller «utgifter» i stedet for «forbruk»: i nasjonalregnskapet er overføringer ikke forbruk, det er pensjonisten som forbruker pengene.
+
+  - figur: overforinger
+    tittel: 'Type 1: overføringer'
+    avsnitt:
+      - type: tall
+        tekst: |-
+          I 2025 betalte det offentlige ut 766 milliarder kroner i kontanter til husholdningene. To av tre kroner er pensjoner: 365 milliarder i alderspensjon og 139 milliarder i uførepensjon. Deretter kommer sykepenger, AAP, dagpenger og foreldrepenger med til sammen 179 milliarder.
+      - type: forslag
+        tekst: |-
+          Pengene forsvinner ikke ut av økonomien. Pensjonisten bruker dem i butikken, og da teller de som privat forbruk. Det offentlige flytter kjøpekraft, men bruker den ikke selv.
+      - type: vurder
+        tekst: |-
+          Hvis du vil så tvil om at alt er «gaver»: alderspensjonen er delvis opptjent gjennom egne innbetalinger. Det gjør den mer lik privat pensjonssparing i andre land, og styrker sammenligningen lenger ned.
+
+  - figur: velferd
+    tittel: 'Type 2: velferdstjenester'
+    avsnitt:
+      - type: gaute
+        tekst: |-
+          Velferdstjenester, inkludert kostnader for å redusere prisene på tjenestene.
+      - type: tall
+        tekst: |-
+          Dette er den største posten: 930 milliarder kroner i 2025. Helse står for 389 milliarder, utdanning for 244 og omsorg, barnehage og andre sosiale tjenester for 296.
+      - type: tall
+        tekst: |-
+          Brukerne betaler lite av dette selv. Egenandeler, foreldrebetaling og brukerbetaling for omsorg ga det offentlige 19,5 milliarder kroner, rundt 2 prosent av kostnaden.
+      - type: vurder
+        tekst: |-
+          Foreldrebetaling i private barnehager er ikke med i tallet over, fordi den går direkte til barnehagen. Andelen brukerne betaler er derfor noe høyere enn 2 prosent. Bruk heller formuleringen «brukerne betaler en liten del» hvis du vil være på den sikre siden.
+      - type: forslag
+        tekst: |-
+          Et konkret eksempel gjør dette håndgripelig: hva koster en barnehageplass, og hvor mye av det betaler foreldrene? Det tallet må hentes fra Utdanningsdirektoratet eller SSB-statistikken for barnehager.
+
+  - figur: fellesgoder
+    tittel: 'Type 3: politi, infrastruktur, domstoler mm'
+    avsnitt:
+      - type: tall
+        tekst: |-
+          Dette er det folk flest tenker på som «staten», og det utgjør rundt 800 milliarder kroner. Forsvar (uten Ukraina-støtten) står for 118 milliarder, politi, domstoler, fengsler og brannvesen for 59, og sentral og lokal forvaltning for 141. Veier, jernbane og annen næringsrettet pengebruk utgjør 314 milliarder.
+      - type: forslag
+        tekst: |-
+          Dette er goder ingen kan kjøpe alene. Du kan ikke kjøpe din egen andel av forsvaret eller rettsvesenet. Derfor er de offentlig finansiert i alle land.
+      - type: vurder
+        tekst: |-
+          Næringsposten på 314 milliarder inneholder også støtte til landbruk og andre næringer (96 milliarder i subsidier). Det er strengt tatt overføringer til bedrifter, ikke fellesgoder. Du kan skille dem ut som egen undergruppe, eller nevne det i en fotnote.
+
+  - figur: land
+    tittel: Hvordan er det i andre land?
+    avsnitt:
+      - type: gaute
+        tekst: |-
+          Disse forskjellige typene offentlig forbruk varierer ganske mye fra land til land. Eller, dvs, alle landene vi sammenligner oss med har investeringer i politi, infrastruktur og domstoler mm som i hovedsak er offentlig finansiert.
+      - type: tall
+        tekst: |-
+          Det offentlige kollektive konsumet (fellesgodene) ligger mellom 7 og 9 prosent av BNP i alle landene: 7,3 i Norge, 7,6 i Sverige, 8,4 i Tyskland og 8,1 i EU-snittet ([Eurostat nama_10_gdp](https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table)).
+      - type: vurder
+        tekst: |-
+          Første setning og «Eller, dvs» kan slås sammen, for eksempel: «To av de tre typene varierer mye fra land til land.»
+      - type: gaute
+        tekst: |-
+          Men de to andre kategoriene varierer ganske mye.
+      - type: gaute
+        tekst: |-
+          Når det gjelder overføringer så er det stor variasjon i hvor mye som er offentlig finansiert og hvor mye som er privat finansiert. Den største andelen er pensjoner, og i noen land har de større andel privat finansiering.
+      - type: tall
+        tekst: |-
+          Offentlige kontantytelser utgjorde 11,5 prosent av BNP i Sverige, 14,1 i Danmark og 13,9 i Norge i 2025. EU-snittet var 16,4, Frankrike 19,4 og Italia 20,3 ([Eurostat gov_10a_main](https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table)). Norges tall blir rundt 17 prosent målt mot fastlands-BNP, fordi oljen blåser opp BNP.
+      - type: mangler
+        tekst: |-
+          Tall for private pensjoner. OECDs Pensions at a Glance har offentlige og private pensjonsutbetalinger i prosent av BNP. Etter det jeg vet har blant annet Nederland og Danmark store private eller arbeidsmarkedsbaserte pensjonsordninger, men dette må sjekkes mot OECD før det publiseres.
+      - type: gaute
+        tekst: |-
+          Det finnes veldig interessant statistikk på andelen av forbruk som er finansiert av det offentlige. De nordiske landene ligger høyt på den statistikken.
+      - type: figur
+        tekst: ''
+      - type: forslag
+        tekst: |-
+          Eurostat kaller målet [actual individual consumption](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Actual_individual_consumption_(AIC)): alt husholdningene faktisk forbruker, også det som betales av det offentlige. Målet påvirkes ikke av oljen, og passer derfor godt til å sammenligne Norge med andre land.
+      - type: vurder
+        tekst: |-
+          Nederland ligger høyt fordi den obligatoriske helseforsikringen der føres som offentlige kjøp. Det bør nevnes i en fotnote, ellers kan noen bruke Nederland mot poenget ditt om Norden.
+
+  - figur: ''
+    tittel: Velferdstjenester er overføringer i en annen form
+    avsnitt:
+      - type: gaute
+        tekst: |-
+          I praksis er dette overføringer til private, fordi det bedrer kjøpekraften til forskjellige grupper, bare indirekte gjennom billigere tjenester heller enn gjennom direkte overføringer.
+      - type: tall
+        tekst: |-
+          Til sammen går 1 696 av 2 685 milliarder kroner, eller 63 prosent, direkte til husholdningene, enten som penger (type 1) eller som tjenester (type 2).
+      - type: forslag
+        tekst: |-
+          Statistikerne er enige med deg. I nasjonalregnskapet heter velferdstjenestene sosiale overføringer i naturalia, og SSB omtaler produktkjøp til husholdningene som [stønader i naturalia](https://www.ssb.no/offentlig-sektor/offentlig-forvaltning/statistikk/offentlig-forvaltnings-inntekter-og-utgifter/artikler/reviderte-tidsserier-for-offentlig-forvaltning). SSB har også vist at det å regne med offentlige tjenester [endrer sammenligningen av ulikhet mellom europeiske land](https://www.ssb.no/inntekt-og-forbruk/inntekt-og-formue/artikler/offentlige-tjenester-reduserer-ulikhet-og-fattigdom).
+      - type: forslag
+        tekst: |-
+          Et poeng som gjør det lett å forstå: samme barnehageplass regnes som privat forbruk hvis foreldrene betaler hele prisen, og som offentlig utgift hvis kommunen betaler. Forskjellen er ikke om vi betaler, men hvordan.
+      - type: vurder
+        tekst: |-
+          Ta motargumentet selv før andre gjør det: En tjeneste er ikke helt det samme som penger. Du kan ikke bruke barnehageplassen på noe annet, og den som ikke har barn, får ingenting. Det er nettopp derfor tjenester omfordeler, men det er også grunnen til at noen foretrekker kontanter. I tillegg viser en SSB-studie at kommunale tjenester [utjevner mindre enn kontantoverføringer](https://ssb.brage.unit.no/ssb-xmlui/handle/11250/2627476).
+
+gjenstar:
+  - Hente OECD-tall for offentlige og private pensjoner (Pensions at a Glance), så påstanden om privat finansiering har tall bak seg
+  - Velge mellom «statsbudsjettet» og «offentlige budsjetter» i innledningen
+  - Velge mellom «forbruk» og «utgifter» eller «pengebruk» for helheten
+  - 'Legge inn et konkret barnehageeksempel: kostnad per plass mot det foreldrene betaler'
+  - Fotnote om Nederland og helseforsikringen
+  - Bestemme om næringsstøtte skal skilles ut fra type 3
+  - Lenke til livsløpssiden når tallene fra Finansdepartementet er på plass
+  - Sjekke tallene på nytt før publisering, fordi SSB reviderer 2025-tallene
+
+metode:
+  - Alle norske tall gjelder 2025 og er foreløpige. De gjelder offentlig forvaltning, det vil si stat og kommune samlet.
+  - Overføringer er stønader i kontanter til husholdningene (SSB tabell 14669, art B6), for alle formål.
+  - Velferdstjenester er utgiftene til helse, utdanning og sosial beskyttelse, minus kontantstønadene i disse formålene.
+  - Fellesgoder er alminnelig tjenesteyting (uten bistand og renter), forsvar (uten Ukraina-støtten), orden og trygghet, næring og samferdsel, miljø, bolig og nærmiljø og kultur.
+  - Annet er internasjonal bistand, støtte til Ukraina og renter på offentlig gjeld.
+  - 'Offentlig betalt andel av forbruket (Eurostat): offentlig individuelt konsum delt på summen av offentlig individuelt konsum og husholdningenes konsum. Utregningen er vår egen, ut fra Eurostats tall.'
