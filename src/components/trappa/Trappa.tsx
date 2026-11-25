@@ -73,7 +73,7 @@ export default function Trappa({
       <div className="border-b border-border bg-hero px-6 py-12 md:py-16">
         <div className="mx-auto max-w-[1100px]">
           <div className="mb-3 flex items-center gap-2">
-            <div className="h-4 w-1 rounded-full bg-accent" />
+            <div className="h-4 w-1 rounded-full bg-rosa" />
             <span className="text-[13px] font-medium text-white/50">{t.topp.overlinje}</span>
           </div>
           <h1 className="font-[family-name:var(--font-playfair)] text-4xl font-bold leading-tight text-white sm:text-5xl">

@@ -12,7 +12,7 @@ export default function KommerSnart() {
     <main className="flex min-h-screen flex-col items-center justify-center bg-hero px-6 text-center">
       <BookSpines className="mb-8 h-16 w-auto" />
       <div className="mb-4 flex items-center gap-2">
-        <div className="h-4 w-1 rounded-full bg-accent" />
+        <div className="h-4 w-1 rounded-full bg-rosa" />
         <span className="text-[11px] font-semibold uppercase tracking-widest text-white/50">
           @valgogpolitikk
         </span>
