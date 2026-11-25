@@ -120,6 +120,12 @@ function katalog(): Oppføring[] {
       kloss: { type: "siste_analyser", overskrift: "Analyser" },
     },
     {
+      navn: "Om meg",
+      bruk: "Bilde til venstre og tekst til høyre. Til Om-siden.",
+      felt: "Bilde, beskrivelse av bildet, navn, undertittel, tekst, bakgrunn",
+      kloss: { type: "om_meg", navn: "Navnet ditt", tekst: "Teksten om deg står her." },
+    },
+    {
       navn: "Samarbeid og tips",
       bruk: "Invitasjon til samarbeid og tips, med knapp som åpner en e-post til deg.",
       felt: "Overskrift, tekst, e-postadresse, tekst på knappen, bakgrunn",

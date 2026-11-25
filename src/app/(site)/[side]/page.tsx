@@ -58,7 +58,7 @@ export default async function Side({ params }: { params: Promise<{ side: string 
           </p>
         </div>
       )}
-      <Klosser seksjoner={s.seksjoner} />
+      <Klosser seksjoner={s.seksjoner} ktx={{ utkastSide: s.utkast }} />
     </>
   );
 }

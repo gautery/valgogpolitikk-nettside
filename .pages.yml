@@ -791,6 +791,29 @@ components:
         label: Alle analyser (arkiv med søk)
         fields: []
 
+      - name: om_meg
+        label: Om meg (bilde og tekst)
+        fields:
+          - name: bilde
+            label: Bilde
+            description: Valgfritt. Står til venstre, i høydeformat (4:5).
+            type: image
+          - name: alt
+            label: Beskrivelse av bildet for skjermlesere
+            type: string
+          - name: navn
+            label: Navn
+            type: string
+          - name: undertittel
+            label: Undertittel
+            description: Én linje under navnet, f.eks. hva du gjør.
+            type: string
+          - name: tekst
+            label: Tekst
+            type: rich-text
+          - name: bakgrunn
+            component: bakgrunn
+
       - name: samarbeid
         label: Samarbeid og tips
         fields:
