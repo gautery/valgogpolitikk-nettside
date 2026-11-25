@@ -35,6 +35,24 @@ export type Bilde = {
   bakgrunn?: Bakgrunn;
 };
 
+export type Datawrapper = {
+  type: "datawrapper";
+  lenke?: string;
+  beskrivelse?: string;
+  bredde?: "normal" | "bred";
+  bakgrunn?: Bakgrunn;
+};
+
+/** Finner graf-ID-en (fem tegn) i en Datawrapper-lenke. Godtar delelenken
+ *  (datawrapper.dwcdn.net/AbC12/1/) og redigeringslenken (app.datawrapper.de/chart/AbC12/...). */
+export function datawrapperId(lenke?: string): string | null {
+  if (!lenke) return null;
+  const m =
+    lenke.match(/datawrapper\.dwcdn\.net\/([A-Za-z0-9]{5})(?:[/?#]|$)/) ??
+    lenke.match(/datawrapper\.de\/(?:_|chart|map|table)\/([A-Za-z0-9]{5})(?:[/?#]|$)/);
+  return m ? m[1] : null;
+}
+
 export type Sitat = {
   type: "sitat";
   sitat?: string;
@@ -108,6 +126,7 @@ export type Kloss =
   | Tekst
   | Nokkeltall
   | Bilde
+  | Datawrapper
   | Sitat
   | Kildeliste
   | Knapp

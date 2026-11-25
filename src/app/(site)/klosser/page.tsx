@@ -55,6 +55,12 @@ function katalog(): Oppføring[] {
       },
     },
     {
+      navn: "Graf fra Datawrapper",
+      bruk: "En interaktiv graf, kart eller tabell laget i Datawrapper. Vises ikke før lenken er fylt inn.",
+      felt: "Lenke til grafen, beskrivelse for skjermlesere, bredde, bakgrunn",
+      kloss: { type: "datawrapper" },
+    },
+    {
       navn: "Sitat",
       bruk: "Én setning som skal stå ut.",
       felt: "Sitat, hvem som sa det, bakgrunn",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import Umami from "@/components/Umami";
 import "./globals.css";
 
 const inter = Inter({
@@ -37,6 +38,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-background font-sans text-text-primary">
         {children}
         <Analytics />
+        <Umami />
       </body>
     </html>
   );

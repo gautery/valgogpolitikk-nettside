@@ -6,7 +6,8 @@ import BookSpines from "@/components/BookSpines";
 import NewsletterForm from "@/components/NewsletterForm";
 import PostList from "@/components/PostList";
 import { KildeBand, TEMAFARGER } from "@/components/SisteFraKildene";
-import type { Bakgrunn, Kloss } from "@/lib/klosser";
+import DatawrapperGraf from "@/components/klosser/DatawrapperGraf";
+import { datawrapperId, type Bakgrunn, type Kloss } from "@/lib/klosser";
 import { hentKildeoversikt } from "@/lib/kilder";
 import { hentAlleKaruseller } from "@/lib/karuseller";
 import { getAllPosts } from "@/lib/posts";
@@ -196,6 +197,18 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
           </figure>
         </Seksjon>
       );
+
+    case "datawrapper": {
+      const id = datawrapperId(kloss.lenke);
+      if (!id) return null;
+      return (
+        <Seksjon bakgrunn={kloss.bakgrunn}>
+          <div className={kloss.bredde === "bred" ? "" : "max-w-[680px]"}>
+            <DatawrapperGraf id={id} tittel={kloss.beskrivelse || "Graf fra Datawrapper"} />
+          </div>
+        </Seksjon>
+      );
+    }
 
     case "sitat":
       if (!kloss.sitat) return null;

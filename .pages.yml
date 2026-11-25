@@ -630,6 +630,26 @@ components:
           - name: bakgrunn
             component: bakgrunn
 
+      - name: datawrapper
+        label: Graf fra Datawrapper
+        fields:
+          - name: lenke
+            label: Lenke til grafen
+            description: Lim inn lenken fra Datawrapper (Publish → «Share link», f.eks. https://datawrapper.dwcdn.net/AbC12/1/). Grafen oppdateres her når du publiserer den på nytt i Datawrapper.
+            type: string
+          - name: beskrivelse
+            label: Beskrivelse for skjermlesere
+            description: Hva grafen viser, i én setning. Skriv hovedpoenget.
+            type: text
+          - name: bredde
+            label: Bredde
+            type: select
+            default: normal
+            options:
+              values: [normal, bred]
+          - name: bakgrunn
+            component: bakgrunn
+
       - name: sitat
         label: Sitat
         fields:
