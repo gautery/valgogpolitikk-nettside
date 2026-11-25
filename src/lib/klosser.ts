@@ -122,6 +122,16 @@ export type Nyhetsbrev = {
   bakgrunn?: Bakgrunn;
 };
 
+export type OmMeg = {
+  type: "om_meg";
+  bilde?: string;
+  alt?: string;
+  navn?: string;
+  undertittel?: string;
+  tekst?: string;
+  bakgrunn?: Bakgrunn;
+};
+
 export type Samarbeid = {
   type: "samarbeid";
   overskrift?: string;
@@ -148,4 +158,5 @@ export type Kloss =
   | Analyser
   | SisteAnalyser
   | Nyhetsbrev
-  | Samarbeid;
+  | Samarbeid
+  | OmMeg;

@@ -20,6 +20,8 @@ import { hentAlleSkraablikk } from "@/lib/skraablikk";
 export type KlossKontekst = {
   /** Ta med karusell- og temasider som er merket som utkast (brukes i kloss-katalogen). */
   visUtkast?: boolean;
+  /** Siden er et utkast: vis plassholdere der noe mangler (f.eks. bilde). */
+  utkastSide?: boolean;
 };
 
 const MND = ["jan", "feb", "mar", "apr", "mai", "jun", "jul", "aug", "sep", "okt", "nov", "des"];
@@ -501,6 +503,43 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
           </div>
         </Seksjon>
       );
+
+    case "om_meg": {
+      if (!kloss.tekst && !kloss.navn && !kloss.bilde) return null;
+      return (
+        <Seksjon bakgrunn={kloss.bakgrunn}>
+          <div className="grid gap-8 md:grid-cols-[300px_minmax(0,1fr)] md:gap-14">
+            <div>
+              {kloss.bilde ? (
+                <Image
+                  src={kloss.bilde}
+                  alt={kloss.alt ?? ""}
+                  width={900}
+                  height={1125}
+                  sizes="(min-width: 768px) 300px, 100vw"
+                  className="w-full max-w-[300px] rounded-[10px] object-cover"
+                />
+              ) : (
+                ktx.utkastSide && (
+                  <div className="flex aspect-[4/5] w-full max-w-[300px] items-center justify-center rounded-[10px] border-2 border-dashed border-border-light p-6 text-center text-[15px] text-text-muted">
+                    Plass til bilde (valgfritt). Legg det inn i Pages CMS.
+                  </div>
+                )
+              )}
+            </div>
+            <div className="max-w-[640px]">
+              {kloss.navn && <h2 className="font-display text-[34px] leading-tight text-black sm:text-[42px]">{kloss.navn}</h2>}
+              {kloss.undertittel && <p className="mt-2 text-[17px] font-semibold text-text-secondary">{kloss.undertittel}</p>}
+              {kloss.tekst && (
+                <div className="mt-6">
+                  <Markdown kilde={kloss.tekst} klasse="text-[17px] leading-[1.75] text-text-secondary" />
+                </div>
+              )}
+            </div>
+          </div>
+        </Seksjon>
+      );
+    }
 
     case "samarbeid": {
       const epost = (kloss.epost || "post@valgogpolitikk.no").trim();
