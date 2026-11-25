@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Rosa-basert profesjonelt tema for @valgogpolitikk */
+  /* Samme formspråk som karusellene: svart grotesk, ekte bilder, rosa tall. */
   --color-background: #ffffff;
-  --color-surface: #faf8f6;
-  --color-surface-light: #f3f0ed;
-  --color-border: #e8e4e0;
-  --color-border-light: #d9d4cf;
-  --color-text-primary: #1a1a2e;
-  --color-text-secondary: #4a4a5a;
-  --color-text-muted: #6b6b77;
+  --color-surface: #f2f2f2;
+  --color-surface-light: #e9e9e9;
+  --color-border: #e2e2e2;
+  --color-border-light: #cfcfcf;
+  --color-text-primary: #000000;
+  --color-text-secondary: #3b3b3b;
+  --color-text-muted: #666666;
   --color-text-faint: #b0b0ba;
-  --color-accent: #c92a62;
+  --color-accent: #e4007c;
   --color-accent-light: #fce4ec;
-  --color-accent-dark: #a61e4d;
+  --color-accent-dark: #b80064;
   --color-accent-green: #2d6a4f;
   --color-accent-blue: #1864ab;
   --color-accent-orange: #e67700;
@@ -22,8 +22,7 @@
   --color-rosa: #ff65c5;
   --color-rosa-dark: #f24bb5;
   --font-sans: "Inter", system-ui, sans-serif;
-  --font-serif: "Playfair Display", Georgia, serif;
-}
+  }
 
 body {
   background: var(--color-background);
@@ -43,4 +42,11 @@ html {
 /* Trappa til toppen: hvert trinn flyttes mot høyre jo høyere opp det står */
 .trinn {
   margin-left: calc(var(--niva) * clamp(10px, 5vw, 64px));
+}
+
+/* Overskrifter: tung grotesk, som i karusellene. */
+@utility font-display {
+  font-family: var(--font-inter), "Inter", system-ui, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.025em;
 }

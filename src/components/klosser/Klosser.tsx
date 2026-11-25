@@ -47,7 +47,7 @@ function Seksjon({ bakgrunn, children }: { bakgrunn?: Bakgrunn; children: ReactN
 function Overskrift({ children }: { children?: ReactNode }) {
   if (!children) return null;
   return (
-    <h2 className="mb-6 font-[family-name:var(--font-playfair)] text-2xl font-bold leading-snug text-text-primary sm:text-[28px]">
+    <h2 className="mb-6 font-display text-[30px] leading-tight text-black sm:text-[36px]">
       {children}
     </h2>
   );
@@ -74,7 +74,7 @@ export async function Markdown({ kilde, klasse }: { kilde: string; klasse?: stri
     source: kilde,
     options: { mdxOptions: { format: "md" } },
     components: {
-      h2: (p) => <h3 className="mb-3 mt-8 font-[family-name:var(--font-playfair)] text-xl font-bold text-text-primary" {...p} />,
+      h2: (p) => <h3 className="mb-3 mt-8 font-display text-xl text-text-primary" {...p} />,
       h3: (p) => <h4 className="mb-2 mt-6 text-[17px] font-semibold text-text-primary" {...p} />,
       p: (p) => <p className="mb-4 last:mb-0" {...p} />,
       a: ({ href = "", children }) => (
@@ -95,30 +95,22 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
   switch (kloss.type) {
     case "toppfelt": {
       const rosa = kloss.farge === "rosa";
+      const tekst = rosa ? "text-black" : "text-white";
       return (
-        <div className={`border-b px-6 py-16 md:py-20 ${rosa ? "border-rosa bg-rosa" : "border-border bg-hero"}`}>
+        <div className={`px-6 py-14 md:py-20 ${rosa ? "bg-rosa" : "bg-hero"}`}>
           <div className="mx-auto max-w-[1100px]">
-            <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
-              <div>
-                {kloss.overlinje && (
-                  <div className="mb-3 flex items-center gap-2">
-                    <div className={`h-4 w-1 rounded-full ${rosa ? "bg-hero" : "bg-rosa"}`} />
-                    <span className={`text-[11px] font-semibold uppercase tracking-widest ${rosa ? "text-hero" : "text-white/60"}`}>
-                      {kloss.overlinje}
-                    </span>
-                  </div>
-                )}
+            <div className="flex flex-col gap-10 md:flex-row md:items-center md:justify-between">
+              <div className="max-w-[640px]">
+                {kloss.overlinje && <p className={`mb-5 text-[15px] font-semibold ${tekst}`}>{kloss.overlinje}</p>}
                 {kloss.tittel && (
-                  <h1
-                    className={`mb-4 max-w-[560px] font-[family-name:var(--font-playfair)] text-3xl font-bold leading-tight sm:text-4xl lg:text-[44px] lg:leading-[1.15] ${
-                      rosa ? "text-hero" : "text-white"
-                    }`}
-                  >
+                  <h1 className={`font-display text-[42px] leading-[1.02] sm:text-[56px] lg:text-[68px] ${tekst}`}>
                     {kloss.tittel}
                   </h1>
                 )}
                 {kloss.ingress && (
-                  <p className={`max-w-[460px] text-[15px] leading-relaxed ${rosa ? "text-hero" : "text-white/60"}`}>{kloss.ingress}</p>
+                  <p className={`mt-6 max-w-[520px] text-[18px] leading-[1.55] ${rosa ? "text-black" : "text-white/75"}`}>
+                    {kloss.ingress}
+                  </p>
                 )}
               </div>
               {kloss.bilde ? (
@@ -128,8 +120,8 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
                   width={1080}
                   height={1350}
                   priority
-                  sizes="240px"
-                  className="hidden w-[240px] rounded-md shadow-[0_20px_40px_-12px_rgba(0,0,0,0.6)] md:block"
+                  sizes="260px"
+                  className="hidden w-[260px] rounded-[10px] md:block"
                 />
               ) : rosa && kloss.bokrygger ? (
                 <Image
@@ -138,8 +130,8 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
                   width={900}
                   height={470}
                   priority
-                  sizes="420px"
-                  className="hidden w-[420px] md:block"
+                  sizes="(min-width: 768px) 400px, 100vw"
+                  className="w-full max-w-[400px] md:w-[400px]"
                 />
               ) : (
                 kloss.bokrygger && <BookSpines className="hidden h-24 w-auto opacity-40 md:block" />
@@ -168,7 +160,7 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
           <dl className="grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
             {tall.map((n, i) => (
               <div key={i} className="border-t-2 border-text-primary pt-4">
-                <dt className="font-[family-name:var(--font-playfair)] text-[40px] font-bold leading-none text-text-primary">
+                <dt className="font-display text-[40px] leading-none text-text-primary">
                   {n.tall}
                 </dt>
                 <dd className="mt-3 text-[14px] leading-relaxed text-text-secondary">
@@ -231,7 +223,7 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
       return (
         <Seksjon bakgrunn={kloss.bakgrunn}>
           <figure className="max-w-[760px] border-l-[3px] border-accent pl-6 sm:pl-8">
-            <blockquote className="font-[family-name:var(--font-playfair)] text-[24px] font-semibold leading-snug text-text-primary sm:text-[30px]">
+            <blockquote className="font-display text-[24px] leading-snug text-text-primary sm:text-[30px]">
               {kloss.sitat}
             </blockquote>
             {kloss.kilde && <figcaption className="mt-4 text-[14px] text-text-muted">{kloss.kilde}</figcaption>}
@@ -253,12 +245,12 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
                     href={k.lenke}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-[family-name:var(--font-playfair)] text-[20px] font-bold leading-snug text-text-primary hover:text-accent hover:underline"
+                    className="font-display text-[20px] leading-snug text-text-primary hover:text-black underline underline-offset-4 hover:text-accent-dark"
                   >
                     {k.navn}
                   </a>
                 ) : (
-                  <span className="font-[family-name:var(--font-playfair)] text-[20px] font-bold leading-snug text-text-primary">
+                  <span className="font-display text-[20px] leading-snug text-text-primary">
                     {k.navn}
                   </span>
                 )}
@@ -293,35 +285,55 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
       );
 
     case "karuseller": {
-      const liste = hentAlleKaruseller()
+      // Karuseller og skråblikk i samme rad, nyeste først i hver gruppe.
+      type Omslag = { key: string; href: string; tittel: string; bilde?: string; under: string; utkast: boolean };
+      const karuseller: Omslag[] = hentAlleKaruseller()
         .filter((k) => ktx.visUtkast || !k.utkast)
-        .slice(0, kloss.antall || 8);
+        .map((k) => ({
+          key: `k-${k.slug}`,
+          href: `/${k.slug}`,
+          tittel: k.tittel,
+          bilde: k.slides[0]?.bilde,
+          under: `${k.slides.length} slides, alle tall med kilde`,
+          utkast: k.utkast,
+        }));
+      const skraablikk: Omslag[] = hentAlleSkraablikk()
+        .filter((s) => ktx.visUtkast || !s.utkast)
+        .map((s) => ({
+          key: `s-${s.slug}`,
+          href: `/skraablikk/${s.slug}`,
+          tittel: s.tittel,
+          bilde: s.slides[0]?.bilde,
+          under: "Skråblikk, med forklaringer",
+          utkast: s.utkast,
+        }));
+      const liste = [...karuseller, ...skraablikk].slice(0, kloss.antall || 8);
       if (liste.length === 0) return null;
       return (
         <Seksjon bakgrunn={kloss.bakgrunn}>
           <Overskrift>{kloss.overskrift}</Overskrift>
-          <ul className="grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 lg:grid-cols-4">
-            {liste.map((k) => (
-              <li key={k.slug}>
-                <Link href={`/${k.slug}`} className="group block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
-                  {k.slides[0]?.bilde ? (
+          <ul className="grid grid-cols-2 gap-x-4 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
+            {liste.map((o) => (
+              <li key={o.key}>
+                <Link href={o.href} className="group block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black">
+                  {o.bilde ? (
                     <Image
-                      src={k.slides[0].bilde}
+                      src={o.bilde}
                       alt=""
                       width={1080}
                       height={1350}
                       sizes="(min-width: 1024px) 260px, (min-width: 640px) 33vw, 50vw"
-                      className="w-full rounded-[4px] border border-border transition-transform group-hover:-translate-y-0.5"
+                      className="w-full rounded-[10px]"
                     />
                   ) : (
-                    <div className="aspect-[4/5] rounded-[4px] border border-dashed border-border-light" />
+                    <div className="aspect-[4/5] rounded-[10px] bg-surface" />
                   )}
-                  <div className="mt-3 text-[15px] font-semibold leading-snug text-text-primary group-hover:text-accent">
-                    {k.tittel}
+                  <div className="mt-3 text-[17px] font-extrabold leading-snug tracking-[-0.01em] text-black group-hover:underline">
+                    {o.tittel}
                   </div>
-                  <div className="mt-1 text-[12.5px] text-text-muted">
-                    {k.slides.length} slides, med kilder
-                    {k.utkast && <span className="ml-2 rounded bg-amber-100 px-1.5 py-0.5 text-amber-900">Utkast</span>}
+                  <div className="mt-1 text-[13.5px] text-text-muted">
+                    {o.under}
+                    {o.utkast && <span className="ml-2 rounded bg-amber-100 px-1.5 py-0.5 text-amber-900">Utkast</span>}
                   </div>
                 </Link>
               </li>
@@ -350,11 +362,11 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
                       width={1080}
                       height={1350}
                       sizes="(min-width: 1024px) 260px, (min-width: 640px) 33vw, 50vw"
-                      className="w-full rounded-[4px] border border-border transition-transform group-hover:-translate-y-0.5"
+                      className="w-full rounded-[10px]"
                     />
                   )}
-                  <div className="mt-3 text-[15px] font-semibold leading-snug text-text-primary group-hover:text-accent">{s.tittel}</div>
-                  <div className="mt-1 text-[12.5px] text-text-muted">
+                  <div className="mt-3 text-[17px] font-extrabold leading-snug tracking-[-0.01em] text-black group-hover:underline">{s.tittel}</div>
+                  <div className="mt-1 text-[13.5px] text-text-muted">
                     Med forklaringer
                     {s.utkast && <span className="ml-2 rounded bg-amber-100 px-1.5 py-0.5 text-amber-900">Utkast</span>}
                   </div>
@@ -362,7 +374,7 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
               </li>
             ))}
           </ul>
-          <Link href="/skraablikk" className="mt-6 inline-block text-[13px] font-semibold text-accent hover:underline">
+          <Link href="/skraablikk" className="mt-6 inline-block text-[15px] font-semibold text-black underline underline-offset-4 hover:text-accent">
             Alle skråblikk
           </Link>
         </Seksjon>
@@ -384,7 +396,7 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
               >
                 <Link
                   href={`/tema/${t.slug}`}
-                  className="font-[family-name:var(--font-playfair)] text-[20px] font-bold leading-snug text-text-primary hover:text-accent"
+                  className="font-display text-[20px] leading-snug text-text-primary hover:text-accent"
                 >
                   {t.tittel}
                 </Link>
@@ -435,7 +447,7 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
               </li>
             ))}
           </ol>
-          <Link href="/kilder" className="mt-4 inline-block text-[13px] font-semibold text-accent hover:underline">
+          <Link href="/kilder" className="mt-4 inline-block text-[13px] font-semibold text-black underline underline-offset-4 hover:text-accent-dark">
             Alle saker fra kildene
           </Link>
         </Seksjon>
@@ -465,7 +477,7 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
                 <div className="text-[12.5px] text-text-muted">{postDato(p.date)}</div>
                 <Link
                   href={`/innlegg/${p.slug}`}
-                  className="mt-1 block font-[family-name:var(--font-playfair)] text-[20px] font-bold leading-snug text-text-primary hover:text-accent"
+                  className="mt-1 block font-display text-[20px] leading-snug text-text-primary hover:text-accent"
                 >
                   {p.title}
                 </Link>

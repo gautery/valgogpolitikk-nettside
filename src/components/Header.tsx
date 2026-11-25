@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import BookSpines from "./BookSpines";
+import Image from "next/image";
 import type { Lenke } from "@/lib/sider";
 
 function MenyLenke({ lenke, className }: { lenke: Lenke; className: string }) {
@@ -22,15 +22,12 @@ export default function Header({ meny }: { meny: Lenke[] }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-white/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 border-b border-black bg-white">
       <div className="mx-auto flex h-16 max-w-[1100px] items-center justify-between px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
-          <BookSpines className="h-8 w-auto" />
-          <div className="h-6 w-px bg-border" />
-          <span className="text-[16px] font-bold tracking-tight text-text-primary">
-            valg og politikk
-          </span>
+          <Image src="/bilder/logo.png" alt="" width={36} height={36} className="rounded-[6px]" priority />
+          <span className="font-display text-[19px] text-text-primary">valg og politikk</span>
         </Link>
 
         {/* Desktop nav */}
@@ -39,7 +36,7 @@ export default function Header({ meny }: { meny: Lenke[] }) {
             <MenyLenke
               key={m.tekst}
               lenke={m}
-              className="text-[13px] font-medium text-text-secondary hover:text-accent transition-colors"
+              className="text-[15px] font-semibold text-text-primary underline-offset-4 hover:underline"
             />
           ))}
         </nav>

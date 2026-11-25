@@ -57,7 +57,7 @@ export default function TrappaSide() {
       {/* ── Helt på toppen ── */}
       <section aria-labelledby="toppen" className="border-t border-border px-6 py-14">
         <div className="mx-auto max-w-[1100px]">
-          <h2 id="toppen" className="font-[family-name:var(--font-playfair)] text-2xl font-bold sm:text-[28px]">
+          <h2 id="toppen" className="font-display text-2xl sm:text-[28px]">
             {t.toppen.tittel}
           </h2>
           <p className="mt-3 max-w-[660px] text-[16px] leading-relaxed text-text-secondary">
@@ -97,7 +97,7 @@ export default function TrappaSide() {
       {/* ── De 400 rikeste ── */}
       <section aria-labelledby="formue" className="border-t border-border bg-hero px-6 py-14 text-white">
         <div className="mx-auto max-w-[1100px]">
-          <h2 id="formue" className="font-[family-name:var(--font-playfair)] text-2xl font-bold sm:text-[28px]">
+          <h2 id="formue" className="font-display text-2xl sm:text-[28px]">
             {t.formue.tittel}
           </h2>
           <p className="mt-3 max-w-[660px] text-[16px] leading-relaxed text-white/75">
@@ -106,25 +106,25 @@ export default function TrappaSide() {
           <dl className="mt-9 grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-4 [&>div]:flex [&>div]:flex-col">
             <div>
               <dt className="text-[14px] text-white/65">{t.formue.etikett_samlet}</dt>
-              <dd className="order-first font-[family-name:var(--font-playfair)] text-4xl font-bold tabular-nums">
+              <dd className="order-first font-display text-4xl tabular-nums">
                 {nf0.format(k.samlet_mrd)} mrd.
               </dd>
             </div>
             <div>
               <dt className="text-[14px] text-white/65">{t.formue.etikett_snitt}</dt>
-              <dd className="order-first font-[family-name:var(--font-playfair)] text-4xl font-bold tabular-nums">
+              <dd className="order-first font-display text-4xl tabular-nums">
                 {nf1.format(k.samlet_mrd / 400)} mrd.
               </dd>
             </div>
             <div>
               <dt className="text-[14px] text-white/65">{t.formue.etikett_milliardaerer}</dt>
-              <dd className="order-first font-[family-name:var(--font-playfair)] text-4xl font-bold tabular-nums">
+              <dd className="order-first font-display text-4xl tabular-nums">
                 {nf0.format(k.milliardaerer)}
               </dd>
             </div>
             <div>
               <dt className="text-[14px] text-white/65">{t.formue.etikett_rikeste}</dt>
-              <dd className="order-first font-[family-name:var(--font-playfair)] text-4xl font-bold tabular-nums">
+              <dd className="order-first font-display text-4xl tabular-nums">
                 {nf0.format(k.rikeste_mrd)} mrd.
               </dd>
             </div>
@@ -145,7 +145,7 @@ export default function TrappaSide() {
       <section aria-labelledby="hvorfor" className="border-t border-border bg-surface px-6 py-14">
         <div className="mx-auto grid max-w-[1100px] gap-12 md:grid-cols-2">
           <div className="max-w-[560px]">
-            <h2 id="hvorfor" className="font-[family-name:var(--font-playfair)] text-2xl font-bold">
+            <h2 id="hvorfor" className="font-display text-2xl">
               {t.hvorfor.tittel}
             </h2>
             <div className="mt-4 space-y-4 text-[16px] leading-relaxed text-text-secondary">
@@ -156,7 +156,7 @@ export default function TrappaSide() {
           </div>
 
           <div className="max-w-[560px]">
-            <h2 className="font-[family-name:var(--font-playfair)] text-2xl font-bold">{t.metode.tittel}</h2>
+            <h2 className="font-display text-2xl">{t.metode.tittel}</h2>
             <ul className="mt-4 list-disc space-y-2.5 pl-5 text-[15px] leading-relaxed text-text-secondary">
               {(t.metode.punkter ?? []).filter(Boolean).map((p) => (
                 <li key={p}>{p}</li>

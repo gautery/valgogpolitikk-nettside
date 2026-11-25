@@ -44,7 +44,7 @@ export default function SkraablikkOversikt() {
                     className="w-full rounded-[4px] border border-border transition-transform group-hover:-translate-y-1"
                   />
                 )}
-                <div className="mt-4 font-[family-name:var(--font-playfair)] text-[22px] font-bold leading-snug text-text-primary group-hover:text-accent">
+                <div className="mt-4 font-display text-[22px] leading-snug text-text-primary group-hover:text-accent">
                   {s.tittel}
                 </div>
                 <div className="mt-1 text-[13.5px] text-text-muted">

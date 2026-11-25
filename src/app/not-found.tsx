@@ -25,8 +25,8 @@ export default function FantIkke() {
       <main id="innhold" className="border-b border-border bg-hero px-6 py-20 md:py-28">
         <div className="mx-auto max-w-[1100px]">
           <BookSpines className="mb-8 h-12 w-auto opacity-80" />
-          <p className="mb-3 text-[12px] font-semibold uppercase tracking-widest text-white/60">Feil 404</p>
-          <h1 className="mb-4 max-w-[560px] font-[family-name:var(--font-playfair)] text-3xl font-bold leading-tight text-white sm:text-4xl">
+          <p className="mb-3 text-[12px] font-semibold text-white/60">Feil 404</p>
+          <h1 className="mb-4 max-w-[560px] font-display text-3xl leading-tight text-white sm:text-4xl">
             Denne siden fant vi ikke
           </h1>
           <p className="mb-10 max-w-[480px] text-[16px] leading-relaxed text-white/75">

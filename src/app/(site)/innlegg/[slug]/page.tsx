@@ -69,7 +69,7 @@ export default async function PostPage({ params }: PageProps) {
           </div>
 
           {/* Title */}
-          <h1 className="mb-5 font-[family-name:var(--font-playfair)] text-3xl font-bold leading-tight text-text-primary sm:text-4xl lg:text-[42px] lg:leading-[1.15]">
+          <h1 className="mb-5 font-display text-3xl leading-tight text-text-primary sm:text-4xl lg:text-[42px] lg:leading-[1.15]">
             {post.title}
           </h1>
 
@@ -87,7 +87,7 @@ export default async function PostPage({ params }: PageProps) {
         {/* Sources */}
         {post.sources && post.sources.length > 0 && (
           <div className="mt-12 rounded-md border border-border bg-surface p-6">
-            <div className="mb-3 text-[11px] font-semibold uppercase tracking-wider text-text-muted">
+            <div className="mb-3 text-[11px] font-semibold text-text-muted">
               Kilder
             </div>
             {post.sources.map((s, i) => (

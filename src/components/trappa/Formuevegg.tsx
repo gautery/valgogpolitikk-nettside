@@ -91,7 +91,7 @@ export default function Formuevegg({ data, tekst }: { data: TrappaData; tekst: T
 
   return (
     <div className="mt-14">
-      <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-bold">{tekst.trapp_tittel}</h3>
+      <h3 className="font-display text-2xl">{tekst.trapp_tittel}</h3>
       <p className="mt-3 max-w-[640px] text-[16px] leading-relaxed text-white/75">
         {tekst.trapp_ingress}{" "}
         <a href="#etter-formuestrappa" className="font-medium text-white underline underline-offset-2">
@@ -120,7 +120,7 @@ export default function Formuevegg({ data, tekst }: { data: TrappaData; tekst: T
           aria-live="off"
         >
           <div className="w-fit max-w-full rounded-md bg-white px-3 py-2 text-text-primary shadow-sm">
-            <span className="block font-[family-name:var(--font-playfair)] text-[19px] font-bold tabular-nums sm:text-2xl">
+            <span className="block font-display text-[19px] tabular-nums sm:text-2xl">
               {belop(naa)} kr
             </span>
             <span className="block text-[11px] leading-snug text-text-secondary sm:text-[13px]">

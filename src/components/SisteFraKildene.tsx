@@ -121,11 +121,11 @@ export function KildeBand({
   );
 
   return (
-    <section aria-labelledby="kildebaand" className="border-b border-border bg-surface px-6">
-      <div className="mx-auto max-w-[1100px] py-7">
+    <section aria-labelledby="kildebaand" className="px-6">
+      <div className="mx-auto max-w-[1100px] border-t border-black py-8">
         <div className="mb-4 flex flex-wrap items-end justify-between gap-x-6 gap-y-3">
           <div className="flex flex-wrap items-end gap-x-6 gap-y-2">
-            <h2 id="kildebaand" className="font-[family-name:var(--font-playfair)] text-[19px] font-bold text-text-primary">
+            <h2 id="kildebaand" className="font-display text-[30px] leading-tight text-black sm:text-[36px]">
               Nytt fra kildene
             </h2>
             {valgte.length > 0 && (
@@ -135,11 +135,11 @@ export function KildeBand({
               </div>
             )}
           </div>
-          <div className="flex items-baseline gap-4 text-[12px]">
+          <div className="flex items-baseline gap-4 text-[14px]">
             <span className="hidden text-text-muted sm:inline" suppressHydrationWarning>
               Oppdatert {oppdatertTekst(oppdatert)}
             </span>
-            <Link href="/kilder" className="font-semibold text-accent hover:underline">
+            <Link href="/kilder" className="font-semibold text-black underline underline-offset-4 hover:text-accent-dark">
               Alle saker
             </Link>
           </div>
@@ -155,9 +155,9 @@ export function KildeBand({
             ? valgte.map((u) => (
                 <li
                   key={u.id}
-                  className="flex w-[260px] flex-shrink-0 snap-start flex-col border-l-[3px] border-accent bg-white py-3 pl-4 pr-3 lg:w-auto"
+                  className="flex w-[260px] flex-shrink-0 snap-start flex-col rounded-[10px] bg-surface p-4 lg:w-auto"
                 >
-                  <div className="text-[11.5px] text-text-muted">
+                  <div className="text-[12.5px] text-text-muted">
                     <span>{u.kilde}</span> <span aria-hidden="true">/</span>{" "}
                     <span suppressHydrationWarning>{nårTekst(u.dato)}</span>
                   </div>
@@ -165,7 +165,7 @@ export function KildeBand({
                     href={u.lenke}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-1.5 line-clamp-3 text-[14px] font-semibold leading-snug text-text-primary hover:text-accent"
+                    className="mt-1.5 line-clamp-3 text-[15.5px] font-extrabold leading-snug tracking-[-0.01em] text-black hover:underline"
                   >
                     {u.tittel}
                   </a>
@@ -177,19 +177,18 @@ export function KildeBand({
             : løpende.map((s) => (
                 <li
                   key={s.id}
-                  className="w-[260px] flex-shrink-0 snap-start border-l-[3px] bg-white py-3 pl-4 pr-3 lg:w-auto"
-                  style={{ borderLeftColor: TEMAFARGER[s.temaer[0]] ?? "#8a8a96" }}
+                  className="w-[260px] flex-shrink-0 snap-start rounded-[10px] bg-surface p-4 lg:w-auto"
                 >
                   <Kildelinje sak={s} />
                   <a
                     href={s.lenke}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-1.5 line-clamp-3 text-[14px] font-semibold leading-snug text-text-primary hover:text-accent"
+                    className="mt-1.5 line-clamp-3 text-[15.5px] font-extrabold leading-snug tracking-[-0.01em] text-black hover:underline"
                   >
                     {s.tittel}
                   </a>
-                  <div className="mt-2 text-[11px] font-medium" style={{ color: TEMAFARGER[s.temaer[0]] }}>
+                  <div className="mt-2 text-[12.5px] font-semibold" style={{ color: TEMAFARGER[s.temaer[0]] }}>
                     {s.temaer[0]}
                   </div>
                 </li>

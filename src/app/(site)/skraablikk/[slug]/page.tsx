@@ -50,7 +50,7 @@ export default async function SkraablikkSide({ params }: { params: Promise<{ slu
           >
             Skråblikk
           </Link>
-          <h1 className="mt-6 max-w-[760px] font-[family-name:var(--font-playfair)] text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-[46px] lg:leading-[1.12]">
+          <h1 className="mt-6 max-w-[760px] font-display text-3xl leading-tight text-white sm:text-4xl lg:text-[46px] lg:leading-[1.12]">
             {s.tittel}
           </h1>
           {s.ingress && <p className="mt-4 max-w-[600px] text-[17px] leading-relaxed text-white/70">{s.ingress}</p>}
@@ -136,7 +136,7 @@ export default async function SkraablikkSide({ params }: { params: Promise<{ slu
           </ol>
 
           <div className="mt-20 border-t border-border pt-8">
-            <Link href="/skraablikk" className="text-[15px] font-semibold text-accent hover:underline">
+            <Link href="/skraablikk" className="text-[15px] font-semibold text-black underline underline-offset-4 hover:text-accent-dark">
               Flere skråblikk
             </Link>
           </div>

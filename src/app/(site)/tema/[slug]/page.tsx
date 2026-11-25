@@ -58,11 +58,11 @@ export default async function TemaSide({ params }: { params: Promise<{ slug: str
         <div className="mx-auto max-w-[1100px]">
           <div className="mb-3 flex items-center gap-2">
             <div className="h-4 w-1 rounded-full bg-rosa" />
-            <span className="text-[11px] font-semibold uppercase tracking-widest text-white/60">
+            <span className="text-[11px] font-semibold text-white/60">
               Tema
             </span>
           </div>
-          <h1 className="mb-4 max-w-[680px] font-[family-name:var(--font-playfair)] text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-[44px] lg:leading-[1.15]">
+          <h1 className="mb-4 max-w-[680px] font-display text-3xl leading-tight text-white sm:text-4xl lg:text-[44px] lg:leading-[1.15]">
             {tema.tittel}
           </h1>
           <p className="max-w-[560px] text-[16px] leading-relaxed text-white/70">{tema.ingress}</p>
@@ -88,7 +88,7 @@ export default async function TemaSide({ params }: { params: Promise<{ slug: str
             <dl className="grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
               {tema.nokkeltall.map((n) => (
                 <div key={n.tall} className="border-t-2 border-text-primary pt-4">
-                  <dt className="font-[family-name:var(--font-playfair)] text-[40px] font-bold leading-none text-text-primary">
+                  <dt className="font-display text-[40px] leading-none text-text-primary">
                     {n.tall}
                   </dt>
                   <dd className="mt-3 text-[14px] leading-relaxed text-text-secondary">
@@ -119,7 +119,7 @@ export default async function TemaSide({ params }: { params: Promise<{ slug: str
             ))}
           </div>
 
-          <h2 className="mb-2 font-[family-name:var(--font-playfair)] text-2xl font-bold">
+          <h2 className="mb-2 font-display text-2xl">
             Kildene
           </h2>
           <p className="mb-6 text-[14px] text-text-muted">
@@ -132,7 +132,7 @@ export default async function TemaSide({ params }: { params: Promise<{ slug: str
                   href={k.lenke}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-[family-name:var(--font-playfair)] text-[20px] font-bold leading-snug text-text-primary hover:text-accent hover:underline"
+                  className="font-display text-[20px] leading-snug text-text-primary hover:text-black underline underline-offset-4 hover:text-accent-dark"
                 >
                   {k.navn}
                 </a>
@@ -151,7 +151,7 @@ export default async function TemaSide({ params }: { params: Promise<{ slug: str
         {/* Sidekolonne */}
         <aside className="flex flex-col gap-6 lg:sticky lg:top-24 lg:self-start">
           <section aria-labelledby="sistenytt" className="rounded-lg border border-border bg-white p-5">
-            <h2 id="sistenytt" className="mb-3 font-[family-name:var(--font-playfair)] text-lg font-bold">
+            <h2 id="sistenytt" className="mb-3 font-display text-lg">
               Siste nytt om {tema.tittel.toLowerCase()}
             </h2>
             {siste.length === 0 ? (
@@ -176,21 +176,21 @@ export default async function TemaSide({ params }: { params: Promise<{ slug: str
                 ))}
               </ol>
             )}
-            <Link href="/kilder" className="mt-3 inline-block text-[12.5px] font-semibold text-accent hover:underline">
+            <Link href="/kilder" className="mt-3 inline-block text-[12.5px] font-semibold text-black underline underline-offset-4 hover:text-accent-dark">
               Alle saker fra kildene
             </Link>
           </section>
 
           {(tema.analyser.length > 0 || tema.karuseller.length > 0) && (
             <section aria-labelledby="mineanalyser" className="rounded-lg border border-border bg-surface p-5">
-              <h2 id="mineanalyser" className="mb-3 font-[family-name:var(--font-playfair)] text-lg font-bold">
+              <h2 id="mineanalyser" className="mb-3 font-display text-lg">
                 Analyser og karuseller
               </h2>
               <ul className="text-[13.5px]">
                 {tema.analyser.map((a) => (
                   <li key={a.tittel} className="border-t border-border py-2 first:border-0 first:pt-0">
                     {a.lenke ? (
-                      <Link href={a.lenke} className="font-medium text-text-primary hover:text-accent hover:underline">
+                      <Link href={a.lenke} className="font-medium text-text-primary hover:text-black underline underline-offset-4 hover:text-accent-dark">
                         {a.tittel}
                       </Link>
                     ) : (
@@ -202,7 +202,7 @@ export default async function TemaSide({ params }: { params: Promise<{ slug: str
                 {tema.karuseller.map((k) => (
                   <li key={k.tittel} className="border-t border-border py-2 first:border-0 first:pt-0">
                     {k.lenke ? (
-                      <a href={k.lenke} target="_blank" rel="noopener noreferrer" className="font-medium text-text-primary hover:text-accent hover:underline">
+                      <a href={k.lenke} target="_blank" rel="noopener noreferrer" className="font-medium text-text-primary hover:text-black underline underline-offset-4 hover:text-accent-dark">
                         {k.tittel}
                       </a>
                     ) : (

@@ -56,32 +56,9 @@ export default async function KarusellSide({ k }: { k: Karusell }) {
 
   return (
     <>
-      {/* Topp */}
-      <div className="border-b border-border bg-hero px-6 py-12 md:py-16">
-        <div className="mx-auto grid max-w-[1100px] items-center gap-10 md:grid-cols-[minmax(0,1fr)_240px]">
-          <div>
-            <div className="mb-3 flex items-center gap-2">
-              <div className="h-4 w-1 rounded-full bg-rosa" />
-              <span className="text-[13px] font-medium text-white/50">Kildene bak karusellen</span>
-            </div>
-            <h1 className="mb-4 max-w-[640px] font-[family-name:var(--font-playfair)] text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-[44px] lg:leading-[1.15]">
-              {k.tittel}
-            </h1>
-            <p className="max-w-[540px] text-[16px] leading-relaxed text-white/70">{k.ingress}</p>
-            <p className="mt-5 text-[14px] text-white/50">
-              {k.slides.length} slides, {medTall} tall med kilde
-            </p>
-            {k.instagram && (
-              <a
-                href={k.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-block rounded-md bg-accent px-5 py-2.5 text-[14px] font-semibold text-white hover:bg-accent-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-              >
-                Se karusellen på Instagram
-              </a>
-            )}
-          </div>
+      {/* Topp: slide 1 slik den ser ut på Instagram, med tittel og nøkkeltall ved siden av */}
+      <div className="border-b border-black px-6 py-10 md:py-14">
+        <div className="mx-auto grid max-w-[1100px] items-center gap-8 md:grid-cols-[360px_minmax(0,1fr)] md:gap-14">
           {k.slides[0]?.bilde && (
             <Image
               src={k.slides[0].bilde}
@@ -89,10 +66,28 @@ export default async function KarusellSide({ k }: { k: Karusell }) {
               width={1080}
               height={1350}
               priority
-              sizes="240px"
-              className="hidden w-[240px] rotate-[2deg] rounded-md shadow-[0_20px_40px_-12px_rgba(0,0,0,0.6)] md:block"
+              sizes="(min-width: 768px) 360px, 100vw"
+              className="w-full max-w-[360px] rounded-[10px]"
             />
           )}
+          <div>
+            <p className="mb-4 text-[15px] font-semibold text-black">Kildene bak karusellen</p>
+            <h1 className="font-display text-[38px] leading-[1.04] sm:text-[50px]">{k.tittel}</h1>
+            <p className="mt-5 max-w-[540px] text-[18px] leading-[1.55] text-text-secondary">{k.ingress}</p>
+            <p className="mt-5 text-[15px] text-text-muted">
+              {k.slides.length} slides, {medTall} tall med kilde
+            </p>
+            {k.instagram && (
+              <a
+                href={k.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-block rounded-[6px] bg-black px-5 py-3 text-[15px] font-semibold text-white hover:bg-text-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+              >
+                Se karusellen på Instagram
+              </a>
+            )}
+          </div>
         </div>
       </div>
 
@@ -108,7 +103,7 @@ export default async function KarusellSide({ k }: { k: Karusell }) {
       {/* Slide for slide */}
       <div className="px-6 py-12">
         <div className="mx-auto max-w-[1100px]">
-          <h2 className="mb-2 font-[family-name:var(--font-playfair)] text-2xl font-bold">
+          <h2 className="mb-2 font-display text-[30px] sm:text-[36px]">
             Slide for slide
           </h2>
           <p className="mb-8 max-w-[620px] text-[15px] leading-relaxed text-text-muted">
@@ -120,7 +115,7 @@ export default async function KarusellSide({ k }: { k: Karusell }) {
             {k.slides.map((s, i) => (
               <li
                 key={i}
-                className="grid gap-5 border-t border-border py-8 sm:grid-cols-[150px_minmax(0,1fr)] sm:gap-8 lg:grid-cols-[190px_minmax(0,1fr)]"
+                className="grid gap-5 border-t border-black py-8 sm:grid-cols-[150px_minmax(0,1fr)] sm:gap-8 lg:grid-cols-[190px_minmax(0,1fr)]"
               >
                 <div className="flex items-start gap-4 sm:block">
                   {s.bilde ? (
@@ -131,7 +126,7 @@ export default async function KarusellSide({ k }: { k: Karusell }) {
                       width={1080}
                       height={1350}
                       sizes="(min-width: 1024px) 190px, 150px"
-                      className="w-[110px] rounded-[4px] border border-border sm:w-full"
+                      className="w-[110px] rounded-[8px] sm:w-full"
                     />
                     </a>
                   ) : (
@@ -145,13 +140,13 @@ export default async function KarusellSide({ k }: { k: Karusell }) {
                 </div>
 
                 <div className="min-w-0 max-w-[680px]">
-                  <h3 className="text-[17px] font-semibold leading-snug text-text-primary">
+                  <h3 className="text-[19px] font-extrabold leading-snug tracking-[-0.01em] text-black">
                     {s.tittel}
                   </h3>
 
                   {s.tall ? (
                     <>
-                      <p className="mt-2 font-[family-name:var(--font-playfair)] text-[34px] font-bold leading-tight text-accent sm:text-[40px]">
+                      <p className="mt-2 font-display text-[40px] leading-[1.05] text-accent sm:text-[48px]">
                         {s.tall}
                       </p>
                       {s.sikkerhet && (
@@ -161,7 +156,7 @@ export default async function KarusellSide({ k }: { k: Karusell }) {
                       )}
                       <ul className="mt-5 space-y-3">
                         {s.kilder.map((kilde) => (
-                          <li key={kilde.navn + kilde.merknad} className="border-l-2 border-border pl-4">
+                          <li key={kilde.navn + kilde.merknad} className="border-l-[3px] border-black pl-4">
                             {kilde.lenke ? (
                               <a
                                 href={kilde.lenke}
@@ -200,7 +195,7 @@ export default async function KarusellSide({ k }: { k: Karusell }) {
 
           {k.avsnitt.length > 0 && (
             <section aria-labelledby="regnet" className="mt-6 border-t-2 border-text-primary pt-8">
-              <h2 id="regnet" className="mb-4 font-[family-name:var(--font-playfair)] text-2xl font-bold">
+              <h2 id="regnet" className="mb-4 font-display text-2xl">
                 Slik regnet vi
               </h2>
               <div className="max-w-[680px] space-y-4 text-[16px] leading-[1.8] text-text-secondary">
@@ -212,8 +207,8 @@ export default async function KarusellSide({ k }: { k: Karusell }) {
           )}
 
           {siste.length > 0 && (
-            <section aria-labelledby="sistenytt" className="mt-12 rounded-lg border border-border bg-surface p-6">
-              <h2 id="sistenytt" className="mb-4 font-[family-name:var(--font-playfair)] text-xl font-bold">
+            <section aria-labelledby="sistenytt" className="mt-12 border-t border-black pt-6">
+              <h2 id="sistenytt" className="mb-4 font-display text-xl">
                 Siste nytt om {k.tema.toLowerCase()}
               </h2>
               <ol className="grid gap-x-8 sm:grid-cols-2">
@@ -233,7 +228,7 @@ export default async function KarusellSide({ k }: { k: Karusell }) {
                   </li>
                 ))}
               </ol>
-              <Link href="/kilder" className="mt-3 inline-block text-[13px] font-semibold text-accent hover:underline">
+              <Link href="/kilder" className="mt-3 inline-block text-[13px] font-semibold text-black underline underline-offset-4 hover:text-accent-dark">
                 Alle saker fra kildene
               </Link>
             </section>

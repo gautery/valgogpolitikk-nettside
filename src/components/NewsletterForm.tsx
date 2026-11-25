@@ -46,12 +46,12 @@ export default function NewsletterForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-lg bg-rosa p-5"
+      className="rounded-[10px] bg-rosa p-5"
     >
-      <div className="mb-1 text-[12px] font-semibold uppercase tracking-wider text-hero">
+      <div className="mb-1 text-[17px] font-extrabold text-black">
         Nyhetsbrev
       </div>
-      <div className="mb-4 text-[13px] leading-relaxed text-hero">
+      <div className="mb-4 text-[14px] leading-relaxed text-black">
         Få nye analyser rett i innboksen.
       </div>
       <div className="flex gap-2">
@@ -66,7 +66,7 @@ export default function NewsletterForm() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="whitespace-nowrap rounded-md bg-hero px-4 py-2.5 text-[13px] font-semibold text-white transition-opacity hover:opacity-90 disabled:opacity-50"
+          className="whitespace-nowrap rounded-md bg-black px-4 py-2.5 text-[14px] font-semibold text-white transition-opacity hover:opacity-90 disabled:opacity-50"
         >
           {status === "loading" ? "..." : "Meld på"}
         </button>

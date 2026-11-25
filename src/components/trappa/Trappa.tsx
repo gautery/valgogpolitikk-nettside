@@ -63,7 +63,7 @@ export default function Trappa({
             <div className="h-4 w-1 rounded-full bg-rosa" />
             <span className="text-[13px] font-medium text-white/50">{t.topp.overlinje}</span>
           </div>
-          <h1 className="font-[family-name:var(--font-playfair)] text-4xl font-bold leading-tight text-white sm:text-5xl">
+          <h1 className="font-display text-4xl leading-tight text-white sm:text-5xl">
             {t.topp.tittel}
           </h1>
           <p className="mt-5 max-w-[620px] text-[17px] leading-relaxed text-white/75">
@@ -99,7 +99,7 @@ export default function Trappa({
               {inntekt !== null && (
                 <div>
                   <p className="text-white">
-                    <span className="font-[family-name:var(--font-playfair)] text-5xl font-bold tabular-nums">
+                    <span className="font-display text-5xl tabular-nums">
                       {plassering(andelUnder(inntekt, data))} %
                     </span>
                     <span className="mt-1 block text-[16px] text-white/80">
@@ -169,7 +169,7 @@ function Vegg({
   return (
     <section id="trappa" aria-labelledby="vegg-tittel" className="scroll-mt-6 px-6 py-14">
       <div className="mx-auto max-w-[1100px]">
-        <h2 id="vegg-tittel" className="font-[family-name:var(--font-playfair)] text-2xl font-bold sm:text-[28px]">
+        <h2 id="vegg-tittel" className="font-display text-2xl sm:text-[28px]">
           {tekst.tittel}
         </h2>
         <p className="mt-3 max-w-[640px] text-[16px] leading-relaxed text-text-secondary">
