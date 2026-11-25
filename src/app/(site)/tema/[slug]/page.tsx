@@ -58,7 +58,7 @@ export default async function TemaSide({ params }: { params: Promise<{ slug: str
         <div className="mx-auto max-w-[1100px]">
           <div className="mb-3 flex items-center gap-2">
             <div className="h-4 w-1 rounded-full bg-accent" />
-            <span className="text-[11px] font-semibold uppercase tracking-widest text-white/40">
+            <span className="text-[11px] font-semibold uppercase tracking-widest text-white/60">
               Tema
             </span>
           </div>

@@ -139,7 +139,7 @@ export default function Formuevegg({ data, tekst }: { data: TrappaData; tekst: T
               className="absolute right-0 border-t border-dashed border-white/15"
               style={{ top: v * PX_PER_MILL, left: "45%" }}
             >
-              <span className="absolute -top-2.5 right-1 text-[11px] tabular-nums text-white/40">{belop(v)}</span>
+              <span className="absolute -top-2.5 right-1 rounded-sm bg-hero/90 px-1 text-[11px] tabular-nums text-white/80">{belop(v)}</span>
             </div>
           ))}
 

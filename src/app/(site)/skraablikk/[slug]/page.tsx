@@ -22,7 +22,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${s.tittel} — Skråblikk — valg og politikk`,
     description: s.ingress,
     robots: s.utkast ? { index: false, follow: false } : undefined,
-    openGraph: { images: s.slides[0]?.bilde ? [s.slides[0].bilde] : undefined },
   };
 }
 

@@ -154,7 +154,7 @@ export default function KlossKatalog() {
               <span className="text-[13px] tabular-nums text-white/50">{i + 1}</span>
               <h2 className="text-[15px] font-semibold">{o.navn}</h2>
               <span className="text-[13px] text-white/70">{o.bruk}</span>
-              <span className="text-[12px] text-white/45">Felt: {o.felt}</span>
+              <span className="text-[12px] text-white/60">Felt: {o.felt}</span>
             </div>
           </div>
           <Klosser seksjoner={[o.kloss]} ktx={{ visUtkast: true }} />

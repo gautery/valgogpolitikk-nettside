@@ -48,10 +48,10 @@ export default function NewsletterForm() {
       onSubmit={handleSubmit}
       className="rounded-lg bg-accent p-5"
     >
-      <div className="mb-1 text-[12px] font-semibold uppercase tracking-wider text-white/70">
+      <div className="mb-1 text-[12px] font-semibold uppercase tracking-wider text-white">
         Nyhetsbrev
       </div>
-      <div className="mb-4 text-[13px] leading-relaxed text-white/85">
+      <div className="mb-4 text-[13px] leading-relaxed text-white">
         Få nye analyser rett i innboksen.
       </div>
       <div className="flex gap-2">
@@ -61,7 +61,7 @@ export default function NewsletterForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="din@epost.no"
-          className="min-w-0 flex-1 rounded-md border border-white/20 bg-white/10 px-3 py-2.5 text-[13px] text-white outline-none placeholder:text-white/40 focus:border-white/40 focus:bg-white/15"
+          className="min-w-0 flex-1 rounded-md border border-white/20 bg-white/10 px-3 py-2.5 text-[13px] text-white outline-none placeholder:text-white/60 focus:border-white/40 focus:bg-white/15"
         />
         <button
           type="submit"

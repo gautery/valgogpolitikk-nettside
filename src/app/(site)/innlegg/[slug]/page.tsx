@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { tekstPaa } from "@/lib/farger";
 import { compileMDX } from "next-mdx-remote/rsc";
 import Link from "next/link";
 import { getAllSlugs, getPostBySlug } from "@/lib/posts";
@@ -57,8 +58,8 @@ export default async function PostPage({ params }: PageProps) {
           {/* Meta */}
           <div className="mb-4 flex flex-wrap items-center gap-2 text-[12px]">
             <span
-              className="rounded-full px-2.5 py-0.5 text-[11px] font-semibold text-white"
-              style={{ background: post.accentColor }}
+              className="rounded-full px-2.5 py-0.5 text-[11px] font-semibold"
+              style={{ background: post.accentColor, color: tekstPaa(post.accentColor) }}
             >
               {category?.label}
             </span>
