@@ -31,7 +31,6 @@ export async function generateMetadata({ params }: { params: Promise<{ side: str
       title: `${k.tittel} — valg og politikk`,
       description: k.ingress,
       robots: k.utkast ? { index: false, follow: false } : undefined,
-      openGraph: { images: k.slides[0]?.bilde ? [k.slides[0].bilde] : undefined },
     };
   }
   const s = lesSide(side);

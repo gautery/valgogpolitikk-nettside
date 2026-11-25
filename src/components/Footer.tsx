@@ -55,7 +55,7 @@ export default function Footer() {
         </div>
 
         {bunntekst.merknad && (
-          <div className="mt-10 border-t border-border pt-6 text-[11px] text-text-faint">{bunntekst.merknad}</div>
+          <div className="mt-10 border-t border-border pt-6 text-[11px] text-text-muted">{bunntekst.merknad}</div>
         )}
       </div>
     </footer>

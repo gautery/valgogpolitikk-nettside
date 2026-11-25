@@ -52,7 +52,7 @@ export default function PostList({ posts, sidebarEkstra, om }: PostListProps) {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="Søk i innlegg …"
-          className="w-full rounded-md border border-border bg-white px-3.5 py-2.5 text-[13px] text-text-primary outline-none placeholder:text-text-faint focus:border-text-muted focus:ring-1 focus:ring-text-muted/20"
+          className="w-full rounded-md border border-border bg-white px-3.5 py-2.5 text-[13px] text-text-primary outline-none placeholder:text-text-muted focus:border-text-muted focus:ring-1 focus:ring-text-muted/20"
         />
 
         {/* Categories */}
@@ -72,7 +72,7 @@ export default function PostList({ posts, sidebarEkstra, om }: PostListProps) {
             >
               <span>{cat.label}</span>
               <span className={`text-[11px] font-medium ${
-                activeCategory === cat.id ? "text-white/60" : "text-text-faint"
+                activeCategory === cat.id ? "text-white/70" : "text-text-muted"
               }`}>
                 {categoryCount(cat.id)}
               </span>
@@ -119,7 +119,7 @@ export default function PostList({ posts, sidebarEkstra, om }: PostListProps) {
       </aside>
 
       {/* Post Feed */}
-      <main className="flex min-w-0 flex-1 flex-col gap-5">
+      <div className="flex min-w-0 flex-1 flex-col gap-5">
         <div className="mb-1 text-[12px] font-medium text-text-muted">
           {filtered.length} {filtered.length === 1 ? "analyse" : "analyser"}
           {activeCategory !== "all" &&
@@ -142,12 +142,12 @@ export default function PostList({ posts, sidebarEkstra, om }: PostListProps) {
           <div className="py-16 text-center text-text-muted">
             <div className="mb-3 text-3xl">🔍</div>
             <div className="text-sm">Ingen innlegg funnet.</div>
-            <div className="mt-1 text-xs text-text-faint">
+            <div className="mt-1 text-xs text-text-muted">
               Prøv en annen kategori eller søkeord.
             </div>
           </div>
         )}
-      </main>
+      </div>
     </div>
   );
 }

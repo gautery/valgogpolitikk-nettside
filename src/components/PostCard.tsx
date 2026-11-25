@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { tekstPaa } from "@/lib/farger";
 import { CATEGORIES } from "@/types/post";
 import type { Post } from "@/types/post";
 
@@ -34,8 +35,8 @@ export default function PostCard({
         {/* Meta */}
         <div className="mb-3 flex flex-wrap items-center gap-2.5 text-[12px]">
           <span
-            className="rounded-full px-2.5 py-0.5 text-[11px] font-semibold text-white"
-            style={{ background: post.accentColor }}
+            className="rounded-full px-2.5 py-0.5 text-[11px] font-semibold"
+            style={{ background: post.accentColor, color: tekstPaa(post.accentColor) }}
           >
             {category?.label}
           </span>

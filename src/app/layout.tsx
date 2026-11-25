@@ -17,6 +17,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  // Gjør adressene til delingsbilder o.l. fullstendige (https://www.valgogpolitikk.no/...).
+  metadataBase: new URL("https://www.valgogpolitikk.no"),
   title: "valg og politikk — Tall. Kilder. Analyse.",
   description:
     "Datadrevet analyse av norsk politikk. Skatt, arbeid, ulikhet og velferd med OECD, SSB og Eurostat som kilde.",
@@ -34,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="no" className={`${inter.variable} ${playfair.variable} antialiased`}>
+    <html lang="nb" className={`${inter.variable} ${playfair.variable} antialiased`}>
       <body className="min-h-screen bg-background font-sans text-text-primary">
         {children}
         <Analytics />

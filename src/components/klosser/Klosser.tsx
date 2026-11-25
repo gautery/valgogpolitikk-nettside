@@ -102,7 +102,7 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
                 {kloss.overlinje && (
                   <div className="mb-3 flex items-center gap-2">
                     <div className="h-4 w-1 rounded-full bg-accent" />
-                    <span className="text-[11px] font-semibold uppercase tracking-widest text-white/40">
+                    <span className="text-[11px] font-semibold uppercase tracking-widest text-white/60">
                       {kloss.overlinje}
                     </span>
                   </div>

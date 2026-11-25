@@ -19,7 +19,7 @@ export default async function KilderSide() {
         <div className="mx-auto max-w-[1100px]">
           <div className="mb-3 flex items-center gap-2">
             <div className="h-4 w-1 rounded-full bg-accent" />
-            <span className="text-[11px] font-semibold uppercase tracking-widest text-white/40">
+            <span className="text-[11px] font-semibold uppercase tracking-widest text-white/60">
               Oppdateres hver time
             </span>
           </div>

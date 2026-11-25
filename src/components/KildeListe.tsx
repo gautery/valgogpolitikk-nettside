@@ -290,10 +290,10 @@ export default function KildeListe({ data }: { data: Kildeoversikt }) {
                 : `Alle ${data.status.length} kildene svarte normalt.`}
             </p>
             <p className="flex flex-wrap gap-x-4">
-              <a href={`${RSS}${spor === "alt" ? "feed.xml" : `feed-${spor}.xml`}`} className="font-semibold text-accent hover:underline">
+              <a href={`${RSS}${spor === "alt" ? "feed.xml" : `feed-${spor}.xml`}`} className="inline-block py-1 font-semibold text-accent hover:underline">
                 RSS for {spor === "alt" ? "alt" : SPOR.find((x) => x.id === spor)!.navn.toLowerCase()}
               </a>
-              <a href="https://github.com/gautery/kildeoverv-kning" className="font-semibold text-accent hover:underline">
+              <a href="https://github.com/gautery/kildeoverv-kning" className="inline-block py-1 font-semibold text-accent hover:underline">
                 Kildeliste
               </a>
             </p>
