@@ -11,7 +11,7 @@ export default function Kontrollsenter() {
   if (!autentisert) {
     return (
       <div className="mx-auto flex min-h-[60vh] max-w-sm flex-col items-center justify-center px-6">
-        <h1 className="mb-6 font-[family-name:var(--font-playfair)] text-2xl font-bold">
+        <h1 className="mb-6 font-display text-2xl">
           Kontrollsenter
         </h1>
         <form
@@ -47,7 +47,7 @@ export default function Kontrollsenter() {
   return (
     <div className="mx-auto max-w-[900px] px-6 py-10">
       <div className="mb-8">
-        <h1 className="mb-2 font-[family-name:var(--font-playfair)] text-3xl font-bold">
+        <h1 className="mb-2 font-display text-3xl">
           Kontrollsenter
         </h1>
         <p className="text-sm text-text-muted">
@@ -58,7 +58,7 @@ export default function Kontrollsenter() {
       {/* Analytics */}
       <div className="mb-8 grid gap-4 sm:grid-cols-2">
         <div className="rounded-lg border border-border bg-white p-6">
-          <div className="mb-1 text-[11px] font-semibold uppercase tracking-wider text-text-muted">
+          <div className="mb-1 text-[11px] font-semibold text-text-muted">
             Bes&oslash;ksstatistikk
           </div>
           <p className="mb-4 text-sm text-text-secondary">
@@ -76,7 +76,7 @@ export default function Kontrollsenter() {
         </div>
 
         <div className="rounded-lg border border-border bg-white p-6">
-          <div className="mb-1 text-[11px] font-semibold uppercase tracking-wider text-text-muted">
+          <div className="mb-1 text-[11px] font-semibold text-text-muted">
             Deployment
           </div>
           <p className="mb-4 text-sm text-text-secondary">
@@ -95,20 +95,20 @@ export default function Kontrollsenter() {
 
       {/* Site overview */}
       <div className="mb-8">
-        <h2 className="mb-4 font-[family-name:var(--font-playfair)] text-xl font-bold">
+        <h2 className="mb-4 font-display text-xl">
           Sideoversikt
         </h2>
         <div className="overflow-hidden rounded-lg border border-border">
           <table className="w-full text-sm">
             <thead>
               <tr className="bg-surface text-left">
-                <th className="px-4 py-3 text-[11px] font-semibold uppercase tracking-wider text-text-muted">
+                <th className="px-4 py-3 text-[11px] font-semibold text-text-muted">
                   Side
                 </th>
-                <th className="px-4 py-3 text-[11px] font-semibold uppercase tracking-wider text-text-muted">
+                <th className="px-4 py-3 text-[11px] font-semibold text-text-muted">
                   URL
                 </th>
-                <th className="px-4 py-3 text-[11px] font-semibold uppercase tracking-wider text-text-muted">
+                <th className="px-4 py-3 text-[11px] font-semibold text-text-muted">
                   Status
                 </th>
               </tr>
@@ -151,7 +151,7 @@ export default function Kontrollsenter() {
 
       {/* Quick actions */}
       <div>
-        <h2 className="mb-4 font-[family-name:var(--font-playfair)] text-xl font-bold">
+        <h2 className="mb-4 font-display text-xl">
           Hurtiglenker
         </h2>
         <div className="flex flex-wrap gap-3">
@@ -202,7 +202,7 @@ function SideRad({
           href={`https://valgogpolitikk-nettside.vercel.app${url}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-accent hover:underline"
+          className="text-black underline underline-offset-4 hover:text-accent-dark"
         >
           {url}
         </a>

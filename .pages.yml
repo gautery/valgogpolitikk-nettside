@@ -791,6 +791,27 @@ components:
         label: Alle analyser (arkiv med søk)
         fields: []
 
+      - name: samarbeid
+        label: Samarbeid og tips
+        fields:
+          - name: overskrift
+            label: Overskrift
+            type: string
+            default: Samarbeid og tips
+          - name: tekst
+            label: Tekst
+            type: text
+          - name: epost
+            label: E-postadresse
+            type: string
+            default: post@valgogpolitikk.no
+          - name: knapp
+            label: Tekst på knappen
+            type: string
+            default: Send en melding
+          - name: bakgrunn
+            component: bakgrunn
+
       - name: nyhetsbrev
         label: Nyhetsbrev
         fields:

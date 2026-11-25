@@ -13,11 +13,11 @@ export default function KommerSnart() {
       <BookSpines className="mb-8 h-16 w-auto" />
       <div className="mb-4 flex items-center gap-2">
         <div className="h-4 w-1 rounded-full bg-rosa" />
-        <span className="text-[11px] font-semibold uppercase tracking-widest text-white/50">
+        <span className="text-[11px] font-semibold text-white/50">
           @valgogpolitikk
         </span>
       </div>
-      <h1 className="mb-4 font-[family-name:var(--font-playfair)] text-4xl font-bold leading-tight text-white sm:text-5xl">
+      <h1 className="mb-4 font-display text-4xl leading-tight text-white sm:text-5xl">
         Kommer snart
       </h1>
       <p className="mb-10 max-w-[420px] text-[15px] leading-relaxed text-white/70">

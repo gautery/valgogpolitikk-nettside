@@ -208,7 +208,7 @@ export default function KildeListe({ data }: { data: Kildeoversikt }) {
           )}
           {grupper.map((g) => (
             <section key={g.dag} className="mb-8">
-              <h2 className="mb-2 border-b border-border pb-2 font-[family-name:var(--font-playfair)] text-xl font-bold">
+              <h2 className="mb-2 border-b border-border pb-2 font-display text-xl">
                 {g.dag}
               </h2>
               <ol>
@@ -226,7 +226,7 @@ export default function KildeListe({ data }: { data: Kildeoversikt }) {
                           .filter((s) => s.kilde === HØRINGER)
                           .map((s) => (
                             <li key={s.id} className="text-[13.5px]">
-                              <a href={s.lenke} target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent hover:underline">
+                              <a href={s.lenke} target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-black underline underline-offset-4 hover:text-accent-dark">
                                 {s.tittel}
                               </a>
                             </li>
@@ -253,7 +253,7 @@ export default function KildeListe({ data }: { data: Kildeoversikt }) {
         <aside className="order-first flex flex-col gap-5 lg:order-none">
           {(spor === "tall" || spor === "alt") && (
           <div className="rounded-lg border border-border bg-surface p-5">
-            <h2 className="mb-3 font-[family-name:var(--font-playfair)] text-lg font-bold">
+            <h2 className="mb-3 font-display text-lg">
               Kommer fra SSB
             </h2>
             {data.kalender.length === 0 ? (
@@ -276,7 +276,7 @@ export default function KildeListe({ data }: { data: Kildeoversikt }) {
           </div>
           )}
           <div className="rounded-lg border border-border bg-surface p-5 text-[13px] leading-relaxed text-text-secondary">
-            <h2 className="mb-2 font-[family-name:var(--font-playfair)] text-lg font-bold text-text-primary">
+            <h2 className="mb-2 font-display text-lg text-text-primary">
               Om oversikten
             </h2>
             <p className="mb-2">
@@ -290,10 +290,10 @@ export default function KildeListe({ data }: { data: Kildeoversikt }) {
                 : `Alle ${data.status.length} kildene svarte normalt.`}
             </p>
             <p className="flex flex-wrap gap-x-4">
-              <a href={`${RSS}${spor === "alt" ? "feed.xml" : `feed-${spor}.xml`}`} className="inline-block py-1 font-semibold text-accent hover:underline">
+              <a href={`${RSS}${spor === "alt" ? "feed.xml" : `feed-${spor}.xml`}`} className="inline-block py-1 font-semibold text-black underline underline-offset-4 hover:text-accent-dark">
                 RSS for {spor === "alt" ? "alt" : SPOR.find((x) => x.id === spor)!.navn.toLowerCase()}
               </a>
-              <a href="https://github.com/gautery/kildeoverv-kning" className="inline-block py-1 font-semibold text-accent hover:underline">
+              <a href="https://github.com/gautery/kildeoverv-kning" className="inline-block py-1 font-semibold text-black underline underline-offset-4 hover:text-accent-dark">
                 Kildeliste
               </a>
             </p>
@@ -311,7 +311,7 @@ function SakRad({ s, rapport }: { s: Sak; rapport: boolean }) {
         href={s.lenke}
         target="_blank"
         rel="noopener noreferrer"
-        className={`font-semibold leading-snug text-text-primary hover:text-accent hover:underline ${rapport ? "text-[16.5px]" : "text-[15px]"}`}
+        className={`font-semibold leading-snug text-text-primary hover:text-black underline underline-offset-4 hover:text-accent-dark ${rapport ? "text-[16.5px]" : "text-[15px]"}`}
       >
         {s.tittel}
       </a>

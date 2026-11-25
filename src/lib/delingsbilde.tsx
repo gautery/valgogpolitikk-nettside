@@ -10,18 +10,18 @@ import sharp from "sharp";
 export const delingsStorrelse = { width: 1200, height: 630 };
 export const delingsType = "image/png";
 
-const BLEKK = "#1a1a2e";
-const AKSENT = "#c92a62";
+const BLEKK = "#000000";
+const AKSENT = "#ff65c5";
 
 async function skrifter() {
   const mappe = path.join(process.cwd(), "src/assets/fonts");
-  const [playfair, inter, interHalvfet] = await Promise.all([
-    readFile(path.join(mappe, "playfair-display-latin-700-normal.woff")),
+  const [interSvart, inter, interHalvfet] = await Promise.all([
+    readFile(path.join(mappe, "inter-latin-900-normal.woff")),
     readFile(path.join(mappe, "inter-latin-400-normal.woff")),
     readFile(path.join(mappe, "inter-latin-600-normal.woff")),
   ]);
   return [
-    { name: "Playfair", data: playfair, weight: 700 as const, style: "normal" as const },
+    { name: "Inter", data: interSvart, weight: 900 as const, style: "normal" as const },
     { name: "Inter", data: inter, weight: 400 as const, style: "normal" as const },
     { name: "Inter", data: interHalvfet, weight: 600 as const, style: "normal" as const },
   ];
@@ -92,16 +92,15 @@ export async function lagDelingsbilde({
                     fontFamily: "Inter",
                     fontWeight: 600,
                     fontSize: 22,
-                    letterSpacing: 3,
-                    color: "rgba(255,255,255,0.6)",
-                    textTransform: "uppercase",
+                                        color: "rgba(255,255,255,0.6)",
+                    textTransform: "",
                   }}
                 >
                   {overlinje}
                 </div>
               </div>
             )}
-            <div style={{ fontFamily: "Playfair", fontWeight: 700, fontSize: tittelStr, lineHeight: 1.12, color: "#fff" }}>
+            <div style={{ fontFamily: "Inter", fontWeight: 900, fontSize: tittelStr, lineHeight: 1.05, letterSpacing: -1.5, color: "#fff" }}>
               {tittelKort}
             </div>
             {undertekst && (

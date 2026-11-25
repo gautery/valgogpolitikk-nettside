@@ -208,7 +208,7 @@ export default function Statsbudsjett({ oversikt, start, startForrige, historikk
             <div className="h-4 w-1 rounded-full bg-rosa" />
             <span className="text-[13px] font-medium text-white/50">Statsbudsjettet</span>
           </div>
-          <h1 className="max-w-[720px] font-[family-name:var(--font-playfair)] text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-[44px] lg:leading-[1.15]">
+          <h1 className="max-w-[720px] font-display text-3xl leading-tight text-white sm:text-4xl lg:text-[44px] lg:leading-[1.15]">
             Hva pengene går til, og hvor de kommer fra
           </h1>
           <p className="mt-5 max-w-[640px] text-[17px] leading-relaxed text-white/75">
@@ -242,7 +242,7 @@ export default function Statsbudsjett({ oversikt, start, startForrige, historikk
       {/* Utgifter */}
       <section aria-labelledby="utgifter" className="px-6 py-12">
         <div className="mx-auto max-w-[1100px]">
-          <h2 id="utgifter" className="font-[family-name:var(--font-playfair)] text-2xl font-bold sm:text-[28px]">
+          <h2 id="utgifter" className="font-display text-2xl sm:text-[28px]">
             Hva pengene går til
           </h2>
           <p className="mt-2 max-w-[640px] text-[15px] leading-relaxed text-text-secondary">
@@ -274,7 +274,7 @@ export default function Statsbudsjett({ oversikt, start, startForrige, historikk
       {/* Om tallene */}
       <section aria-labelledby="om-tallene" className="border-t border-border px-6 py-12">
         <div className="mx-auto max-w-[1100px]">
-          <h2 id="om-tallene" className="font-[family-name:var(--font-playfair)] text-2xl font-bold">
+          <h2 id="om-tallene" className="font-display text-2xl">
             Slik er tallene regnet
           </h2>
           <div className="mt-4 max-w-[680px] space-y-4 text-[15.5px] leading-[1.75] text-text-secondary">
@@ -425,7 +425,7 @@ function Kart({ node, total, onVelg }: { node: Node; total: number; onVelg: (n: 
                   </div>
                   {visBelop && (
                     <div
-                      className={`mt-1 whitespace-nowrap font-[family-name:var(--font-playfair)] font-bold text-text-primary ${
+                      className={`mt-1 whitespace-nowrap font-display text-text-primary ${
                         stor ? "text-[24px]" : "text-[15px]"
                       }`}
                     >
@@ -661,7 +661,7 @@ function Inntekter({ budsjett }: { budsjett: Budsjett }) {
   return (
     <section aria-labelledby="inntekter" className="border-t border-border bg-surface px-6 py-12">
       <div className="mx-auto max-w-[1100px]">
-        <h2 id="inntekter" className="font-[family-name:var(--font-playfair)] text-2xl font-bold sm:text-[28px]">
+        <h2 id="inntekter" className="font-display text-2xl sm:text-[28px]">
           Hvor pengene kommer fra
         </h2>
         <p className="mt-2 max-w-[640px] text-[15px] leading-relaxed text-text-secondary">

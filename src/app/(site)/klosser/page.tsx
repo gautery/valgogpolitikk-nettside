@@ -120,6 +120,15 @@ function katalog(): Oppføring[] {
       kloss: { type: "siste_analyser", overskrift: "Analyser" },
     },
     {
+      navn: "Samarbeid og tips",
+      bruk: "Invitasjon til samarbeid og tips, med knapp som åpner en e-post til deg.",
+      felt: "Overskrift, tekst, e-postadresse, tekst på knappen, bakgrunn",
+      kloss: {
+        type: "samarbeid",
+        tekst: "Vil du samarbeide med valgogpolitikk, eller har du tips til kilder? Send en melding her.",
+      },
+    },
+    {
       navn: "Nyhetsbrev",
       bruk: "Påmelding til nyhetsbrevet.",
       felt: "Overskrift, tekst, bakgrunn",
@@ -140,7 +149,7 @@ export default function KlossKatalog() {
     <>
       <div className="border-b border-border bg-surface px-6 py-10">
         <div className="mx-auto max-w-[1100px]">
-          <h1 className="font-[family-name:var(--font-playfair)] text-3xl font-bold">Byggeklosser</h1>
+          <h1 className="font-display text-3xl">Byggeklosser</h1>
           <p className="mt-3 max-w-[620px] text-[15px] leading-relaxed text-text-secondary">
             Alle klossene du kan sette sammen sider av i Pages CMS. Eksemplene bruker innhold som
             allerede finnes på nettsiden. Siden er skjult for søkemotorer.

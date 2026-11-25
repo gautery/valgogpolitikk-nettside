@@ -122,6 +122,15 @@ export type Nyhetsbrev = {
   bakgrunn?: Bakgrunn;
 };
 
+export type Samarbeid = {
+  type: "samarbeid";
+  overskrift?: string;
+  tekst?: string;
+  epost?: string;
+  knapp?: string;
+  bakgrunn?: Bakgrunn;
+};
+
 export type Kloss =
   | Toppfelt
   | Tekst
@@ -138,4 +147,5 @@ export type Kloss =
   | Kildeband
   | Analyser
   | SisteAnalyser
-  | Nyhetsbrev;
+  | Nyhetsbrev
+  | Samarbeid;

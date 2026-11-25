@@ -9,7 +9,7 @@ function SourceList({
 }) {
   return (
     <div className="mt-8 rounded-md border border-border bg-surface p-5">
-      <div className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-text-muted">
+      <div className="mb-2 text-[11px] font-semibold text-text-muted">
         Kilder
       </div>
       {sources.map((s, i) => (
@@ -43,13 +43,13 @@ function Callout({ children }: { children: React.ReactNode }) {
 export const mdxComponents: MDXComponents = {
   h1: (props) => (
     <h1
-      className="mb-4 mt-10 font-[family-name:var(--font-playfair)] text-2xl font-bold text-text-primary"
+      className="mb-4 mt-10 font-display text-2xl text-text-primary"
       {...props}
     />
   ),
   h2: (props) => (
     <h2
-      className="mb-3 mt-8 font-[family-name:var(--font-playfair)] text-xl font-bold text-text-primary"
+      className="mb-3 mt-8 font-display text-xl text-text-primary"
       {...props}
     />
   ),
@@ -120,7 +120,7 @@ export const mdxComponents: MDXComponents = {
   ),
   th: (props) => (
     <th
-      className="border border-border bg-surface px-4 py-2.5 text-left text-[12px] font-semibold uppercase tracking-wider text-text-muted"
+      className="border border-border bg-surface px-4 py-2.5 text-left text-[12px] font-semibold text-text-muted"
       {...props}
     />
   ),
