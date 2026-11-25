@@ -1,6 +1,7 @@
 "use client";
 
-import { useId, useMemo, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
+import { sporHendelse } from "@/lib/hendelser";
 import { andelUnder, type Trinn, type TrappaData } from "@/lib/trappa-felles";
 import type { TrappaTekst } from "@/lib/trappa-tekst";
 
@@ -43,6 +44,18 @@ export default function Trappa({
     const tall = Number(tekst.replace(/[^\d]/g, ""));
     return tall > 0 ? tall : null;
   }, [tekst]);
+
+  // Teller én gang per besøk at kalkulatoren er brukt, når folk har sluttet å skrive.
+  // Selve inntekten sendes aldri.
+  const sporet = useRef(false);
+  useEffect(() => {
+    if (inntekt === null || sporet.current) return;
+    const t = setTimeout(() => {
+      sporet.current = true;
+      sporHendelse("kalkulator-brukt");
+    }, 1500);
+    return () => clearTimeout(t);
+  }, [inntekt]);
 
   // Trinnene fra toppen og ned
   const trinn = useMemo(() => [...data.trinn].sort((a, b) => a.topp - b.topp), [data.trinn]);

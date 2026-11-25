@@ -4,11 +4,12 @@ import { useState } from "react";
 import Link from "next/link";
 import BookSpines from "./BookSpines";
 import type { Lenke } from "@/lib/sider";
+import { lenkeUtSporing } from "@/lib/hendelser";
 
 function MenyLenke({ lenke, className }: { lenke: Lenke; className: string }) {
   const href = lenke.lenke || "/";
   return /^https?:\/\//.test(href) ? (
-    <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+    <a href={href} target="_blank" rel="noopener noreferrer" className={className} {...lenkeUtSporing(href)}>
       {lenke.tekst}
     </a>
   ) : (

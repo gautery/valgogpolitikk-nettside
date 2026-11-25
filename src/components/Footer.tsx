@@ -1,5 +1,6 @@
 import BookSpines from "./BookSpines";
 import { erEkstern, lesInnstillinger } from "@/lib/sider";
+import { lenkeUtSporing } from "@/lib/hendelser";
 
 // Teksten i bunnen redigeres i Pages CMS under «Innstillinger».
 export default function Footer() {
@@ -35,7 +36,7 @@ export default function Footer() {
                         <a
                           key={l.tekst}
                           href={l.lenke}
-                          {...(erEkstern(l.lenke) ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                          {...(erEkstern(l.lenke) ? { target: "_blank", rel: "noopener noreferrer", ...lenkeUtSporing(l.lenke) } : {})}
                           className="text-xs text-text-secondary hover:text-accent transition-colors"
                         >
                           {l.tekst}

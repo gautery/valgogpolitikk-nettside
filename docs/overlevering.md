@@ -19,7 +19,8 @@ Faste regler:
 - **Bruk alltid skillene carousel-design og frontend-design** i produksjon.
 - **Hent inspirasjonskilder faktisk**, ikke gjett hva de inneholder.
 - **Hemmeligheter** (f.eks. Beehiiv-nøkkelen) legges rett inn i Vercel, aldri i chatten.
-- **Lansering:** valgogpolitikk.no viser «kommer snart» til Gaute sier fra. Ved lansering slettes `src/proxy.ts`.
+- **Lansering:** valgogpolitikk.no viser «kommer snart» til Gaute sier fra. Lanseringen ligger klar på grenen `lansering`
+  (se «Lansering» under). Den slås sammen med `master` først når Gaute sier «lanser».
 - **90-tallskarusellen:** Gautes egne formuleringer skal stå ordrett.
 - **Blokkerte nettsteder:** Hvis et nettsted blokkerer nedlasting (f.eks. regjeringen.no), ikke gå rundt det.
   Be Gaute laste ned og legge ved fila.
@@ -96,6 +97,27 @@ Svakheter som står på siden:
 - **/tema/skatt:** temaside.
 - **/kilder:** kildeoversikten med faner for rapporter, tall og løpende nytt.
 
+## Statistikk og søk (lagt til 25. november)
+
+- **Umami Cloud** teller besøk uten cookies, bare på valgogpolitikk.no (`src/components/Umami.tsx`).
+  Gratisplanen lagrer 6 måneder. Gaute får en påminnelse 26. april 2027 om å eksportere dataene.
+- **Hendelser i Umami** (`src/lib/hendelser.ts`): `nyhetsbrev-pamelding`, `kalkulator-brukt` (/trappa, én gang
+  per besøk, inntekten sendes aldri) og `lenke-ut` (lenker ut fra meny og bunntekst).
+- **Datawrapper:** byggeklossen «Graf fra Datawrapper» i Pages CMS viser siste publiserte versjon av grafen.
+- **Google Search Console:** domenet er bekreftet med TXT-post hos Gigahost (navnet må være `@`).
+
+## Lansering (grenen `lansering`)
+
+Klar, men ikke slått sammen med `master`:
+
+- `src/proxy.ts` er slettet, så valgogpolitikk.no viser hele siden.
+- `src/app/sitemap.ts` og `src/app/robots.ts`: nettstedskart og robots.txt. Utkast er ikke med.
+- `next.config.ts`: alle andre adresser enn valgogpolitikk.no (vercel.app, forhåndsvisninger) får `noindex`.
+- `src/lib/utkast.ts`: én bryter for /trappa og /statsbudsjett. Sett til `false` når Gaute har godkjent siden.
+
+Gjenstår før lansering: bytte ut eksempelinnleggene (de står i nettstedskartet), fjerne TestBanner og godkjenne
+utkastene. Etter lansering sender Gaute inn `https://www.valgogpolitikk.no/sitemap.xml` i Search Console.
+
 ## Venter på Gaute
 
 - Godkjenne eller rette utkastene over. Det gjelder særlig tekstene på /trappa.
@@ -103,7 +125,7 @@ Svakheter som står på siden:
 - Logge inn i Pages CMS og gi GitHub-appen tilgang til bare de to repoene.
 - Legge Beehiiv-nøklene inn i Vercel og slå på totrinnsinnlogging (Vercel, Gigahost, GitHub).
 - Legge inn Instagram-lenker til karusellene og sjekke bilderettigheter for fotoene i slidene.
-- Før lansering: bytte ut eksempelinnleggene, fjerne TestBanner og slette `src/proxy.ts`.
+- Før lansering: bytte ut eksempelinnleggene og fjerne TestBanner. Resten ligger klart på grenen `lansering`.
 
 ## Uavklart
 

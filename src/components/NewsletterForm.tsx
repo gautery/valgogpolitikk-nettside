@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { sporHendelse } from "@/lib/hendelser";
 
 export default function NewsletterForm() {
   const [email, setEmail] = useState("");
@@ -21,6 +22,7 @@ export default function NewsletterForm() {
       const data = await res.json();
       if (data.ok) {
         setStatus("success");
+        sporHendelse("nyhetsbrev-pamelding");
       } else {
         setErrorMsg(data.error || "Noe gikk galt.");
         setStatus("error");
