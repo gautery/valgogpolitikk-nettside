@@ -4,7 +4,7 @@ import Script from "next/script";
 // Lim inn «Website ID» fra Umami her (Settings → Websites → Edit). ID-en er ikke hemmelig:
 // den står synlig i kildekoden til alle nettsider som bruker Umami.
 // Så lenge feltet er tomt, lastes ingenting.
-const UMAMI_WEBSITE_ID = "";
+const UMAMI_WEBSITE_ID = "560c4faf-5541-4442-863c-c896fad6d76c";
 
 export default function Umami() {
   if (!UMAMI_WEBSITE_ID) return null;
