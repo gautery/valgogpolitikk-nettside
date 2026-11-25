@@ -11,4 +11,8 @@ seksjoner:
     overskrift: Karusellene
   - type: kildeband
   - type: analyser
+  - type: samarbeid
+    overskrift: Samarbeid og tips
+    tekst: Vil du samarbeide med valgogpolitikk, eller har du tips til kilder? Send en melding her.
+    epost: post@valgogpolitikk.no
 ---

@@ -120,6 +120,15 @@ function katalog(): Oppføring[] {
       kloss: { type: "siste_analyser", overskrift: "Analyser" },
     },
     {
+      navn: "Samarbeid og tips",
+      bruk: "Invitasjon til samarbeid og tips, med knapp som åpner en e-post til deg.",
+      felt: "Overskrift, tekst, e-postadresse, tekst på knappen, bakgrunn",
+      kloss: {
+        type: "samarbeid",
+        tekst: "Vil du samarbeide med valgogpolitikk, eller har du tips til kilder? Send en melding her.",
+      },
+    },
+    {
       navn: "Nyhetsbrev",
       bruk: "Påmelding til nyhetsbrevet.",
       felt: "Overskrift, tekst, bakgrunn",

@@ -502,6 +502,34 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
         </Seksjon>
       );
 
+    case "samarbeid": {
+      const epost = (kloss.epost || "post@valgogpolitikk.no").trim();
+      return (
+        <Seksjon bakgrunn={kloss.bakgrunn}>
+          <div className="grid gap-6 border-t border-black pt-8 md:grid-cols-[minmax(0,1fr)_auto] md:items-end md:gap-12">
+            <div>
+              <h2 className="font-display text-[30px] leading-tight text-black sm:text-[36px]">
+                {kloss.overskrift || "Samarbeid og tips"}
+              </h2>
+              {kloss.tekst && (
+                <p className="mt-4 max-w-[560px] text-[18px] leading-[1.55] text-text-secondary">{kloss.tekst}</p>
+              )}
+            </div>
+            <div className="flex flex-col items-start gap-2">
+              <a
+                href={`mailto:${epost}`}
+                className="rounded-[6px] bg-black px-6 py-3.5 text-[16px] font-semibold text-white hover:bg-text-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                data-umami-event="samarbeid-epost"
+              >
+                {kloss.knapp || "Send en melding"}
+              </a>
+              <span className="text-[14px] text-text-muted">{epost}</span>
+            </div>
+          </div>
+        </Seksjon>
+      );
+    }
+
     default:
       return null;
   }
