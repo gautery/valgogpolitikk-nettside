@@ -93,27 +93,32 @@ export async function Markdown({ kilde, klasse }: { kilde: string; klasse?: stri
 
 async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
   switch (kloss.type) {
-    case "toppfelt":
+    case "toppfelt": {
+      const rosa = kloss.farge === "rosa";
       return (
-        <div className="border-b border-border bg-hero px-6 py-16 md:py-20">
+        <div className={`border-b px-6 py-16 md:py-20 ${rosa ? "border-rosa bg-rosa" : "border-border bg-hero"}`}>
           <div className="mx-auto max-w-[1100px]">
             <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
               <div>
                 {kloss.overlinje && (
                   <div className="mb-3 flex items-center gap-2">
-                    <div className="h-4 w-1 rounded-full bg-accent" />
-                    <span className="text-[11px] font-semibold uppercase tracking-widest text-white/60">
+                    <div className={`h-4 w-1 rounded-full ${rosa ? "bg-hero" : "bg-rosa"}`} />
+                    <span className={`text-[11px] font-semibold uppercase tracking-widest ${rosa ? "text-hero" : "text-white/60"}`}>
                       {kloss.overlinje}
                     </span>
                   </div>
                 )}
                 {kloss.tittel && (
-                  <h1 className="mb-4 max-w-[560px] font-[family-name:var(--font-playfair)] text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-[44px] lg:leading-[1.15]">
+                  <h1
+                    className={`mb-4 max-w-[560px] font-[family-name:var(--font-playfair)] text-3xl font-bold leading-tight sm:text-4xl lg:text-[44px] lg:leading-[1.15] ${
+                      rosa ? "text-hero" : "text-white"
+                    }`}
+                  >
                     {kloss.tittel}
                   </h1>
                 )}
                 {kloss.ingress && (
-                  <p className="max-w-[460px] text-[15px] leading-relaxed text-white/55">{kloss.ingress}</p>
+                  <p className={`max-w-[460px] text-[15px] leading-relaxed ${rosa ? "text-hero" : "text-white/60"}`}>{kloss.ingress}</p>
                 )}
               </div>
               {kloss.bilde ? (
@@ -126,6 +131,16 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
                   sizes="240px"
                   className="hidden w-[240px] rounded-md shadow-[0_20px_40px_-12px_rgba(0,0,0,0.6)] md:block"
                 />
+              ) : rosa && kloss.bokrygger ? (
+                <Image
+                  src="/bilder/bokrad.webp"
+                  alt=""
+                  width={900}
+                  height={470}
+                  priority
+                  sizes="420px"
+                  className="hidden w-[420px] md:block"
+                />
               ) : (
                 kloss.bokrygger && <BookSpines className="hidden h-24 w-auto opacity-40 md:block" />
               )}
@@ -133,6 +148,7 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
           </div>
         </div>
       );
+    }
 
     case "tekst":
       if (!kloss.tekst && !kloss.overskrift) return null;

@@ -46,12 +46,12 @@ export default function NewsletterForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-lg bg-accent p-5"
+      className="rounded-lg bg-rosa p-5"
     >
-      <div className="mb-1 text-[12px] font-semibold uppercase tracking-wider text-white">
+      <div className="mb-1 text-[12px] font-semibold uppercase tracking-wider text-hero">
         Nyhetsbrev
       </div>
-      <div className="mb-4 text-[13px] leading-relaxed text-white">
+      <div className="mb-4 text-[13px] leading-relaxed text-hero">
         Få nye analyser rett i innboksen.
       </div>
       <div className="flex gap-2">
@@ -61,18 +61,18 @@ export default function NewsletterForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="din@epost.no"
-          className="min-w-0 flex-1 rounded-md border border-white/20 bg-white/10 px-3 py-2.5 text-[13px] text-white outline-none placeholder:text-white/60 focus:border-white/40 focus:bg-white/15"
+          className="min-w-0 flex-1 rounded-md border border-hero/25 bg-white px-3 py-2.5 text-[13px] text-hero outline-none placeholder:text-text-muted focus:border-hero focus-visible:outline-2 focus-visible:outline-hero"
         />
         <button
           type="submit"
           disabled={status === "loading"}
-          className="whitespace-nowrap rounded-md bg-white px-4 py-2.5 text-[13px] font-semibold text-accent transition-opacity hover:opacity-90 disabled:opacity-50"
+          className="whitespace-nowrap rounded-md bg-hero px-4 py-2.5 text-[13px] font-semibold text-white transition-opacity hover:opacity-90 disabled:opacity-50"
         >
           {status === "loading" ? "..." : "Meld på"}
         </button>
       </div>
       {status === "error" && (
-        <div className="mt-2 text-[11px] text-white/70">{errorMsg}</div>
+        <div className="mt-2 text-[11px] text-hero">{errorMsg}</div>
       )}
     </form>
   );

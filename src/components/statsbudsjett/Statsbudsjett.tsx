@@ -205,7 +205,7 @@ export default function Statsbudsjett({ oversikt, start, startForrige, historikk
       <div className="border-b border-border bg-hero px-6 py-12 md:py-14">
         <div className="mx-auto max-w-[1100px]">
           <div className="mb-3 flex items-center gap-2">
-            <div className="h-4 w-1 rounded-full bg-accent" />
+            <div className="h-4 w-1 rounded-full bg-rosa" />
             <span className="text-[13px] font-medium text-white/50">Statsbudsjettet</span>
           </div>
           <h1 className="max-w-[720px] font-[family-name:var(--font-playfair)] text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-[44px] lg:leading-[1.15]">

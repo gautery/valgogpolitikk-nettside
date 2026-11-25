@@ -66,7 +66,7 @@ export default function PostList({ posts, sidebarEkstra, om }: PostListProps) {
               onClick={() => setActiveCategory(cat.id)}
               className={`flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-[13px] transition-colors ${
                 activeCategory === cat.id
-                  ? "bg-accent text-white font-medium"
+                  ? "bg-hero text-white font-medium"
                   : "text-text-secondary hover:bg-surface"
               }`}
             >
@@ -94,7 +94,7 @@ export default function PostList({ posts, sidebarEkstra, om }: PostListProps) {
                 onClick={() => setSortBy(val)}
                 className={`flex-1 rounded-md border px-2.5 py-1.5 text-[12px] font-medium transition-colors ${
                   sortBy === val
-                    ? "border-accent bg-accent text-white"
+                    ? "border-hero bg-hero text-white"
                     : "border-border text-text-muted hover:border-text-muted"
                 }`}
               >

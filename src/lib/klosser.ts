@@ -10,6 +10,7 @@ export type Toppfelt = {
   ingress?: string;
   bilde?: string;
   bokrygger?: boolean;
+  farge?: "mork" | "rosa";
 };
 
 export type Tekst = {

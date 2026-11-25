@@ -565,6 +565,13 @@ components:
           - name: bokrygger
             label: Vis bokryggene til høyre (når det ikke er bilde)
             type: boolean
+          - name: farge
+            label: Bakgrunn
+            description: «rosa» er samme farge som profilbildet på Instagram. Passer best øverst på forsiden.
+            type: select
+            default: mork
+            options:
+              values: [mork, rosa]
 
       - name: tekst
         label: Tekst

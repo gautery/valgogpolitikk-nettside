@@ -18,7 +18,7 @@ export default async function KilderSide() {
       <div className="border-b border-border bg-hero px-6 py-14 md:py-16">
         <div className="mx-auto max-w-[1100px]">
           <div className="mb-3 flex items-center gap-2">
-            <div className="h-4 w-1 rounded-full bg-accent" />
+            <div className="h-4 w-1 rounded-full bg-rosa" />
             <span className="text-[11px] font-semibold uppercase tracking-widest text-white/60">
               Oppdateres hver time
             </span>

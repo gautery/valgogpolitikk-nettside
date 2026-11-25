@@ -61,7 +61,7 @@ export default async function KarusellSide({ k }: { k: Karusell }) {
         <div className="mx-auto grid max-w-[1100px] items-center gap-10 md:grid-cols-[minmax(0,1fr)_240px]">
           <div>
             <div className="mb-3 flex items-center gap-2">
-              <div className="h-4 w-1 rounded-full bg-accent" />
+              <div className="h-4 w-1 rounded-full bg-rosa" />
               <span className="text-[13px] font-medium text-white/50">Kildene bak karusellen</span>
             </div>
             <h1 className="mb-4 max-w-[640px] font-[family-name:var(--font-playfair)] text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-[44px] lg:leading-[1.15]">
