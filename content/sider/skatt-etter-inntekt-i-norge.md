@@ -28,6 +28,8 @@ seksjoner:
   - type: tekst
     overskrift: Skatten stiger, helt til toppen
     bakgrunn: lys
+    graf: https://datawrapper.dwcdn.net/dFq7w/
+    grafBeskrivelse: Liggende søylediagram med 15 inntektsgrupper i Norge. Samlet skatt stiger fra rundt 42 prosent av inntekten nederst til 56 prosent for gruppen 95–99 prosent. Deretter faller den til 22 prosent for de 0,0005 prosent rikeste.
     tekst: |-
       For de aller fleste virker skattesystemet slik folk vil. Jo høyere inntekt, jo større andel går til skatt. De med lavest inntekt betaler mellom 34 og 46 prosent, de midt i fordelingen 47 prosent, og gruppen rett under den rikeste prosenten betaler mest av alle: 56 prosent.
 
