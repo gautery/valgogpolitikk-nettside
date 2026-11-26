@@ -22,7 +22,7 @@ seksjoner:
       inntektene fra disse bedriftene.
 
 
-      SSB har sett på hva inntektene hos de aller rikeste betsår av. For den
+      SSB har sett på hva inntektene hos de aller rikeste består av. For den
       rikeste prosenten kommer over halvparten av inntekten fra eierskap:
       overskudd i selskaper, bolig og verdipapirer. For de 0,01 prosent rikeste
       er andelen 97 prosent.
@@ -42,15 +42,21 @@ seksjoner:
     bakgrunn: hvit
   - type: tekst
     overskrift: Nesten en fjerdedel til én prosent
+    graf: https://datawrapper.dwcdn.net/69Erh/
+    grafBeskrivelse: "Liggende søylediagram. De 10 prosent rikeste får 46 prosent av inntektene i Norge, den rikeste prosenten 23 prosent og de 0,1 prosent rikeste 14 prosent."
     tekst: >-
       I en studie fra SSB fant de at for hver hundrelapp som tjenes i Norge, går
       23 kroner til den rikeste prosenten. De 0,1 prosent rikeste får 14 kroner.
       Det er en gruppe på under 4 000 personer.
 
 
-      De resterende 9% i topp 10% får også en betydelig andel, ca ??, men det er
-      tross alt bare litt over dobbelt så mye som gjennomsnittet, og
+      De resterende 9% i topp 10% får også en betydelig andel, ca 23 %, men det er
+      tross alt bare rundt 2,5 ganger så mye som gjennomsnittet, og
       internasjonalt vil dette bli ansett som små forskjeller.
+
+
+      Den rikeste prosenten får til sammenligning 23 ganger så mye som
+      gjennomsnittet, og de 0,1 prosent rikeste rundt 140 ganger så mye.
 
 
       Norge er altså et land med relativt små lønnsforskjeller blant de 99% som
@@ -59,6 +65,8 @@ seksjoner:
     bakgrunn: lys
   - type: tekst
     overskrift: Har det alltid vært slik?
+    knapp: Gå til neste leksjon
+    knappLenke: /har-inntektsulikheten-okt
     tekst: Den rikeste prosenten får altså over en femtedel av inntektene. Er det
       mye eller lite, sammenlignet med før? Det er neste leksjon.
     bakgrunn: lys
@@ -78,7 +86,7 @@ seksjoner:
   - type: tekst
     overskrift: Kildene
     tekst: |+
-      - Ola Lotherington Vestad (2024): «Utviklingen i inntektsulikhet i perioden 2016–2022». SSB Rapporter 2024/32. [ssb.no](https://www.ssb.no/inntekt-og-forbruk/inntekt-og-formue/artikler/utviklingen-i-inntektsulikhet-i-perioden-20162022). Tallene er lest av figur 3.2 og avrundet. De gjelder markedsinntekt for personer over 25 år, medregnet eiernes andel av overskudd som blir stående i selskapene. Antall personer er regnet ut fra rapportens utvalg på 3,86 millioner personer.
+      - Ola Lotherington Vestad (2024): «Utviklingen i inntektsulikhet i perioden 2016–2022». SSB Rapporter 2024/32. [ssb.no](https://www.ssb.no/inntekt-og-forbruk/inntekt-og-formue/artikler/utviklingen-i-inntektsulikhet-i-perioden-20162022). Tallene er lest av figur 3.2 og avrundet. De gjelder markedsinntekt for personer over 25 år, medregnet eiernes andel av overskudd som blir stående i selskapene. Antall personer er regnet ut fra rapportens utvalg på 3,86 millioner personer. Hvor mange ganger gjennomsnittet hver gruppe får, er regnet ut fra andelene: 23 prosent av inntekten til 1 prosent av personene er 23 ganger gjennomsnittet.
       - Rolf Aaberge, Magne Mogstad, Ola L. Vestad og Arnstein Vestre (2021): «Økonomisk ulikhet i Norge i det 21. århundre». SSB Rapporter 2021/33. [ssb.no](https://www.ssb.no/inntekt-og-forbruk/inntekt-og-formue/artikler/okonomisk-ulikhet-i-norge-i-det-21.arhundre). Andelen eierinntekter på toppen står i kapittel 2. Rapporten dekker 2001–2018.
       - Ring, Seim og Zucman (2026) finner omtrent samme nivå med en annen metode: rundt 20 prosent til den rikeste prosenten i 2020.
 
