@@ -25,7 +25,7 @@ export default function Konfetti({ antall = 44, stor = false }: { antall?: numbe
               background: FARGER[i % (stor ? FARGER.length : 3)],
               borderRadius: i % 4 === 0 ? "50%" : 0,
               animationDuration: `${((stor ? 3.2 : 2.6) + tall(i, 4) * (stor ? 3.4 : 2.2)).toFixed(2)}s`,
-              animationDelay: `${(tall(i, 5) * (stor ? 3.2 : 1.3)).toFixed(2)}s`,
+              animationDelay: `${(tall(i, 5) * (stor ? 4.5 : 1.3)).toFixed(2)}s`,
               ["--sving" as string]: `${Math.round((tall(i, 6) - 0.5) * (stor ? 320 : 160))}px`,
               ["--snurr" as string]: `${Math.round(360 + tall(i, 7) * 1080)}deg`,
             }}

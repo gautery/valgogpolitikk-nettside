@@ -81,7 +81,7 @@ export default function Feiring(p: FeiringProps) {
       )}
 
       <Fyrverkeri key={`f${smell}`} runde={smell} />
-      <Konfetti key={runde} antall={150} stor />
+      <Konfetti key={runde} antall={340} stor />
     </div>
   );
 }

@@ -125,14 +125,14 @@ html {
 }
 .fyrverkeri .smell span {
   position: absolute;
-  left: -5px;
-  top: -5px;
-  width: 10px;
-  height: 10px;
+  left: -4px;
+  top: -4px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   opacity: 0;
-  box-shadow: 0 0 10px 3px currentColor;
-  animation: fyr-gnist 1.5s cubic-bezier(0.1, 0.7, 0.3, 1) 1 both;
+  box-shadow: 0 0 6px 1px currentColor;
+  animation: fyr-gnist 1.1s cubic-bezier(0.2, 0.6, 0.4, 1) 1 both;
 }
 @keyframes fyr-rakett {
   0% {
@@ -149,15 +149,18 @@ html {
 }
 @keyframes fyr-gnist {
   0% {
-    opacity: 1;
-    transform: translate(0, 0) scale(1);
+    opacity: 0;
+    transform: translate(0, 0) scale(0.5);
   }
-  65% {
+  8% {
+    opacity: 1;
+  }
+  50% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    transform: translate(var(--dx), calc(var(--dy) + 45px)) scale(0.35);
+    transform: translate(var(--dx), calc(var(--dy) + 70px)) scale(0.45);
   }
 }
 @media (prefers-reduced-motion: reduce) {
