@@ -9,14 +9,14 @@ seksjoner:
     tittel: Har inntektsulikheten i Norge økt?
     ingress: Andelen de rikeste tjente gikk ned og ned i nesten 100 år etter
       demokratiseringen av Norge, men fra 80-tallet av så har den steget
-      dramatisk. Nå er vi tilbake til omtrent samme nivå som for hundre år siden.
+      dramatisk. Nå er vi tilbake til omtrent samme nivå som for hundre år
+      siden.
     bokrygger: false
+    konfetti: false
     farge: mork
   - type: tekst
     overskrift: Den lange linja
-    graf: https://datawrapper.dwcdn.net/krafw/
-    grafBeskrivelse: "Linjediagram for 1875 til 2022. Den rikeste prosentens andel av inntektene faller fra rundt 23 prosent i 1900 til 4 prosent i 1980. Med overskudd i selskapene regnet med stiger den fra 11 prosent i 2001 til 23 prosent i 2022."
-    tekst: >-
+    tekst: >+
       SSB-forskere har brukt skattestatistikk for å regne seg tilbake til 1875.
       Altså tilbake til før Norge i det hele tatt kunne påstå å være
       demokratisk. Ulikheten var enorm i 1882, de rikeste 1% tjente 22% av
@@ -56,12 +56,19 @@ seksjoner:
       - **2022:** 23 prosent (med overskudd i selskapene)
 
 
-      Andelen falt altså i hundre år, og har mer enn doblet seg siden 1980.
+      Andelen falt altså i hundre år, og basert på de beste dataen vi har så ser
+      den ut til å ha flerdoblet seg siden 1980.
 
 
-      De eldste tallene er anslag. De bygger på tabeller over skattytere, ikke
+      - De eldste tallene er anslag. De bygger på tabeller over skattytere, ikke
       på opplysninger om hver enkelt person, og forskerne oppgir selv et øvre og
-      et nedre anslag. Retningen er likevel tydelig.
+      et nedre anslag.
+
+    graf: https://datawrapper.dwcdn.net/krafw/
+    grafBeskrivelse: Linjediagram for 1875 til 2022. Den rikeste prosentens andel av
+      inntektene faller fra rundt 23 prosent i 1900 til 4 prosent i 1980. Med
+      overskudd i selskapene regnet med stiger den fra 11 prosent i 2001 til 23
+      prosent i 2022.
     bakgrunn: hvit
   - type: nokkeltall
     overskrift: Den rikeste prosentens andel av inntektene
@@ -101,11 +108,11 @@ seksjoner:
     bakgrunn: hvit
   - type: tekst
     overskrift: Inntekt er én ting, formue en annen
-    knapp: Gå til neste leksjon
-    knappLenke: /formuesfordelingen-i-norge
     tekst: Inntekt er det du tjener i løpet av et år. Formue er det du eier. Når
       noen tjener mye år etter år, hoper det seg opp. Hvordan er formuen
       fordelt?
+    knapp: Gå til neste leksjon
+    knappLenke: /formuesfordelingen-i-norge
     bakgrunn: lys
   - type: tekst
     overskrift: Hvorfor er tallene høyere enn i offisiell statistikk?
@@ -118,7 +125,8 @@ seksjoner:
       Det har betydd mer og mer. I 2006 kom det skatt på utbytte til personer,
       og etter det har eierne latt mer av pengene stå i selskapene. På
       skattemeldingene har den rikeste prosenten derfor ligget på 8 til 9
-      prosent av inntektene de fleste årene siden 2006, mens andelen i virkeligheten har steget.
+      prosent av inntektene de fleste årene siden 2006, mens andelen i
+      virkeligheten har steget.
 
 
       Den lange tallserien fra 1875 bygger også på skattemeldingene. Derfor
