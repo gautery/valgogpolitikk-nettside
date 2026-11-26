@@ -4,7 +4,7 @@ beskrivelse: "Hvor rike er «de rike»? Ikke elektrikeren eller legen i nabohuse
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: "Grunnkurs i ulikhet, del 2 av 8"
+    overlinje: "Grunnkurs i ulikhet, del 1 av 9"
     tittel: "Hvordan er inntektene fordelt i Norge?"
     ingress: "Hvor rike er «de rike»? Ikke elektrikeren eller legen i nabohuset."
   - type: tekst
@@ -34,7 +34,6 @@ seksjoner:
   - type: tekst
     overskrift: Videre i serien
     tekst: |-
-      - Forrige: [Hvor mye skatt vil nordmenn at de rike skal betale?](/hvor-mye-skatt-vil-nordmenn-at-de-rike-skal-betale)
-      - Neste: [Hvor mye skatt betaler de rikeste i Norge?](/skatt-etter-inntekt-i-norge)
+      - Neste: [Hvor skjevt er formuen fordelt i Norge?](/formuesfordelingen-i-norge)
       - [Alle delene i Grunnkurs i ulikhet](/grunnkurs-i-ulikhet)
 ---

@@ -1,12 +1,12 @@
 ---
 tittel: "Hvor skjevt er formuen fordelt i Norge?"
-beskrivelse: "Lav skatt på de rikeste år etter år blir til store formuer."
+beskrivelse: "Formuen er langt skjevere fordelt enn inntekten."
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: "Grunnkurs i ulikhet, del 7 av 8"
+    overlinje: "Grunnkurs i ulikhet, del 2 av 9"
     tittel: "Hvor skjevt er formuen fordelt i Norge?"
-    ingress: "Lav skatt på de rikeste år etter år blir til store formuer."
+    ingress: "Formuen er langt skjevere fordelt enn inntekten."
   - type: tekst
     overskrift: Hovedpoenget
     tekst: |-
@@ -34,7 +34,7 @@ seksjoner:
   - type: tekst
     overskrift: Videre i serien
     tekst: |-
-      - Forrige: [Hvor vanlig er det at selskapet betaler eierens private forbruk?](/privat-forbruk-i-selskaper)
-      - Neste: [Er formuen jevnere fordelt i Norge enn i andre land?](/formue-i-norge-og-andre-land)
+      - Forrige: [Hvordan er inntektene fordelt i Norge?](/inntektsfordelingen-i-norge)
+      - Neste: [Har ulikheten i Norge økt?](/har-ulikheten-i-norge-okt)
       - [Alle delene i Grunnkurs i ulikhet](/grunnkurs-i-ulikhet)
 ---

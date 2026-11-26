@@ -4,7 +4,7 @@ beskrivelse: "Norge er kjent for små forskjeller. Det gjelder inntekt, men ikke
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: "Grunnkurs i ulikhet, del 8 av 8"
+    overlinje: "Grunnkurs i ulikhet, del 4 av 9"
     tittel: "Er formuen jevnere fordelt i Norge enn i andre land?"
     ingress: "Norge er kjent for små forskjeller. Det gjelder inntekt, men ikke formue."
   - type: tekst
@@ -31,6 +31,7 @@ seksjoner:
   - type: tekst
     overskrift: Videre i serien
     tekst: |-
-      - Forrige: [Hvor skjevt er formuen fordelt i Norge?](/formuesfordelingen-i-norge)
+      - Forrige: [Har ulikheten i Norge økt?](/har-ulikheten-i-norge-okt)
+      - Neste: [Hvor mye skatt vil nordmenn at folk med forskjellige inntekter skal betale?](/hvor-mye-skatt-vil-nordmenn-at-de-rike-skal-betale)
       - [Alle delene i Grunnkurs i ulikhet](/grunnkurs-i-ulikhet)
 ---
