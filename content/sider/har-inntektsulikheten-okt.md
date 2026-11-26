@@ -39,11 +39,17 @@ seksjoner:
 
       - **1882:** 22 prosent
 
+      - **1920:** rundt 13 prosent
+
       - **1939:** 13 prosent
 
       - **1953:** 6 prosent
 
       - **1980:** 4 prosent
+
+      - **1990:** rundt 5 prosent
+
+      - **1995:** rundt 8 prosent
 
       - **2001:** 11 prosent (med overskudd i selskapene)
 
@@ -124,7 +130,7 @@ seksjoner:
   - type: tekst
     overskrift: Kildene
     tekst: |+
-      - Rolf Aaberge, Anthony B. Atkinson og Jørgen Modalsli (2020): «Estimating long-run income inequality from mixed tabular data: Empirical evidence from Norway, 1875–2017». SSB Discussion Papers 928. [ssb.no](https://www.ssb.no/en/forskning/discussion-papers/estimating-long-run-income-inequality-from-mixed-tabular-data-empirical-evidence-from-norway-1875-2017). Tallene for 1882, 1939, 1953, 1980 og 2017 står i kapittel 4.1.
+      - Rolf Aaberge, Anthony B. Atkinson og Jørgen Modalsli (2020): «Estimating long-run income inequality from mixed tabular data: Empirical evidence from Norway, 1875–2017». SSB Discussion Papers 928. [ssb.no](https://www.ssb.no/en/forskning/discussion-papers/estimating-long-run-income-inequality-from-mixed-tabular-data-empirical-evidence-from-norway-1875-2017). Tallene for 1882, 1939, 1953, 1980 og 2017 står i kapittel 4.1. Tallene for 1920, 1990 og 1995 er lest av figur A10 og er omtrentlige. For 1920 er det snittet av forskernes øvre og nedre anslag, som er rundt 14 og 11 prosent.
       - Rolf Aaberge, Jørgen Heibø Modalsli og Ola Lotherington Vestad (2020): «Ulikheten – betydelig større enn statistikken viser». SSB analyse 2020/13. [ssb.no](https://www.ssb.no/inntekt-og-forbruk/artikler-og-publikasjoner/ulikheten-betydelig-storre-enn-statistikken-viser). Tallene for 2001–2018 er fra figur 3. De gjelder markedsinntekt for personer over 25 år, medregnet eiernes andel av overskuddet i selskapene.
       - Ola Lotherington Vestad (2024): «Utviklingen i inntektsulikhet i perioden 2016–2022». SSB Rapporter 2024/32. [ssb.no](https://www.ssb.no/inntekt-og-forbruk/inntekt-og-formue/artikler/utviklingen-i-inntektsulikhet-i-perioden-20162022). Den fortsetter tallserien fra SSB analyse 2020/13 med samme inntektsmål. Tallene for 2019–2022 er lest av figur 3.2 og avrundet.
       - Den lange grafen: Tallene for 1875–2000 er lest av figur A10 i SSB Discussion Papers 928, som snittet av forskernes øvre og nedre anslag. De er derfor omtrentlige.
