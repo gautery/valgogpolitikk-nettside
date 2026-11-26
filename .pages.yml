@@ -883,7 +883,7 @@ components:
             type: string
           - name: fotokreditt
             label: Fotokreditt
-            description: F.eks. Foto: Navn / Unsplash
+            description: "F.eks. «Foto: Navn / Unsplash»"
             type: string
           - name: fotokredittLenke
             label: Lenke til bildet eller fotografen
