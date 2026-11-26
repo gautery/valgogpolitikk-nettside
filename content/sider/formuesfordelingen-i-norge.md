@@ -1,40 +1,57 @@
 ---
 tittel: "Hvor skjevt er formuen fordelt i Norge?"
-beskrivelse: "Formuen er langt skjevere fordelt enn inntekten."
+beskrivelse: "Den rikeste prosenten eier over en tredjedel av formuen i Norge. Og det er et forsiktig anslag."
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: "Grunnkurs i ulikhet, del 2 av 8"
+    overlinje: "Grunnkurs i ulikhet, leksjon 3 av 10"
     tittel: "Hvor skjevt er formuen fordelt i Norge?"
-    ingress: "Formuen er langt skjevere fordelt enn inntekten."
+    ingress: "Den rikeste prosenten eier over en tredjedel av formuen i Norge. Og det er et forsiktig anslag."
   - type: tekst
-    overskrift: Hovedpoenget
+    overskrift: "Formue er skjevere fordelt enn inntekt"
     tekst: |-
-      **Stikkord. Skriv om med dine egne ord og slett lista.**
+      Den rikeste prosenten får rundt en femtedel av inntektene i Norge. Av formuen eier de mye mer.
 
-      - Hvordan formuen er fordelt: hvor mye de rikeste 1 og 0,1 prosent eier.
-      - Hvorfor formuen er mer skjevfordelt enn inntekten.
-      - Hvorfor store formuer er et demokratisk problem: penger gir innflytelse.
-      - Forskjellen på skattemessig verdi og reell verdi av formuen.
+      SSB-forskere har regnet ut at den rikeste prosenten eide 37 prosent av all formue i Norge i 2019. De 99 andre prosentene delte resten.
+  - type: nokkeltall
+    overskrift: "Så mye eier de rikeste"
+    tall:
+      - tall: "37 %"
+        tekst: "av formuen eies av den rikeste prosenten (2019)."
+        kilde: "SSB Discussion Papers 1028"
+      - tall: "21 %"
+        tekst: "av finansformuen eies av de 0,1 prosent rikeste husholdningene, rundt 2 600 husholdninger (2024)."
+        kilde: "SSB, inntekts- og formuesstatistikk for husholdninger"
+      - tall: "1/10"
+        tekst: "Aksjer i private selskaper teller med rundt en tidel av markedsverdien når formuesskatten regnes ut."
+        kilde: "Ring, Seim og Zucman (2026)"
   - type: tekst
-    overskrift: Tallene
+    overskrift: "Hvorfor tallet er for lavt"
     bakgrunn: lys
     tekst: |-
-      **Tall du har fra før er merket [Sjekk]. Plassholdere i hakeparentes må fylles inn.**
+      Tallene bygger på verdiene som brukes når formuesskatten regnes ut. De verdiene er ofte mye lavere enn det formuen faktisk er verdt.
 
-      - [De rikeste 1 og 0,1 prosents andel av formuen, med og uten justering for reell verdi]
-      - Unoterte aksjer verdsettes til ca. en tredjedel av reell verdi i skattesystemet (SSB). [Sjekk]
+      Det gjelder særlig selskaper som ikke er på børs. De verdsettes etter regnskapet, ikke etter hva de kunne vært solgt for. Ring, Seim og Zucman finner at aksjer i private selskaper teller med rundt en tidel av markedsverdien.
 
-      Grafen lager du i Datawrapper og legger inn med byggeklossen «Graf fra Datawrapper».
+      Det er de aller rikeste som eier slike selskaper. SSB-forskerne skriver derfor selv at tallene deres er et nedre anslag. Den virkelige andelen er trolig høyere enn 37 prosent.
   - type: tekst
-    overskrift: Kildene
+    overskrift: "Har det alltid vært slik?"
+    knapp: Gå til neste leksjon
+    knappLenke: /har-formuesulikheten-okt
     tekst: |-
-      - SSB, formuesstatistikk. [Legg inn tabell eller rapport]
-      - Kapital, listen over de 400 rikeste
+      Formuen er altså langt skjevere fordelt enn inntekten. Men var det mer eller mindre skjevt før? Det er neste leksjon.
+  - type: tekst
+    overskrift: "Kildene"
+    bakgrunn: lys
+    tekst: |-
+      - Rolf Aaberge, Jørgen Modalsli og Edda Solbakken (2025): «Measuring long-run wealth inequality: Empirical results for Norway 1912–2019». SSB Discussion Papers 1028. [ssb.no](https://www.ssb.no/inntekt-og-forbruk/inntekt-og-formue/artikler/maling-av-langsiktig-ulikskap-i-formue-empiriske-resultat-fra-noreg-1912-2019). Tallet for 2019 står i tabellen over de fire fasene. Studien er et arbeidsnotat, og er ikke publisert i et tidsskrift ennå.
+      - SSB (2025): «Vekst i husholdningenes finansformue i 2024». [ssb.no](https://www.ssb.no/inntekt-og-forbruk/inntekt-og-formue/statistikk/inntekts-og-formuesstatistikk-for-husholdninger/artikler/vekst-i-husholdningenes-finansformue-i-2024). Finansformue er bankinnskudd, aksjer og andre verdipapirer. Bolig er ikke med.
+      - Marius Ring, David Seim og Gabriel Zucman (2026): «Personal Holding Companies, Tax Progressivity, and Inequality». NBER Working Paper 35534. [nber.org/papers/w35534](https://www.nber.org/papers/w35534).
   - type: tekst
     overskrift: Videre i serien
+    bakgrunn: lys
     tekst: |-
-      - Forrige: [Hvordan er inntektene fordelt i Norge?](/inntektsfordelingen-i-norge)
-      - Neste: [Har ulikheten i Norge økt?](/har-ulikheten-i-norge-okt)
-      - [Alle delene i Grunnkurs i ulikhet](/grunnkurs-i-ulikhet)
+      - Forrige: [Har inntektsulikheten i Norge økt?](/har-inntektsulikheten-okt)
+      - Neste: [Har formuesulikheten i Norge økt?](/har-formuesulikheten-okt)
+      - [Alle leksjonene i Grunnkurs i ulikhet](/grunnkurs-i-ulikhet)
 ---

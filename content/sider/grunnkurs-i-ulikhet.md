@@ -1,11 +1,11 @@
 ---
 tittel: Grunnkurs i ulikhet
-beskrivelse: 'Et kort grunnkurs i ulikhet i Norge: hvordan inntekt og formue er fordelt, hva folk vil, hvor mye skatt de rikeste betaler, og hvorfor. Åtte korte sider med kilder.'
+beskrivelse: 'Et kort grunnkurs i ulikhet i Norge: hvordan inntekt og formue er fordelt, hva folk vil, hvor mye skatt de rikeste betaler, og hvorfor. Ti korte sider med kilder.'
 utkast: true
 seksjoner:
 - type: toppfelt
   tittel: Grunnkurs i ulikhet
-  ingress: Åtte korte sider om ulikhet i Norge, basert på noen av de viktigste rapportene som har kommet ut om temaet de siste årene.
+  ingress: Ti korte sider om ulikhet i Norge, basert på noen av de viktigste rapportene som har kommet ut om temaet de siste årene.
   bokrygger: false
   farge: mork
 - type: tekst
@@ -17,19 +17,29 @@ seksjoner:
 
     Dette lille kurset er ment å gi faktisk informasjon om disse temaene som ofte blir omtalt feilaktig i offentligheten, og når du er ferdig med kurset så kjenner du til litteratur som gjør at du kan svare på følgende spørsmål:
 
+    **Del 1: Hvor stor er ulikheten?**
+
     1. [Hvordan er inntektene fordelt i Norge?](/inntektsfordelingen-i-norge)
-    2. [Hvor skjevt er formuen fordelt i Norge?](/formuesfordelingen-i-norge)
-    3. [Har ulikheten i Norge økt?](/har-ulikheten-i-norge-okt)
-    4. [Hvor mye skatt vil nordmenn at folk med forskjellige inntekter skal betale?](/hvor-mye-skatt-vil-nordmenn-at-de-rike-skal-betale)
-    5. [Hvor mye skatt betaler vi faktisk i Norge?](/skatt-etter-inntekt-i-norge)
-    6. [Betaler de rike mindre skatt i Norge enn i andre land?](/skatt-pa-de-rike-i-andre-land)
-    7. [Hvordan slipper de rikeste unna skatt med holdingselskaper?](/holdingselskap-og-utsatt-skatt)
-    8. [Hvor vanlig er det at selskapet betaler eierens private forbruk?](/privat-forbruk-i-selskaper)
+    2. [Har inntektsulikheten i Norge økt?](/har-inntektsulikheten-okt)
+    3. [Hvor skjevt er formuen fordelt i Norge?](/formuesfordelingen-i-norge)
+    4. [Har formuesulikheten i Norge økt?](/har-formuesulikheten-okt)
+
+    **Del 2: Hva gjør skatten med det?**
+
+    5. [Hvor mye skatt vil nordmenn at folk med forskjellige inntekter skal betale?](/hvor-mye-skatt-vil-nordmenn-at-de-rike-skal-betale)
+    6. [Hvor mye skatt betaler vi faktisk i Norge?](/skatt-etter-inntekt-i-norge)
+    7. [Betaler de rike mindre skatt i Norge enn i andre land?](/skatt-pa-de-rike-i-andre-land)
+    8. [Hva koster det at de rikeste betaler mindre?](/hva-koster-lav-skatt-pa-de-rikeste)
+
+    **Del 3: Hvorfor betaler de rikeste så lite?**
+
+    9. [Hvordan slipper de rikeste unna skatt med holdingselskaper?](/holdingselskap-og-utsatt-skatt)
+    10. [Hvor vanlig er det at selskapet betaler eierens private forbruk?](/privat-forbruk-i-selskaper)
   bakgrunn: hvit
 - type: tekst
   overskrift: Kom i gang
   bakgrunn: lys
-  tekst: 'Hver del tar et par minutter å lese, og kan leses for seg. Leser du dem i rekkefølge, bygger de på hverandre: fra hvordan det faktisk er, via hva vi ønsker, til hvorfor det har blitt slik. Alle tall har kilde, så du kan sjekke dem selv.'
-  knapp: Start med del 1
+  tekst: 'Hver leksjon tar et par minutter å lese, og kan leses for seg. Leser du dem i rekkefølge, bygger de på hverandre: fra hvordan det faktisk er, via hva vi ønsker, til hvorfor det har blitt slik. Alle tall har kilde, så du kan sjekke dem selv.'
+  knapp: Start med leksjon 1
   knappLenke: /inntektsfordelingen-i-norge
 ---
