@@ -12,7 +12,7 @@ seksjoner:
     bokrygger: false
     farge: mork
   - type: tekst
-    overskrift: En kort intro
+    overskrift: Hvorfor "et grunnkurs i ulikhet"?
     tekst: >-
       Den offentlige debatten gjenspeiler alt for sjelden de faktiske forholdene
       om ulikhet i Norge. Det er som om debatten sitter fast på 90-tallet: "Vi
@@ -20,6 +20,12 @@ seksjoner:
       Norge". Begge er faktisk sant, så lenge du "glemmer" å ta med den delen av
       befolkningen som hvert år tjener ca hver femte krone som tjenes i Norge,
       altså de 1%.
+
+
+      Som du vil se i dette kurset har de 1%, eller faktisk snakker vi egentlig
+      mest om de 0,01%, kjørt kraftig i fra resten av befolkningen. Andelen de
+      tar av det vi tjener har skutt i været. Men det snakkes nesten aldri om,
+      og det gjør heller ikke årsakene til det.
 
 
       Dette lille kurset er ment å gi faktisk informasjon om disse temaene som
