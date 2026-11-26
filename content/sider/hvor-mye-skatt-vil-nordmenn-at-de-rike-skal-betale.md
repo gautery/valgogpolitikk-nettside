@@ -31,6 +31,8 @@ seksjoner:
     bakgrunn: hvit
   - type: tekst
     overskrift: Nordmenn flest ønsker høyest skatt på de rikeste
+    graf: https://datawrapper.dwcdn.net/Xplnc/
+    grafBeskrivelse: Søylediagram med ti inntekter fra 100 000 kroner til 100 millioner kroner i året. Skattesatsen folk ønsker stiger jevnt fra 6 prosent til 48 prosent.
     tekst: >-
       Det grafene viser er at nordmenn i snitt ønsker et såkalt progressivt
       skattesystem, at de som har minst betaler veldig lite i skatt, mens de som
@@ -56,6 +58,8 @@ seksjoner:
     bakgrunn: lys
   - type: tekst
     overskrift: Det gjelder velgere i alle partier
+    graf: https://datawrapper.dwcdn.net/Oo9nN/
+    grafBeskrivelse: Liggende søylediagram med ni partier. Rødt-velgerne ønsker høyest skattesats, 65,7 prosent, og Høyre-velgerne lavest, 42,6 prosent.
     tekst: >-
       Her kommer vi inn i noe som jeg syns er veldig spennende: ønsket om at det
       er de rikeste som skal betale mest er ikke bare et ønske fra venstresida.
