@@ -4,7 +4,7 @@ beskrivelse: "Hvor rike er «de rike»? Ikke elektrikeren eller legen i nabohuse
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: "Grunnkurs i ulikhet, del 1 av 9"
+    overlinje: "Grunnkurs i ulikhet, del 1 av 8"
     tittel: "Hvordan er inntektene fordelt i Norge?"
     ingress: "Hvor rike er «de rike»? Ikke elektrikeren eller legen i nabohuset."
   - type: tekst

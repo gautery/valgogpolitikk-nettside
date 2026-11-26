@@ -4,7 +4,7 @@ beskrivelse: "Formuen er langt skjevere fordelt enn inntekten."
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: "Grunnkurs i ulikhet, del 2 av 9"
+    overlinje: "Grunnkurs i ulikhet, del 2 av 8"
     tittel: "Hvor skjevt er formuen fordelt i Norge?"
     ingress: "Formuen er langt skjevere fordelt enn inntekten."
   - type: tekst
