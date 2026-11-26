@@ -25,6 +25,7 @@ seksjoner:
       - For folk flest står rundt 90 prosent av inntekten på selvangivelsen. For milliardærene under 2 prosent. [Sjekk]
       - Ca. halvparten av inntekten til de rikeste blir liggende i holdingselskaper. [Sjekk]
       - Effektiv skatt på utbytte innenfor fritaksmetoden: 0,66 prosent. [Sjekk]
+      - Hvilke skatter de 0,0005 prosent rikeste betaler (Ring, Seim og Zucman 2026, figur 5d, snitt 2018–2020): inntektsskatt under 1 prosent av inntekten, selskapsskatt rundt 20 prosent, formuesskatt rundt 1 prosent. Under 5 prosent av inntekten deres kommer med på skattemeldingen. Flyttet hit fra del 3.
 
       Grafen lager du i Datawrapper og legger inn med byggeklossen «Graf fra Datawrapper».
   - type: tekst
