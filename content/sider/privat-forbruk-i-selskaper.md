@@ -4,7 +4,7 @@ beskrivelse: "Hytta, bilen og ferien betales av selskapet. Det er ulovlig, og de
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: "Grunnkurs i ulikhet, del 8 av 8"
+    overlinje: "Grunnkurs i ulikhet, leksjon 10 av 10"
     tittel: "Hvor vanlig er det at selskapet betaler eierens private forbruk?"
     ingress: "Hytta, bilen og ferien betales av selskapet. Det er ulovlig, og det skjer likevel."
   - type: tekst
@@ -35,5 +35,5 @@ seksjoner:
     overskrift: Videre i serien
     tekst: |-
       - Forrige: [Hvordan slipper de rikeste unna skatt med holdingselskaper?](/holdingselskap-og-utsatt-skatt)
-      - [Alle delene i Grunnkurs i ulikhet](/grunnkurs-i-ulikhet)
+      - [Alle leksjonene i Grunnkurs i ulikhet](/grunnkurs-i-ulikhet)
 ---

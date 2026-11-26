@@ -5,7 +5,7 @@ beskrivelse: Folk flest betaler nesten halvparten av inntekten i skatt.
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: Grunnkurs i ulikhet, del 5 av 8
+    overlinje: Grunnkurs i ulikhet, leksjon 6 av 10
     tittel: Hvor mye skatt betaler vi faktisk i Norge?
     ingress: >-
       Studien tar med alle skatter og avgifter, altså inkludert moms, blant
@@ -75,6 +75,13 @@ seksjoner:
       enn alle de andre gruppene i studien.
     bakgrunn: lys
   - type: tekst
+    overskrift: Er det sånn i andre land også?
+    knapp: Gå til neste leksjon
+    knappLenke: /skatt-pa-de-rike-i-andre-land
+    tekst: |-
+      De aller rikeste i Norge betaler altså en lavere andel i skatt enn folk flest. Er Norge spesielt, eller er det slik i andre land også? Det er neste leksjon.
+    bakgrunn: hvit
+  - type: tekst
     overskrift: Kildene
     tekst: |-
       - Marius Ring, David Seim og Gabriel Zucman (2026): «Personal Holding Companies, Tax Progressivity, and Inequality». NBER Working Paper 35534. [nber.org/papers/w35534](https://www.nber.org/papers/w35534). Tallene gjelder snittet for 2018–2020.
@@ -90,6 +97,6 @@ seksjoner:
       - Se også karusellen: [Betaler de rike mer skatt i Norge enn i Sverige, USA og Frankrike?](/skatt-pa-de-rikeste)
       - Forrige: [Hvor mye skatt vil nordmenn at folk med forskjellige inntekter skal betale?](/hvor-mye-skatt-vil-nordmenn-at-de-rike-skal-betale)
       - Neste: [Betaler de rike mindre skatt i Norge enn i andre land?](/skatt-pa-de-rike-i-andre-land)
-      - [Alle delene i Grunnkurs i ulikhet](/grunnkurs-i-ulikhet)
+      - [Alle leksjonene i Grunnkurs i ulikhet](/grunnkurs-i-ulikhet)
     bakgrunn: lys
 ---
