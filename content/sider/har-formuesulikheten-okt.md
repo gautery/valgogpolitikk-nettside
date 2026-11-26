@@ -25,6 +25,8 @@ seksjoner:
         kilde: "SSB Discussion Papers 1028"
   - type: tekst
     overskrift: "Ned, og så opp igjen"
+    graf: https://datawrapper.dwcdn.net/kbfVb/
+    grafBeskrivelse: "Linjediagram for 1912 til 2019. Den rikeste prosentens andel av formuen er 37 prosent i 1912 og 44 prosent i 1938, faller til 20 prosent rundt 1970, og stiger til 37 prosent i 2019."
     bakgrunn: lys
     tekst: |-
       Historien har tre deler.

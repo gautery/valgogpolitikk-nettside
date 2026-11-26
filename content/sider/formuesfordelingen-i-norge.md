@@ -9,6 +9,8 @@ seksjoner:
     ingress: "Den rikeste prosenten eier over en tredjedel av formuen i Norge. Og det er et forsiktig anslag."
   - type: tekst
     overskrift: "Formue er skjevere fordelt enn inntekt"
+    graf: https://datawrapper.dwcdn.net/YpzU3/
+    grafBeskrivelse: "Liggende søylediagram med to søyler. Den rikeste prosenten har 20 prosent av inntektene og 37 prosent av formuen i Norge."
     tekst: |-
       Den rikeste prosenten får rundt en femtedel av inntektene i Norge. Av formuen eier de mye mer.
 

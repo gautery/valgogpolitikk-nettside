@@ -27,6 +27,8 @@ seksjoner:
         kilde: "SSB Rapporter 2024/32, figur 3.2"
   - type: tekst
     overskrift: "To måter å telle på"
+    graf: https://datawrapper.dwcdn.net/69Erh/
+    grafBeskrivelse: "Liggende søylediagram. De 10 prosent rikeste har 35 prosent av inntektene i offisiell statistikk og 46 prosent når overskudd i selskaper regnes med. Den rikeste prosenten har 10 og 23 prosent. De 0,1 prosent rikeste har 3 og 14 prosent."
     bakgrunn: lys
     tekst: |-
       Den offisielle statistikken teller inntekten som står på skattemeldingen. Der har den rikeste prosenten 10 prosent av inntektene.
