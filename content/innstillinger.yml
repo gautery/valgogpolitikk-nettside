@@ -1,6 +1,8 @@
 meny:
   - tekst: Analyser
-    lenke: /
+    lenke: /analyser
+  - tekst: Karuseller
+    lenke: /karuseller
   - tekst: Kilder
     lenke: /kilder
   - tekst: Om

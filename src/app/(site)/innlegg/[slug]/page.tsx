@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import { tekstPaa } from "@/lib/farger";
 import { compileMDX } from "next-mdx-remote/rsc";
 import Link from "next/link";
 import { getAllSlugs, getPostBySlug } from "@/lib/posts";
@@ -46,37 +45,22 @@ export default async function PostPage({ params }: PageProps) {
   return (
     <>
       {/* Article header */}
-      <div className="border-b border-border bg-surface px-6 py-12 md:py-16">
+      <div className="border-b border-black px-6 py-12 md:py-16">
         <div className="mx-auto max-w-[740px]">
           <Link
-            href="/"
-            className="mb-6 inline-flex items-center gap-1 text-[12px] font-medium text-text-muted hover:text-text-primary transition-colors"
+            href="/analyser"
+            className="mb-8 inline-block text-[15px] font-semibold text-black underline underline-offset-4 hover:text-accent-dark"
           >
-            ← Tilbake til alle analyser
+            Alle analyser
           </Link>
 
-          {/* Meta */}
-          <div className="mb-4 flex flex-wrap items-center gap-2 text-[12px]">
-            <span
-              className="rounded-full px-2.5 py-0.5 text-[11px] font-semibold"
-              style={{ background: post.accentColor, color: tekstPaa(post.accentColor) }}
-            >
-              {category?.label}
-            </span>
-            <span className="text-text-muted">{formatDate(post.date)}</span>
-            <span className="text-text-faint">·</span>
-            <span className="text-text-muted">{post.readTime}</span>
-          </div>
-
-          {/* Title */}
-          <h1 className="mb-5 font-display text-3xl leading-tight text-text-primary sm:text-4xl lg:text-[42px] lg:leading-[1.15]">
-            {post.title}
-          </h1>
-
-          {/* Summary */}
-          <p className="text-[16px] leading-relaxed text-text-secondary">
-            {post.summary}
+          <p className="mb-4 text-[15px] text-text-muted">
+            <span className="font-semibold text-black">{category?.label}</span>, {formatDate(post.date)}, {post.readTime}
           </p>
+
+          <h1 className="mb-6 font-display text-[38px] leading-[1.05] text-black sm:text-[48px]">{post.title}</h1>
+
+          <p className="text-[19px] leading-[1.55] text-text-secondary">{post.summary}</p>
         </div>
       </div>
 
@@ -86,7 +70,7 @@ export default async function PostPage({ params }: PageProps) {
 
         {/* Sources */}
         {post.sources && post.sources.length > 0 && (
-          <div className="mt-12 rounded-md border border-border bg-surface p-6">
+          <div className="mt-12 border-t border-black pt-6">
             <div className="mb-3 text-[11px] font-semibold text-text-muted">
               Kilder
             </div>
@@ -114,11 +98,20 @@ export default async function PostPage({ params }: PageProps) {
           {post.tags.map((t, i) => (
             <span
               key={i}
-              className="rounded-full border border-border bg-surface px-3 py-1 text-[11px] font-medium text-text-secondary"
+              className="rounded-[6px] bg-surface px-3 py-1 text-[13px] font-medium text-text-secondary"
             >
               {t}
             </span>
           ))}
+        </div>
+
+        <div className="mt-12 border-t border-black pt-6">
+          <Link
+            href="/analyser"
+            className="inline-block rounded-[6px] bg-black px-6 py-3.5 text-[16px] font-semibold text-white hover:bg-text-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+          >
+            Se flere analyser
+          </Link>
         </div>
       </article>
     </>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SKJULT_FOR_SOK, UTKAST } from "@/lib/utkast";
 import Trappa from "@/components/trappa/Trappa";
 import Formuevegg from "@/components/trappa/Formuevegg";
 import { hentTrappa } from "@/lib/trappa";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: "Trappa til toppen — valg og politikk",
   description:
     "Hvor står du i inntektstrappa? Se hvor mye du må tjene for å være blant de 10, 1 og 0,1 prosent med høyest inntekt, og hvor mye de egentlig får.",
-  robots: { index: false, follow: false }, // utkast
+  robots: UTKAST.trappa ? SKJULT_FOR_SOK : undefined,
 };
 
 const nf0 = new Intl.NumberFormat("nb-NO", { maximumFractionDigits: 0 });

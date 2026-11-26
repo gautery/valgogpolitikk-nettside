@@ -11,9 +11,10 @@ import { datawrapperId, type Bakgrunn, type Kloss } from "@/lib/klosser";
 import { hentKildeoversikt } from "@/lib/kilder";
 import { hentAlleKaruseller } from "@/lib/karuseller";
 import { getAllPosts } from "@/lib/posts";
-import { erEkstern, lesInnstillinger } from "@/lib/sider";
+import { erEkstern, lesInnstillinger, lesSide } from "@/lib/sider";
 import { hentAlleTema } from "@/lib/tema";
 import { hentAlleSkraablikk } from "@/lib/skraablikk";
+import { DEMO, UTKAST } from "@/lib/utkast";
 
 // Tegner en side bygd av byggeklosser. Hver kloss er en seksjon i full bredde.
 
@@ -43,6 +44,19 @@ function Seksjon({ bakgrunn, children }: { bakgrunn?: Bakgrunn; children: ReactN
     >
       <div className="mx-auto max-w-[1100px]">{children}</div>
     </section>
+  );
+}
+
+function KnappLenke({ href, children }: { href: string; children: ReactNode }) {
+  return (
+    <div className="mt-6">
+      <Link
+        href={href}
+        className="inline-block rounded-[6px] border border-black bg-white px-5 py-3 text-[15px] font-semibold text-black hover:bg-black hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+      >
+        {children}
+      </Link>
+    </div>
   );
 }
 
@@ -97,9 +111,9 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
   switch (kloss.type) {
     case "toppfelt": {
       const rosa = kloss.farge === "rosa";
-      const tekst = rosa ? "text-black" : "text-white";
+      const tekst = "text-black";
       return (
-        <div className={`px-6 py-14 md:py-20 ${rosa ? "bg-rosa" : "bg-hero"}`}>
+        <div className={`px-6 py-14 md:py-20 ${rosa ? "bg-rosa" : "border-b border-black bg-white"}`}>
           <div className="mx-auto max-w-[1100px]">
             <div className="flex flex-col gap-10 md:flex-row md:items-center md:justify-between">
               <div className="max-w-[640px]">
@@ -110,7 +124,7 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
                   </h1>
                 )}
                 {kloss.ingress && (
-                  <p className={`mt-6 max-w-[520px] text-[18px] leading-[1.55] ${rosa ? "text-black" : "text-white/75"}`}>
+                  <p className={`mt-6 max-w-[520px] text-[18px] leading-[1.55] ${rosa ? "text-black" : "text-text-secondary"}`}>
                     {kloss.ingress}
                   </p>
                 )}
@@ -290,7 +304,7 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
       // Karuseller og skråblikk i samme rad, nyeste først i hver gruppe.
       type Omslag = { key: string; href: string; tittel: string; bilde?: string; under: string; utkast: boolean };
       const karuseller: Omslag[] = hentAlleKaruseller()
-        .filter((k) => ktx.visUtkast || !k.utkast)
+        .filter((k) => ktx.visUtkast || DEMO || !k.utkast)
         .map((k) => ({
           key: `k-${k.slug}`,
           href: `/${k.slug}`,
@@ -300,7 +314,7 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
           utkast: k.utkast,
         }));
       const skraablikk: Omslag[] = hentAlleSkraablikk()
-        .filter((s) => ktx.visUtkast || !s.utkast)
+        .filter((s) => ktx.visUtkast || DEMO || !s.utkast)
         .map((s) => ({
           key: `s-${s.slug}`,
           href: `/skraablikk/${s.slug}`,
@@ -341,6 +355,7 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
               </li>
             ))}
           </ul>
+          {kloss.visKnapp !== false && <KnappLenke href="/karuseller">Se alle karuseller</KnappLenke>}
         </Seksjon>
       );
     }
@@ -472,21 +487,21 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
       if (poster.length === 0) return null;
       return (
         <Seksjon bakgrunn={kloss.bakgrunn}>
-          <Overskrift>{kloss.overskrift}</Overskrift>
-          <ul className="grid gap-x-8 gap-y-8 md:grid-cols-3">
+          <Overskrift>{kloss.overskrift || "Siste analyser"}</Overskrift>
+          <ul className="grid gap-x-8 gap-y-2 md:grid-cols-3">
             {poster.map((p) => (
-              <li key={p.slug} className="border-t-2 pt-4" style={{ borderTopColor: p.accentColor || "var(--color-accent)" }}>
-                <div className="text-[12.5px] text-text-muted">{postDato(p.date)}</div>
-                <Link
-                  href={`/innlegg/${p.slug}`}
-                  className="mt-1 block font-display text-[20px] leading-snug text-text-primary hover:text-accent"
-                >
-                  {p.title}
-                </Link>
-                <p className="mt-2 line-clamp-3 text-[14px] leading-relaxed text-text-secondary">{p.summary}</p>
+              <li key={p.slug} className="border-t border-black pt-4 pb-6">
+                <div className="text-[14px] text-text-muted">{postDato(p.date)}</div>
+                <h3 className="mt-2 font-display text-[24px] leading-[1.12]">
+                  <Link href={`/innlegg/${p.slug}`} className="text-black underline-offset-[5px] hover:underline">
+                    {p.title}
+                  </Link>
+                </h3>
+                <p className="mt-3 line-clamp-3 text-[15.5px] leading-relaxed text-text-secondary">{p.summary}</p>
               </li>
             ))}
           </ul>
+          <KnappLenke href="/analyser">Se alle analyser</KnappLenke>
         </Seksjon>
       );
     }
@@ -537,6 +552,37 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
               )}
             </div>
           </div>
+        </Seksjon>
+      );
+    }
+
+    case "utforsk": {
+      const tema = hentAlleTema().filter((t) => DEMO || !t.utkast);
+      type Punkt = { tittel: string; tekst: string; href: string; utkast?: boolean };
+      const alle: Punkt[] = [
+        { tittel: "Trappa til toppen", tekst: "Hvor står du i inntektstrappa, og hvor mye skatt betaler de på toppen?", href: "/trappa", utkast: UTKAST.trappa },
+        { tittel: "Statsbudsjettet", tekst: "Hvor pengene kommer fra, og hva de går til.", href: "/statsbudsjett", utkast: UTKAST.statsbudsjett },
+        ...tema.map((t) => ({ tittel: t.tittel, tekst: t.ingress || "Alt om temaet, samlet på ett sted.", href: `/tema/${t.slug}`, utkast: t.utkast })),
+        { tittel: "Nytt fra kildene", tekst: "Rapporter og tall fra SSB, regjeringen, Stortinget og andre.", href: "/kilder" },
+        { tittel: "Om valgogpolitikk", tekst: "Hvem som står bak, og hvordan jeg jobber med kildene.", href: "/om", utkast: lesSide("om")?.utkast },
+      ];
+      const punkter = alle.filter((p) => DEMO || !p.utkast);
+      return (
+        <Seksjon bakgrunn={kloss.bakgrunn}>
+          <Overskrift>{kloss.overskrift || "Utforsk"}</Overskrift>
+          <ul className="grid gap-x-8 sm:grid-cols-2 lg:grid-cols-3">
+            {punkter.map((p) => (
+              <li key={p.href} className="border-t border-black">
+                <Link href={p.href} className="group block py-5 pr-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
+                  <span className="block text-[21px] font-extrabold leading-snug tracking-[-0.015em] text-black group-hover:underline">
+                    {p.tittel}
+                  </span>
+                  <span className="mt-1.5 block text-[15.5px] leading-relaxed text-text-secondary">{p.tekst}</span>
+                  {p.utkast && <span className="mt-2 inline-block rounded bg-amber-100 px-1.5 py-0.5 text-[13px] text-amber-900">Utkast</span>}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </Seksjon>
       );
     }

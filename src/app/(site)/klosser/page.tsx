@@ -120,6 +120,12 @@ function katalog(): Oppføring[] {
       kloss: { type: "siste_analyser", overskrift: "Analyser" },
     },
     {
+      navn: "Utforsk",
+      bruk: "Snarveier til Trappa, Statsbudsjettet, temasidene, Kilder og Om. Oppdateres av seg selv.",
+      felt: "Overskrift, bakgrunn",
+      kloss: { type: "utforsk" },
+    },
+    {
       navn: "Om meg",
       bruk: "Bilde til venstre og tekst til høyre. Til Om-siden.",
       felt: "Bilde, beskrivelse av bildet, navn, undertittel, tekst, bakgrunn",

@@ -10,9 +10,12 @@ interface PostListProps {
   posts: Post[];
   sidebarEkstra?: React.ReactNode;
   om?: { tittel: string; tekst: string };
+  /** På /analyser er «Analyser» sidens hovedoverskrift. */
+  hovedoverskrift?: boolean;
 }
 
-export default function PostList({ posts, sidebarEkstra, om }: PostListProps) {
+export default function PostList({ posts, sidebarEkstra, om, hovedoverskrift }: PostListProps) {
+  const Tittel = hovedoverskrift ? "h1" : "h2";
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState<"newest" | "oldest">("newest");
@@ -118,7 +121,7 @@ export default function PostList({ posts, sidebarEkstra, om }: PostListProps) {
       {/* Post Feed */}
       <div className="flex min-w-0 flex-1 flex-col">
         <div className="mb-6 flex items-baseline justify-between gap-4">
-          <h2 className="font-display text-[30px] leading-tight sm:text-[36px]">Analyser</h2>
+          <Tittel className="font-display text-[30px] leading-tight sm:text-[36px]">Analyser</Tittel>
           <p className="text-[14px] text-text-muted" aria-live="polite">
             {filtered.length} {filtered.length === 1 ? "analyse" : "analyser"}
             {activeCategory !== "all" && ` i ${CATEGORIES.find((c) => c.id === activeCategory)?.label}`}

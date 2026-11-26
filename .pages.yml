@@ -774,6 +774,16 @@ components:
         label: Kildebånd (Utvalgt og Løpende)
         fields: []
 
+      - name: utforsk
+        label: Utforsk (snarveier til verktøy, tema, kilder og om)
+        fields:
+          - name: overskrift
+            label: Overskrift
+            type: string
+            default: Utforsk
+          - name: bakgrunn
+            component: bakgrunn
+
       - name: siste_analyser
         label: Siste analyser
         fields:

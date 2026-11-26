@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SKJULT_FOR_SOK, UTKAST } from "@/lib/utkast";
 import Statsbudsjett from "@/components/statsbudsjett/Statsbudsjett";
 import {
   forrigeId,
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   title: "Statsbudsjettet: hva pengene går til — valg og politikk",
   description:
     "Hva staten bruker penger på, og hvor pengene kommer fra. Regjeringens forslag og vedtatte budsjett fra 2014.",
-  robots: { index: false, follow: false }, // utkast
+  robots: UTKAST.statsbudsjett ? SKJULT_FOR_SOK : undefined,
 };
 
 export default function StatsbudsjettSide() {

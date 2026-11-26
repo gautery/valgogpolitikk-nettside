@@ -15,18 +15,17 @@ export default async function KilderSide() {
 
   return (
     <>
-      <div className="border-b border-border bg-hero px-6 py-14 md:py-16">
+      <div className="border-b border-black bg-white px-6 py-14 md:py-16">
         <div className="mx-auto max-w-[1100px]">
           <div className="mb-3 flex items-center gap-2">
-            <div className="h-4 w-1 rounded-full bg-rosa" />
-            <span className="text-[11px] font-semibold text-white/60">
+            <span className="text-[11px] font-semibold text-text-secondary">
               Oppdateres hver time
             </span>
           </div>
-          <h1 className="mb-4 max-w-[640px] font-display text-3xl leading-tight text-white sm:text-4xl lg:text-[44px] lg:leading-[1.15]">
+          <h1 className="mb-4 max-w-[640px] font-display text-3xl leading-tight text-black sm:text-4xl lg:text-[44px] lg:leading-[1.15]">
             Kildeovervåkning
           </h1>
-          <p className="max-w-[560px] text-[15px] leading-relaxed text-white/70">
+          <p className="max-w-[560px] text-[15px] leading-relaxed text-text-secondary">
             Nytt fra regjeringen, Stortinget, Riksrevisjonen, SSB, Eurostat,
             tilsyn, partier og forskning, samlet på ett sted og sortert etter
             tema.

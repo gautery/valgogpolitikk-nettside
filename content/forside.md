@@ -9,8 +9,12 @@ seksjoner:
     farge: rosa
   - type: karuseller
     overskrift: Karusellene
+  - type: siste_analyser
+    overskrift: Siste analyser
+    antall: 3
+  - type: utforsk
+    overskrift: Utforsk
   - type: kildeband
-  - type: analyser
   - type: samarbeid
     overskrift: Samarbeid og tips
     tekst: Vil du samarbeide med valgogpolitikk, eller har du tips til kilder? Send en melding her.

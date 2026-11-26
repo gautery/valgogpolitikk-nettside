@@ -202,31 +202,30 @@ export default function Statsbudsjett({ oversikt, start, startForrige, historikk
   return (
     <div className={laster ? "opacity-60 transition-opacity" : "transition-opacity"} aria-busy={laster}>
       {/* Topp */}
-      <div className="border-b border-border bg-hero px-6 py-12 md:py-14">
+      <div className="border-b border-black bg-white px-6 py-12 md:py-14">
         <div className="mx-auto max-w-[1100px]">
           <div className="mb-3 flex items-center gap-2">
-            <div className="h-4 w-1 rounded-full bg-rosa" />
-            <span className="text-[13px] font-medium text-white/50">Statsbudsjettet</span>
+            <span className="text-[13px] font-medium text-text-secondary">Statsbudsjettet</span>
           </div>
-          <h1 className="max-w-[720px] font-display text-3xl leading-tight text-white sm:text-4xl lg:text-[44px] lg:leading-[1.15]">
+          <h1 className="max-w-[720px] font-display text-3xl leading-tight text-black sm:text-4xl lg:text-[44px] lg:leading-[1.15]">
             Hva pengene går til, og hvor de kommer fra
           </h1>
-          <p className="mt-5 max-w-[640px] text-[17px] leading-relaxed text-white/75">
+          <p className="mt-5 max-w-[640px] text-[17px] leading-relaxed text-text-secondary">
             {budsjett.versjon === "forslag" ? "Regjeringen foreslår" : "Stortinget vedtok"} å bruke{" "}
-            <strong className="font-semibold text-white">{mrd(budsjett.sum_utgifter)} milliarder kroner</strong> i{" "}
+            <strong className="font-semibold text-black">{mrd(budsjett.sum_utgifter)} milliarder kroner</strong> i{" "}
             {budsjett.aar}. {mrd(budsjett.sum_inntekter)} milliarder kommer fra skatter, avgifter og andre inntekter,
-            og <strong className="font-semibold text-white">{mrd(budsjett.fra_oljefondet)} milliarder</strong> fra
+            og <strong className="font-semibold text-black">{mrd(budsjett.fra_oljefondet)} milliarder</strong> fra
             oljefondet.
           </p>
           <div className="mt-7 flex flex-wrap items-center gap-3">
-            <label htmlFor="velg-budsjett" className="text-[14px] text-white/60">
+            <label htmlFor="velg-budsjett" className="text-[14px] text-text-secondary">
               Vis
             </label>
             <select
               id="velg-budsjett"
               value={budsjett.id}
               onChange={(e) => byttBudsjett(e.target.value)}
-              className="rounded-md border border-white/20 bg-white/10 px-3 py-2 text-[14px] font-medium text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="rounded-md border border-black bg-surface px-3 py-2 text-[14px] font-medium text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
             >
               {sortertOversikt.map((o) => (
                 <option key={o.id} value={o.id} className="text-text-primary">
@@ -234,7 +233,7 @@ export default function Statsbudsjett({ oversikt, start, startForrige, historikk
                 </option>
               ))}
             </select>
-            {laster && <span className="text-[13px] text-white/60">Henter tall …</span>}
+            {laster && <span className="text-[13px] text-text-secondary">Henter tall …</span>}
           </div>
         </div>
       </div>
