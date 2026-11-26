@@ -164,6 +164,16 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
         <Seksjon bakgrunn={kloss.bakgrunn}>
           <Overskrift>{kloss.overskrift}</Overskrift>
           {kloss.tekst && <Markdown kilde={kloss.tekst} />}
+          {kloss.knapp && kloss.knappLenke && (
+            <div className="mt-6">
+              <Link
+                href={kloss.knappLenke}
+                className="inline-block rounded-[6px] bg-black px-6 py-3.5 text-[16px] font-semibold text-white hover:bg-text-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+              >
+                {kloss.knapp}
+              </Link>
+            </div>
+          )}
         </Seksjon>
       );
 
@@ -562,8 +572,8 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
       const alle: Punkt[] = [
         { tittel: "Trappa til toppen", tekst: "Hvor står du i inntektstrappa, og hvor mye skatt betaler de på toppen?", href: "/trappa", utkast: UTKAST.trappa },
         { tittel: "Statsbudsjettet", tekst: "Hvor pengene kommer fra, og hva de går til.", href: "/statsbudsjett", utkast: UTKAST.statsbudsjett },
-        ...(lesSide("skole-i-ulikhet")
-          ? [{ tittel: "Skole i ulikhet", tekst: "Åtte korte sider om ulikhet i Norge, steg for steg og med kilder.", href: "/skole-i-ulikhet", utkast: lesSide("skole-i-ulikhet")?.utkast }]
+        ...(lesSide("grunnkurs-i-ulikhet")
+          ? [{ tittel: "Grunnkurs i ulikhet", tekst: "Åtte korte sider om ulikhet i Norge, steg for steg og med kilder.", href: "/grunnkurs-i-ulikhet", utkast: lesSide("grunnkurs-i-ulikhet")?.utkast }]
           : []),
         ...tema.map((t) => ({ tittel: t.tittel, tekst: t.ingress || "Alt om temaet, samlet på ett sted.", href: `/tema/${t.slug}`, utkast: t.utkast })),
         { tittel: "Nytt fra kildene", tekst: "Rapporter og tall fra SSB, regjeringen, Stortinget og andre.", href: "/kilder" },

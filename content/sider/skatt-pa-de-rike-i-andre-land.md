@@ -4,7 +4,7 @@ beskrivelse: "Norge er et høyskatteland for vanlige folk. For milliardærene er
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: "Skole i ulikhet, del 4 av 8"
+    overlinje: "Grunnkurs i ulikhet, del 4 av 8"
     tittel: "Betaler de rike mindre skatt i Norge enn i andre land?"
     ingress: "Norge er et høyskatteland for vanlige folk. For milliardærene er Norge som USA."
   - type: tekst
@@ -34,6 +34,6 @@ seksjoner:
     tekst: |-
       - Se også karusellen: [Betaler de rike mer skatt i Norge enn i Sverige, USA og Frankrike?](/skatt-pa-de-rikeste)
       - Forrige: [Hvor mye skatt betaler de rikeste i Norge?](/skatt-etter-inntekt-i-norge)
-      - Neste: [Hvordan holdingselskaper utsetter skatten](/holdingselskap-og-utsatt-skatt)
-      - [Alle delene i Skole i ulikhet](/skole-i-ulikhet)
+      - Neste: [Hvordan slipper de rikeste unna skatt med holdingselskaper?](/holdingselskap-og-utsatt-skatt)
+      - [Alle delene i Grunnkurs i ulikhet](/grunnkurs-i-ulikhet)
 ---

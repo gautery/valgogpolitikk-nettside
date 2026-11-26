@@ -17,6 +17,9 @@ export type Tekst = {
   type: "tekst";
   overskrift?: string;
   tekst?: string;
+  /** Valgfri knapp under teksten. */
+  knapp?: string;
+  knappLenke?: string;
   bakgrunn?: Bakgrunn;
 };
 
