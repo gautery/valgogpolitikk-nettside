@@ -12,7 +12,8 @@ meny:
   - tekst: TikTok
     lenke: https://tiktok.com/@valgogpolitikk
 bunntekst:
-  beskrivelse: Datadrevet analyse av norsk politikk. Posisjonert til venstre, men alltid med kilder.
+  beskrivelse: Datadrevet analyse av norsk politikk. Posisjonert til venstre, men
+    alltid med kilder.
   grupper:
     - overskrift: Følg oss
       lenker:
@@ -25,7 +26,7 @@ bunntekst:
         - tekst: OECD
         - tekst: SSB
         - tekst: Eurostat
-  merknad: Alle analyser basert på offentlig tilgjengelig data. Ikke finansiell eller juridisk rådgivning.
 om:
   tittel: Om @valgogpolitikk
-  tekst: Datadrevet analyse av norsk politikk. Posisjonert til venstre, men alltid med kilder. Alt innhold basert på offentlig statistikk fra OECD, SSB, Eurostat og forskningslitteratur.
+  tekst: Analyser av norsk politikk. Tar utgangspunkt i offentlig tilgjengelig
+    statistikk og rapporter. Mener de beste løsningene er på venstresida.
