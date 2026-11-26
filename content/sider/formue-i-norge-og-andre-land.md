@@ -4,7 +4,7 @@ beskrivelse: "Norge er kjent for små forskjeller. Det gjelder inntekt, men ikke
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: "Skole i ulikhet, del 8 av 8"
+    overlinje: "Grunnkurs i ulikhet, del 8 av 8"
     tittel: "Er formuen jevnere fordelt i Norge enn i andre land?"
     ingress: "Norge er kjent for små forskjeller. Det gjelder inntekt, men ikke formue."
   - type: tekst
@@ -31,6 +31,6 @@ seksjoner:
   - type: tekst
     overskrift: Videre i serien
     tekst: |-
-      - Forrige: [Og hva fører alt dette til? Formuen i Norge](/formuesfordelingen-i-norge)
-      - [Alle delene i Skole i ulikhet](/skole-i-ulikhet)
+      - Forrige: [Hvor skjevt er formuen fordelt i Norge?](/formuesfordelingen-i-norge)
+      - [Alle delene i Grunnkurs i ulikhet](/grunnkurs-i-ulikhet)
 ---

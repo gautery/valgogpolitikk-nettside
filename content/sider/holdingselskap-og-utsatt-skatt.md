@@ -1,11 +1,11 @@
 ---
-tittel: "Hvordan holdingselskaper utsetter skatten"
+tittel: "Hvordan slipper de rikeste unna skatt med holdingselskaper?"
 beskrivelse: "Inntekten finnes. Den blir bare aldri personlig inntekt."
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: "Skole i ulikhet, del 5 av 8"
-    tittel: "Hvordan holdingselskaper utsetter skatten"
+    overlinje: "Grunnkurs i ulikhet, del 5 av 8"
+    tittel: "Hvordan slipper de rikeste unna skatt med holdingselskaper?"
     ingress: "Inntekten finnes. Den blir bare aldri personlig inntekt."
   - type: tekst
     overskrift: Hovedpoenget
@@ -37,6 +37,6 @@ seksjoner:
     tekst: |-
       - Se også karusellen: [Betaler de rike mer skatt i Norge enn i Sverige, USA og Frankrike?](/skatt-pa-de-rikeste)
       - Forrige: [Betaler de rike mindre skatt i Norge enn i andre land?](/skatt-pa-de-rike-i-andre-land)
-      - Neste: [Privat forbruk i selskaper: når firmaet betaler regningene](/privat-forbruk-i-selskaper)
-      - [Alle delene i Skole i ulikhet](/skole-i-ulikhet)
+      - Neste: [Hvor vanlig er det at selskapet betaler eierens private forbruk?](/privat-forbruk-i-selskaper)
+      - [Alle delene i Grunnkurs i ulikhet](/grunnkurs-i-ulikhet)
 ---

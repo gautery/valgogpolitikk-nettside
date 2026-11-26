@@ -582,6 +582,14 @@ components:
           - name: tekst
             label: Tekst
             type: rich-text
+          - name: knapp
+            label: Knapp (valgfri)
+            description: Tekst på en svart knapp under teksten, f.eks. «Start med del 1».
+            type: string
+          - name: knappLenke
+            label: Lenke for knappen
+            description: For sider på nettsiden, f.eks. /analyser.
+            type: string
           - name: bakgrunn
             component: bakgrunn
 

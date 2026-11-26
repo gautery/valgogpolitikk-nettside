@@ -4,7 +4,7 @@ beskrivelse: "Før vi ser på hva de rike faktisk betaler: hva mener folk at de 
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: "Skole i ulikhet, del 1 av 8"
+    overlinje: "Grunnkurs i ulikhet, del 1 av 8"
     tittel: "Hvor mye skatt vil nordmenn at de rike skal betale?"
     ingress: "Før vi ser på hva de rike faktisk betaler: hva mener folk at de burde betale?"
   - type: tekst
@@ -33,5 +33,5 @@ seksjoner:
     overskrift: Videre i serien
     tekst: |-
       - Neste: [Hvordan er inntektene fordelt i Norge?](/inntektsfordelingen-i-norge)
-      - [Alle delene i Skole i ulikhet](/skole-i-ulikhet)
+      - [Alle delene i Grunnkurs i ulikhet](/grunnkurs-i-ulikhet)
 ---

@@ -1,11 +1,11 @@
 ---
-tittel: "Privat forbruk i selskaper: når firmaet betaler regningene"
+tittel: "Hvor vanlig er det at selskapet betaler eierens private forbruk?"
 beskrivelse: "Hytta, bilen og ferien betales av selskapet. Det er ulovlig, og det skjer likevel."
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: "Skole i ulikhet, del 6 av 8"
-    tittel: "Privat forbruk i selskaper: når firmaet betaler regningene"
+    overlinje: "Grunnkurs i ulikhet, del 6 av 8"
+    tittel: "Hvor vanlig er det at selskapet betaler eierens private forbruk?"
     ingress: "Hytta, bilen og ferien betales av selskapet. Det er ulovlig, og det skjer likevel."
   - type: tekst
     overskrift: Hovedpoenget
@@ -34,7 +34,7 @@ seksjoner:
   - type: tekst
     overskrift: Videre i serien
     tekst: |-
-      - Forrige: [Hvordan holdingselskaper utsetter skatten](/holdingselskap-og-utsatt-skatt)
-      - Neste: [Og hva fører alt dette til? Formuen i Norge](/formuesfordelingen-i-norge)
-      - [Alle delene i Skole i ulikhet](/skole-i-ulikhet)
+      - Forrige: [Hvordan slipper de rikeste unna skatt med holdingselskaper?](/holdingselskap-og-utsatt-skatt)
+      - Neste: [Hvor skjevt er formuen fordelt i Norge?](/formuesfordelingen-i-norge)
+      - [Alle delene i Grunnkurs i ulikhet](/grunnkurs-i-ulikhet)
 ---

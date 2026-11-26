@@ -1,11 +1,11 @@
 ---
-tittel: "Og hva fører alt dette til? Formuen i Norge"
+tittel: "Hvor skjevt er formuen fordelt i Norge?"
 beskrivelse: "Lav skatt på de rikeste år etter år blir til store formuer."
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: "Skole i ulikhet, del 7 av 8"
-    tittel: "Og hva fører alt dette til? Formuen i Norge"
+    overlinje: "Grunnkurs i ulikhet, del 7 av 8"
+    tittel: "Hvor skjevt er formuen fordelt i Norge?"
     ingress: "Lav skatt på de rikeste år etter år blir til store formuer."
   - type: tekst
     overskrift: Hovedpoenget
@@ -34,7 +34,7 @@ seksjoner:
   - type: tekst
     overskrift: Videre i serien
     tekst: |-
-      - Forrige: [Privat forbruk i selskaper: når firmaet betaler regningene](/privat-forbruk-i-selskaper)
+      - Forrige: [Hvor vanlig er det at selskapet betaler eierens private forbruk?](/privat-forbruk-i-selskaper)
       - Neste: [Er formuen jevnere fordelt i Norge enn i andre land?](/formue-i-norge-og-andre-land)
-      - [Alle delene i Skole i ulikhet](/skole-i-ulikhet)
+      - [Alle delene i Grunnkurs i ulikhet](/grunnkurs-i-ulikhet)
 ---
