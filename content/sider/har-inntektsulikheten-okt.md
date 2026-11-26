@@ -1,12 +1,12 @@
 ---
 tittel: "Har inntektsulikheten i Norge økt?"
-beskrivelse: "Den rikeste prosentens andel av inntektene falt i hundre år. Siden 1980-tallet har den steget igjen, og mest når vi regner med overskuddet i selskapene."
+beskrivelse: "Den rikeste prosentens andel av inntektene falt i hundre år. Siden 1980-tallet har den steget kraftig igjen."
 utkast: true
 seksjoner:
   - type: toppfelt
     overlinje: "Grunnkurs i ulikhet, leksjon 2 av 10"
     tittel: "Har inntektsulikheten i Norge økt?"
-    ingress: "Den rikeste prosentens andel av inntektene falt i hundre år. Siden 1980-tallet har den steget igjen, og mest når vi regner med overskuddet i selskapene."
+    ingress: "Den rikeste prosentens andel av inntektene falt i hundre år. Siden 1980-tallet har den steget kraftig igjen."
   - type: tekst
     overskrift: "Den lange linja"
     tekst: |-
@@ -34,21 +34,16 @@ seksjoner:
         tekst: "i 2020, når overskudd i selskapene regnes med."
         kilde: "Ring, Seim og Zucman (2026), figur 9b"
   - type: tekst
-    overskrift: "Det statistikken ikke fanger opp"
-    graf: https://datawrapper.dwcdn.net/zGyMB/
-    grafBeskrivelse: "Linjediagram for 2002 til 2020. Den rikeste prosentens andel av inntekten på skattemeldingene går fra 9 til 8 prosent. Andelen av all inntekt, med overskudd i selskaper, stiger fra 11 til 20 prosent."
+    overskrift: "De siste tjue årene"
     bakgrunn: lys
+    graf: https://datawrapper.dwcdn.net/zGyMB/
+    grafBeskrivelse: "Linjediagram for 2002 til 2020. Den rikeste prosentens andel av inntektene stiger fra 11 prosent i 2002 til 21 prosent i 2006, faller til 14 prosent i 2008, og stiger til 20 prosent i 2020."
     tekst: |-
-      Den lange tallserien teller bare inntekt som står på skattemeldingen. Etter 2006 gir det et skjevt bilde.
+      For årene etter 2002 finnes det bedre tall. Ring, Seim og Zucman har koblet eierne til selskapene deres, og regnet med overskuddet som blir stående der.
 
-      I 2006 kom det skatt på utbytte til personer. Året før tok eierne ut svært store utbytter. Etterpå lot de pengene stå i selskapene. På skattemeldingene så det ut som om de rikeste plutselig tjente mye mindre.
+      I 2002 fikk den rikeste prosenten rundt 11 prosent av inntektene i Norge. I 2020 var andelen 20 prosent.
 
-      Ring, Seim og Zucman har regnet med overskuddet som blir stående i selskapene. Da ser utviklingen slik ut for den rikeste prosenten:
-
-      - **På skattemeldingen:** 9 prosent i 2002, 14 prosent i 2005 og 8 prosent i 2020.
-      - **Med overskudd i selskapene:** rundt 11 prosent i 2002 og 20 prosent i 2020.
-
-      Andelen svinger mye fra år til år. Den var 21 prosent i 2006 og falt til 14 prosent under finanskrisen i 2008. Siden har den steget igjen.
+      Andelen svinger mye fra år til år, fordi overskuddet i selskapene følger konjunkturene. Den var 21 prosent i 2006 og falt til 14 prosent under finanskrisen i 2008. Siden har den steget igjen.
   - type: tekst
     overskrift: "Hva med boligprisene?"
     tekst: |-
@@ -61,7 +56,16 @@ seksjoner:
     tekst: |-
       Inntekt er det du tjener i løpet av et år. Formue er det du eier. Når noen tjener mye år etter år, hoper det seg opp. Hvordan er formuen fordelt?
   - type: tekst
+    overskrift: "Hvorfor er tallene høyere enn i offisiell statistikk?"
+    tekst: |-
+      Den offisielle statistikken teller bare inntekt som blir tatt ut til enkeltpersoner og havner på skattemeldingen. For de rikeste er det bare en del av inntekten. Resten blir stående som overskudd i selskapene de eier.
+
+      Det har betydd mer og mer. I 2006 kom det skatt på utbytte til personer, og etter det har eierne latt mer av pengene stå i selskapene. På skattemeldingene har den rikeste prosenten derfor ligget på rundt 8 prosent av inntektene siden 2006, mens andelen i virkeligheten har steget.
+
+      Den lange tallserien fra 1875 bygger også på skattemeldingene. Tallet for 2017, 10 prosent, er derfor lavere enn de 20 prosentene vi får når overskuddet i selskapene regnes med.
+  - type: tekst
     overskrift: "Kildene"
+    bakgrunn: lys
     tekst: |-
       - Rolf Aaberge, Anthony B. Atkinson og Jørgen Modalsli (2020): «Estimating long-run income inequality from mixed tabular data: Empirical evidence from Norway, 1875–2017». SSB Discussion Papers 928. [ssb.no](https://www.ssb.no/en/forskning/discussion-papers/estimating-long-run-income-inequality-from-mixed-tabular-data-empirical-evidence-from-norway-1875-2017). Tallene for 1882, 1939, 1953, 1980 og 2017 står i kapittel 4.1.
       - Marius Ring, David Seim og Gabriel Zucman (2026): «Personal Holding Companies, Tax Progressivity, and Inequality». NBER Working Paper 35534. [nber.org/papers/w35534](https://www.nber.org/papers/w35534). Tallene for 2002–2020 er lest av figur 9b og avrundet. Studien fordeler privat nasjonalinntekt, og holder overskuddet i statseide selskaper utenfor.

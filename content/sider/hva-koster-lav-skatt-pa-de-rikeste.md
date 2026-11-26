@@ -33,9 +33,15 @@ seksjoner:
 
       Tallet viser den øvre grensen: Så mye er det mulig å hente hvis skattesystemet sluttet å falle på toppen.
   - type: tekst
-    overskrift: "Til deg, Gaute: beløp i kroner"
+    overskrift: "Hva blir det i kroner?"
     tekst: |-
-      **Slett denne seksjonen før publisering.** Studien oppgir bare prosent. Leseren vil ha kroner. I karusellen «Hvor mye lavere skatt kunne du fått?» brukte du 127 milliarder, og sammenlignet med matmoms, tannhelse og gratis barnehage. Si fra hvordan du kom fram til beløpet, så legger jeg det inn her med kilde.
+      Studien oppgir bare prosent. Men vi kan gjøre et grovt overslag.
+
+      I 2025 fikk staten inn 1 416 milliarder kroner i skatter og avgifter fra Fastlands-Norge. 7,6 prosent av det er rundt 108 milliarder kroner. Skattene til kommunene kommer i tillegg, så det samlede tallet er høyere.
+
+      Overslaget viser størrelsen, ikke et nøyaktig beløp. Studiens tall gjelder årene 2018–2020, og det er som sagt en øvre grense.
+
+      **Til deg, Gaute, slett før publisering:** I karusellen brukte du 127 milliarder. Det tilsvarer 7,6 prosent av rundt 1 660 milliarder, altså omtrent statens og kommunenes skatter til sammen. Finner du tallet du brukte, kan vi bytte ut overslaget over.
   - type: tekst
     overskrift: "Del 3: Hvorfor betaler de så lite?"
     bakgrunn: lys
@@ -47,6 +53,7 @@ seksjoner:
     overskrift: "Kildene"
     tekst: |-
       - Marius Ring, David Seim og Gabriel Zucman (2026): «Personal Holding Companies, Tax Progressivity, and Inequality». NBER Working Paper 35534. [nber.org/papers/w35534](https://www.nber.org/papers/w35534). Regnestykket står i kapittel 5.1, under «Mechanical revenue losses». Tallet 7,6 prosent står i figur 5f, og 4 prosent i figur A14.
+      - Finansdepartementet: Meld. St. 3 (2025–2026), Statsrekneskapen 2025. [regjeringen.no](https://www.regjeringen.no/no/dokumenter/meld.-st.-3-20252026/id3157098/?ch=1). Skatter og avgifter fra Fastlands-Norge: 1 416,4 milliarder kroner.
   - type: tekst
     overskrift: Videre i serien
     bakgrunn: lys
