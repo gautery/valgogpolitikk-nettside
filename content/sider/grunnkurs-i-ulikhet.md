@@ -80,6 +80,8 @@ seksjoner:
     bakgrunn: hvit
   - type: tekst
     overskrift: Kom i gang
+    knapp: Start med leksjon 1
+    knappLenke: /inntektsfordelingen-i-norge
     tekst: "Hver leksjon tar et par minutter å lese, og kan leses for seg. Leser du
       dem i rekkefølge, bygger de på hverandre: fra hvordan det faktisk er, via
       hva vi ønsker, til hvorfor det har blitt slik. Alle tall har kilde, så du
