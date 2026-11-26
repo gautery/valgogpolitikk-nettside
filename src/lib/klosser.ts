@@ -17,6 +17,9 @@ export type Tekst = {
   type: "tekst";
   overskrift?: string;
   tekst?: string;
+  /** Valgfri graf fra Datawrapper mellom overskriften og teksten. */
+  graf?: string;
+  grafBeskrivelse?: string;
   /** Valgfri knapp under teksten. */
   knapp?: string;
   knappLenke?: string;

@@ -582,6 +582,13 @@ components:
           - name: tekst
             label: Tekst
             type: rich-text
+          - name: graf
+            label: Graf fra Datawrapper (valgfri)
+            description: Lim inn lenken til grafen. Den vises mellom overskriften og teksten.
+            type: string
+          - name: grafBeskrivelse
+            label: Beskrivelse av grafen for skjermlesere
+            type: text
           - name: knapp
             label: Knapp (valgfri)
             description: Tekst på en svart knapp under teksten, f.eks. «Start med del 1».

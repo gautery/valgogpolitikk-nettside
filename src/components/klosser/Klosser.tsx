@@ -163,6 +163,11 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
       return (
         <Seksjon bakgrunn={kloss.bakgrunn}>
           <Overskrift>{kloss.overskrift}</Overskrift>
+          {datawrapperId(kloss.graf) && (
+            <div className="mb-8 max-w-[680px] rounded-[10px] bg-white p-3 sm:p-4">
+              <DatawrapperGraf id={datawrapperId(kloss.graf)!} tittel={kloss.grafBeskrivelse || "Graf fra Datawrapper"} />
+            </div>
+          )}
           {kloss.tekst && <Markdown kilde={kloss.tekst} />}
           {kloss.knapp && kloss.knappLenke && (
             <div className="mt-6">
