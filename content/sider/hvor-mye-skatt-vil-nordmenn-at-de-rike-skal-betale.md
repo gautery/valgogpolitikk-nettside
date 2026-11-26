@@ -28,17 +28,17 @@ seksjoner:
   - type: tekst
     overskrift: Jo mer du tjener, jo større andel
     bakgrunn: lys
+    graf: https://datawrapper.dwcdn.net/Xplnc/
+    grafBeskrivelse: Søylediagram med ti inntekter fra 100 000 kroner til 100 millioner kroner i året. Skattesatsen folk ønsker stiger jevnt fra 6 prosent til 48 prosent.
     tekst: |-
-      **[Graf 1 settes inn her: skattesatsen folk ønsker for de ti inntektene. Lag den i Datawrapper med filen datawrapper-graf1-onsket-skatt.csv.]**
+      Grafen viser snittet av svarene. Søylene stiger hele veien. Folk vil at den som tjener 500 000 kroner skal betale 24 prosent, den som tjener 2 millioner 38 prosent, og den som tjener 10 millioner 43 prosent.
 
-      Grafen viser snittet av svarene. Linja stiger hele veien. Folk vil at den som tjener 500 000 kroner skal betale 24 prosent, den som tjener 2 millioner 38 prosent, og den som tjener 10 millioner 43 prosent.
-
-      Legg merke til at linja fortsetter å stige også helt på toppen. Folk mener ikke at det holder med én sats for «de rike». Den som tjener 100 millioner bør betale en større andel enn den som tjener 5 millioner.
+      Legg merke til at søylene fortsetter å stige også helt på toppen. Folk mener ikke at det holder med én sats for «de rike». Den som tjener 100 millioner bør betale en større andel enn den som tjener 5 millioner.
   - type: tekst
     overskrift: Det gjelder velgere i alle partier
+    graf: https://datawrapper.dwcdn.net/Oo9nN/
+    grafBeskrivelse: Liggende søylediagram med ni partier. Rødt-velgerne ønsker høyest skattesats, 65,7 prosent, og Høyre-velgerne lavest, 42,6 prosent.
     tekst: |-
-      **[Graf 2 settes inn her: ønsket skattesats for den som tjener 100 millioner, etter parti. Lag den i Datawrapper med filen datawrapper-graf2-partiene.csv.]**
-
       Dette er ikke bare et ønske fra venstresida. Velgerne til alle de ni partiene vil i snitt ha under 10 prosent skatt på den laveste inntekten og over 40 prosent på den høyeste.
 
       Forskjellene går på hvor høyt man vil gå på toppen. Rødt-velgerne vil at den som tjener 100 millioner skal betale 65,7 prosent. Høyre-velgerne vil ha lavest sats, 42,6 prosent, og FrP-velgerne 44,5 prosent.
