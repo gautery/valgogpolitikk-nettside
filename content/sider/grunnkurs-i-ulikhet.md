@@ -1,11 +1,11 @@
 ---
 tittel: Grunnkurs i ulikhet
-beskrivelse: 'Et kort grunnkurs i ulikhet i Norge: hvordan inntekt og formue er fordelt, hva folk vil, hvor mye skatt de rikeste betaler, og hvorfor. Ni korte sider med kilder.'
+beskrivelse: 'Et kort grunnkurs i ulikhet i Norge: hvordan inntekt og formue er fordelt, hva folk vil, hvor mye skatt de rikeste betaler, og hvorfor. Åtte korte sider med kilder.'
 utkast: true
 seksjoner:
 - type: toppfelt
   tittel: Grunnkurs i ulikhet
-  ingress: Ni korte sider om ulikhet i Norge, basert på noen av de viktigste rapportene som har kommet ut om temaet de siste årene.
+  ingress: Åtte korte sider om ulikhet i Norge, basert på noen av de viktigste rapportene som har kommet ut om temaet de siste årene.
   bokrygger: false
   farge: mork
 - type: tekst
@@ -20,12 +20,11 @@ seksjoner:
     1. [Hvordan er inntektene fordelt i Norge?](/inntektsfordelingen-i-norge)
     2. [Hvor skjevt er formuen fordelt i Norge?](/formuesfordelingen-i-norge)
     3. [Har ulikheten i Norge økt?](/har-ulikheten-i-norge-okt)
-    4. [Er formuen jevnere fordelt i Norge enn i andre land?](/formue-i-norge-og-andre-land)
-    5. [Hvor mye skatt vil nordmenn at folk med forskjellige inntekter skal betale?](/hvor-mye-skatt-vil-nordmenn-at-de-rike-skal-betale)
-    6. [Hvor mye skatt betaler vi faktisk i Norge?](/skatt-etter-inntekt-i-norge)
-    7. [Betaler de rike mindre skatt i Norge enn i andre land?](/skatt-pa-de-rike-i-andre-land)
-    8. [Hvordan slipper de rikeste unna skatt med holdingselskaper?](/holdingselskap-og-utsatt-skatt)
-    9. [Hvor vanlig er det at selskapet betaler eierens private forbruk?](/privat-forbruk-i-selskaper)
+    4. [Hvor mye skatt vil nordmenn at folk med forskjellige inntekter skal betale?](/hvor-mye-skatt-vil-nordmenn-at-de-rike-skal-betale)
+    5. [Hvor mye skatt betaler vi faktisk i Norge?](/skatt-etter-inntekt-i-norge)
+    6. [Betaler de rike mindre skatt i Norge enn i andre land?](/skatt-pa-de-rike-i-andre-land)
+    7. [Hvordan slipper de rikeste unna skatt med holdingselskaper?](/holdingselskap-og-utsatt-skatt)
+    8. [Hvor vanlig er det at selskapet betaler eierens private forbruk?](/privat-forbruk-i-selskaper)
   bakgrunn: hvit
 - type: tekst
   overskrift: Kom i gang

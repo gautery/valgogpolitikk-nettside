@@ -5,7 +5,7 @@ beskrivelse: Folk flest betaler nesten halvparten av inntekten i skatt.
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: Grunnkurs i ulikhet, del 6 av 9
+    overlinje: Grunnkurs i ulikhet, del 5 av 8
     tittel: Hvor mye skatt betaler vi faktisk i Norge?
     ingress: >-
       Studien tar med alle skatter og avgifter, altså inkludert moms, blant
