@@ -35,7 +35,7 @@ seksjoner:
       forskjeller i hvordan en regner. Da er det fint å vite at tallene de
       finner for Norge stort sett stemmer ganske godt med tallene som ble regnet
       ut av SSB-økonomer for noen år siden. Forskjellen ligger i hovedsak i at
-      SS-økonomene fant enda litt lavere satser for de aller rikeste.
+      SSB-økonomene fant enda litt lavere satser for de aller rikeste.
     bakgrunn: hvit
   - type: nokkeltall
     overskrift: Så mye betaler vi i skatt
