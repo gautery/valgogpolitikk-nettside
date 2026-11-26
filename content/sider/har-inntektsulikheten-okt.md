@@ -9,11 +9,13 @@ seksjoner:
     tittel: Har inntektsulikheten i Norge økt?
     ingress: Andelen de rikeste tjente gikk ned og ned i nesten 100 år etter
       demokratiseringen av Norge, men fra 80-tallet av så har den steget
-      dramatisk. Nå er vi tilbake til samme nivå som i ??.
+      dramatisk. Nå er vi tilbake til omtrent samme nivå som for hundre år siden.
     bokrygger: false
     farge: mork
   - type: tekst
     overskrift: Den lange linja
+    graf: https://datawrapper.dwcdn.net/krafw/
+    grafBeskrivelse: "Linjediagram for 1875 til 2022. Den rikeste prosentens andel av inntektene faller fra rundt 23 prosent i 1900 til 4 prosent i 1980. Med overskudd i selskapene regnet med stiger den fra 11 prosent i 2002 til 20 prosent i 2020 og 23 prosent i 2022."
     tekst: >-
       SSB-forskere har brukt skattestatistikk for å regne seg tilbake til 1875.
       Altså tilbake til før Norge i det hele tatt kunne påstå å være
@@ -47,6 +49,8 @@ seksjoner:
 
       - **2020:** 20 prosent (med overskudd i selskapene)
 
+      - **2022:** 23 prosent (med overskudd i selskapene, ny kilde)
+
 
       Andelen falt altså i hundre år, og har mer enn doblet seg siden 1980.
 
@@ -64,9 +68,9 @@ seksjoner:
       - tall: 4 %
         tekst: i 1980, det laveste nivået.
         kilde: SSB Discussion Papers 928
-      - tall: 20 %
-        tekst: i 2020, når overskudd i selskapene regnes med.
-        kilde: Ring, Seim og Zucman (2026), figur 9b
+      - tall: 23 %
+        tekst: i 2022, når overskudd i selskapene regnes med.
+        kilde: SSB Rapporter 2024/32, figur 3.2
     bakgrunn: hvit
   - type: tekst
     overskrift: De siste tjue årene
@@ -85,6 +89,12 @@ seksjoner:
       Andelen svinger mye fra år til år, fordi overskuddet i selskapene følger
       konjunkturene. Den var 21 prosent i 2006 og falt til 14 prosent under
       finanskrisen i 2008. Siden har den steget igjen.
+
+
+      De nyeste tallene kommer fra en annen kilde, SSB. Den regner også med
+      overskuddet i selskapene, men måler inntekt litt annerledes. Der var
+      andelen 23 prosent i 2022. I 2021 var den hele 28 prosent, fordi
+      selskapene hadde et uvanlig godt år.
     bakgrunn: lys
   - type: tekst
     overskrift: Hva med boligprisene?
@@ -126,8 +136,10 @@ seksjoner:
     tekst: |+
       - Rolf Aaberge, Anthony B. Atkinson og Jørgen Modalsli (2020): «Estimating long-run income inequality from mixed tabular data: Empirical evidence from Norway, 1875–2017». SSB Discussion Papers 928. [ssb.no](https://www.ssb.no/en/forskning/discussion-papers/estimating-long-run-income-inequality-from-mixed-tabular-data-empirical-evidence-from-norway-1875-2017). Tallene for 1882, 1939, 1953, 1980 og 2017 står i kapittel 4.1.
       - Marius Ring, David Seim og Gabriel Zucman (2026): «Personal Holding Companies, Tax Progressivity, and Inequality». NBER Working Paper 35534. [nber.org/papers/w35534](https://www.nber.org/papers/w35534). Tallene for 2002–2020 er lest av figur 9b og avrundet. Studien fordeler privat nasjonalinntekt, og holder overskuddet i statseide selskaper utenfor.
+      - Ola Lotherington Vestad (2024): «Utviklingen i inntektsulikhet i perioden 2016–2022». SSB Rapporter 2024/32. [ssb.no](https://www.ssb.no/inntekt-og-forbruk/inntekt-og-formue/artikler/utviklingen-i-inntektsulikhet-i-perioden-20162022). Tallene for 2016–2022 er lest av figur 3.2 og avrundet. De gjelder markedsinntekt for personer over 25 år, medregnet eiernes andel av overskudd som blir stående i selskapene.
+      - Den lange grafen: Tallene for 1875–2001 er lest av figur A10 i SSB Discussion Papers 928, som snittet av forskernes øvre og nedre anslag. De er derfor omtrentlige.
       - Rolf Aaberge, Magne Mogstad, Ola L. Vestad og Arnstein Vestre (2021): «Økonomisk ulikhet i Norge i det 21. århundre». SSB Rapporter 2021/33. [ssb.no](https://www.ssb.no/inntekt-og-forbruk/inntekt-og-formue/artikler/okonomisk-ulikhet-i-norge-i-det-21.arhundre). Økningen på 29 prosent gjelder Gini-koeffisienten for inntekt etter skatt, figur 2.5.
-      - De tre kildene måler inntekt på ulik måte. Tallene før 2002 er uten overskudd som blir stående i selskapene, og tallene fra 2002 er med. De kan derfor ikke sammenlignes direkte.
+      - Kildene måler inntekt på ulik måte. Tallene før 2002 er uten overskudd som blir stående i selskapene, og tallene fra 2002 er med. De kan derfor ikke sammenlignes direkte.
 
     bakgrunn: lys
   - type: tekst
