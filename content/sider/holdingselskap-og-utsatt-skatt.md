@@ -31,6 +31,8 @@ seksjoner:
         kilde: "Ring, Seim og Zucman (2026)"
   - type: tekst
     overskrift: "Utsatt skatt blir til ingen skatt"
+    graf: https://datawrapper.dwcdn.net/ulURW/
+    grafBeskrivelse: "Liggende søylediagram med 15 inntektsgrupper i Norge. For de fleste kommer rundt 90 prosent av inntekten på skattemeldingen. For de 0,0005 prosent rikeste er andelen 2 prosent."
     bakgrunn: lys
     tekst: |-
       Tanken bak reglene er at skatten bare er utsatt. Den skal betales den dagen eieren tar pengene ut.

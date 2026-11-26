@@ -35,6 +35,8 @@ seksjoner:
         kilde: "Ring, Seim og Zucman (2026), figur 9b"
   - type: tekst
     overskrift: "Det statistikken ikke fanger opp"
+    graf: https://datawrapper.dwcdn.net/zGyMB/
+    grafBeskrivelse: "Linjediagram for 2002 til 2020. Den rikeste prosentens andel av inntekten på skattemeldingene går fra 9 til 8 prosent. Andelen av all inntekt, med overskudd i selskaper, stiger fra 11 til 20 prosent."
     bakgrunn: lys
     tekst: |-
       Den lange tallserien teller bare inntekt som står på skattemeldingen. Etter 2006 gir det et skjevt bilde.

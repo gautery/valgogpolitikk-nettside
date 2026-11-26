@@ -27,6 +27,8 @@ seksjoner:
         kilde: "Ring, Seim og Zucman (2026)"
   - type: tekst
     overskrift: "Høy skatt for folk flest, lav for toppen"
+    graf: https://datawrapper.dwcdn.net/2obCo/
+    grafBeskrivelse: "Liggende søylediagram med fem land. Samlet skatt for de aller rikeste er 25 prosent i Frankrike, 24 i USA, 22 i Norge, 21 i Nederland og 14 i Sverige."
     bakgrunn: lys
     tekst: |-
       Det som skiller landene, er hvor mye vanlige folk betaler.
