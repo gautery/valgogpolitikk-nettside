@@ -124,6 +124,21 @@ export type SisteAnalyser = {
   bakgrunn?: Bakgrunn;
 };
 
+export type FeiringKloss = {
+  type: "feiring";
+  overlinje?: string;
+  tittel?: string;
+  ingress?: string;
+  bilde?: string;
+  bildetekst?: string;
+  fotokreditt?: string;
+  fotokredittLenke?: string;
+  knapp?: string;
+  knappLenke?: string;
+  lenke?: string;
+  lenkeTil?: string;
+};
+
 export type Nyhetsbrev = {
   type: "nyhetsbrev";
   overskrift?: string;
@@ -173,6 +188,7 @@ export type Kloss =
   | Analyser
   | SisteAnalyser
   | Nyhetsbrev
+  | FeiringKloss
   | Samarbeid
   | Utforsk
   | OmMeg;

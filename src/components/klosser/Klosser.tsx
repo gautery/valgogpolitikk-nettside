@@ -6,6 +6,7 @@ import BookSpines from "@/components/BookSpines";
 import NewsletterForm from "@/components/NewsletterForm";
 import PostList from "@/components/PostList";
 import { KildeBand, TEMAFARGER } from "@/components/SisteFraKildene";
+import Feiring from "@/components/Feiring";
 import Konfetti from "@/components/Konfetti";
 import DatawrapperGraf from "@/components/klosser/DatawrapperGraf";
 import { datawrapperId, type Bakgrunn, type Kloss } from "@/lib/klosser";
@@ -522,6 +523,34 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
         </Seksjon>
       );
     }
+
+    case "feiring":
+      return (
+        <Feiring
+          overlinje={kloss.overlinje}
+          tittel={kloss.tittel}
+          ingress={kloss.ingress}
+          bilde={kloss.bilde}
+          bildetekst={kloss.bildetekst}
+          fotokreditt={
+            kloss.fotokreditt ? (
+              kloss.fotokredittLenke ? (
+                <a href={kloss.fotokredittLenke} className="underline underline-offset-2">
+                  {kloss.fotokreditt}
+                </a>
+              ) : (
+                kloss.fotokreditt
+              )
+            ) : undefined
+          }
+          knapp={kloss.knapp}
+          knappLenke={kloss.knappLenke}
+          lenke={kloss.lenke}
+          lenkeTil={kloss.lenkeTil}
+        >
+          <NewsletterForm />
+        </Feiring>
+      );
 
     case "nyhetsbrev":
       return (
