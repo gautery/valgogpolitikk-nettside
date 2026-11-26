@@ -4,7 +4,7 @@ beskrivelse: "Formuen var jevnest fordelt rundt 1970. Siden har den rikeste pros
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: "Grunnkurs i ulikhet, leksjon 4 av 10"
+    overlinje: "Grunnkurs i ulikhet, leksjon 4 av 8"
     tittel: "Har formuesulikheten i Norge økt?"
     ingress: "Formuen var jevnest fordelt rundt 1970. Siden har den rikeste prosentens andel nesten doblet seg, og er tilbake der den var for hundre år siden."
   - type: tekst

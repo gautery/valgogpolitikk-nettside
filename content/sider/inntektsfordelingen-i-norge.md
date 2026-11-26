@@ -4,7 +4,7 @@ beskrivelse: "Den rikeste prosenten får over en femtedel av all inntekt i Norge
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: "Grunnkurs i ulikhet, leksjon 1 av 10"
+    overlinje: "Grunnkurs i ulikhet, leksjon 1 av 8"
     tittel: "Hvordan er inntektene fordelt i Norge?"
     ingress: "Den rikeste prosenten får over en femtedel av all inntekt i Norge. De lever ikke av lønn, men av å eie."
   - type: tekst

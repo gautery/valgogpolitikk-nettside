@@ -4,7 +4,7 @@ beskrivelse: "Den rikeste prosenten eier over en tredjedel av formuen i Norge. O
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: "Grunnkurs i ulikhet, leksjon 3 av 10"
+    overlinje: "Grunnkurs i ulikhet, leksjon 3 av 8"
     tittel: "Hvor skjevt er formuen fordelt i Norge?"
     ingress: "Den rikeste prosenten eier over en tredjedel av formuen i Norge. Og det er et forsiktig anslag."
   - type: tekst

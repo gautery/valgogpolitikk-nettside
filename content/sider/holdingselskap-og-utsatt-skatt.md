@@ -4,7 +4,7 @@ beskrivelse: "Inntekten finnes. Den blir bare aldri personlig inntekt."
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: "Grunnkurs i ulikhet, leksjon 9 av 10"
+    overlinje: "Påbygging til Grunnkurs i ulikhet, leksjon 1 av 2"
     tittel: "Hvordan slipper de rikeste unna skatt med holdingselskaper?"
     ingress: "Inntekten finnes. Den blir bare aldri personlig inntekt."
   - type: tekst
@@ -68,7 +68,7 @@ seksjoner:
     bakgrunn: lys
     tekst: |-
       - Se også karusellen: [Betaler de rike mer skatt i Norge enn i Sverige, USA og Frankrike?](/skatt-pa-de-rikeste)
-      - Forrige: [Hva koster det at de rikeste betaler mindre?](/hva-koster-lav-skatt-pa-de-rikeste)
+      - Forrige: [Du har fullført grunnkurset](/grunnkurset-fullfort)
       - Neste: [Hvor vanlig er det at selskapet betaler eierens private forbruk?](/privat-forbruk-i-selskaper)
       - [Alle leksjonene i Grunnkurs i ulikhet](/grunnkurs-i-ulikhet)
 ---

@@ -11,6 +11,7 @@ export type Toppfelt = {
   bilde?: string;
   bokrygger?: boolean;
   farge?: "mork" | "rosa";
+  konfetti?: boolean;
 };
 
 export type Tekst = {

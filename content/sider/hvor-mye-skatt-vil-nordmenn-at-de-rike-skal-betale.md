@@ -6,7 +6,7 @@ beskrivelse: "Nordmenn har fått sette skattesatsen selv, for inntekter fra 100
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: Grunnkurs i ulikhet, leksjon 5 av 10
+    overlinje: Grunnkurs i ulikhet, leksjon 5 av 8
     tittel: Hvor mye skatt vil nordmenn at folk med forskjellige inntekter skal betale?
     ingress: >-
       Hvor mye skatt bør du betale om du tjener 100 000 kroner? Hva med 100

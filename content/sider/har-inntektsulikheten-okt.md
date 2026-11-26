@@ -4,7 +4,7 @@ beskrivelse: "Den rikeste prosentens andel av inntektene falt i hundre år. Side
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: "Grunnkurs i ulikhet, leksjon 2 av 10"
+    overlinje: "Grunnkurs i ulikhet, leksjon 2 av 8"
     tittel: "Har inntektsulikheten i Norge økt?"
     ingress: "Den rikeste prosentens andel av inntektene falt i hundre år. Siden 1980-tallet har den steget kraftig igjen."
   - type: tekst
