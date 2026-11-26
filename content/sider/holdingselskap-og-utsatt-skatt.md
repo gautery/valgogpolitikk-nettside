@@ -4,7 +4,7 @@ beskrivelse: "Inntekten finnes. Den blir bare aldri personlig inntekt."
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: "Grunnkurs i ulikhet, del 5 av 8"
+    overlinje: "Grunnkurs i ulikhet, del 8 av 9"
     tittel: "Hvordan slipper de rikeste unna skatt med holdingselskaper?"
     ingress: "Inntekten finnes. Den blir bare aldri personlig inntekt."
   - type: tekst
