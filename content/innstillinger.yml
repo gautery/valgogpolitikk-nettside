@@ -12,8 +12,7 @@ meny:
   - tekst: TikTok
     lenke: https://tiktok.com/@valgogpolitikk
 bunntekst:
-  beskrivelse: Datadrevet analyse av norsk politikk. Posisjonert til venstre, men
-    alltid med kilder.
+  beskrivelse: Datadrevet analyse av norsk politikk.
   grupper:
     - overskrift: Følg oss
       lenker:
