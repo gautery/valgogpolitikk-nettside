@@ -80,8 +80,29 @@ html {
     transform: translate3d(var(--sving), 640px, 0) rotate(var(--snurr));
   }
 }
+/* Stor konfetti på feiringssiden: faller gjennom hele skjermbildet. */
+.konfetti-stor {
+  z-index: 10;
+}
+.konfetti-stor span {
+  animation-name: konfetti-fall-stor;
+}
+@keyframes konfetti-fall-stor {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--sving), 105svh, 0) rotate(var(--snurr));
+  }
+}
 @media (prefers-reduced-motion: reduce) {
-  .konfetti {
+  .konfetti,
+  .konfetti-knapp {
     display: none;
   }
 }

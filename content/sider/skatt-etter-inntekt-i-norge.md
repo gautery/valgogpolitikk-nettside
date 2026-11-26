@@ -53,8 +53,6 @@ seksjoner:
     bakgrunn: hvit
   - type: tekst
     overskrift: Et progressivt skattesystem?
-    graf: https://datawrapper.dwcdn.net/dFq7w/
-    grafBeskrivelse: Liggende søylediagram med 15 inntektsgrupper i Norge. Samlet skatt stiger fra rundt 42 prosent av inntekten nederst til 56 prosent for gruppen 95–99 prosent. Deretter faller den til 22 prosent for de 0,0005 prosent rikeste.
     tekst: >-
       For de aller fleste virker skattesystemet slik folk oppgir i studien til
       Mathisen at de ønsker at skattesystemet skal fungere. Jo høyere inntekt,
@@ -76,10 +74,9 @@ seksjoner:
     bakgrunn: lys
   - type: tekst
     overskrift: Er det sånn i andre land også?
-    knapp: Gå til neste leksjon
-    knappLenke: /skatt-pa-de-rike-i-andre-land
-    tekst: |-
-      De aller rikeste i Norge betaler altså en lavere andel i skatt enn folk flest. Er Norge spesielt, eller er det slik i andre land også? Det er neste leksjon.
+    tekst: De aller rikeste i Norge betaler altså en lavere andel i skatt enn folk
+      flest. Er Norge spesielt, eller er det slik i andre land også? Det er
+      neste leksjon.
     bakgrunn: hvit
   - type: tekst
     overskrift: Kildene
@@ -93,10 +90,17 @@ seksjoner:
     bakgrunn: hvit
   - type: tekst
     overskrift: Videre i serien
-    tekst: |-
-      - Se også karusellen: [Betaler de rike mer skatt i Norge enn i Sverige, USA og Frankrike?](/skatt-pa-de-rikeste)
-      - Forrige: [Hvor mye skatt vil nordmenn at folk med forskjellige inntekter skal betale?](/hvor-mye-skatt-vil-nordmenn-at-de-rike-skal-betale)
-      - Neste: [Betaler de rike mindre skatt i Norge enn i andre land?](/skatt-pa-de-rike-i-andre-land)
+    tekst: >+
+      - Se også karusellen: [Betaler de rike mer skatt i Norge enn i Sverige,
+      USA og Frankrike?](/skatt-pa-de-rikeste)
+
+      - Forrige: [Hvor mye skatt vil nordmenn at folk med forskjellige inntekter
+      skal betale?](/hvor-mye-skatt-vil-nordmenn-at-de-rike-skal-betale)
+
+      - Neste: [Betaler de rike mindre skatt i Norge enn i andre
+      land?](/skatt-pa-de-rike-i-andre-land)
+
       - [Alle leksjonene i Grunnkurs i ulikhet](/grunnkurs-i-ulikhet)
+
     bakgrunn: lys
 ---

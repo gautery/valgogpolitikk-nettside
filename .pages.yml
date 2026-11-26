@@ -863,6 +863,44 @@ components:
           - name: bakgrunn
             component: bakgrunn
 
+      - name: feiring
+        label: Feiring (fullskjerm med konfetti og nyhetsbrev)
+        fields:
+          - name: overlinje
+            label: Overlinje
+            type: string
+          - name: tittel
+            label: Tittel
+            type: string
+          - name: ingress
+            label: Tekst under tittelen
+            type: text
+          - name: bilde
+            label: Bakgrunnsbilde
+            type: image
+          - name: bildetekst
+            label: Bildetekst nederst
+            type: string
+          - name: fotokreditt
+            label: Fotokreditt
+            description: F.eks. Foto: Navn / Unsplash
+            type: string
+          - name: fotokredittLenke
+            label: Lenke til bildet eller fotografen
+            type: string
+          - name: knapp
+            label: Tekst på den svarte knappen
+            type: string
+          - name: knappLenke
+            label: Lenke for knappen
+            type: string
+          - name: lenke
+            label: Tekst på lenken ved siden av
+            type: string
+          - name: lenkeTil
+            label: Hvor lenken går
+            type: string
+
       - name: nyhetsbrev
         label: Nyhetsbrev
         fields:
