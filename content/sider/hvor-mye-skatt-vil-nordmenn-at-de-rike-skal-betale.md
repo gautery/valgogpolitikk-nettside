@@ -70,14 +70,14 @@ seksjoner:
       rikeste.
     bakgrunn: hvit
   - type: tekst
-    overskrift: Og så til det spennende
+    overskrift: ...og hva betaler faktisk forskjellige inntektsgrupper i skatt?
     tekst: >-
       Velgerne til alle partiene er altså for progressiv beskatning: at de rike
       skal betale den høyeste andelen. Da blir det jo veldig spennende å se om
       det er slik skattesystemet vårt faktisk fungerer.
 
 
-      Det kommer vi til. Men først må vi vite hvem «de rike» egentlig er.
+      Det er neste leksjon i grunnkurset ->
     bakgrunn: lys
   - type: tekst
     overskrift: Kildene
