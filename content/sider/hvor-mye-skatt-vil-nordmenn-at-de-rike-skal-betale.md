@@ -57,14 +57,17 @@ seksjoner:
   - type: tekst
     overskrift: Det gjelder velgere i alle partier
     tekst: >-
-      Dette er ikke bare et ønske fra venstresida. Velgerne til alle de ni
-      partiene vil i snitt ha under 10 prosent skatt på den laveste inntekten og
-      over 40 prosent på den høyeste.
+      Her kommer vi inn i noe som jeg syns er veldig spennende: ønsket om at det
+      er de rikeste som skal betale mest er ikke bare et ønske fra venstresida.
+      Velgerne til alle de ni partiene vil i snitt ha under 10 prosent skatt på
+      den laveste inntekten og over 40 prosent på den høyeste.
 
 
-      Forskjellene går på hvor høyt man vil gå på toppen. Rødt-velgerne vil at
-      den som tjener 100 millioner skal betale 65,7 prosent. Høyre-velgerne vil
-      ha lavest sats, 42,6 prosent, og FrP-velgerne 44,5 prosent.
+      Forskjellene går i hovedsak på hvor høy andel skatt man vil at de aller
+      rikeste skal betale: Rødt-velgerne vil at den som tjener 100 millioner
+      skal betale 65,7 prosent. Høyre-velgerne vil ha lavest sats, med 42,6
+      prosent, mens FrP-velgerne i snitt vil ha 44,5 prosent for de aller
+      rikeste.
     bakgrunn: hvit
   - type: tekst
     overskrift: Og så til det spennende
