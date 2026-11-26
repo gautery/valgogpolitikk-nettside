@@ -562,6 +562,9 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
       const alle: Punkt[] = [
         { tittel: "Trappa til toppen", tekst: "Hvor står du i inntektstrappa, og hvor mye skatt betaler de på toppen?", href: "/trappa", utkast: UTKAST.trappa },
         { tittel: "Statsbudsjettet", tekst: "Hvor pengene kommer fra, og hva de går til.", href: "/statsbudsjett", utkast: UTKAST.statsbudsjett },
+        ...(lesSide("skole-i-ulikhet")
+          ? [{ tittel: "Skole i ulikhet", tekst: "Åtte korte sider om ulikhet i Norge, steg for steg og med kilder.", href: "/skole-i-ulikhet", utkast: lesSide("skole-i-ulikhet")?.utkast }]
+          : []),
         ...tema.map((t) => ({ tittel: t.tittel, tekst: t.ingress || "Alt om temaet, samlet på ett sted.", href: `/tema/${t.slug}`, utkast: t.utkast })),
         { tittel: "Nytt fra kildene", tekst: "Rapporter og tall fra SSB, regjeringen, Stortinget og andre.", href: "/kilder" },
         { tittel: "Om valgogpolitikk", tekst: "Hvem som står bak, og hvordan jeg jobber med kildene.", href: "/om", utkast: lesSide("om")?.utkast },
