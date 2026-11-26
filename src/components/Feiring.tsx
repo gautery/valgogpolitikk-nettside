@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, type ReactNode } from "react";
+import Fyrverkeri from "@/components/Fyrverkeri";
 import Konfetti from "@/components/Konfetti";
 
 // Feiringen etter grunnkurset: ett skjermbilde med bilde, konfetti, påmelding
@@ -25,6 +26,7 @@ export type FeiringProps = {
 export default function Feiring(p: FeiringProps) {
   // Ny nøkkel starter konfettien på nytt.
   const [runde, setRunde] = useState(0);
+  const [smell, setSmell] = useState(0);
 
   return (
     <div className="relative isolate flex min-h-[calc(100svh-150px)] items-center overflow-hidden bg-black px-4 pt-5 pb-16 sm:px-6 sm:pb-12">
@@ -32,7 +34,7 @@ export default function Feiring(p: FeiringProps) {
         <Image src={p.bilde} alt="" fill priority sizes="100vw" className="-z-10 object-cover" />
       )}
 
-      <div className="mx-auto w-full max-w-[640px] rounded-[10px] border-2 border-black bg-white p-6 sm:px-9 sm:py-7">
+      <div className="mx-auto w-full max-w-[790px] rounded-[10px] border-2 border-black bg-white p-6 sm:px-9 sm:py-7">
         {p.overlinje && <p className="mb-3 text-[15px] font-semibold text-black">{p.overlinje}</p>}
         {p.tittel && (
           <h1 className="font-display text-[36px] leading-[1.02] text-black sm:text-[44px]">{p.tittel}</h1>
@@ -58,9 +60,16 @@ export default function Feiring(p: FeiringProps) {
           <button
             type="button"
             onClick={() => setRunde((n) => n + 1)}
-            className="konfetti-knapp min-h-[48px] rounded-md border-2 border-black bg-rosa px-5 text-[16px] font-semibold text-black hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            className="konfetti-knapp min-h-[48px] rounded-md border-2 border-black bg-rosa px-4 text-[16px] font-semibold text-black hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
           >
             Mer konfetti
+          </button>
+          <button
+            type="button"
+            onClick={() => setSmell((n) => n + 1)}
+            className="konfetti-knapp min-h-[48px] rounded-md border-2 border-black bg-white px-4 text-[16px] font-semibold text-black hover:bg-rosa focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+          >
+            Mer fyrverkeri
           </button>
         </div>
       </div>
@@ -71,6 +80,7 @@ export default function Feiring(p: FeiringProps) {
         </p>
       )}
 
+      <Fyrverkeri key={`f${smell}`} runde={smell} />
       <Konfetti key={runde} antall={150} stor />
     </div>
   );
