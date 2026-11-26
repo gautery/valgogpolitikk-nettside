@@ -80,6 +80,8 @@ export type Karuseller = {
   type: "karuseller";
   overskrift?: string;
   antall?: number;
+  /** Vis «Se alle karuseller» under raden (standard: ja). */
+  visKnapp?: boolean;
   bakgrunn?: Bakgrunn;
 };
 
@@ -132,6 +134,12 @@ export type OmMeg = {
   bakgrunn?: Bakgrunn;
 };
 
+export type Utforsk = {
+  type: "utforsk";
+  overskrift?: string;
+  bakgrunn?: Bakgrunn;
+};
+
 export type Samarbeid = {
   type: "samarbeid";
   overskrift?: string;
@@ -159,4 +167,5 @@ export type Kloss =
   | SisteAnalyser
   | Nyhetsbrev
   | Samarbeid
+  | Utforsk
   | OmMeg;

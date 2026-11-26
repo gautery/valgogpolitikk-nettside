@@ -233,6 +233,21 @@ export default async function KarusellSide({ k }: { k: Karusell }) {
               </Link>
             </section>
           )}
+
+          <div className="mt-12 flex flex-wrap gap-3 border-t border-black pt-6">
+            <Link
+              href="/karuseller"
+              className="inline-block rounded-[6px] bg-black px-6 py-3.5 text-[16px] font-semibold text-white hover:bg-text-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            >
+              Se flere karuseller
+            </Link>
+            <Link
+              href="/analyser"
+              className="inline-block rounded-[6px] border border-black px-6 py-3.5 text-[16px] font-semibold text-black hover:bg-black hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            >
+              Se analysene
+            </Link>
+          </div>
         </div>
       </div>
     </>

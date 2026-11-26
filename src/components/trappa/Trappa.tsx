@@ -70,28 +70,27 @@ export default function Trappa({
   return (
     <>
       {/* ── Topp med kalkulator ── */}
-      <div className="border-b border-border bg-hero px-6 py-12 md:py-16">
+      <div className="border-b border-black bg-white px-6 py-12 md:py-16">
         <div className="mx-auto max-w-[1100px]">
           <div className="mb-3 flex items-center gap-2">
-            <div className="h-4 w-1 rounded-full bg-rosa" />
-            <span className="text-[13px] font-medium text-white/50">{t.topp.overlinje}</span>
+            <span className="text-[13px] font-medium text-text-secondary">{t.topp.overlinje}</span>
           </div>
-          <h1 className="font-display text-4xl leading-tight text-white sm:text-5xl">
+          <h1 className="font-display text-4xl leading-tight text-black sm:text-5xl">
             {t.topp.tittel}
           </h1>
-          <p className="mt-5 max-w-[620px] text-[17px] leading-relaxed text-white/75">
+          <p className="mt-5 max-w-[620px] text-[17px] leading-relaxed text-text-secondary">
             {t.topp.ingress}
           </p>
 
           <div className="mt-9 grid gap-8 md:grid-cols-[minmax(0,420px)_1fr] md:items-end">
             <div>
-              <label htmlFor={inputId} className="block text-[15px] font-semibold text-white">
+              <label htmlFor={inputId} className="block text-[15px] font-semibold text-black">
                 {t.topp.sporsmal}
               </label>
-              <p id={hintId} className="mt-1 text-[13px] leading-snug text-white/60">
+              <p id={hintId} className="mt-1 text-[13px] leading-snug text-text-secondary">
                 {t.topp.hjelpetekst}
               </p>
-              <div className="mt-3 flex items-center rounded-lg border border-white/25 bg-white/10 focus-within:border-white focus-within:ring-2 focus-within:ring-white/40">
+              <div className="mt-3 flex items-center rounded-lg border border-black bg-surface focus-within:border-white focus-within:ring-2 focus-within:ring-white/40">
                 <input
                   id={inputId}
                   aria-describedby={hintId}
@@ -100,9 +99,9 @@ export default function Trappa({
                   placeholder="For eksempel 650 000"
                   value={tekst}
                   onChange={(e) => formaterInntekt(e.target.value)}
-                  className="w-full bg-transparent px-4 py-3.5 text-[22px] font-semibold tabular-nums text-white placeholder:font-normal placeholder:text-white/35 focus:outline-none"
+                  className="w-full bg-transparent px-4 py-3.5 text-[22px] font-semibold tabular-nums text-black placeholder:font-normal placeholder:text-text-secondary focus:outline-none"
                 />
-                <span className="pr-4 text-[16px] text-white/60" aria-hidden="true">
+                <span className="pr-4 text-[16px] text-text-secondary" aria-hidden="true">
                   kr
                 </span>
               </div>
@@ -111,19 +110,19 @@ export default function Trappa({
             <div aria-live="polite" className="min-h-[96px]">
               {inntekt !== null && (
                 <div>
-                  <p className="text-white">
+                  <p className="text-black">
                     <span className="font-display text-5xl tabular-nums">
                       {plassering(andelUnder(inntekt, data))} %
                     </span>
-                    <span className="mt-1 block text-[16px] text-white/80">
+                    <span className="mt-1 block text-[16px] text-text-secondary">
                       av alle voksne over 25 år tjener mindre enn deg.
                     </span>
                   </p>
-                  <p className="mt-3 text-[15px] text-white/70">
+                  <p className="mt-3 text-[15px] text-text-secondary">
                     {nesteTrinn
                       ? `For å komme blant de ${prosentTopp(nesteTrinn.topp)} prosent med høyest inntekt må du tjene ${kroner(nesteTrinn.grense - inntekt)} mer.`
                       : "Du er blant de 0,01 prosent med høyest inntekt i Norge."}{" "}
-                    <a href="#trappa" className="font-medium text-white underline underline-offset-2 hover:text-accent-light">
+                    <a href="#trappa" className="font-medium text-black underline underline-offset-2 hover:text-accent-light">
                       Se deg selv i trappa
                     </a>
                   </p>

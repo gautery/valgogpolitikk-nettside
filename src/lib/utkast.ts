@@ -7,4 +7,8 @@ export const UTKAST = {
   statsbudsjett: true,
 } as const;
 
+// Før lansering er hele nettstedet en demo: utkast vises da i lister og menyer,
+// merket «Utkast», så Gaute ser hvordan alt henger sammen. Settes til false ved lansering.
+export const DEMO = false;
+
 export const SKJULT_FOR_SOK = { index: false, follow: false } as const;
