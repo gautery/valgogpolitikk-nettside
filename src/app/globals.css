@@ -100,7 +100,68 @@ html {
     transform: translate3d(var(--sving), 105svh, 0) rotate(var(--snurr));
   }
 }
+/* Fyrverkeri på feiringssiden. */
+.fyrverkeri {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  overflow: hidden;
+  pointer-events: none;
+}
+.fyrverkeri .smell {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.fyrverkeri .rakett {
+  position: absolute;
+  left: -2px;
+  top: 0;
+  width: 4px;
+  height: 22px;
+  border-radius: 2px;
+  opacity: 0;
+  animation: fyr-rakett 0.6s ease-out 1 both;
+}
+.fyrverkeri .smell span {
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 10px 3px currentColor;
+  animation: fyr-gnist 1.5s cubic-bezier(0.1, 0.7, 0.3, 1) 1 both;
+}
+@keyframes fyr-rakett {
+  0% {
+    opacity: 1;
+    transform: translateY(60svh);
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+@keyframes fyr-gnist {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  65% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--dx), calc(var(--dy) + 45px)) scale(0.35);
+  }
+}
 @media (prefers-reduced-motion: reduce) {
+  .fyrverkeri,
   .konfetti,
   .konfetti-knapp {
     display: none;
