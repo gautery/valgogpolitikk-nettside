@@ -21,8 +21,12 @@ seksjoner:
   - type: kildeband
   - type: samarbeid
     overskrift: Samarbeid og tips
-    tekst: Vil du samarbeide med valgogpolitikk, eller har du tips til kilder? Send
+    tekst: >-
+      Vil du samarbeide med Valg og politikk, eller har du tips til kilder? Send
       en melding her.
+
+      Jeg vil særlig høre fra organisasjoner, forskere og andre som har noe nytt
+      å melde.
     epost: post@valgogpolitikk.no
     knapp: Send en melding
     bakgrunn: hvit
