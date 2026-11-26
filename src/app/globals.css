@@ -50,3 +50,38 @@ html {
   font-weight: 900;
   letter-spacing: -0.025em;
 }
+
+/* Konfetti på siden «Du har fullført grunnkurset». Faller én gang. */
+.konfetti {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.konfetti span {
+  position: absolute;
+  top: -24px;
+  opacity: 0;
+  animation-name: konfetti-fall;
+  animation-timing-function: cubic-bezier(0.3, 0.1, 0.6, 1);
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes konfetti-fall {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--sving), 640px, 0) rotate(var(--snurr));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .konfetti {
+    display: none;
+  }
+}

@@ -6,6 +6,7 @@ import BookSpines from "@/components/BookSpines";
 import NewsletterForm from "@/components/NewsletterForm";
 import PostList from "@/components/PostList";
 import { KildeBand, TEMAFARGER } from "@/components/SisteFraKildene";
+import Konfetti from "@/components/Konfetti";
 import DatawrapperGraf from "@/components/klosser/DatawrapperGraf";
 import { datawrapperId, type Bakgrunn, type Kloss } from "@/lib/klosser";
 import { hentKildeoversikt } from "@/lib/kilder";
@@ -113,8 +114,9 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
       const rosa = kloss.farge === "rosa";
       const tekst = "text-black";
       return (
-        <div className={`px-6 py-14 md:py-20 ${rosa ? "bg-rosa" : "border-b border-black bg-white"}`}>
-          <div className="mx-auto max-w-[1100px]">
+        <div className={`relative px-6 py-14 md:py-20 ${rosa ? "bg-rosa" : "border-b border-black bg-white"}`}>
+          {kloss.konfetti && <Konfetti />}
+          <div className="relative mx-auto max-w-[1100px]">
             <div className="flex flex-col gap-10 md:flex-row md:items-center md:justify-between">
               <div className="max-w-[640px]">
                 {kloss.overlinje && <p className={`mb-5 text-[15px] font-semibold ${tekst}`}>{kloss.overlinje}</p>}

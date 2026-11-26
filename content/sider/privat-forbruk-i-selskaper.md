@@ -4,7 +4,7 @@ beskrivelse: "Hytta, bilen og ferien betales av selskapet. Det er ulovlig, og de
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: "Grunnkurs i ulikhet, leksjon 10 av 10"
+    overlinje: "Påbygging til Grunnkurs i ulikhet, leksjon 2 av 2"
     tittel: "Hvor vanlig er det at selskapet betaler eierens private forbruk?"
     ingress: "Hytta, bilen og ferien betales av selskapet. Det er ulovlig, og det skjer likevel."
   - type: tekst

@@ -565,6 +565,9 @@ components:
           - name: bokrygger
             label: Vis bokryggene til høyre (når det ikke er bilde)
             type: boolean
+          - name: konfetti
+            label: Konfetti når siden åpnes
+            type: boolean
           - name: farge
             label: Bakgrunn
             description: «rosa» er samme farge som profilbildet på Instagram. Passer best øverst på forsiden.

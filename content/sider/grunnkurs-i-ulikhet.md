@@ -1,11 +1,11 @@
 ---
 tittel: Grunnkurs i ulikhet
-beskrivelse: 'Et kort grunnkurs i ulikhet i Norge: hvordan inntekt og formue er fordelt, hva folk vil, hvor mye skatt de rikeste betaler, og hvorfor. Ti korte sider med kilder.'
+beskrivelse: 'Et kort grunnkurs i ulikhet i Norge: hvordan inntekt og formue er fordelt, hva folk vil, hvor mye skatt de rikeste betaler, og hvorfor. Åtte korte sider med kilder, og en påbygging.'
 utkast: true
 seksjoner:
 - type: toppfelt
   tittel: Grunnkurs i ulikhet
-  ingress: Ti korte sider om ulikhet i Norge, basert på noen av de viktigste rapportene som har kommet ut om temaet de siste årene.
+  ingress: Åtte korte sider om ulikhet i Norge, basert på noen av de viktigste rapportene som har kommet ut om temaet de siste årene.
   bokrygger: false
   farge: mork
 - type: tekst
@@ -31,10 +31,12 @@ seksjoner:
     7. [Betaler de rike mindre skatt i Norge enn i andre land?](/skatt-pa-de-rike-i-andre-land)
     8. [Hva koster det at de rikeste betaler mindre?](/hva-koster-lav-skatt-pa-de-rikeste)
 
-    **Del 3: Hvorfor betaler de rikeste så lite?**
+    **Påbygging: Hvorfor betaler de rikeste så lite?**
 
-    9. [Hvordan slipper de rikeste unna skatt med holdingselskaper?](/holdingselskap-og-utsatt-skatt)
-    10. [Hvor vanlig er det at selskapet betaler eierens private forbruk?](/privat-forbruk-i-selskaper)
+    Påbyggingen er for deg som har tatt grunnkurset og vil forstå hvordan det går til. Den er litt mer krevende.
+
+    1. [Hvordan slipper de rikeste unna skatt med holdingselskaper?](/holdingselskap-og-utsatt-skatt)
+    2. [Hvor vanlig er det at selskapet betaler eierens private forbruk?](/privat-forbruk-i-selskaper)
   bakgrunn: hvit
 - type: tekst
   overskrift: Kom i gang

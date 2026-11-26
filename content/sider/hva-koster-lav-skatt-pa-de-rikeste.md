@@ -4,7 +4,7 @@ beskrivelse: "Hvis skatten ikke falt på toppen, ville de aller rikeste betalt m
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: "Grunnkurs i ulikhet, leksjon 8 av 10"
+    overlinje: "Grunnkurs i ulikhet, leksjon 8 av 8"
     tittel: "Hva koster det at de rikeste betaler mindre?"
     ingress: "Hvis skatten ikke falt på toppen, ville de aller rikeste betalt mye mer. Forskjellen tilsvarer over 7 prosent av alle skatteinntekter i Norge."
   - type: tekst
@@ -43,12 +43,12 @@ seksjoner:
 
       **Til deg, Gaute, slett før publisering:** I karusellen brukte du 127 milliarder. Det tilsvarer 7,6 prosent av rundt 1 660 milliarder, altså omtrent statens og kommunenes skatter til sammen. Finner du tallet du brukte, kan vi bytte ut overslaget over.
   - type: tekst
-    overskrift: "Del 3: Hvorfor betaler de så lite?"
+    overskrift: "Det var grunnkurset"
     bakgrunn: lys
-    knapp: Gå til neste leksjon
-    knappLenke: /holdingselskap-og-utsatt-skatt
+    knapp: Fullfør grunnkurset
+    knappLenke: /grunnkurset-fullfort
     tekst: |-
-      Vi har sett at de aller rikeste betaler mindre skatt enn folk flest, og hva det koster. I siste del ser vi på hvordan det går til. Svaret begynner med et holdingselskap.
+      Vi har sett hvor stor ulikheten er, hvor mye skatt folk vil at de rikeste skal betale, hvor mye de faktisk betaler, og hva forskjellen koster. Da er du ferdig med grunnkurset.
   - type: tekst
     overskrift: "Kildene"
     tekst: |-
@@ -59,6 +59,6 @@ seksjoner:
     bakgrunn: lys
     tekst: |-
       - Forrige: [Betaler de rike mindre skatt i Norge enn i andre land?](/skatt-pa-de-rike-i-andre-land)
-      - Neste: [Hvordan slipper de rikeste unna skatt med holdingselskaper?](/holdingselskap-og-utsatt-skatt)
+      - Neste: [Du har fullført grunnkurset](/grunnkurset-fullfort)
       - [Alle leksjonene i Grunnkurs i ulikhet](/grunnkurs-i-ulikhet)
 ---

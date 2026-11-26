@@ -4,7 +4,7 @@ beskrivelse: "Norge er et høyskatteland for vanlige folk. For milliardærene er
 utkast: true
 seksjoner:
   - type: toppfelt
-    overlinje: "Grunnkurs i ulikhet, leksjon 7 av 10"
+    overlinje: "Grunnkurs i ulikhet, leksjon 7 av 8"
     tittel: "Betaler de rike mindre skatt i Norge enn i andre land?"
     ingress: "Norge er et høyskatteland for vanlige folk. For milliardærene er Norge som USA."
   - type: tekst
