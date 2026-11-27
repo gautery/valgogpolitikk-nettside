@@ -5,64 +5,299 @@
   "kilde": "Regjeringens forslag til statsbudsjett for 2027 (Prop. 1 LS (2026–2027)), slik satsene er gjengitt av Smarte Penger 8. oktober 2026 og Regnskap Norge. Trinnskatten er kontrollert mot Rødts tabell 1, som gjengir regjeringens satser.",
   "alminnelig_sats": 0.22,
   "personfradrag": 120180,
-  "minstefradrag_lonn": {"sats": 0.46, "maks": 99550},
-  "minstefradrag_pensjon": {"sats": 0.40, "maks": 77950},
-  "trinnskatt": [[235150, 0.017], [331050, 0.040], [754050, 0.137], [1019300, 0.168], [1525900, 0.178]],
+  "minstefradrag_lonn": {
+   "sats": 0.46,
+   "maks": 99550
+  },
+  "minstefradrag_pensjon": {
+   "sats": 0.4,
+   "maks": 77950
+  },
+  "trinnskatt": [
+   [
+    235150,
+    0.017
+   ],
+   [
+    331050,
+    0.04
+   ],
+   [
+    754050,
+    0.137
+   ],
+   [
+    1019300,
+    0.168
+   ],
+   [
+    1525900,
+    0.178
+   ]
+  ],
   "trygdeavgift_lonn": 0.074,
   "trygdeavgift_pensjon": 0.051,
   "skattefradrag_arbeid": 0,
   "skattefradrag_pensjon": 0,
-  "formue": {"bunnfradrag": 1990000, "trinn": [[1990000, 0.010], [21500000, 0.011]], "aksjer_verdsettelse": 0.80}
+  "formue": {
+   "bunnfradrag": 1990000,
+   "trinn": [
+    [
+     1990000,
+     0.01
+    ],
+    [
+     21500000,
+     0.011
+    ]
+   ],
+   "aksjer_verdsettelse": 0.8
+  }
  },
  "uten_regjeringens_lettelse": {
   "forklaring": "Regjeringen senker trygdeavgiften fra 7,6 til 7,4 prosent og øker personfradraget om lag 1 100 kroner mer enn lønnsveksten. Høyre og KrF går imot denne lettelsen. Lønnsjustert personfradrag er anslått til 114 540 × 1,04 = 119 100 kroner.",
-  "trygdeavgift_lonn": 0.076, "personfradrag": 119100
+  "trygdeavgift_lonn": 0.076,
+  "personfradrag": 119100
  },
  "partier": {
-  "frp": {"navn": "FrP",
-   "endringer": {"personfradrag": 130000, "trinnskatt": [[331050, 0.035], [754050, 0.137], [1019300, 0.168], [1525900, 0.178]],
-                 "formue": {"bunnfradrag": 3000000, "trinn": [[3000000, 0.009]], "aksjer_verdsettelse": 0.80}},
-   "sikkerhet": "anslag",
-   "kilde": "NTBs omtale av FrPs alternative statsbudsjett for 2027, lest i Dagsavisen 25. november 2026",
-   "merknad": "Vi har ikke fått åpnet FrPs eget dokument, så tallene er fra NTBs omtale: personfradrag på 130 000 kroner, trinn 1 fjernes, og satsen i trinn 2 senkes med 0,5 prosentenheter. Om FrP endrer trygdeavgiften, vet vi ikke."},
-  "hoyre": {"navn": "Høyre",
-   "endringer": {"trygdeavgift_lonn": 0.076, "personfradrag": 119100, "skattefradrag_arbeid": 7700, "skattefradrag_pensjon": 2000},
+  "frp": {
+   "navn": "FrP",
+   "endringer": {
+    "personfradrag": 130000,
+    "trinnskatt": [
+     [
+      331050,
+      0.035
+     ],
+     [
+      754050,
+      0.137
+     ],
+     [
+      1019300,
+      0.168
+     ],
+     [
+      1525900,
+      0.178
+     ]
+    ],
+    "formue": {
+     "bunnfradrag": 3000000,
+     "trinn": [
+      [
+       3000000,
+       0.009
+      ]
+     ],
+     "aksjer_verdsettelse": 0.8
+    }
+   },
+   "kilde": "FrPs alternative statsbudsjett for 2027, s. 10 og 62",
+   "merknad": "FrP øker personfradraget til 130 000 kroner, fjerner trinn 1 i trinnskatten og senker satsen i trinn 2 med 0,5 prosentenheter. FrP oppgir selv 5 800 kroner for en gjennomsnittlig skattebetaler."
+  },
+  "hoyre": {
+   "navn": "Høyre",
+   "endringer": {
+    "trygdeavgift_lonn": 0.076,
+    "personfradrag": 119100,
+    "skattefradrag_arbeid": 7700,
+    "skattefradrag_pensjon": 2000
+   },
    "sikkerhet": "anslag",
    "kilde": "Høyres alternative statsbudsjett for 2027, s. 9–10",
-   "merknad": "Høyre gir 7 700 kroner i lavere skatt til alle i arbeid, men «omprioriterer» regjeringens egen lettelse (5 970 mill. kroner). Høyre oppgir ikke satsene. Vi har lest det som at trygdeavgiften blir 7,6 prosent og personfradraget lønnsjustert, som trekker fra om lag 1 440 kroner."},
-  "sv": {"navn": "SV",
-   "endringer": {"trinnskatt": [[415300, 0.040], [754050, 0.137], [800000, 0.182], [1525900, 0.190]],
-                 "minstefradrag_lonn": {"sats": 0.55, "maks": 99550}, "minstefradrag_pensjon": {"sats": 0.55, "maks": 77950},
-                 "formue": {"bunnfradrag": 2000000, "trinn": [[2000000, 0.011], [20000000, 0.014], [100000000, 0.017], [1000000000, 0.020]], "aksjer_verdsettelse": 1.0}},
+   "merknad": "Høyre gir 7 700 kroner i lavere skatt til alle i arbeid, men «omprioriterer» regjeringens egen lettelse (5 970 mill. kroner). Høyre oppgir ikke satsene. Vi har lest det som at trygdeavgiften blir 7,6 prosent og personfradraget lønnsjustert, som trekker fra om lag 1 440 kroner."
+  },
+  "sv": {
+   "navn": "SV",
+   "endringer": {
+    "trinnskatt": [
+     [
+      415300,
+      0.04
+     ],
+     [
+      754050,
+      0.137
+     ],
+     [
+      800000,
+      0.182
+     ],
+     [
+      1525900,
+      0.19
+     ]
+    ],
+    "minstefradrag_lonn": {
+     "sats": 0.55,
+     "maks": 99550
+    },
+    "minstefradrag_pensjon": {
+     "sats": 0.55,
+     "maks": 77950
+    },
+    "formue": {
+     "bunnfradrag": 2000000,
+     "trinn": [
+      [
+       2000000,
+       0.011
+      ],
+      [
+       20000000,
+       0.014
+      ],
+      [
+       100000000,
+       0.017
+      ],
+      [
+       1000000000,
+       0.02
+      ]
+     ],
+     "aksjer_verdsettelse": 1.0
+    }
+   },
    "kilde": "SVs alternative statsbudsjett for 2027, s. 82–83 og 86 i dokumentet (s. 42 og 44 i PDF-en)",
-   "merknad": "SV fjerner trinn 1 og flytter trinn 2 til 415 300 kroner. Trinn 4 starter på 800 000 kroner med 18,2 prosent. SVs egen tabell viser 4 012 kroner i snitt for inntekter mellom 550 000 og 600 000 kroner, men der er økt formuesskatt (845 kroner) trukket fra. SV øker også utbytteskatten, som ikke er med her."},
-  "sp": {"navn": "Sp",
-   "endringer": {"personfradrag": 125080, "trygdeavgift_lonn": 0.0745},
+   "merknad": "SV fjerner trinn 1 og flytter trinn 2 til 415 300 kroner. Trinn 4 starter på 800 000 kroner med 18,2 prosent. SVs egen tabell viser 4 012 kroner i snitt for inntekter mellom 550 000 og 600 000 kroner, men der er økt formuesskatt (845 kroner) trukket fra. SV øker også utbytteskatten, som ikke er med her."
+  },
+  "sp": {
+   "navn": "Sp",
+   "endringer": {
+    "personfradrag": 125080,
+    "trygdeavgift_lonn": 0.0745
+   },
    "sikkerhet": "anslag",
    "kilde": "Senterpartiets alternative statsbudsjett for 2027, s. 63",
-   "merknad": "Sp øker personfradraget med 4 900 kroner og kutter trygdeavgiften mindre enn regjeringen. Sp oppgir ikke satsen, så vi har anslått den til 7,45 prosent ut fra provenyet (1 232,5 mill. kroner). Sp øker også skatten på høye inntekter med 4,7 mrd. kroner uten å oppgi grensen. Vi antar at den ligger over 600 000 kroner."},
-  "rodt": {"navn": "Rødt",
-   "endringer": {"personfradrag": 123180, "trinnskatt": [[415300, 0.040], [754050, 0.137], [800000, 0.204], [1525900, 0.250]],
-                 "formue": {"bunnfradrag": 2200000, "trinn": [[2200000, 0.012], [20000000, 0.014], [100000000, 0.016]], "aksjer_verdsettelse": 1.0}},
+   "merknad": "Sp øker personfradraget med 4 900 kroner og kutter trygdeavgiften mindre enn regjeringen. Sp oppgir ikke satsen, så vi har anslått den til 7,45 prosent ut fra provenyet (1 232,5 mill. kroner). Sp øker også skatten på høye inntekter med 4,7 mrd. kroner uten å oppgi grensen. Vi antar at den ligger over 600 000 kroner."
+  },
+  "rodt": {
+   "navn": "Rødt",
+   "endringer": {
+    "personfradrag": 123180,
+    "trinnskatt": [
+     [
+      415300,
+      0.04
+     ],
+     [
+      754050,
+      0.137
+     ],
+     [
+      800000,
+      0.204
+     ],
+     [
+      1525900,
+      0.25
+     ]
+    ],
+    "formue": {
+     "bunnfradrag": 2200000,
+     "trinn": [
+      [
+       2200000,
+       0.012
+      ],
+      [
+       20000000,
+       0.014
+      ],
+      [
+       100000000,
+       0.016
+      ]
+     ],
+     "aksjer_verdsettelse": 1.0
+    }
+   },
    "kilde": "Rødts alternative statsbudsjett for 2027, s. 12 og 33–34",
-   "merknad": "Rødt fjerner trinn 1, flytter trinn 2 til 415 300 kroner og øker personfradraget til 123 180 kroner. Rødts eget eksempel med 600 000 kroner i lønn viser 5 800 kroner. Vi får 5 660 kroner med satsene i Rødts tabell 1. Rødt øker også utbytteskatten, som ikke er med her."},
-  "mdg": {"navn": "MDG",
-   "endringer": {"trygdeavgift_lonn": 0.076, "trinnskatt": [[235150, 0.013], [331050, 0.035], [754050, 0.144], [1019300, 0.179], [1525900, 0.200]],
-                 "formue": {"bunnfradrag": 8000000, "trinn": [[8000000, 0.008], [100000000, 0.014], [300000000, 0.017]], "aksjer_verdsettelse": 1.0}},
+   "merknad": "Rødt fjerner trinn 1, flytter trinn 2 til 415 300 kroner og øker personfradraget til 123 180 kroner. Rødts eget eksempel med 600 000 kroner i lønn viser 5 800 kroner. Vi får 5 660 kroner med satsene i Rødts tabell 1. Rødt øker også utbytteskatten, som ikke er med her."
+  },
+  "mdg": {
+   "navn": "MDG",
+   "endringer": {
+    "trygdeavgift_lonn": 0.076,
+    "trinnskatt": [
+     [
+      235150,
+      0.013
+     ],
+     [
+      331050,
+      0.035
+     ],
+     [
+      754050,
+      0.144
+     ],
+     [
+      1019300,
+      0.179
+     ],
+     [
+      1525900,
+      0.2
+     ]
+    ],
+    "formue": {
+     "bunnfradrag": 8000000,
+     "trinn": [
+      [
+       8000000,
+       0.008
+      ],
+      [
+       100000000,
+       0.014
+      ],
+      [
+       300000000,
+       0.017
+      ]
+     ],
+     "aksjer_verdsettelse": 1.0
+    }
+   },
    "kilde": "MDGs alternative statsbudsjett for 2027, s. 8 og 75–76",
-   "merknad": "MDG senker satsene i trinn 1 og 2 og øker dem i trinn 3–5, og går imot regjeringens kutt i trygdeavgiften. MDGs egen tabell viser 1 728 kroner lavere skatt for 600 000 kroner i lønn, men der er trygdeavgiften (1 200 kroner) ikke med."},
-  "krf": {"navn": "KrF",
-   "endringer": {"trygdeavgift_lonn": 0.076, "personfradrag": 119100, "skattefradrag_arbeid": 2794,
-                 "formue": {"bunnfradrag": 1990000, "trinn": [[1990000, 0.010], [21500000, 0.011]], "aksjer_verdsettelse": 0.60}},
+   "merknad": "MDG senker satsene i trinn 1 og 2 og øker dem i trinn 3–5, og går imot regjeringens kutt i trygdeavgiften. MDGs egen tabell viser 1 728 kroner lavere skatt for 600 000 kroner i lønn, men der er trygdeavgiften (1 200 kroner) ikke med."
+  },
+  "krf": {
+   "navn": "KrF",
+   "endringer": {
+    "trygdeavgift_lonn": 0.076,
+    "personfradrag": 119100,
+    "skattefradrag_arbeid": 2794,
+    "formue": {
+     "bunnfradrag": 1990000,
+     "trinn": [
+      [
+       1990000,
+       0.01
+      ],
+      [
+       21500000,
+       0.011
+      ]
+     ],
+     "aksjer_verdsettelse": 0.6
+    }
+   },
    "sikkerhet": "anslag",
    "kilde": "KrFs alternative statsbudsjett for 2027, s. 40 i dokumentet (s. 21 i PDF-en)",
-   "merknad": "KrF går imot regjeringens generelle lettelse i inntektsskatten og gir i stedet alle i arbeid et fradrag på 12 700 kroner, som er verdt 2 794 kroner. Vi har lest «regjeringens generelle lettelse» som kuttet i trygdeavgiften og økningen i personfradraget utover lønnsveksten, til sammen om lag 1 440 kroner."},
-  "venstre": {"navn": "Venstre",
-   "endringer": {"skattefradrag_arbeid": 5000},
+   "merknad": "KrF går imot regjeringens generelle lettelse i inntektsskatten og gir i stedet alle i arbeid et fradrag på 12 700 kroner, som er verdt 2 794 kroner. Vi har lest «regjeringens generelle lettelse» som kuttet i trygdeavgiften og økningen i personfradraget utover lønnsveksten, til sammen om lag 1 440 kroner."
+  },
+  "venstre": {
+   "navn": "Venstre",
+   "endringer": {
+    "skattefradrag_arbeid": 5000
+   },
    "kilde": "Venstres alternative statsbudsjett for 2027, s. 29, 58–59 og 100",
-   "merknad": "Venstre beholder regjeringens lettelser og gir et jobbskattefradrag på 22 727 kroner, som er 5 000 kroner i lavere skatt for alle med inntekt over 223 000 kroner."}
+   "merknad": "Venstre beholder regjeringens lettelser og gir et jobbskattefradrag på 22 727 kroner, som er 5 000 kroner i lavere skatt for alle med inntekt over 223 000 kroner."
+  }
  },
- "merk": [
-  {"tittel": "FrP er usikkert.", "tekst": "Vi har ikke lest FrPs eget dokument ennå. Tallene er hentet fra NTBs omtale. Fagforeningsfradrag, foreldrefradrag, barnetrygd og barnehage er ikke omtalt der, og står derfor som uendret."}
- ]
+ "merk": []
 }

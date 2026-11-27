@@ -24,7 +24,7 @@ print("   Regjeringens egen lettelse er om lag 1 440 kr ved 600 000 kr, så vår
 print("3) SVs tabell (alt. budsjett s. 86): snitt for 550–600 000 kr er −4 012 kr, herav formuesskatt +845 kr.")
 print(f"   Uten formuesskatt: −4 857. Vår, ren lønn 575 000: {endring('sv', 575000):,.0f}\n".replace(",", " "))
 
-print("4) FrP (NTB): «en gjennomsnittlig skattebetaler med minst 705 000 kroner» får 5 800 kr.")
+print("4) FrP (alt. budsjett s. 10): en gjennomsnittlig skattebetaler får 5 800 kr. NTB oppga inntekten til minst 705 000 kr.")
 print(f"   Vår, ren lønn 705 000: {endring('frp', 705000):,.0f}\n".replace(",", " "))
 
 print("5) Høyre, KrF og Venstre oppgir skatteletten i kroner. Kontroll mot provenyet (om lag 2,75 mill. personer i arbeid):")

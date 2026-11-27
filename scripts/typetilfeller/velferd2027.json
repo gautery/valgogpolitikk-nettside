@@ -1,30 +1,63 @@
 {
  "grunnlag": {
-  "barnehage_makspris_mnd": 1200, "barnehage_maaneder": 11, "soskenmoderasjon_barn2": 0.30,
+  "barnehage_makspris_mnd": 1200,
+  "barnehage_maaneder": 11,
+  "soskenmoderasjon_barn2": 0.3,
   "sfo_4_klasse_aar": 21156,
   "barnetrygd_mnd": 2012,
-  "foreldrefradrag": {"forste": 15000, "neste": 10000},
-  "tannlege_full_pris": 1500, "tannlege_egenandel_21_28": 0.25,
+  "foreldrefradrag": {
+   "forste": 15000,
+   "neste": 10000
+  },
+  "tannlege_full_pris": 1500,
+  "tannlege_egenandel_21_28": 0.25,
   "kilde": "Makspris i barnehage, barnetrygd og foreldrefradrag: regjeringens forslag for 2027, der alle tre står uendret (Smarte Penger 8. oktober 2026). Barnetrygden på 2 012 kroner i måneden følger av KrFs forslag om 100 kroner mer og ny sats på 2 112 kroner. Prisen på SFO i 4. klasse er SVs tall. Tannlege: SSBs forbruksundersøkelse 2022 viser 1 494 kroner i snitt for aleneboende."
  },
  "partier": {
-  "hoyre": {"tannlege_egenandel_21_28": 1.0,
-          "kilde": "Høyres alternative statsbudsjett for 2027, s. 23 og 28",
-          "merknad": "Høyre fjerner rabatten hos tannlegen for 21–28-åringer."},
-  "sv": {"barnehage_makspris_mnd": 600, "sfo_4_klasse_aar": 0, "barnetrygd_aar": 648, "tannlege_rabatt_29_30": 0.75,
-          "kilde": "SVs alternative statsbudsjett for 2027, s. 8–9, 18–21 og 38 i dokumentet (s. 5, 10–11 og 20 i PDF-en)",
-          "merknad": "SV halverer barnehageprisen til 600 kroner fra 1. august, gir gratis halvdagsplass på SFO i 4. klasse fra 1. august og prisjusterer barnetrygden. 29–30-åringer får 75 prosent rabatt hos tannlegen fra 1. juli. Her vises virkningen for et helt år."},
-  "rodt": {"barnetrygd_aar": 648,
-          "kilde": "Rødts alternative statsbudsjett for 2027, s. 7, 11 og 13",
-          "merknad": "Rødt prisjusterer barnetrygden fra 1. februar, som er 54 kroner i måneden per barn. Enslige forsørgere får 500 kroner mer i måneden, som ikke er med. Rødt vil at staten dekker 40 prosent av tannlegeutgifter over 2 500 kroner. Det slår ikke ut for en som bruker 1 500 kroner. Gratis skolemat er ikke med."},
-  "mdg": {"barnetrygd_aar": 648,
-          "kilde": "MDGs alternative statsbudsjett for 2027, s. 10 og 25",
-          "merknad": "MDG prisjusterer barnetrygden. MDGs eget eksempel viser 1 296 kroner for to barn."},
-  "krf": {"barnetrygd_aar": 1200, "foreldrefradrag": {"uten_krav_barn_1_og_2": 50000, "uten_krav_fra_barn_3": 100000}, "tannlege_egenandel_21_28": 1.0,
-          "kilde": "KrFs alternative statsbudsjett for 2027, s. 5, 15, 17 og 21 i PDF-en",
-          "merknad": "KrF øker barnetrygden med 100 kroner i måneden og foreldrefradraget til 50 000 kroner per barn for de to første og 100 000 kroner fra det tredje, uten krav om å dokumentere utgifter. KrF fjerner rabatten hos tannlegen for 21–28-åringer. Økt kontantstøtte er ikke med."},
-  "venstre": {"barnehage_makspris_mnd": 1500, "barnetrygd_aar": 648, "tannlege_egenandel_21_28": 1.0,
-          "kilde": "Venstres alternative statsbudsjett for 2027, s. 18–19, 40–41 og 98",
-          "merknad": "Venstre øker barnehageprisen til 1 500 kroner i måneden og gjør barnehagen gratis for husholdninger som tjener under 800 000 kroner. Barnetrygden prisjusteres. Venstre fjerner rabatten hos tannlegen for 21–28-åringer."}
+  "hoyre": {
+   "tannlege_egenandel_21_28": 1.0,
+   "kilde": "Høyres alternative statsbudsjett for 2027, s. 23 og 28",
+   "merknad": "Høyre fjerner rabatten hos tannlegen for 21–28-åringer."
+  },
+  "sv": {
+   "barnehage_makspris_mnd": 600,
+   "sfo_4_klasse_aar": 0,
+   "barnetrygd_aar": 648,
+   "tannlege_rabatt_29_30": 0.75,
+   "kilde": "SVs alternative statsbudsjett for 2027, s. 8–9, 18–21 og 38 i dokumentet (s. 5, 10–11 og 20 i PDF-en)",
+   "merknad": "SV halverer barnehageprisen til 600 kroner fra 1. august, gir gratis halvdagsplass på SFO i 4. klasse fra 1. august og prisjusterer barnetrygden. 29–30-åringer får 75 prosent rabatt hos tannlegen fra 1. juli. Her vises virkningen for et helt år."
+  },
+  "rodt": {
+   "barnetrygd_aar": 648,
+   "kilde": "Rødts alternative statsbudsjett for 2027, s. 7, 11 og 13",
+   "merknad": "Rødt prisjusterer barnetrygden fra 1. februar, som er 54 kroner i måneden per barn. Enslige forsørgere får 500 kroner mer i måneden, som ikke er med. Rødt vil at staten dekker 40 prosent av tannlegeutgifter over 2 500 kroner. Det slår ikke ut for en som bruker 1 500 kroner. Gratis skolemat er ikke med."
+  },
+  "mdg": {
+   "barnetrygd_aar": 648,
+   "kilde": "MDGs alternative statsbudsjett for 2027, s. 10 og 25",
+   "merknad": "MDG prisjusterer barnetrygden. MDGs eget eksempel viser 1 296 kroner for to barn."
+  },
+  "krf": {
+   "barnetrygd_aar": 1200,
+   "foreldrefradrag": {
+    "uten_krav_barn_1_og_2": 50000,
+    "uten_krav_fra_barn_3": 100000
+   },
+   "tannlege_egenandel_21_28": 1.0,
+   "kilde": "KrFs alternative statsbudsjett for 2027, s. 5, 15, 17 og 21 i PDF-en",
+   "merknad": "KrF øker barnetrygden med 100 kroner i måneden og foreldrefradraget til 50 000 kroner per barn for de to første og 100 000 kroner fra det tredje, uten krav om å dokumentere utgifter. KrF fjerner rabatten hos tannlegen for 21–28-åringer. Økt kontantstøtte er ikke med."
+  },
+  "venstre": {
+   "barnehage_makspris_mnd": 1500,
+   "barnetrygd_aar": 648,
+   "tannlege_egenandel_21_28": 1.0,
+   "kilde": "Venstres alternative statsbudsjett for 2027, s. 18–19, 40–41 og 98",
+   "merknad": "Venstre øker barnehageprisen til 1 500 kroner i måneden og gjør barnehagen gratis for husholdninger som tjener under 800 000 kroner. Barnetrygden prisjusteres. Venstre fjerner rabatten hos tannlegen for 21–28-åringer."
+  },
+  "frp": {
+   "tannlege_egenandel_21_28": 1.0,
+   "kilde": "FrPs alternative statsbudsjett for 2027, s. 69",
+   "merknad": "FrP fjerner rabatten hos tannlegen for 21–28-åringer."
+  }
  }
 }

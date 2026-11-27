@@ -340,3 +340,16 @@ saldo, og partikort til slutt. Han liker også avstandskartet mellom budsjettene
   Betalingsvalget til slutt teller ikke med i sammenligningen ennå. Alle tekster er Claudes utkast.
 - **Neste:** FrPs dokument, kontroll av hver plassering mot dokumentene, eventuelt en kjerne på ti spørsmål, og la
   betalingsvalget telle.
+
+### FrPs dokument er lest inn (27. november)
+
+Gaute la ved FrPs alternative statsbudsjett for 2027. NTB-tallene er byttet ut med tall fra dokumentet, både på
+lønnsmottaker-sida og i budsjettomaten.
+
+- **Bekreftet:** personfradrag 130 000, trinn 1 fjernes, trinn 2 ned 0,5 prosentenheter, ingen endring i
+  trygdeavgiften (s. 10 og 62). Matmoms halveres fra 1. april (11,9 mrd.). Bensin 6,76 kr billigere per liter (s. 9).
+- **Nytt:** FrP fjerner fagforeningsfradraget (s. 62) og rabatten hos tannlegen for 21–28-åringer (s. 69), kutter
+  bistanden med om lag 15,6 mrd. (s. 50), senker grunnrenteskatten på havbruk til 15 prosent, øker minstepensjonen
+  med 8 000 kroner fra 1. mai (s. 12) og styrker kommunesektoren med 6 mrd. (s. 45–46).
+- **Ikke funnet:** barnetrygd, foreldrefradrag, barnehagepris, skolemat, utbytteskatt (står som «som regjeringen»)
+  og kvoteflyktninger (står som ukjent, innvandringskapitlet er ikke lest).

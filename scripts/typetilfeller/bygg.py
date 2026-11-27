@@ -91,7 +91,7 @@ ut = {
                        "tannlege": wg["tannlege_full_pris"], "tannlege_egenandel_21_28": wg["tannlege_egenandel_21_28"]},
     "kilder": [r["grunnlag"]["kilde"], f["kilde"], g["kilde"], wg["kilde"]],
     "partier": partier,
-    "merk": r.get("merk") or [{"tittel": "Rødt mangler.", "tekst": r["mangler"]["rodt"]}],
+    "merk": r["merk"] if "merk" in r else [{"tittel": "Rødt mangler.", "tekst": r["mangler"]["rodt"]}],
 }
 mappe = Path(__file__).resolve().parents[2] / "public" / "data" / "typetilfeller"
 mappe.mkdir(parents=True, exist_ok=True)

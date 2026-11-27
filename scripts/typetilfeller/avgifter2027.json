@@ -1,39 +1,85 @@
 {
  "forbruk": {
   "kilde": "SSB, forbruksundersøkelsen 2022, tabell 14152, aleneboende. Beløpene er i 2022-kroner.",
-  "mat_og_drikke": 40146, "kjott": 6302, "frukt_og_gront": 7495, "sukkervarer": 3548, "brus": 1712,
-  "bil_km": 12000, "bil_liter_per_mil": 0.7
+  "mat_og_drikke": 40146,
+  "kjott": 6302,
+  "frukt_og_gront": 7495,
+  "sukkervarer": 3548,
+  "brus": 1712,
+  "bil_km": 12000,
+  "bil_liter_per_mil": 0.7
  },
  "grunnlag": {
-  "matmoms": 0.15, "fagforeningsfradrag": 8950,
-  "bensin_veibruksavgift": 3.37, "bensin_co2_avgift": 4.40,
+  "matmoms": 0.15,
+  "fagforeningsfradrag": 8950,
+  "bensin_veibruksavgift": 3.37,
+  "bensin_co2_avgift": 4.4,
   "kilde": "Fagforeningsfradrag og drivstoffavgifter: regjeringens forslag for 2027, gjengitt av Smarte Penger 8. oktober 2026. Veibruksavgiften på bensin er 3,37 kroner per liter og CO2-avgiften 4,40 kroner per liter, før moms."
  },
  "partier": {
-  "frp": {"matmoms_alle": 0.075, "bensin_kr_per_liter": -6.76, "bensin_sikkerhet": "partiets tall",
-          "kilde": "NTBs omtale av FrPs alternative statsbudsjett for 2027, lest i Dagsavisen 25. november 2026",
-          "merknad": "FrP halverer matmomsen fra 1. april. Her vises virkningen for et helt år. FrP fjerner veibruksavgiften, går imot økningen i CO2-avgiften og fjerner kravet om biodrivstoff. FrP oppgir selv at bensinen blir 6,76 kroner billigere per liter. I fjor fjernet FrP fagforeningsfradraget. Om de gjør det i år, vet vi ikke."},
-  "hoyre": {"fagforeningsfradrag": 3850,
-          "kilde": "Høyres alternative statsbudsjett for 2027, s. 10",
-          "merknad": "Høyre setter fagforeningsfradraget «på Solberg-regjeringens nivå», som var 3 850 kroner."},
-  "sv": {"bensin_kr_per_liter": 1.28, "bensin_sikkerhet": "anslag",
-          "kilde": "SVs alternative statsbudsjett for 2027, s. 85 i dokumentet (s. 43 i PDF-en)",
-          "merknad": "SV går imot regjeringens kutt i veibruksavgiften (50 øre per liter) og trapper CO2-avgiften raskere opp. CO2-delen er anslått til 78 øre per liter ut fra provenyet."},
-  "sp": {"bensin_kr_per_liter": -3.29, "bensin_sikkerhet": "anslag",
-          "kilde": "Senterpartiets alternative statsbudsjett for 2027, s. 13 og 63",
-          "merknad": "Sp fjerner veibruksavgiften på bensin fram til 1. juli og er regnet for et halvt år (4,21 kroner per liter med moms). Sp går også imot opptrappingen av CO2-avgiften og senker den midlertidig til 1. juli. CO2-delen er anslått ut fra provenyet."},
-  "rodt": {"matmoms_alle": 0.10, "bensin_kr_per_liter": -1.70, "bensin_sikkerhet": "partiets tall",
-          "kilde": "Rødts alternative statsbudsjett for 2027, s. 13, 35–36 og 38–39",
-          "merknad": "Rødt kutter matmomsen til 10 prosent fra 1. juli. Her vises virkningen for et helt år. Rødt oppgir selv at pumpeprisen blir om lag 1,70 kroner lavere. Rødts klimarabatt går bare til dem som tjener under 500 000 kroner. Lavere pris på månedskort, trafikkforsikring og egenandeler er ikke med."},
-  "mdg": {"matmoms_0": ["frukt_og_gront"], "bensin_kr_per_liter": 4.16, "bensin_sikkerhet": "anslag",
-          "utbetaling": 2506, "utbetaling_navn": "Klimabelønning", "utbetaling_per_barn": 2255,
-          "kilde": "MDGs alternative statsbudsjett for 2027, s. 8–10 og 60–61",
-          "merknad": "MDG fjerner momsen på frukt og grønt. Veibruksavgiften på bensin øker med 2,50 kroner per liter før moms, og CO2-avgiften øker. CO2-delen er anslått ut fra provenyet. Klimabelønningen betales til alle og er størst der det bor færrest. Vi har brukt sone 3 av 6 (for eksempel Haugesund): 2 506 kroner per voksen og 2 255 kroner per barn. I Oslo er beløpet 2 004 kroner per voksen, i de minst sentrale kommunene 5 011 kroner. MDGs avgifter på klær, plastemballasje og flyseter er ikke med, og heller ikke nasjonalt månedskort."},
-  "krf": {"bensin_kr_per_liter": -1.05, "bensin_sikkerhet": "anslag", "mat_tillegg_kr": 650, "mat_sikkerhet": "anslag",
-          "kilde": "KrFs alternative statsbudsjett for 2027, s. 40 i dokumentet (s. 21 i PDF-en)",
-          "merknad": "KrF gjeninnfører avgiften på sjokolade og sukkervarer og øker avgiften på brus. Vi har anslått det til 650 kroner per person ut fra provenyet (2,9 mrd. kroner). KrF fjerner veibruksavgiften på bensin fram til 1. april, og er regnet for tre måneder."},
-  "venstre": {"matmoms_0": ["frukt_og_gront"], "matmoms_25": ["kjott"], "bensin_kr_per_liter": 2.26, "bensin_sikkerhet": "anslag",
-          "kilde": "Venstres alternative statsbudsjett for 2027, s. 29, 64 og 67",
-          "merknad": "Venstre fjerner momsen på frukt og grønt og setter full moms på kjøtt. CO2-avgiften settes til 2 239 kroner per tonn, som er 99 øre mer per liter bensin med moms. Økningen i veibruksavgiften er anslått til 1,27 kroner per liter ut fra provenyet."}
+  "frp": {
+   "matmoms_alle": 0.075,
+   "bensin_kr_per_liter": -6.76,
+   "bensin_sikkerhet": "partiets tall",
+   "kilde": "FrPs alternative statsbudsjett for 2027, s. 9 og 62",
+   "merknad": "FrP halverer matmomsen fra 1. april. Her vises virkningen for et helt år. FrP fjerner veibruksavgiften, går imot økningen i CO2-avgiften og fjerner kravet om biodrivstoff. FrP oppgir selv at bensinen blir 6,76 kroner billigere per liter. FrP fjerner fagforeningsfradraget.",
+   "fagforeningsfradrag": 0
+  },
+  "hoyre": {
+   "fagforeningsfradrag": 3850,
+   "kilde": "Høyres alternative statsbudsjett for 2027, s. 10",
+   "merknad": "Høyre setter fagforeningsfradraget «på Solberg-regjeringens nivå», som var 3 850 kroner."
+  },
+  "sv": {
+   "bensin_kr_per_liter": 1.28,
+   "bensin_sikkerhet": "anslag",
+   "kilde": "SVs alternative statsbudsjett for 2027, s. 85 i dokumentet (s. 43 i PDF-en)",
+   "merknad": "SV går imot regjeringens kutt i veibruksavgiften (50 øre per liter) og trapper CO2-avgiften raskere opp. CO2-delen er anslått til 78 øre per liter ut fra provenyet."
+  },
+  "sp": {
+   "bensin_kr_per_liter": -3.29,
+   "bensin_sikkerhet": "anslag",
+   "kilde": "Senterpartiets alternative statsbudsjett for 2027, s. 13 og 63",
+   "merknad": "Sp fjerner veibruksavgiften på bensin fram til 1. juli og er regnet for et halvt år (4,21 kroner per liter med moms). Sp går også imot opptrappingen av CO2-avgiften og senker den midlertidig til 1. juli. CO2-delen er anslått ut fra provenyet."
+  },
+  "rodt": {
+   "matmoms_alle": 0.1,
+   "bensin_kr_per_liter": -1.7,
+   "bensin_sikkerhet": "partiets tall",
+   "kilde": "Rødts alternative statsbudsjett for 2027, s. 13, 35–36 og 38–39",
+   "merknad": "Rødt kutter matmomsen til 10 prosent fra 1. juli. Her vises virkningen for et helt år. Rødt oppgir selv at pumpeprisen blir om lag 1,70 kroner lavere. Rødts klimarabatt går bare til dem som tjener under 500 000 kroner. Lavere pris på månedskort, trafikkforsikring og egenandeler er ikke med."
+  },
+  "mdg": {
+   "matmoms_0": [
+    "frukt_og_gront"
+   ],
+   "bensin_kr_per_liter": 4.16,
+   "bensin_sikkerhet": "anslag",
+   "utbetaling": 2506,
+   "utbetaling_navn": "Klimabelønning",
+   "utbetaling_per_barn": 2255,
+   "kilde": "MDGs alternative statsbudsjett for 2027, s. 8–10 og 60–61",
+   "merknad": "MDG fjerner momsen på frukt og grønt. Veibruksavgiften på bensin øker med 2,50 kroner per liter før moms, og CO2-avgiften øker. CO2-delen er anslått ut fra provenyet. Klimabelønningen betales til alle og er størst der det bor færrest. Vi har brukt sone 3 av 6 (for eksempel Haugesund): 2 506 kroner per voksen og 2 255 kroner per barn. I Oslo er beløpet 2 004 kroner per voksen, i de minst sentrale kommunene 5 011 kroner. MDGs avgifter på klær, plastemballasje og flyseter er ikke med, og heller ikke nasjonalt månedskort."
+  },
+  "krf": {
+   "bensin_kr_per_liter": -1.05,
+   "bensin_sikkerhet": "anslag",
+   "mat_tillegg_kr": 650,
+   "mat_sikkerhet": "anslag",
+   "kilde": "KrFs alternative statsbudsjett for 2027, s. 40 i dokumentet (s. 21 i PDF-en)",
+   "merknad": "KrF gjeninnfører avgiften på sjokolade og sukkervarer og øker avgiften på brus. Vi har anslått det til 650 kroner per person ut fra provenyet (2,9 mrd. kroner). KrF fjerner veibruksavgiften på bensin fram til 1. april, og er regnet for tre måneder."
+  },
+  "venstre": {
+   "matmoms_0": [
+    "frukt_og_gront"
+   ],
+   "matmoms_25": [
+    "kjott"
+   ],
+   "bensin_kr_per_liter": 2.26,
+   "bensin_sikkerhet": "anslag",
+   "kilde": "Venstres alternative statsbudsjett for 2027, s. 29, 64 og 67",
+   "merknad": "Venstre fjerner momsen på frukt og grønt og setter full moms på kjøtt. CO2-avgiften settes til 2 239 kroner per tonn, som er 99 øre mer per liter bensin med moms. Økningen i veibruksavgiften er anslått til 1,27 kroner per liter ut fra provenyet."
+  }
  }
 }

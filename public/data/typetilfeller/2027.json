@@ -26,7 +26,7 @@
    "id": "frp",
    "navn": "FrP",
    "skatt": 5135,
-   "skatt_anslag": true,
+   "skatt_anslag": false,
    "mat": 2618,
    "mat_anslag": false,
    "utbetaling": 0,
@@ -34,7 +34,7 @@
    "utbetaling_anslag": false,
    "bil": 5678,
    "bil_anslag": false,
-   "fagforening": 0,
+   "fagforening": -1969,
    "barn": [
     [
      {
@@ -87,16 +87,19 @@
    ],
    "barnetrygd_anslag": false,
    "tannlege": {
-    "21-28": 0,
+    "21-28": -1125,
     "29-30": 0,
     "31+": 0
    },
    "merknader": [
-    "Vi har ikke fått åpnet FrPs eget dokument, så tallene er fra NTBs omtale: personfradrag på 130 000 kroner, trinn 1 fjernes, og satsen i trinn 2 senkes med 0,5 prosentenheter. Om FrP endrer trygdeavgiften, vet vi ikke.",
-    "FrP halverer matmomsen fra 1. april. Her vises virkningen for et helt år. FrP fjerner veibruksavgiften, går imot økningen i CO2-avgiften og fjerner kravet om biodrivstoff. FrP oppgir selv at bensinen blir 6,76 kroner billigere per liter. I fjor fjernet FrP fagforeningsfradraget. Om de gjør det i år, vet vi ikke."
+    "FrP øker personfradraget til 130 000 kroner, fjerner trinn 1 i trinnskatten og senker satsen i trinn 2 med 0,5 prosentenheter. FrP oppgir selv 5 800 kroner for en gjennomsnittlig skattebetaler.",
+    "FrP halverer matmomsen fra 1. april. Her vises virkningen for et helt år. FrP fjerner veibruksavgiften, går imot økningen i CO2-avgiften og fjerner kravet om biodrivstoff. FrP oppgir selv at bensinen blir 6,76 kroner billigere per liter. FrP fjerner fagforeningsfradraget.",
+    "FrP fjerner rabatten hos tannlegen for 21–28-åringer."
    ],
    "kilder": [
-    "NTBs omtale av FrPs alternative statsbudsjett for 2027, lest i Dagsavisen 25. november 2026"
+    "FrPs alternative statsbudsjett for 2027, s. 10 og 62",
+    "FrPs alternative statsbudsjett for 2027, s. 9 og 62",
+    "FrPs alternative statsbudsjett for 2027, s. 69"
    ]
   },
   {
@@ -657,10 +660,5 @@
    ]
   }
  ],
- "merk": [
-  {
-   "tittel": "FrP er usikkert.",
-   "tekst": "Vi har ikke lest FrPs eget dokument ennå. Tallene er hentet fra NTBs omtale. Fagforeningsfradrag, foreldrefradrag, barnetrygd og barnehage er ikke omtalt der, og står derfor som uendret."
-  }
- ]
+ "merk": []
 }

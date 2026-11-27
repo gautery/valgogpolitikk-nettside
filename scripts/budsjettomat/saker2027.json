@@ -2,7 +2,7 @@
  "aar": 2027,
  "innbyggere_mill": 5.6,
  "kilder": {
-  "frp": "NTBs omtale av FrPs alternative statsbudsjett for 2027, lest i Dagsavisen 25. november 2026",
+  "frp": "FrPs alternative statsbudsjett for 2027",
   "hoyre": "Høyres alternative statsbudsjett for 2027",
   "sv": "SVs alternative statsbudsjett for 2027 (sidetall i PDF-en)",
   "sp": "Senterpartiets alternative statsbudsjett for 2027",
@@ -117,9 +117,9 @@
      "tekst": ""
     },
     "frp": {
-     "verdi": null,
-     "tekst": "",
-     "kilde": "ikke omtalt hos NTB"
+     "verdi": -1,
+     "tekst": "fjerner rabatten for dem mellom 21 og 28 år og sparer 981 mill. kroner",
+     "kilde": "s. 69"
     }
    }
   },
@@ -152,8 +152,8 @@
    "partier": {
     "frp": {
      "verdi": 1,
-     "tekst": "halverer momsen på all mat fra 1. april",
-     "kilde": "NTB"
+     "tekst": "halverer momsen på all mat fra 1. april, som koster 11,9 mrd. kroner i 2027",
+     "kilde": "s. 62"
     },
     "rodt": {
      "verdi": 1,
@@ -263,9 +263,9 @@
      "tekst": ""
     },
     "frp": {
-     "verdi": null,
+     "verdi": 0,
      "tekst": "",
-     "kilde": "ikke omtalt hos NTB"
+     "kilde": "ingen endring funnet"
     }
    }
   },
@@ -279,8 +279,8 @@
     {
      "verdi": -1,
      "tekst": "Mye mindre: 0,7 prosent",
-     "pris": -15.0,
-     "pristekst": "Sparer om lag 15 mrd. kroner (vårt anslag)"
+     "pris": -15.6,
+     "pristekst": "Sparer om lag 15 mrd. kroner"
     },
     {
      "verdi": -0.5,
@@ -304,8 +304,8 @@
    "partier": {
     "frp": {
      "verdi": -1,
-     "tekst": "kutter bistanden til 0,7 prosent",
-     "kilde": "NTB"
+     "tekst": "kutter om lag 15,6 mrd. kroner og vil ha et tak på 0,7 prosent",
+     "kilde": "s. 50"
     },
     "hoyre": {
      "verdi": -0.5,
@@ -382,8 +382,8 @@
     },
     "frp": {
      "verdi": -1,
-     "tekst": "øker bunnfradraget til 3 mill. kroner og setter én sats på 0,9 prosent",
-     "kilde": "NTB"
+     "tekst": "setter én sats på 0,9 prosent og øker bunnfradraget til 3 mill. kroner, som koster 10,1 mrd. kroner",
+     "kilde": "s. 62"
     },
     "krf": {
      "verdi": -0.5,
@@ -485,8 +485,8 @@
     },
     "frp": {
      "verdi": -1,
-     "tekst": "øker personfradraget til 130 000 kroner og fjerner trinn 1 i trinnskatten",
-     "kilde": "NTB"
+     "tekst": "øker personfradraget til 130 000 kroner, fjerner trinn 1 og senker trinn 2 (20 mrd. kroner)",
+     "kilde": "s. 10 og 62"
     },
     "ap": {
      "verdi": 0,
@@ -557,9 +557,9 @@
      "kilde": "s. 32–33"
     },
     "frp": {
-     "verdi": null,
+     "verdi": 0,
      "tekst": "",
-     "kilde": "ikke omtalt hos NTB"
+     "kilde": "ingen endring funnet"
     },
     "ap": {
      "verdi": 0,
@@ -630,9 +630,9 @@
      "kilde": "ingen endring funnet"
     },
     "frp": {
-     "verdi": null,
-     "tekst": "",
-     "kilde": "ikke omtalt hos NTB"
+     "verdi": -1,
+     "tekst": "senker satsen til 15 prosent, som koster 1,2 mrd. kroner",
+     "kilde": "s. 62"
     },
     "ap": {
      "verdi": 0,
@@ -705,7 +705,7 @@
     "frp": {
      "verdi": -1,
      "tekst": "fjerner veibruksavgiften og går imot økningen i CO2-avgiften. Partiet sier bensinen blir 6,76 kroner billigere per liter",
-     "kilde": "NTB"
+     "kilde": "s. 9 og 62"
     },
     "ap": {
      "verdi": 0,
@@ -777,8 +777,8 @@
     },
     "frp": {
      "verdi": 1,
-     "tekst": "vil ha 50 øre med moms, som er 40 øre før moms",
-     "kilde": "NTB"
+     "tekst": "vil ha 50 øre med moms, som er 40 øre før moms (1,2 mrd. kroner)",
+     "kilde": "s. 62"
     },
     "ap": {
      "verdi": 0,
@@ -849,9 +849,9 @@
      "kilde": "s. 7"
     },
     "frp": {
-     "verdi": null,
+     "verdi": 0,
      "tekst": "",
-     "kilde": "ikke omtalt hos NTB"
+     "kilde": "ingen endring funnet"
     },
     "ap": {
      "verdi": 0,
@@ -922,9 +922,9 @@
      "kilde": "s. 5 og 7"
     },
     "frp": {
-     "verdi": null,
-     "tekst": "",
-     "kilde": "ikke omtalt hos NTB"
+     "verdi": 0.5,
+     "tekst": "øker minstepensjonen med 8 000 kroner i året fra 1. mai",
+     "kilde": "s. 12"
     },
     "ap": {
      "verdi": 0,
@@ -995,9 +995,9 @@
      "kilde": "s. 7"
     },
     "frp": {
-     "verdi": null,
-     "tekst": "",
-     "kilde": "ikke omtalt hos NTB"
+     "verdi": 0.75,
+     "tekst": "styrker kommunesektoren med 6 mrd. kroner, blant annet til eldreomsorg og fylkesveier",
+     "kilde": "s. 45–46"
     },
     "ap": {
      "verdi": 0,
@@ -1062,9 +1062,9 @@
      "kilde": "s. 7"
     },
     "frp": {
-     "verdi": null,
+     "verdi": 0,
      "tekst": "",
-     "kilde": "ikke omtalt hos NTB"
+     "kilde": "ingen endring funnet"
     },
     "ap": {
      "verdi": 0,
@@ -1129,9 +1129,9 @@
      "kilde": "s. 7"
     },
     "frp": {
-     "verdi": null,
+     "verdi": 0,
      "tekst": "",
-     "kilde": "ikke omtalt hos NTB"
+     "kilde": "ingen endring funnet"
     },
     "ap": {
      "verdi": 0,
@@ -1204,7 +1204,7 @@
     "frp": {
      "verdi": null,
      "tekst": "",
-     "kilde": "ikke omtalt hos NTB"
+     "kilde": "ikke funnet i dokumentet"
     },
     "ap": {
      "verdi": 0,
