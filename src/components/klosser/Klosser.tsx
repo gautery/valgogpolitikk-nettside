@@ -567,7 +567,7 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
     case "nyhetsbrev":
       return (
         <Seksjon bakgrunn={kloss.bakgrunn}>
-          <div className="grid items-center gap-6 md:grid-cols-[minmax(0,1fr)_400px] md:gap-12">
+          <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-[minmax(0,1fr)_400px] md:gap-12">
             <div>
               <Overskrift>{kloss.overskrift}</Overskrift>
               {kloss.tekst && <p className="-mt-2 max-w-[520px] text-[16px] leading-relaxed text-text-secondary">{kloss.tekst}</p>}
@@ -614,6 +614,81 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
       );
     }
 
+    case "hovedsak": {
+      if (!kloss.tittel) return null;
+      const rader = (kloss.tall ?? [])
+        .map((t) => ({
+          etikett: t?.etikett?.trim() ?? "",
+          verdi: Number(String(t?.verdi ?? "").replace(",", ".")),
+          uthev: t?.uthev === true,
+        }))
+        .filter((t) => t.etikett && Number.isFinite(t.verdi) && t.verdi > 0);
+      const maks = Math.max(1, ...rader.map((r) => r.verdi));
+      const enhet = kloss.enhet ?? "%";
+      const knappStil =
+        "rounded-[6px] bg-black px-6 py-3.5 text-[16px] font-semibold text-white hover:bg-white hover:text-black focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black";
+      const harKnapp = Boolean(kloss.knapp && kloss.knappLenke);
+      return (
+        <div className="bg-rosa px-6 pb-10 pt-8 md:py-16">
+          <div className="mx-auto grid max-w-[1100px] gap-8 md:grid-cols-[minmax(0,6fr)_minmax(0,5fr)] md:items-center md:gap-16">
+            <div>
+              {kloss.overlinje && <p className="mb-4 text-[15px] font-semibold text-black">{kloss.overlinje}</p>}
+              <h1 className="font-display text-[31px] leading-[1.06] text-black sm:text-[44px] lg:text-[52px]">
+                {kloss.tittel}
+              </h1>
+              {kloss.tekst && <p className="mt-5 max-w-[520px] text-[18px] leading-[1.5] text-black">{kloss.tekst}</p>}
+              {harKnapp && (
+                <Link
+                  href={kloss.knappLenke!}
+                  className={`mt-8 hidden md:inline-block ${knappStil}`}
+                  data-umami-event="forside-hovedsak-knapp"
+                >
+                  {kloss.knapp}
+                </Link>
+              )}
+            </div>
+            {rader.length > 0 && (
+              <figure>
+                <ul className="flex flex-col gap-4">
+                  {rader.map((r, i) => (
+                    <li key={r.etikett}>
+                      <div className="mb-1.5 text-[15px] font-semibold leading-snug text-black">{r.etikett}</div>
+                      <div className="flex items-center gap-3">
+                        <div className="h-8 min-w-0 flex-1">
+                          <div
+                            className={`soyle-voks h-full rounded-[3px] ${
+                              r.uthev ? "border-2 border-black bg-white" : "bg-black"
+                            }`}
+                            style={{ width: `${Math.max(4, (r.verdi / maks) * 100)}%`, animationDelay: `${i * 130}ms` }}
+                          />
+                        </div>
+                        <div className="font-display w-[84px] shrink-0 text-right text-[28px] leading-none tabular-nums text-black">
+                          {r.verdi.toLocaleString("nb-NO")}
+                          {enhet ? `\u00a0${enhet}` : ""}
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+                {kloss.forklaring && (
+                  <figcaption className="mt-4 text-[13px] leading-snug text-black/80">{kloss.forklaring}</figcaption>
+                )}
+              </figure>
+            )}
+            {harKnapp && (
+              <Link
+                href={kloss.knappLenke!}
+                className={`justify-self-start md:hidden ${knappStil}`}
+                data-umami-event="forside-hovedsak-knapp"
+              >
+                {kloss.knapp}
+              </Link>
+            )}
+          </div>
+        </div>
+      );
+    }
+
     case "fremhevet": {
       const side = sideFraLenke(kloss.lenke);
       const utkast = side?.utkast === true;
@@ -651,6 +726,7 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
                 <span className="mt-4 inline-block rounded bg-amber-100 px-1.5 py-0.5 text-[13px] text-amber-900">Utkast</span>
               )}
               {kloss.tekst && <p className="mt-5 max-w-[440px] text-[18px] leading-[1.55] text-white/85">{kloss.tekst}</p>}
+              {kloss.merknad && <p className="mt-3 text-[15px] font-semibold text-rosa">{kloss.merknad}</p>}
               {kloss.knapp && kloss.knappLenke && (
                 <Link
                   href={kloss.knappLenke}
@@ -664,7 +740,7 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
             {grupper.length > 0 && (
               <div className="grid gap-10 sm:grid-cols-2 sm:gap-8">
                 {grupper.map((g, i) => (
-                  <div key={i}>
+                  <div key={i} className={kloss.seAlle && i > 0 ? "hidden sm:block" : undefined}>
                     {g.tittel && <h3 className="mb-1 text-[15px] font-semibold text-rosa">{g.tittel}</h3>}
                     <ol>
                       {g.punkter.map((p) => (
@@ -683,6 +759,14 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
                     </ol>
                   </div>
                 ))}
+                {kloss.seAlle && kloss.lenke && grupper.length > 1 && (
+                  <Link
+                    href={kloss.lenke}
+                    className={`-mt-4 justify-self-start text-[16px] font-semibold text-white underline underline-offset-4 sm:hidden ${fokus}`}
+                  >
+                    {kloss.seAlle}
+                  </Link>
+                )}
               </div>
             )}
           </div>

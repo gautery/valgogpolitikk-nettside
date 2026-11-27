@@ -188,6 +188,26 @@ export type Fremhevet = {
   knappLenke?: string;
   /** Lenkene i lista. En linje uten lenke blir en mellomtittel. */
   lenker?: { tekst?: string; lenke?: string }[];
+  /** Liten linje under teksten, f.eks. hvor lang tid det tar. */
+  merknad?: string;
+  /** Er denne satt, viser mobil bare første gruppe og en lenke med denne teksten til resten. */
+  seAlle?: string;
+};
+
+/** Øverst på forsiden: ett funn som tittel, med noen få søyler og en knapp videre. */
+export type Hovedsak = {
+  type: "hovedsak";
+  overlinje?: string;
+  tittel?: string;
+  tekst?: string;
+  /** Søylene. Den lengste fyller bredden, resten tegnes i forhold til den. */
+  tall?: { etikett?: string; verdi?: number | string; uthev?: boolean }[];
+  /** Står etter tallet. Standard er %. */
+  enhet?: string;
+  /** Liten tekst under søylene: hva tallene viser, og kilden. */
+  forklaring?: string;
+  knapp?: string;
+  knappLenke?: string;
 };
 
 export type Samarbeid = {
@@ -219,5 +239,6 @@ export type Kloss =
   | FeiringKloss
   | Samarbeid
   | Fremhevet
+  | Hovedsak
   | Utforsk
   | OmMeg;

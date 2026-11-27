@@ -28,6 +28,21 @@ content:
         label: Seksjoner
         component: seksjoner
 
+  - name: forside_utkast
+    label: Forsiden (nytt utkast)
+    description: Forslag til ny forside. Vises på /forside-utkast, ved siden av dagens forside.
+    type: file
+    path: content/forside-utkast.md
+    format: yaml-frontmatter
+    fields:
+      - name: tittel
+        label: Navn (vises ikke)
+        type: string
+        hidden: true
+      - name: seksjoner
+        label: Seksjoner
+        component: seksjoner
+
   - name: sider
     label: Sider
     description: Egne sider bygd av byggeklosser, på adressen valgogpolitikk.no/<filnavn>.
@@ -862,6 +877,52 @@ components:
         label: Kildebånd (Utvalgt og Løpende)
         fields: []
 
+      - name: hovedsak
+        label: Hovedsak (rosa felt øverst, ett funn med søyler)
+        fields:
+          - name: overlinje
+            label: Liten tekst over tittelen
+            type: string
+          - name: tittel
+            label: Tittel
+            description: Selve funnet, som en setning eller to.
+            type: text
+          - name: tekst
+            label: Tekst under tittelen (valgfri)
+            type: text
+          - name: tall
+            label: Søyler
+            description: To til fire søyler holder. Den lengste fyller bredden.
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{etikett}: {verdi}"
+            fields:
+              - name: etikett
+                label: Hvem eller hva
+                type: string
+              - name: verdi
+                label: Tall
+                type: number
+              - name: uthev
+                label: Uthev denne søylen (hvit)
+                type: boolean
+                default: false
+          - name: enhet
+            label: Enhet etter tallet
+            type: string
+            default: "%"
+          - name: forklaring
+            label: Forklaring og kilde under søylene
+            type: text
+          - name: knapp
+            label: Knappetekst
+            type: string
+          - name: knappLenke
+            label: Lenke for knappen
+            type: string
+
       - name: fremhevet
         label: Fremhevet (svart felt med nummerert liste, f.eks. Grunnkurset)
         fields:
@@ -880,6 +941,14 @@ components:
             type: string
           - name: knappLenke
             label: Lenke for knappen
+            type: string
+          - name: merknad
+            label: Liten linje under teksten
+            description: F.eks. hvor lang tid det tar.
+            type: string
+          - name: seAlle
+            label: «Se alle»-lenke på mobil
+            description: Er denne fylt ut, viser mobil bare første gruppe og denne lenken til resten.
             type: string
           - name: lenker
             label: Liste

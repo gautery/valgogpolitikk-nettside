@@ -120,6 +120,23 @@ function katalog(): Oppføring[] {
       kloss: { type: "siste_analyser", overskrift: "Analyser" },
     },
     {
+      navn: "Hovedsak",
+      bruk: "Øverst på forsiden: ett funn som tittel, med noen få søyler og en knapp videre.",
+      felt: "Liten tekst, tittel, tekst, søyler (hvem, tall, uthev), enhet, forklaring, knapp",
+      kloss: {
+        type: "hovedsak" as const,
+        overlinje: "Liten tekst",
+        tittel: "Ett funn som tittel",
+        tall: [
+          { etikett: "Gruppe A", verdi: 47 },
+          { etikett: "Gruppe B", verdi: 22, uthev: true },
+        ],
+        forklaring: "Hva tallene viser, og kilden.",
+        knapp: "Knapp",
+        knappLenke: "/",
+      },
+    },
+    {
       navn: "Fremhevet",
       bruk: "Løfter fram én ting, f.eks. Grunnkurset. Svart felt med knapp og en nummerert liste.",
       felt: "Overskrift, tekst, lenke, knapp, liste (linje uten lenke blir mellomtittel)",

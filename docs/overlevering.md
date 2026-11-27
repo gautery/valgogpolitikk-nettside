@@ -259,6 +259,20 @@ Gaute ba om at forsiden kobles til Grunnkurset og det andre som er ferdig. Ligge
 - `next.config.ts` setter `X-Robots-Tag: noindex` på alle vercel.app-adresser, også etter lansering.
 - Lange ord i karuselltitlene deles, så forsiden og /karuseller holder 320 piksler.
 
+**Utkast til ny forside (27. november, sent):** Gaute ba om et fritt utkast. Det ligger på `/forside-utkast`,
+ved siden av dagens forside, og er ikke godkjent.
+
+- Innholdet ligger i `content/forside-utkast.md` og redigeres i Pages CMS under «Forsiden (nytt utkast)».
+  Siden er `src/app/(site)/forside-utkast/page.tsx`. Godkjenner han det, flyttes seksjonene over i
+  `content/forside.md`, og siden, filen og oppføringen i `.pages.yml` slettes.
+- **Ny kloss «Hovedsak»** (`hovedsak`): rosa felt øverst med ett funn som tittel, to til fire søyler og knapp.
+  Utkastet bruker beskrivelsen og tallene fra leksjon 6 (47, 56 og 22 prosent, Ring, Seim og Zucman figur 5a).
+  Slagordet står som liten linje over. Bokraden er ute.
+- **«Fremhevet» har to nye felt:** `merknad` («Omtrent 25 minutter til sammen», Claudes anslag ut fra ordtallet)
+  og `seAlle`, som gjør at mobil bare viser første gruppe og en lenke til resten.
+- «Utforsk» er ute. Nyhetsbrev ligger mellom karusellene og kildene, med Gautes egne setninger som tekst.
+- Dagens forside er ikke endret, bortsett fra at nyhetsbrev-klossen ikke lenger blir for bred på 320 piksler.
+
 **Dette gjenstår før forsiden ser ferdig ut:**
 
 1. Gaute må si hvilke sider som er godkjent. Etter lansering skjules alt som er utkast, og da står forsiden igjen
