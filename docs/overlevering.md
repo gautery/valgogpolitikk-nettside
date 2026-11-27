@@ -189,3 +189,30 @@ Bare Gaute kan gjøre:
 - Bytte passord andre steder hvis passordet fra /kontrollsenter er brukt der.
 - Beehiiv-nøklene i Vercel og totrinnsinnlogging, hvis det ikke er gjort.
 - Godkjenne utkastene og si «lanser».
+
+## Partienes alternative budsjetter (utkast, 27. november)
+
+Gaute vil ha en side der man ser hva hvert parti ville endret i statsbudsjettet, med tre innganger fra samme
+tabell: en introliste over områdene partiene er mest uenige om, en side per område med alle partiene på én linje,
+og en side per parti med de største plussene og kuttene. Alt kan trykkes på, fra parti til område og tilbake.
+
+- **Adresse:** `/statsbudsjett/partiene`, `/statsbudsjett/partiene/<parti>` og `/statsbudsjett/partiene/omrade/<område>`.
+  Utkast, skjult for søkemotorer med bryteren `partibudsjett` i `src/lib/utkast.ts`.
+- **Tall:** `scripts/partibudsjett.py` leser tabellen «Oversikt over partienes forslag til rammevedtak»
+  (kap. 3.2) i finansinnstillingen og skriver `public/data/partibudsjett/<år>.json`. Skriptet stopper hvis
+  summene ikke stemmer med kilden. Stortinget.no kan lastes ned fra arbeidsmiljøet.
+- **Prøvedata:** Siden viser nå budsjettet for 2026, fra Innst. 2 S (2025–2026). Når Innst. 2 S (2026–2027)
+  kommer: kjør skriptet med årets PDF og sidetall, sett `AAR = 2027` og `PROVEDATA = false` i
+  `src/lib/partibudsjett.ts`.
+- **Kode:** `src/lib/partibudsjett*.ts`, `src/components/partibudsjett/` og `src/app/(site)/statsbudsjett/partiene/`.
+- **Fortegn:** For skatt og utbytte er fortegnet snudd, så høyre side alltid betyr «mer» (høyere skatter, mer utbytte).
+
+Uavklart:
+
+- Første versjon er på de 22 rammeområdene. Enkeltsaker per budsjettpost kan fylles på fra fagkomiteenes
+  innstillinger.
+- Noen tall trenger forklaring før publisering: «Tilfeldige utgifter og inntekter» er en reserve, og flere partier
+  har store kutt der. På forsvar står FrP, Høyre og Venstre med 2–3 milliarder mindre enn regjeringen i 2026-tallene.
+  Det kan være en teknisk flytting og må sjekkes mot innstillingen før noen leser det som et kutt.
+- Arbeiderpartiet og Senterpartiet har ingen egen kolonne i 2026-tabellen.
+- Tekstene på sidene er Claudes utkast.

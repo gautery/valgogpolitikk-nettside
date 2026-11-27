@@ -1,0 +1,477 @@
+{
+ "aar": 2026,
+ "kilde": "Innst. 2 S (2025–2026), kapittel 3.2",
+ "kilde_lenke": "https://www.stortinget.no/globalassets/pdf/innstillinger/stortinget/2025-2026/inns-202526-002s.pdf",
+ "enhet": "1000 kroner",
+ "flertall": "A, Sp og R",
+ "partier": [
+  {
+   "id": "frp",
+   "kort": "FrP",
+   "navn": "Fremskrittspartiet"
+  },
+  {
+   "id": "hoyre",
+   "kort": "Høyre",
+   "navn": "Høyre"
+  },
+  {
+   "id": "sv",
+   "kort": "SV",
+   "navn": "Sosialistisk Venstreparti"
+  },
+  {
+   "id": "rodt",
+   "kort": "Rødt",
+   "navn": "Rødt"
+  },
+  {
+   "id": "mdg",
+   "kort": "MDG",
+   "navn": "Miljøpartiet De Grønne"
+  },
+  {
+   "id": "krf",
+   "kort": "KrF",
+   "navn": "Kristelig Folkeparti"
+  },
+  {
+   "id": "venstre",
+   "kort": "Venstre",
+   "navn": "Venstre"
+  }
+ ],
+ "omrader": [
+  {
+   "nr": 1,
+   "slug": "statsforvaltning",
+   "navn": "Statsforvaltning",
+   "navn_kilde": "Statsforvaltning mv.",
+   "dekker": "",
+   "retning": "utgift",
+   "gul_bok": 22711700,
+   "avvik": {
+    "frp": -609613,
+    "hoyre": -1492010,
+    "sv": -1191000,
+    "rodt": -159700,
+    "mdg": 60000,
+    "krf": -110000,
+    "venstre": -389000
+   },
+   "flertall": 78800
+  },
+  {
+   "nr": 2,
+   "slug": "familie",
+   "navn": "Familie, forbruker, kirke og trossamfunn",
+   "navn_kilde": "Familie, forbruker, kirke og trossamfunn",
+   "dekker": "",
+   "retning": "utgift",
+   "gul_bok": 78516480,
+   "avvik": {
+    "frp": -902400,
+    "hoyre": 634000,
+    "sv": 1345000,
+    "rodt": 2024700,
+    "mdg": 33866327,
+    "krf": 3689000,
+    "venstre": -193900
+   },
+   "flertall": 738700
+  },
+  {
+   "nr": 3,
+   "slug": "kultur",
+   "navn": "Kultur og likestilling",
+   "navn_kilde": "Kultur og likestilling mv.",
+   "dekker": "",
+   "retning": "utgift",
+   "gul_bok": 27351838,
+   "avvik": {
+    "frp": -5853470,
+    "hoyre": -454465,
+    "sv": 567000,
+    "rodt": 313210,
+    "mdg": 537400,
+    "krf": -230500,
+    "venstre": 431082
+   },
+   "flertall": 72000
+  },
+  {
+   "nr": 4,
+   "slug": "utenriks",
+   "navn": "Utenriks",
+   "navn_kilde": "Utenriks",
+   "dekker": "bistand og utenrikstjeneste",
+   "retning": "utgift",
+   "gul_bok": 57173495,
+   "avvik": {
+    "frp": -16383611,
+    "hoyre": -1730565,
+    "sv": 1693000,
+    "rodt": 422152,
+    "mdg": 32816236,
+    "krf": 1691437,
+    "venstre": 721300
+   },
+   "flertall": 11500
+  },
+  {
+   "nr": 5,
+   "slug": "justis",
+   "navn": "Justis",
+   "navn_kilde": "Justis",
+   "dekker": "",
+   "retning": "utgift",
+   "gul_bok": 50423915,
+   "avvik": {
+    "frp": 1713000,
+    "hoyre": 154345,
+    "sv": 318041,
+    "rodt": 344000,
+    "mdg": 581642,
+    "krf": 660400,
+    "venstre": 701300
+   },
+   "flertall": 199830
+  },
+  {
+   "nr": 6,
+   "slug": "innvandring-distrikt-bolig",
+   "navn": "Innvandring, regional utvikling og bolig",
+   "navn_kilde": "Innvandring, regional utvikling og bolig",
+   "dekker": "",
+   "retning": "utgift",
+   "gul_bok": 26108487,
+   "avvik": {
+    "frp": -6673796,
+    "hoyre": -866820,
+    "sv": 1447382,
+    "rodt": 1321733,
+    "mdg": 2416606,
+    "krf": 860400,
+    "venstre": 708700
+   },
+   "flertall": 90750
+  },
+  {
+   "nr": 7,
+   "slug": "arbeid-og-sosial",
+   "navn": "Arbeid og sosial",
+   "navn_kilde": "Arbeid og sosial",
+   "dekker": "trygd, pensjon og Nav",
+   "retning": "utgift",
+   "gul_bok": 710471668,
+   "avvik": {
+    "frp": -537000,
+    "hoyre": -2779871,
+    "sv": 1346000,
+    "rodt": 9887850,
+    "mdg": 615900,
+    "krf": 784200,
+    "venstre": -8393000
+   },
+   "flertall": 115400
+  },
+  {
+   "nr": 8,
+   "slug": "forsvar",
+   "navn": "Forsvar",
+   "navn_kilde": "Forsvar",
+   "dekker": "",
+   "retning": "utgift",
+   "gul_bok": 169093153,
+   "avvik": {
+    "frp": -2300000,
+    "hoyre": -2200000,
+    "sv": 0,
+    "rodt": 0,
+    "mdg": 0,
+    "krf": 0,
+    "venstre": -3290000
+   },
+   "flertall": -3283500
+  },
+  {
+   "nr": 9,
+   "slug": "naering",
+   "navn": "Næring",
+   "navn_kilde": "Næring",
+   "dekker": "",
+   "retning": "utgift",
+   "gul_bok": 9915654,
+   "avvik": {
+    "frp": -2994400,
+    "hoyre": -2290476,
+    "sv": -28450,
+    "rodt": 285000,
+    "mdg": 644400,
+    "krf": -709900,
+    "venstre": -1390400
+   },
+   "flertall": -961900
+  },
+  {
+   "nr": 10,
+   "slug": "fiskeri",
+   "navn": "Fiskeri",
+   "navn_kilde": "Fiskeri",
+   "dekker": "",
+   "retning": "utgift",
+   "gul_bok": 2923238,
+   "avvik": {
+    "frp": -655400,
+    "hoyre": -157900,
+    "sv": -350000,
+    "rodt": -8300,
+    "mdg": -350500,
+    "krf": -640400,
+    "venstre": -324800
+   },
+   "flertall": 22200
+  },
+  {
+   "nr": 11,
+   "slug": "landbruk",
+   "navn": "Landbruk",
+   "navn_kilde": "Landbruk",
+   "dekker": "",
+   "retning": "utgift",
+   "gul_bok": 33884588,
+   "avvik": {
+    "frp": -4180002,
+    "hoyre": -1963408,
+    "sv": 531000,
+    "rodt": 486000,
+    "mdg": 507350,
+    "krf": 130800,
+    "venstre": -864090
+   },
+   "flertall": 143400
+  },
+  {
+   "nr": 12,
+   "slug": "olje-og-energi",
+   "navn": "Olje og energi",
+   "navn_kilde": "Olje og energi",
+   "dekker": "",
+   "retning": "netto",
+   "gul_bok": -172686112,
+   "avvik": {
+    "frp": -875000,
+    "hoyre": -221600,
+    "sv": 52000,
+    "rodt": 355300,
+    "mdg": -3863000,
+    "krf": 430000,
+    "venstre": 71676
+   },
+   "flertall": -303000
+  },
+  {
+   "nr": 13,
+   "slug": "miljo",
+   "navn": "Miljø",
+   "navn_kilde": "Miljø",
+   "dekker": "",
+   "retning": "utgift",
+   "gul_bok": 23936203,
+   "avvik": {
+    "frp": -6622184,
+    "hoyre": -2373199,
+    "sv": 1881200,
+    "rodt": 371000,
+    "mdg": 6281000,
+    "krf": -3604951,
+    "venstre": -706800
+   },
+   "flertall": 50250
+  },
+  {
+   "nr": 14,
+   "slug": "kontroll-og-konstitusjon",
+   "navn": "Kontroll og konstitusjon",
+   "navn_kilde": "Kontroll og konstitusjon",
+   "dekker": "",
+   "retning": "utgift",
+   "gul_bok": 947147,
+   "avvik": {
+    "frp": -18000,
+    "hoyre": -24471,
+    "sv": 0,
+    "rodt": 0,
+    "mdg": 0,
+    "krf": 0,
+    "venstre": -34400
+   },
+   "flertall": -8000
+  },
+  {
+   "nr": 15,
+   "slug": "helse",
+   "navn": "Helse",
+   "navn_kilde": "Helse",
+   "dekker": "",
+   "retning": "utgift",
+   "gul_bok": 299975220,
+   "avvik": {
+    "frp": 5500504,
+    "hoyre": 865545,
+    "sv": 1255000,
+    "rodt": 6698700,
+    "mdg": 1710500,
+    "krf": 1925300,
+    "venstre": 1117662
+   },
+   "flertall": 459938
+  },
+  {
+   "nr": 16,
+   "slug": "utdanning-og-forskning",
+   "navn": "Utdanning og forskning",
+   "navn_kilde": "Utdanning og forskning",
+   "dekker": "",
+   "retning": "utgift",
+   "gul_bok": 95992769,
+   "avvik": {
+    "frp": -601025,
+    "hoyre": -790970,
+    "sv": 656200,
+    "rodt": 3271055,
+    "mdg": 1640900,
+    "krf": 1299100,
+    "venstre": 2635900
+   },
+   "flertall": 790660
+  },
+  {
+   "nr": 17,
+   "slug": "transport",
+   "navn": "Transport og kommunikasjon",
+   "navn_kilde": "Transport og kommunikasjon",
+   "dekker": "",
+   "retning": "utgift",
+   "gul_bok": 99522225,
+   "avvik": {
+    "frp": 5123300,
+    "hoyre": -497600,
+    "sv": -3187000,
+    "rodt": -3830650,
+    "mdg": 4931450,
+    "krf": -353000,
+    "venstre": -771000
+   },
+   "flertall": 383800
+  },
+  {
+   "nr": 18,
+   "slug": "kommunene",
+   "navn": "Kommunene",
+   "navn_kilde": "Rammeoverføringer til kommunesektoren mv.",
+   "dekker": "rammeoverføringer til kommuner og fylker",
+   "retning": "utgift",
+   "gul_bok": 273474209,
+   "avvik": {
+    "frp": 1207500,
+    "hoyre": 5137465,
+    "sv": 9888000,
+    "rodt": 11123570,
+    "mdg": 6800000,
+    "krf": 2849500,
+    "venstre": 6323123
+   },
+   "flertall": 5714700
+  },
+  {
+   "nr": 19,
+   "slug": "tilfeldige-utgifter",
+   "navn": "Tilfeldige utgifter og inntekter",
+   "navn_kilde": "Tilfeldige utgifter og inntekter",
+   "dekker": "reserve for uforutsette utgifter",
+   "retning": "netto",
+   "gul_bok": 5900000,
+   "avvik": {
+    "frp": -11300000,
+    "hoyre": -3900000,
+    "sv": 0,
+    "rodt": -3000,
+    "mdg": 0,
+    "krf": -3344000,
+    "venstre": -2195000
+   },
+   "flertall": 0
+  },
+  {
+   "nr": 20,
+   "slug": "stortinget-og-finans",
+   "navn": "Stortinget og finansadministrasjon",
+   "navn_kilde": "Stortinget, finansadministrasjon mv.",
+   "dekker": "",
+   "retning": "utgift",
+   "gul_bok": 45189427,
+   "avvik": {
+    "frp": 410000,
+    "hoyre": -335000,
+    "sv": 64500,
+    "rodt": 66880,
+    "mdg": 182000,
+    "krf": -330000,
+    "venstre": -561000
+   },
+   "flertall": 34000
+  },
+  {
+   "nr": 21,
+   "slug": "skatter-og-avgifter",
+   "navn": "Skatter og avgifter",
+   "navn_kilde": "Skatter og avgifter",
+   "dekker": "",
+   "retning": "skatt",
+   "gul_bok": -1862746244,
+   "avvik": {
+    "frp": 51436000,
+    "hoyre": 15754000,
+    "sv": -32299000,
+    "rodt": -28637000,
+    "mdg": -38082800,
+    "krf": -3379000,
+    "venstre": 6906500
+   },
+   "flertall": 54000
+  },
+  {
+   "nr": 22,
+   "slug": "utbytte",
+   "navn": "Utbytte fra statens selskaper",
+   "navn_kilde": "Utbytte mv.",
+   "dekker": "",
+   "retning": "inntekt",
+   "gul_bok": -67164254,
+   "avvik": {
+    "frp": -3200000,
+    "hoyre": -500000,
+    "sv": 0,
+    "rodt": -642000,
+    "mdg": 0,
+    "krf": -1100000,
+    "venstre": -500000
+   },
+   "flertall": 0
+  }
+ ],
+ "sum": {
+  "gul_bok": -69085194,
+  "avvik": {
+   "frp": 1684403,
+   "hoyre": -33000,
+   "sv": -16011127,
+   "rodt": 3690500,
+   "mdg": 51295411,
+   "krf": 518386,
+   "venstre": 3853
+  },
+  "flertall": 4403528
+ }
+}

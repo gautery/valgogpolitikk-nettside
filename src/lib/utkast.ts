@@ -5,6 +5,7 @@
 export const UTKAST = {
   trappa: true,
   statsbudsjett: true,
+  partibudsjett: true,
 } as const;
 
 // Før lansering er hele nettstedet en demo: utkast vises da i lister og menyer,
