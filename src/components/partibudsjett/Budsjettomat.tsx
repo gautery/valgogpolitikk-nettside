@@ -124,7 +124,21 @@ export default function Budsjettomat({ data }: { data: OmatData }) {
                 className={`rounded-md border border-black px-4 py-3 text-left ${FOKUS} ${paa ? "bg-black text-white" : "bg-white text-black hover:bg-surface"}`}
               >
                 <span className="block text-[16px] font-semibold">{o.tekst}</span>
-                <span className={`mt-0.5 block text-[13.5px] ${paa ? "text-white/80" : "text-text-muted"}`}>{o.pristekst}</span>
+                <span className={`mt-1 flex items-center gap-2 text-[13.5px] ${paa ? "text-white/85" : "text-text-muted"}`}>
+                  {o.verdi === 0 ? (
+                    <span aria-hidden="true" className="h-[10px] w-[10px] shrink-0 rounded-full bg-accent" />
+                  ) : o.pris !== 0 ? (
+                    <span
+                      aria-hidden="true"
+                      className={`flex h-[17px] w-[17px] shrink-0 items-center justify-center rounded-[3px] text-[13px] font-bold leading-none ${
+                        o.pris > 0 ? (paa ? "bg-white text-black" : "bg-black text-white") : paa ? "border border-white" : "border border-black text-black"
+                      }`}
+                    >
+                      {o.pris > 0 ? "+" : "−"}
+                    </span>
+                  ) : null}
+                  <span>{o.verdi === 0 ? "Regjeringens forslag" : o.pristekst}</span>
+                </span>
               </button>
             );
           })}
@@ -160,11 +174,13 @@ export default function Budsjettomat({ data }: { data: OmatData }) {
           )}
         </div>
 
-        <div className="mt-7 flex flex-wrap gap-2.5">
-          {steg > 0 && (
-            <button type="button" onClick={() => gaTil(steg - 1)} className={`${KNAPP} bg-white text-black hover:bg-surface`}>
+        <div className="sticky bottom-0 z-10 -mx-6 mt-7 flex items-center justify-between gap-3 border-t border-black bg-white px-6 py-3">
+          {steg > 0 ? (
+            <button type="button" onClick={() => gaTil(steg - 1)} className={`${KNAPP} bg-white px-4 text-black hover:bg-surface`}>
               Tilbake
             </button>
+          ) : (
+            <span />
           )}
           <button
             type="button"
@@ -267,11 +283,17 @@ export default function Budsjettomat({ data }: { data: OmatData }) {
         {rader.map((r) => (
           <li key={r.id} className="border-b border-border-light py-4">
             <div className="flex items-baseline justify-between gap-4">
-              <h4 className="font-display text-[19px] text-black">{r.navn}</h4>
+              <h4 className="flex items-center gap-2 font-display text-[19px] text-black">
+                {r.id === "ap" && <span aria-hidden="true" className="h-[10px] w-[10px] rounded-full bg-accent" />}
+                {r.navn}
+              </h4>
               <p className="text-[14.5px] font-semibold text-black">{Math.round(r.naerhet * 100)} prosent likt</p>
             </div>
             <div className="mt-2 h-[10px] w-full bg-surface" aria-hidden="true">
-              <div className="h-full rounded-r-[3px] bg-black" style={{ width: `${Math.round(r.naerhet * 100)}%` }} />
+              <div
+                className={`h-full rounded-r-[3px] ${r.id === "ap" ? "bg-accent" : "bg-black"}`}
+                style={{ width: `${Math.round(r.naerhet * 100)}%` }}
+              />
             </div>
             <details className="mt-2.5">
               <summary className={`cursor-pointer text-[14px] font-semibold text-black underline decoration-border-light underline-offset-[4px] ${FOKUS}`}>

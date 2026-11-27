@@ -70,6 +70,12 @@
      "pristekst": "Som regjeringen"
     },
     {
+     "verdi": 0.5,
+     "tekst": "Litt: rabatt for flere unge og gratis tannregulering for barn",
+     "pris": 1.2,
+     "pristekst": "Koster om lag 1,2 mrd. kroner"
+    },
+    {
      "verdi": 1,
      "tekst": "Ja, staten skal dekke mer for flere",
      "pris": 3.4,
@@ -143,10 +149,16 @@
      "pristekst": "Koster om lag 5 mrd. kroner"
     },
     {
-     "verdi": 1,
-     "tekst": "Ja, på all mat",
+     "verdi": 0.75,
+     "tekst": "Ja, ned til 10 prosent på all mat",
      "pris": 14.0,
-     "pristekst": "Koster om lag 14 mrd. kroner i året med 10 prosent moms"
+     "pristekst": "Koster om lag 14 mrd. kroner i året"
+    },
+    {
+     "verdi": 1,
+     "tekst": "Ja, halver den på all mat",
+     "pris": 16.0,
+     "pristekst": "Koster om lag 16 mrd. kroner i året"
     }
    ],
    "partier": {
@@ -156,7 +168,7 @@
      "kilde": "s. 62"
     },
     "rodt": {
-     "verdi": 1,
+     "verdi": 0.75,
      "tekst": "kutter momsen på all mat til 10 prosent fra 1. juli, som koster 7 mrd. kroner for et halvt år",
      "kilde": "s. 35–36"
     },
@@ -362,6 +374,12 @@
      "pristekst": "Koster om lag 10 mrd. kroner"
     },
     {
+     "verdi": -0.5,
+     "tekst": "Kutt den for dem som eier bedrifter",
+     "pris": 5.8,
+     "pristekst": "Koster om lag 6 mrd. kroner"
+    },
+    {
      "verdi": 0,
      "tekst": "Behold den som i dag",
      "pris": 0,
@@ -433,6 +451,12 @@
      "tekst": "Alle som jobber, like mye",
      "pris": 14.0,
      "pristekst": "Koster om lag 14 mrd. kroner"
+    },
+    {
+     "verdi": -0.5,
+     "tekst": "Alle som jobber, men mindre",
+     "pris": 7.5,
+     "pristekst": "Koster om lag 7,5 mrd. kroner"
     },
     {
      "verdi": 0,
@@ -660,8 +684,14 @@
      "pristekst": "Som regjeringen"
     },
     {
+     "verdi": 0.5,
+     "tekst": "Øk dem litt",
+     "pris": -3.4,
+     "pristekst": "Gir om lag 3 mrd. kroner"
+    },
+    {
      "verdi": 1,
-     "tekst": "Øk dem",
+     "tekst": "Øk dem mye",
      "pris": -6.0,
      "pristekst": "Gir om lag 6 mrd. kroner"
     }
@@ -952,6 +982,12 @@
      "pristekst": "Koster om lag 1 mrd. kroner"
     },
     {
+     "verdi": 0.75,
+     "tekst": "En god del mer",
+     "pris": 3.0,
+     "pristekst": "Koster om lag 3 mrd. kroner"
+    },
+    {
      "verdi": 1,
      "tekst": "Mye mer",
      "pris": 4.5,
@@ -1019,8 +1055,14 @@
      "pristekst": "Som regjeringen"
     },
     {
+     "verdi": 0.5,
+     "tekst": "Ja, der behovet er størst",
+     "pris": 0.2,
+     "pristekst": "Koster om lag 0,2 mrd. kroner"
+    },
+    {
      "verdi": 1,
-     "tekst": "Ja",
+     "tekst": "Ja, i alle barnehager",
      "pris": 1.3,
      "pristekst": "Koster om lag 1,3 mrd. kroner"
     }
@@ -1086,8 +1128,14 @@
      "pristekst": "Som regjeringen"
     },
     {
+     "verdi": 0.5,
+     "tekst": "Ja, som tilskudd til kommuner som vil",
+     "pris": 0.2,
+     "pristekst": "Koster om lag 0,2 mrd. kroner"
+    },
+    {
      "verdi": 1,
-     "tekst": "Ja",
+     "tekst": "Ja, gratis for alle på noen trinn",
      "pris": 0.45,
      "pristekst": "Koster om lag 0,4 mrd. kroner i første omgang"
     }

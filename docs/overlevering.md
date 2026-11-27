@@ -353,3 +353,8 @@ lønnsmottaker-sida og i budsjettomaten.
   med 8 000 kroner fra 1. mai (s. 12) og styrker kommunesektoren med 6 mrd. (s. 45–46).
 - **Ikke funnet:** barnetrygd, foreldrefradrag, barnehagepris, skolemat, utbytteskatt (står som «som regjeringen»)
   og kvoteflyktninger (står som ukjent, innvandringskapitlet er ikke lest).
+- **Lagt på demoen samme dag**, sammen med tre endringer Gaute ba om i budsjettomaten: flere svaralternativer
+  (åtte nye, alle knyttet til et partis forslag), regjeringens forslag merket med rosa prikk, og en fast knapperad
+  nederst så «Neste spørsmål» alltid er ett trykk unna. Prislappene har pluss for «koster» og minus for «sparer/gir».
+  Gaute foreslo grønt for mer forbruk og rødt for mindre. Claude valgte tegn i stedet, fordi grønt og rødt leses som
+  bra og dårlig, og fordi fargene er vanskelige for fargeblinde. Gaute har ikke tatt stilling til det ennå.
