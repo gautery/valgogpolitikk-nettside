@@ -177,6 +177,19 @@ export type Utforsk = {
   bakgrunn?: Bakgrunn;
 };
 
+/** Løfter fram én ting, f.eks. Grunnkurset: svart felt med overskrift, knapp og en nummerert liste. */
+export type Fremhevet = {
+  type: "fremhevet";
+  overskrift?: string;
+  tekst?: string;
+  /** Siden overskriften lenker til, f.eks. /grunnkurs-i-ulikhet. */
+  lenke?: string;
+  knapp?: string;
+  knappLenke?: string;
+  /** Lenkene i lista. En linje uten lenke blir en mellomtittel. */
+  lenker?: { tekst?: string; lenke?: string }[];
+};
+
 export type Samarbeid = {
   type: "samarbeid";
   overskrift?: string;
@@ -205,5 +218,6 @@ export type Kloss =
   | Nyhetsbrev
   | FeiringKloss
   | Samarbeid
+  | Fremhevet
   | Utforsk
   | OmMeg;

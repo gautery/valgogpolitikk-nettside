@@ -1,4 +1,6 @@
 meny:
+  - tekst: Grunnkurs
+    lenke: /grunnkurs-i-ulikhet
   - tekst: Analyser
     lenke: /analyser
   - tekst: Karuseller

@@ -120,6 +120,12 @@ function katalog(): Oppføring[] {
       kloss: { type: "siste_analyser", overskrift: "Analyser" },
     },
     {
+      navn: "Fremhevet",
+      bruk: "Løfter fram én ting, f.eks. Grunnkurset. Svart felt med knapp og en nummerert liste.",
+      felt: "Overskrift, tekst, lenke, knapp, liste (linje uten lenke blir mellomtittel)",
+      kloss: forside.find((k) => k.type === "fremhevet") ?? { type: "fremhevet" as const },
+    },
+    {
       navn: "Utforsk",
       bruk: "Snarveier til Trappa, Statsbudsjettet, temasidene, Kilder og Om. Oppdateres av seg selv.",
       felt: "Overskrift, bakgrunn",

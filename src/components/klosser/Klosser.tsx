@@ -26,7 +26,15 @@ export type KlossKontekst = {
   visUtkast?: boolean;
   /** Siden er et utkast: vis plassholdere der noe mangler (f.eks. bilde). */
   utkastSide?: boolean;
+  /** Sider som alt er løftet fram på samme side, og derfor ikke gjentas i «Utforsk». */
+  fremhevet?: string[];
 };
+
+// «/grunnkurs-i-ulikhet» → siden i content/sider, hvis lenken går dit.
+function sideFraLenke(lenke?: string) {
+  const slug = (lenke ?? "").trim().replace(/^\//, "").replace(/\/$/, "");
+  return slug && !slug.includes("/") ? lesSide(slug) : null;
+}
 
 const MND = ["jan", "feb", "mar", "apr", "mai", "jun", "jul", "aug", "sep", "okt", "nov", "des"];
 function datoTekst(iso: string) {
@@ -606,6 +614,82 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
       );
     }
 
+    case "fremhevet": {
+      const side = sideFraLenke(kloss.lenke);
+      const utkast = side?.utkast === true;
+      // Etter lansering vises ikke et felt som peker på en side som fortsatt er utkast.
+      if (utkast && !DEMO && !ktx.visUtkast) return null;
+      if (!kloss.overskrift) return null;
+      const rader = (kloss.lenker ?? []).filter((l) => l?.tekst?.trim());
+      // Mellomtitler deler lista i grupper. Tallene løper videre fra gruppe til gruppe.
+      const grupper: { tittel?: string; punkter: { nr: number; tekst: string; lenke: string }[] }[] = [];
+      let nr = 0;
+      for (const r of rader) {
+        if (!r.lenke?.trim()) {
+          grupper.push({ tittel: r.tekst, punkter: [] });
+          continue;
+        }
+        if (grupper.length === 0) grupper.push({ punkter: [] });
+        nr += 1;
+        grupper[grupper.length - 1].punkter.push({ nr, tekst: r.tekst!, lenke: r.lenke.trim() });
+      }
+      const fokus = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-rosa";
+      return (
+        <section className="bg-black px-6 py-14 text-white md:py-20">
+          <div className="mx-auto grid max-w-[1100px] gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
+            <div>
+              <h2 className="font-display text-[38px] leading-[1.02] sm:text-[48px]">
+                {kloss.lenke ? (
+                  <Link href={kloss.lenke} className={`underline-offset-[6px] hover:underline ${fokus}`}>
+                    {kloss.overskrift}
+                  </Link>
+                ) : (
+                  kloss.overskrift
+                )}
+              </h2>
+              {utkast && (
+                <span className="mt-4 inline-block rounded bg-amber-100 px-1.5 py-0.5 text-[13px] text-amber-900">Utkast</span>
+              )}
+              {kloss.tekst && <p className="mt-5 max-w-[440px] text-[18px] leading-[1.55] text-white/85">{kloss.tekst}</p>}
+              {kloss.knapp && kloss.knappLenke && (
+                <Link
+                  href={kloss.knappLenke}
+                  className={`mt-8 inline-block rounded-[6px] bg-rosa px-6 py-3.5 text-[16px] font-semibold text-black hover:bg-white ${fokus}`}
+                  data-umami-event="forside-fremhevet-knapp"
+                >
+                  {kloss.knapp}
+                </Link>
+              )}
+            </div>
+            {grupper.length > 0 && (
+              <div className="grid gap-10 sm:grid-cols-2 sm:gap-8">
+                {grupper.map((g, i) => (
+                  <div key={i}>
+                    {g.tittel && <h3 className="mb-1 text-[15px] font-semibold text-rosa">{g.tittel}</h3>}
+                    <ol>
+                      {g.punkter.map((p) => (
+                        <li key={p.lenke} className="border-t border-white/25 last:border-b">
+                          <Link href={p.lenke} className={`group flex gap-4 py-4 ${fokus}`}>
+                            <span aria-hidden="true" className="font-display w-7 shrink-0 text-[22px] leading-[1.25] tabular-nums text-rosa">
+                              {p.nr}
+                            </span>
+                            <span className="text-[17px] font-semibold leading-snug group-hover:underline group-hover:underline-offset-4">
+                              <span className="sr-only">{p.nr}. </span>
+                              {p.tekst}
+                            </span>
+                          </Link>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+      );
+    }
+
     case "utforsk": {
       const tema = hentAlleTema().filter((t) => DEMO || !t.utkast);
       type Punkt = { tittel: string; tekst: string; href: string; utkast?: boolean };
@@ -619,7 +703,7 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
         { tittel: "Nytt fra kildene", tekst: "Rapporter og tall fra SSB, regjeringen, Stortinget og andre.", href: "/kilder" },
         { tittel: "Om valgogpolitikk", tekst: "Hvem som står bak, og hvordan jeg jobber med kildene.", href: "/om", utkast: lesSide("om")?.utkast },
       ];
-      const punkter = alle.filter((p) => DEMO || !p.utkast);
+      const punkter = alle.filter((p) => (DEMO || !p.utkast) && !ktx.fremhevet?.includes(p.href));
       return (
         <Seksjon bakgrunn={kloss.bakgrunn}>
           <Overskrift>{kloss.overskrift || "Utforsk"}</Overskrift>
@@ -674,10 +758,12 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
 }
 
 export default function Klosser({ seksjoner, ktx = {} }: { seksjoner: Kloss[]; ktx?: KlossKontekst }) {
+  const fremhevet = seksjoner.flatMap((k) => (k.type === "fremhevet" && k.lenke ? [k.lenke.trim()] : []));
+  const medFremhevet = { ...ktx, fremhevet };
   return (
     <>
       {seksjoner.map((k, i) => (
-        <EnKloss key={i} kloss={k} ktx={ktx} />
+        <EnKloss key={i} kloss={k} ktx={medFremhevet} />
       ))}
     </>
   );

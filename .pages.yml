@@ -862,6 +862,41 @@ components:
         label: Kildebånd (Utvalgt og Løpende)
         fields: []
 
+      - name: fremhevet
+        label: Fremhevet (svart felt med nummerert liste, f.eks. Grunnkurset)
+        fields:
+          - name: overskrift
+            label: Overskrift
+            type: string
+          - name: tekst
+            label: Tekst under overskriften
+            type: text
+          - name: lenke
+            label: Siden overskriften lenker til
+            description: F.eks. /grunnkurs-i-ulikhet. Er den siden et utkast, vises ikke feltet etter lansering.
+            type: string
+          - name: knapp
+            label: Knappetekst
+            type: string
+          - name: knappLenke
+            label: Lenke for knappen
+            type: string
+          - name: lenker
+            label: Liste
+            description: Hver linje med lenke får et tall. En linje uten lenke blir en mellomtittel.
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{tekst}"
+            fields:
+              - name: tekst
+                label: Tekst
+                type: string
+              - name: lenke
+                label: Lenke (tom for mellomtittel)
+                type: string
+
       - name: utforsk
         label: Utforsk (snarveier til verktøy, tema, kilder og om)
         fields:
