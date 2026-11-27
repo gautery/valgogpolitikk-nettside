@@ -9,8 +9,7 @@ seksjoner:
     tittel: Har inntektsulikheten i Norge økt?
     ingress: Andelen de rikeste tjente gikk ned og ned i nesten 100 år etter
       demokratiseringen av Norge, men fra 90-tallet av så har den steget
-      dramatisk. Nå er vi tilbake til omtrent samme nivå som for hundre år
-      siden.
+      dramatisk. Nå er vi tilbake til omtrent samme nivå som på 1880-tallet.
     bokrygger: false
     konfetti: false
     farge: mork
