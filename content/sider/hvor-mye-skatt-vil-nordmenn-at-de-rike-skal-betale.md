@@ -1,5 +1,5 @@
 ---
-tittel: Hvor mye skatt vil nordmenn at de rike skal betale?
+tittel: Hvor mye skatt vil nordmenn at folk med forskjellige inntekter skal betale?
 beskrivelse: "Nordmenn har fått sette skattesatsen selv, for inntekter fra 100
   000 kroner til 100 millioner. Svaret er tydelig: jo mer du tjener, jo større
   andel bør du betale."
@@ -17,22 +17,20 @@ seksjoner:
       En ting er veldig tydelig: nordmenn ønsker at de rikeste skal betale
       høyest andel skatt. 
     bokrygger: true
+    konfetti: false
     farge: mork
   - type: tekst
     overskrift: Et enkelt spørsmål
-    tekst: >+
+    tekst: >-
       I 2020 fikk et representativt utvalg nordmenn i Norsk medborgerpanel en
       oppgave: sett skattesatsen for ti personer med inntekter fra 100 000
       kroner til 100 millioner kroner i året.
 
 
       Hvor stor del av inntekten bør hver av dem betale i skatt?
-
     bakgrunn: hvit
   - type: tekst
     overskrift: Nordmenn flest ønsker høyest skatt på de rikeste
-    graf: https://datawrapper.dwcdn.net/Xplnc/
-    grafBeskrivelse: Søylediagram med ti inntekter fra 100 000 kroner til 100 millioner kroner i året. Skattesatsen folk ønsker stiger jevnt fra 6 prosent til 48 prosent.
     tekst: >-
       Det grafene viser er at nordmenn i snitt ønsker et såkalt progressivt
       skattesystem, at de som har minst betaler veldig lite i skatt, mens de som
@@ -55,11 +53,13 @@ seksjoner:
       nordmenn at en som tjener 5 millioner bør betale mindre enn en som tjener
       100 millioner. Per i dag har vi ingen mekanisme i skattesystemet for å
       sørge for dette.
+    graf: https://datawrapper.dwcdn.net/Xplnc/
+    grafBeskrivelse: Søylediagram med ti inntekter fra 100 000 kroner til 100
+      millioner kroner i året. Skattesatsen folk ønsker stiger jevnt fra 6
+      prosent til 48 prosent.
     bakgrunn: lys
   - type: tekst
     overskrift: Det gjelder velgere i alle partier
-    graf: https://datawrapper.dwcdn.net/Oo9nN/
-    grafBeskrivelse: Liggende søylediagram med ni partier. Rødt-velgerne ønsker høyest skattesats, 65,7 prosent, og Høyre-velgerne lavest, 42,6 prosent.
     tekst: >-
       Her kommer vi inn i noe som jeg syns er veldig spennende: ønsket om at det
       er de rikeste som skal betale mest er ikke bare et ønske fra venstresida.
@@ -69,14 +69,15 @@ seksjoner:
 
       Forskjellene går i hovedsak på hvor høy andel skatt man vil at de aller
       rikeste skal betale: Rødt-velgerne vil at den som tjener 100 millioner
-      skal betale 65,7 prosent. Høyre-velgerne vil ha lavest sats, med 42,6
-      prosent, mens FrP-velgerne i snitt vil ha 44,5 prosent for de aller
-      rikeste.
+      skal betale 65,7 prosent. Høyre-velgerne vil ha lavest sats for de
+      rikeste, med 42,6 prosent, mens FrP-velgerne i snitt vil ha 44,5 prosent
+      for de aller rikeste.
+    graf: https://datawrapper.dwcdn.net/Oo9nN/
+    grafBeskrivelse: Liggende søylediagram med ni partier. Rødt-velgerne ønsker
+      høyest skattesats, 65,7 prosent, og Høyre-velgerne lavest, 42,6 prosent.
     bakgrunn: hvit
   - type: tekst
     overskrift: ...og hva betaler faktisk forskjellige inntektsgrupper i skatt?
-    knapp: Gå til neste leksjon
-    knappLenke: /skatt-etter-inntekt-i-norge
     tekst: >-
       Velgerne til alle partiene er altså for progressiv beskatning: at de rike
       skal betale den høyeste andelen. Da blir det jo veldig spennende å se om
@@ -84,6 +85,8 @@ seksjoner:
 
 
       Det er neste leksjon i grunnkurset ->
+    knapp: Gå til neste leksjon
+    knappLenke: /skatt-etter-inntekt-i-norge
     bakgrunn: lys
   - type: tekst
     overskrift: Kildene
@@ -95,9 +98,13 @@ seksjoner:
     bakgrunn: hvit
   - type: tekst
     overskrift: Videre i serien
-    tekst: |-
+    tekst: >+
       - Forrige: [Har formuesulikheten i Norge økt?](/har-formuesulikheten-okt)
-      - Neste: [Hvor mye skatt betaler vi faktisk i Norge?](/skatt-etter-inntekt-i-norge)
+
+      - Neste: [Hvor mye skatt betaler vi faktisk i
+      Norge?](/skatt-etter-inntekt-i-norge)
+
       - [Alle leksjonene i Grunnkurs i ulikhet](/grunnkurs-i-ulikhet)
+
     bakgrunn: lys
 ---
