@@ -180,7 +180,8 @@
     "venstre": {
      "verdi": 0.5,
      "tekst": "fjerner momsen på frukt og grønt (4,4 mrd. kroner) og setter full moms på kjøtt (3,2 mrd. kroner tilbake)",
-     "kilde": "s. 29 og 64"
+     "kilde": "s. 29 og 64",
+     "forbehold": "Venstre setter samtidig full moms på kjøtt."
     },
     "sv": {
      "verdi": 0,
@@ -243,7 +244,8 @@
     "venstre": {
      "verdi": -1,
      "tekst": "øker prisen til 1 500 kroner, gir gratis plass til familier som tjener under 800 000 kroner og bruker pengene på flere ansatte",
-     "kilde": "s. 18 og 98"
+     "kilde": "s. 18 og 98",
+     "forbehold": "Venstre bruker prisøkningen på flere ansatte."
     },
     "krf": {
      "verdi": -0.5,
@@ -317,7 +319,8 @@
     "frp": {
      "verdi": -1,
      "tekst": "kutter om lag 15,6 mrd. kroner og vil ha et tak på 0,7 prosent",
-     "kilde": "s. 50"
+     "kilde": "s. 50",
+     "forbehold": "FrP øker samtidig nødhjelpen med 2,5 mrd. kroner."
     },
     "hoyre": {
      "verdi": -0.5,
@@ -416,7 +419,8 @@
     "mdg": {
      "verdi": 0,
      "tekst": "hever bunnfradraget til 8 mill. kroner, men øker satsene over 100 mill. kroner og fjerner rabattene. Samlet tar MDG inn mindre i formuesskatt og innfører en nasjonal eiendomsskatt på næringseiendom",
-     "kilde": "s. 7, 60 og 75"
+     "kilde": "s. 7, 60 og 75",
+     "forbehold": "MDG kutter for de fleste, men øker satsene for formuer over 100 mill. kroner."
     },
     "sv": {
      "verdi": 1,
@@ -475,12 +479,14 @@
     "hoyre": {
      "verdi": -1,
      "tekst": "gir alle i arbeid 7 700 kroner i lavere skatt (21,2 mrd. kroner), men går imot regjeringens egen lettelse",
-     "kilde": "s. 9–10"
+     "kilde": "s. 9–10",
+     "forbehold": "Høyre går samtidig imot regjeringens egen skattelette."
     },
     "krf": {
      "verdi": -0.5,
      "tekst": "gir alle i arbeid et fradrag verdt 2 794 kroner, men går imot regjeringens egen lettelse",
-     "kilde": "s. 21"
+     "kilde": "s. 21",
+     "forbehold": "KrF går samtidig imot regjeringens egen skattelette."
     },
     "venstre": {
      "verdi": -1,
@@ -705,7 +711,8 @@
     "krf": {
      "verdi": -0.5,
      "tekst": "fjerner veibruksavgiften på bensin til 1. april",
-     "kilde": "s. 21"
+     "kilde": "s. 21",
+     "forbehold": "KrF fjerner veibruksavgiften på bensin bare fram til 1. april."
     },
     "venstre": {
      "verdi": 1,
@@ -715,7 +722,8 @@
     "sp": {
      "verdi": -1,
      "tekst": "fjerner veibruksavgiften på bensin til 1. juli og går imot økningen i CO2-avgiften",
-     "kilde": "s. 13 og 63"
+     "kilde": "s. 13 og 63",
+     "forbehold": "Sp fjerner veibruksavgiften på bensin bare fram til 1. juli."
     },
     "mdg": {
      "verdi": 1,
@@ -730,7 +738,8 @@
     "rodt": {
      "verdi": -0.5,
      "tekst": "kutter veibruksavgiften, men øker CO2-avgiften. Partiet sier pumpeprisen blir om lag 1,70 kroner lavere",
-     "kilde": "s. 38–39"
+     "kilde": "s. 38–39",
+     "forbehold": "Rødt kutter veibruksavgiften, men øker CO2-avgiften."
     },
     "frp": {
      "verdi": -1,
@@ -793,12 +802,14 @@
     "mdg": {
      "verdi": 1,
      "tekst": "bytter ut Norgespris med en strømbonus og bruker 7,5 mrd. kroner mer enn regjeringen",
-     "kilde": "s. 4 og 10"
+     "kilde": "s. 4 og 10",
+     "forbehold": "MDG vil bytte ut Norgespris med en strømbonus."
     },
     "sv": {
      "verdi": 0.5,
      "tekst": "øker prisen bare med prisstigningen, og dekker mindre av forbruket",
-     "kilde": "s. 5"
+     "kilde": "s. 5",
+     "forbehold": "SV vil også dekke mindre av forbruket."
     },
     "rodt": {
      "verdi": 1,

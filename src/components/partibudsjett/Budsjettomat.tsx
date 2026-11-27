@@ -7,7 +7,7 @@ import { useRef, useState } from "react";
 // scripts/budsjettomat/bygg.py. «verdi» går fra −1 til 1, der 0 er regjeringens forslag.
 
 type Valg = { verdi: number; tekst: string; pris: number; pristekst: string };
-type Plassering = { verdi: number | null; tekst: string; kilde?: string };
+type Plassering = { verdi: number | null; tekst: string; kilde?: string; forbehold?: string };
 export type Sporsmal = {
   id: string;
   tittel: string;
@@ -109,6 +109,9 @@ export default function Budsjettomat({ data }: { data: OmatData }) {
       else mellom.push(p.navn);
     }
     const liste = (a: string[]) => a.join(", ").replace(/, ([^,]*)$/, " og $1");
+    // Partier som bare delvis passer med valget de står på, får en stjerne og én linje med forbeholdet.
+    const forbehold = data.partier.filter((p) => q.partier[p.id].forbehold);
+    const stjerne = (navn: string) => (forbehold.some((p) => p.navn === navn) ? `${navn}*` : navn);
     const mine = v ? [...(v.verdi === 0 ? ["regjeringen"] : []), ...hvem[svar[steg] as number]] : [];
 
     return (
@@ -160,7 +163,7 @@ export default function Budsjettomat({ data }: { data: OmatData }) {
                         key={navn}
                         className={`rounded-[3px] border px-1.5 py-0.5 text-[12.5px] font-semibold leading-tight ${paa ? "border-white/70 text-white" : "border-black text-black"}`}
                       >
-                        {navn}
+                        {stjerne(navn)}
                       </span>
                     ))}
                   </span>
@@ -170,16 +173,26 @@ export default function Budsjettomat({ data }: { data: OmatData }) {
           })}
         </div>
 
-        {v && mellom.length > 0 && (
-          <p className="mt-3 text-[14px] text-text-secondary">
-            <strong className="font-semibold text-black">Mellom to av valgene:</strong> {liste(mellom)}.
-          </p>
-        )}
+        <div aria-live="polite">
+          {v && mellom.length > 0 && (
+            <p className="mt-3 text-[14px] leading-relaxed text-text-secondary">
+              <strong className="font-semibold text-black">Mellom to av valgene:</strong> {liste(mellom.map(stjerne))}.
+            </p>
+          )}
+          {v &&
+            forbehold.map((p) => (
+              <p key={p.id} className="mt-1.5 text-[14px] leading-relaxed text-text-secondary">
+                * {q.partier[p.id].forbehold}
+              </p>
+            ))}
+        </div>
 
-        <div aria-live="polite" className="mt-7">
+        <div className="mt-6">
           {v && (
-            <div className="border-t border-black pt-5">
-              <h3 className="mb-3 font-display text-[19px] text-black">Dette foreslår partiene</h3>
+            <details className="border-t border-black pt-4">
+              <summary className={`mb-3 cursor-pointer text-[15px] font-semibold text-black underline decoration-border-light underline-offset-[4px] ${FOKUS}`}>
+                Les hva partiene foreslår
+              </summary>
               {v.pris !== 0 && perInnbygger > 0 && (
                 <p className="mb-4 text-[14.5px] text-text-secondary">
                   Det er om lag {perInnbygger.toLocaleString("nb-NO")} kroner per innbygger.
@@ -203,7 +216,7 @@ export default function Budsjettomat({ data }: { data: OmatData }) {
                   {ukjent.map((p) => p.navn).join(", ")}.
                 </p>
               )}
-            </div>
+            </details>
           )}
         </div>
 
