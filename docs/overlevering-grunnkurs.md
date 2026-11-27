@@ -213,3 +213,21 @@ det røpes til slutt, som en bro til teksten «nå kan du nok til å irritere de
 - **Test:** `python3 /home/claude/skript/test_quiz.py <adresse> <mappe>` går gjennom 5, 0, 4 og 3 rette,
   hopp over og tastatur.
 
+### Quizen spisset mot påstander som faktisk blir sagt (27. november, kveld)
+
+Gaute ville ha påstander som brukes i norsk offentlighet. Seks står igjen:
+
+- **«Ulikheten i Norge er stabilt lav …»:** Henrik Asheim (H), Stortinget 28. mai 2019, debatten om Meld. St. 13
+  (2018–2019). Samme innlegg nevner «et progressivt skattesystem» som første grunn.
+- **«Eierne betaler over 50 prosent i skatt»:** Menon-rapporten for NHO (2024) oppga 51,5 prosent som effektiv
+  gjennomsnittsskatt, ifølge Bjerksund, Schjelderup og Zoutman i DN («Graverende feil i NHO sin skatterapport»).
+- **Formuesskatten og andre land:** Mathilde Fasting (Civita) i Altinget 2022: med formuesskatten på
+  næringskapital «topper Norge skalaen». Gautes egen formulering er beholdt.
+- **Velgerne og småpengene:** ikke kildebelagt. Gaute er sikker på at mange tror dette, og vil ha dem med.
+  Forklaringen til småpengene er hans egen tekst.
+- **Tatt ut:** leger og advokater, bolig og bank (Claudes utkast uten kilde), og «formuesulikheten har ikke økt»
+  (Mæland og Thorburn i DN, juni 2026), som Gaute ikke ville ha med.
+- **Ikke brukt:** FrPs Dok. 8:196 S (2020–2021) om at formuesskatten favoriserer utenlandske eiere. Kurset
+  tilbakeviser ikke det.
+- **Ikke avklart:** om quizen skal vise «Sagt av …» med lenke etter hvert svar. Navn står ikke i quizen nå.
+
