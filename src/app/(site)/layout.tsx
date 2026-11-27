@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import TestBanner from "@/components/TestBanner";
 import { lesInnstillinger } from "@/lib/sider";
 
 export default function SiteLayout({
@@ -16,7 +15,6 @@ export default function SiteLayout({
       >
         Hopp til innholdet
       </a>
-      <TestBanner />
       <Header meny={lesInnstillinger().meny} />
       <main id="innhold" tabIndex={-1} className="outline-none">
         {children}

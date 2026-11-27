@@ -16,7 +16,7 @@ export default function Footer() {
               <span className="font-display text-[17px] text-text-primary">valg og politikk</span>
             </div>
             {bunntekst.beskrivelse && (
-              <p className="max-w-xs text-xs leading-relaxed text-text-muted">{bunntekst.beskrivelse}</p>
+              <p className="max-w-xs text-[14px] leading-relaxed text-text-muted">{bunntekst.beskrivelse}</p>
             )}
           </div>
 
@@ -25,22 +25,22 @@ export default function Footer() {
             <div className="flex gap-12">
               {bunntekst.grupper.map((g) => (
                 <div key={g.overskrift}>
-                  <div className="mb-3 text-[11px] font-semibold text-text-muted">
+                  <div className="mb-3 text-[13px] font-semibold text-text-muted">
                     {g.overskrift}
                   </div>
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-2.5">
                     {g.lenker.map((l) =>
                       l.lenke ? (
                         <a
                           key={l.tekst}
                           href={l.lenke}
                           {...(erEkstern(l.lenke) ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                          className="text-xs text-text-secondary hover:text-accent transition-colors"
+                          className="text-[14px] text-text-primary underline-offset-4 hover:underline"
                         >
                           {l.tekst}
                         </a>
                       ) : (
-                        <span key={l.tekst} className="text-xs text-text-secondary">
+                        <span key={l.tekst} className="text-[14px] text-text-secondary">
                           {l.tekst}
                         </span>
                       )

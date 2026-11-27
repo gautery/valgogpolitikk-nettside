@@ -6,7 +6,7 @@ export const contentType = delingsType;
 
 export default function Bilde() {
   return lagDelingsbilde({
-    tittel: "Tall. Kilder. Analyse.",
-    undertekst: "Datadrevet analyse av norsk politikk: skatt, arbeid, ulikhet og velferd.",
+    tittel: "Norsk politikk med tall og kilder",
+    undertekst: "Analyser av norsk politikk, i hovedsak skatt, ulikhet og velferd.",
   });
 }

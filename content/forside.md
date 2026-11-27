@@ -38,10 +38,6 @@ seksjoner:
   - type: karuseller
     overskrift: Karusellene
     bakgrunn: hvit
-  - type: siste_analyser
-    overskrift: Siste analyser
-    antall: 3
-    bakgrunn: hvit
   - type: utforsk
     overskrift: Utforsk
     bakgrunn: hvit

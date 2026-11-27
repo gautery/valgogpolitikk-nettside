@@ -246,17 +246,28 @@ Gaute ba om at forsiden kobles til Grunnkurset og det andre som er ferdig. Ligge
 - «Utforsk» gjentar ikke sider som er løftet fram. «Grunnkurs» står først i menyen.
 - Be Gaute laste Pages CMS på nytt før han redigerer forsiden.
 
-**Dette gjenstår før forsiden ser ferdig ut** (forslag, Gaute har ikke svart):
+**Ryddet 27. november, etter at Gaute sa ja** (ligger på demoen):
+
+- TestBanner er slettet. «Siste analyser» er tatt ut av forsiden og «Analyser» ut av menyen.
+  Eksempelinnleggene ligger fortsatt på /analyser og /innlegg/…, men er skjult for søkemotorer.
+- Bunnteksten: «OECD, SSB, Eurostat» er byttet ut med lenker til Grunnkurs, Karuseller, Kilder og Om
+  (`content/innstillinger.yml`, redigeres i Pages CMS under Innstillinger). Teksten er gjort større.
+- Sidetittel, beskrivelse og delingsbilde bruker Gautes egen tekst fra toppfeltet (`src/app/layout.tsx`,
+  `src/app/opengraph-image.tsx`).
+- `src/app/sitemap.ts` lister bare sider som ikke er utkast, så sider kommer med av seg selv når
+  «Utkast» fjernes. `src/app/robots.ts` peker på nettstedskartet.
+- `next.config.ts` setter `X-Robots-Tag: noindex` på alle vercel.app-adresser, også etter lansering.
+- Lange ord i karuselltitlene deles, så forsiden og /karuseller holder 320 piksler.
+
+**Dette gjenstår før forsiden ser ferdig ut:**
 
 1. Gaute må si hvilke sider som er godkjent. Etter lansering skjules alt som er utkast, og da står forsiden igjen
-   med toppfelt, «Nytt fra kildene» og «Samarbeid og tips».
-2. TestBanner og «Siste analyser» (eksempelinnlegg fra mars) ut, og «Analyser» ut av menyen.
+   med toppfelt, «Nytt fra kildene» og «Samarbeid og tips». Nettstedskartet har nå bare forsiden og /kilder.
+2. «Til deg, Gaute»-notatet i leksjon 6 må slettes før kurset kan miste utkast-merket.
 3. Påmelding til nyhetsbrev på forsiden (klossen `nyhetsbrev` finnes). Krever Beehiiv-nøklene i Vercel.
-4. post@valgogpolitikk.no må finnes før «Send en melding» virker.
-5. Bunnteksten: «OECD, SSB, Eurostat» står som tekst uten lenker.
-6. Søk og deling: sidetittel og beskrivelse i `src/app/layout.tsx` er fra prototypen, og demoen har verken
-   `sitemap.xml` eller `robots.txt`. Forsiden på vercel.app-adressen er ikke skjult for søkemotorer.
-7. På 320 piksler er forsiden fortsatt seks piksler for bred.
+4. E-post: knappen «Send en melding» peker på post@valgogpolitikk.no, som ikke finnes ennå. Gaute har en
+   Proton-konto og vurderer en valgogpolitikk-adresse der, eller videresending fra post@ (MX- og TXT-poster
+   i Flux hos Gigahost). Adressen byttes i Pages CMS: Forsiden → Samarbeid og tips.
 
 ## Partienes alternative budsjetter (utkast, 27. november)
 

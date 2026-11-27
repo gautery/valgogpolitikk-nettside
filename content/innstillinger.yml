@@ -1,8 +1,6 @@
 meny:
   - tekst: Grunnkurs
     lenke: /grunnkurs-i-ulikhet
-  - tekst: Analyser
-    lenke: /analyser
   - tekst: Karuseller
     lenke: /karuseller
   - tekst: Kilder
@@ -16,17 +14,22 @@ meny:
 bunntekst:
   beskrivelse: Datadrevet analyse av norsk politikk.
   grupper:
+    - overskrift: Innhold
+      lenker:
+        - tekst: Grunnkurs i ulikhet
+          lenke: /grunnkurs-i-ulikhet
+        - tekst: Karuseller
+          lenke: /karuseller
+        - tekst: Kilder
+          lenke: /kilder
+        - tekst: Om
+          lenke: /om
     - overskrift: Følg oss
       lenker:
         - tekst: Instagram
           lenke: https://instagram.com/valgogpolitikk
         - tekst: TikTok
           lenke: https://tiktok.com/@valgogpolitikk
-    - overskrift: Kilder
-      lenker:
-        - tekst: OECD
-        - tekst: SSB
-        - tekst: Eurostat
 om:
   tittel: Om @valgogpolitikk
   tekst: Analyser av norsk politikk. Tar utgangspunkt i offentlig tilgjengelig

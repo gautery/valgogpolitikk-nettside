@@ -371,7 +371,7 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
                   ) : (
                     <div className="aspect-[4/5] rounded-[10px] bg-surface" />
                   )}
-                  <div className="mt-3 text-[17px] font-extrabold leading-snug tracking-[-0.01em] text-black group-hover:underline">
+                  <div className="mt-3 hyphens-auto break-words text-[17px] font-extrabold leading-snug tracking-[-0.01em] text-black group-hover:underline">
                     {o.tittel}
                   </div>
                   <div className="mt-1 text-[13.5px] text-text-muted">
@@ -409,7 +409,7 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
                       className="w-full rounded-[10px]"
                     />
                   )}
-                  <div className="mt-3 text-[17px] font-extrabold leading-snug tracking-[-0.01em] text-black group-hover:underline">{s.tittel}</div>
+                  <div className="mt-3 hyphens-auto break-words text-[17px] font-extrabold leading-snug tracking-[-0.01em] text-black group-hover:underline">{s.tittel}</div>
                   <div className="mt-1 text-[13.5px] text-text-muted">
                     Med forklaringer
                     {s.utkast && <span className="ml-2 rounded bg-amber-100 px-1.5 py-0.5 text-amber-900">Utkast</span>}

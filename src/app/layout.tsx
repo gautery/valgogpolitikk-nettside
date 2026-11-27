@@ -13,13 +13,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   // Gjør adressene til delingsbilder o.l. fullstendige (https://www.valgogpolitikk.no/...).
   metadataBase: new URL("https://www.valgogpolitikk.no"),
-  title: "valg og politikk — Tall. Kilder. Analyse.",
+  title: "valg og politikk — Norsk politikk med tall og kilder",
   description:
-    "Datadrevet analyse av norsk politikk. Skatt, arbeid, ulikhet og velferd med OECD, SSB og Eurostat som kilde.",
+    "Analyser av norsk politikk, i hovedsak skatt, ulikhet og velferd. Jeg leser rapportene slik at du slipper.",
   openGraph: {
     title: "valg og politikk",
-    description:
-      "Datadrevet analyse av norsk politikk med tall og kilder.",
+    description: "Norsk politikk med tall og kilder: skatt, ulikhet og velferd.",
     type: "website",
   },
 };

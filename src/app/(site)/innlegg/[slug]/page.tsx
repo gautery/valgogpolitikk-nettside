@@ -5,6 +5,7 @@ import { getAllSlugs, getPostBySlug } from "@/lib/posts";
 import { mdxComponents } from "@/components/MdxComponents";
 import { CATEGORIES } from "@/types/post";
 import type { Metadata } from "next";
+import { SKJULT_FOR_SOK } from "@/lib/utkast";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -21,6 +22,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${post.title} — valg og politikk`,
     description: post.summary,
+    // Eksempelinnlegg fra prototypen: skjult for søkemotorer til Gaute har lagt inn egne tekster.
+    robots: SKJULT_FOR_SOK,
     openGraph: {
       title: post.title,
       description: post.summary,
