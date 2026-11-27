@@ -1,0 +1,33 @@
+{
+ "forbruk": {
+  "kilde": "SSB, forbruksundersøkelsen 2022, tabell 14152, aleneboende. Beløpene er i 2022-kroner.",
+  "mat_og_drikke": 40146, "kjott": 6302, "frukt_og_gront": 7495, "sukkervarer": 3548, "brus": 1712,
+  "bil_km": 12000, "bil_liter_per_mil": 0.7
+ },
+ "grunnlag": {
+  "matmoms": 0.15, "fagforeningsfradrag": 8700,
+  "kilde": "Fagforeningsfradraget: Finansdepartementets satstabell for 2026. CO2-avgiften på bensin i regjeringens forslag er 3,77 kr per liter (Innst. 3 S (2025–2026)), som tilsvarer 1 625 kr per tonn."
+ },
+ "partier": {
+  "frp": {"matmoms_alle": 0.075, "bensin_kr_per_liter": -3.00, "bensin_sikkerhet": "partiets tall", "fagforeningsfradrag": 0,
+          "kilde": "FrPs alternative statsbudsjett 2026, s. 9–10 og 46",
+          "merknad": "FrP halverer matmomsen fra 1. april. Her vises virkningen for et helt år. FrP vil også ha makspris på strøm, som ikke er med."},
+  "hoyre": {"fagforeningsfradrag": 3850,
+          "kilde": "Høyres alternative statsbudsjett 2026, s. 17",
+          "merknad": "Høyre setter fagforeningsfradraget til 2021-nivå, som var 3 850 kroner."},
+  "sv": {"bensin_kr_per_liter": 0.87, "bensin_sikkerhet": "anslag",
+          "kilde": "SVs alternative statsbudsjett 2026, s. 5 og 37 i PDF-en",
+          "merknad": "SV øker veibruksavgiften på bensin med 25 øre per liter og trapper opp CO2-avgiften. CO2-delen er regnet ut fra SVs eget eksempel med dieselbil (751 kroner i året)."},
+  "sp": {"matmoms_alle": 0.10, "bensin_kr_per_liter": -0.76, "bensin_sikkerhet": "anslag",
+          "kilde": "Senterpartiets alternative statsbudsjett 2026, s. 8 og 80",
+          "merknad": "Sp kutter matmomsen fra 1. september. Her vises virkningen for et helt år. Sp vil holde bensinavgiftene reelt uendret og kutte 25 øre til. Den første delen er anslått ut fra provenyet."},
+  "mdg": {"matmoms_25": ["kjott", "sukkervarer", "brus"], "mat_sikkerhet": "anslag", "bensin_kr_per_liter": 4.21, "bensin_sikkerhet": "anslag", "utbetaling": -160,
+          "kilde": "MDGs alternative statsbudsjett 2026, s. 80–81",
+          "merknad": "MDG øker veibruksavgiften på bensin med 2,50 kroner per liter og den generelle CO2-avgiften. CO2-delen er anslått ut fra provenyet. Utbetalingen er klimabelønningen som kommer fra bilavgiftene. MDGs flyseteavgift og klimabelønningen den betaler for, er ikke med."},
+  "krf": {"kilde": "Innst. 2 S (2025–2026), KrFs tabell for rammeområde 21",
+          "merknad": "Vi fant ingen endringer i matmoms eller drivstoffavgifter. KrF vil ha makspris på strøm, som ikke er med."},
+  "venstre": {"matmoms_0": ["frukt_og_gront"], "matmoms_25": ["kjott"], "bensin_kr_per_liter": 2.19, "bensin_sikkerhet": "anslag",
+          "kilde": "Venstres alternative statsbudsjett 2026, s. 81, 85 og 122",
+          "merknad": "Venstre fjerner momsen på frukt og grønt og setter full moms på kjøtt. CO2-avgiften settes til 1 842 kroner per tonn. Økningen i veibruksavgiften er anslått ut fra provenyet. Venstre holder også elavgiften høyere enn regjeringen, som ikke er med."}
+ }
+}

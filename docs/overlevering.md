@@ -232,5 +232,15 @@ i 2026-budsjettene, og FrP en delvis. Derfor regner vi selv, på konkrete typeti
 - **Forutsetninger som må godkjennes:** FrPs formuesskatt er lest som én sats på 0,8 prosent. Sps sammenslåtte trinn
   er lest som 17,7 prosent fra 960 000. Venstres eksempler bruker bunnfradrag 2,25 mill., som ikke står i tiltakslista.
   Lønnsmottakeren er ikke fagorganisert (FrP og Høyre kutter fagforeningsfradraget).
-- Ikke med: utbytteskatt, avgifter, klimabelønning, fagforeningsfradrag og ordninger for unge.
-- Ingen side er bygd ennå. Tallene gjelder budsjettene for 2026.
+- **Utkastside:** `/statsbudsjett/partiene/lonnsmottaker` viser lønnsmottakeren (600 000 kr) med brytere for
+  «Er fagorganisert» og «Kjører bensinbil». Tallene lages av `scripts/typetilfeller/bygg.py`, som leser
+  `regler2026.json` og `avgifter2026.json` og skriver `public/data/typetilfeller/2026.json`.
+- **Med:** skatt på lønn, matmoms, bensin (veibruksavgift og CO2-avgift) og fagforeningsfradrag. Forbruket er
+  SSBs snitt for aleneboende (tabell 14152, 2022-kroner), og bilen går 12 000 km på 840 liter.
+- **Sikre tall:** skatten, matmomsen for FrP, Sp og Venstre, FrPs bensinpris (partiets eget tall) og fagforeningsfradraget.
+- **Anslag som må erstattes med partienes satser før publisering:** bensin for SV, Sp, Venstre og MDG (regnet fra
+  partienes eksempler og proveny), og MDGs matmoms (SSBs varegrupper passer ikke helt).
+- **Ikke med:** strøm, flyreiser (MDGs flyseteavgift og klimabelønningen den betaler for), utbytteskatt og ordninger
+  for unge og barnefamilier. Gaute har foreslått flere brytere. Flyreiser er den som skiller mest, men krever satser.
+- Siden sier tydelig at den bare viser det man betaler inn, ikke hva partiene bruker pengene på.
+- Pensjonisten og eieren er regnet (`regn.py`), men har ingen side ennå. Tallene gjelder budsjettene for 2026.

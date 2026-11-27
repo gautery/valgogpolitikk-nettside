@@ -1,0 +1,156 @@
+{
+ "aar": 2026,
+ "lonn": 600000,
+ "skatt_regjeringen": 144255,
+ "forutsetninger": {
+  "mat": 40146,
+  "km": 12000,
+  "liter": 840,
+  "fagforeningsfradrag": 8700
+ },
+ "kilder": [
+  "Finansdepartementet: Skattesatser, fradrag og beløpsgrenser i 2025 og regjeringens forslag for 2026 (Prop. 1 LS (2025–2026)). Personfradrag og minstefradrag er kontrollert mot Innst. 3 S (2025–2026), formuesskatten mot skattevedtaket § 2-1 i samme innstilling.",
+  "SSB, forbruksundersøkelsen 2022, tabell 14152, aleneboende. Beløpene er i 2022-kroner.",
+  "Fagforeningsfradraget: Finansdepartementets satstabell for 2026. CO2-avgiften på bensin i regjeringens forslag er 3,77 kr per liter (Innst. 3 S (2025–2026)), som tilsvarer 1 625 kr per tonn."
+ ],
+ "partier": [
+  {
+   "id": "frp",
+   "navn": "FrP",
+   "skatt": -5977,
+   "mat": -2618,
+   "mat_anslag": false,
+   "utbetaling": 0,
+   "bil": -2520,
+   "bil_anslag": false,
+   "fagforening": 1914,
+   "merknader": [
+    "FrP skriver «senke satsen til 0,8 prosent». Vi har lest det som én sats for all formue over bunnfradraget. FrP fjerner også fagforeningsfradraget, som ikke er med her.",
+    "FrP halverer matmomsen fra 1. april. Her vises virkningen for et helt år. FrP vil også ha makspris på strøm, som ikke er med."
+   ],
+   "kilder": [
+    "FrPs alternative statsbudsjett 2026, s. 8–9 og 12–13",
+    "FrPs alternative statsbudsjett 2026, s. 9–10 og 46"
+   ]
+  },
+  {
+   "id": "hoyre",
+   "navn": "Høyre",
+   "skatt": -3700,
+   "mat": 0,
+   "mat_anslag": false,
+   "utbetaling": 0,
+   "bil": 0,
+   "bil_anslag": false,
+   "fagforening": 1067,
+   "merknader": [
+    "Høyre oppgir jobbfradraget og pensjonsfradraget som kroner i lavere skatt (4 300 og 2 000). Høyre går imot regjeringens kutt i trygdeavgiften og setter fagforeningsfradraget ned, som ikke er med her.",
+    "Høyre setter fagforeningsfradraget til 2021-nivå, som var 3 850 kroner."
+   ],
+   "kilder": [
+    "Høyres alternative statsbudsjett 2026, s. 5 og 17",
+    "Høyres alternative statsbudsjett 2026, s. 17"
+   ]
+  },
+  {
+   "id": "sv",
+   "navn": "SV",
+   "skatt": -6334,
+   "mat": 0,
+   "mat_anslag": false,
+   "utbetaling": 0,
+   "bil": 731,
+   "bil_anslag": true,
+   "fagforening": 0,
+   "merknader": [
+    "SV øker også utbytteskatten, som ikke er med her.",
+    "SV øker veibruksavgiften på bensin med 25 øre per liter og trapper opp CO2-avgiften. CO2-delen er regnet ut fra SVs eget eksempel med dieselbil (751 kroner i året)."
+   ],
+   "kilder": [
+    "SVs alternative statsbudsjett 2026, s. 72–73 i dokumentet (s. 37 i PDF-en)",
+    "SVs alternative statsbudsjett 2026, s. 5 og 37 i PDF-en"
+   ]
+  },
+  {
+   "id": "sp",
+   "navn": "Sp",
+   "skatt": -600,
+   "mat": -1745,
+   "mat_anslag": false,
+   "utbetaling": 0,
+   "bil": -638,
+   "bil_anslag": true,
+   "fagforening": 0,
+   "merknader": [
+    "Sp slår sammen trinn 4 og 5. Vi har lest det som at satsen i trinn 5 (17,7 prosent) gjelder fra 960 000 kroner.",
+    "Sp kutter matmomsen fra 1. september. Her vises virkningen for et helt år. Sp vil holde bensinavgiftene reelt uendret og kutte 25 øre til. Den første delen er anslått ut fra provenyet."
+   ],
+   "kilder": [
+    "Senterpartiets alternative statsbudsjett 2026, s. 8 og 80"
+   ]
+  },
+  {
+   "id": "mdg",
+   "navn": "MDG",
+   "skatt": -1774,
+   "mat": 1005,
+   "mat_anslag": true,
+   "utbetaling": -160,
+   "bil": 3536,
+   "bil_anslag": true,
+   "fagforening": 0,
+   "merknader": [
+    "MDG betaler i tillegg ut klimabelønning, som ikke er skatt og ikke er med her.",
+    "MDG øker veibruksavgiften på bensin med 2,50 kroner per liter og den generelle CO2-avgiften. CO2-delen er anslått ut fra provenyet. Utbetalingen er klimabelønningen som kommer fra bilavgiftene. MDGs flyseteavgift og klimabelønningen den betaler for, er ikke med."
+   ],
+   "kilder": [
+    "MDGs alternative statsbudsjett 2026, s. 19, 79 og 82",
+    "MDGs alternative statsbudsjett 2026, s. 80–81"
+   ]
+  },
+  {
+   "id": "krf",
+   "navn": "KrF",
+   "skatt": 0,
+   "mat": 0,
+   "mat_anslag": false,
+   "utbetaling": 0,
+   "bil": 0,
+   "bil_anslag": false,
+   "fagforening": 0,
+   "merknader": [
+    "KrFs lettelser i inntektsskatten gjelder unge født 1991–2006 og barnefamilier, og treffer ikke disse typetilfellene.",
+    "Vi fant ingen endringer i matmoms eller drivstoffavgifter. KrF vil ha makspris på strøm, som ikke er med."
+   ],
+   "kilder": [
+    "Innst. 2 S (2025–2026), s. 77 i dokumentet (KrFs tabell for rammeområde 21)",
+    "Innst. 2 S (2025–2026), KrFs tabell for rammeområde 21"
+   ]
+  },
+  {
+   "id": "venstre",
+   "navn": "Venstre",
+   "skatt": -2540,
+   "mat": -430,
+   "mat_anslag": false,
+   "utbetaling": 0,
+   "bil": 1840,
+   "bil_anslag": true,
+   "fagforening": 0,
+   "merknader": [
+    "Venstres egne eksempler (tabell 27) ser ut til å regne med et bunnfradrag på 2,25 mill. kroner, som ikke står i tiltakslista.",
+    "Venstre fjerner momsen på frukt og grønt og setter full moms på kjøtt. CO2-avgiften settes til 1 842 kroner per tonn. Økningen i veibruksavgiften er anslått ut fra provenyet. Venstre holder også elavgiften høyere enn regjeringen, som ikke er med."
+   ],
+   "kilder": [
+    "Venstres alternative statsbudsjett 2026, s. 117 og 119",
+    "Venstres alternative statsbudsjett 2026, s. 81, 85 og 122"
+   ]
+  }
+ ],
+ "mangler": [
+  {
+   "navn": "Rødt",
+   "tekst": "Rødts satser står ikke i finansinnstillingen, og vi har ikke fått lest Rødts eget dokument ennå. Rødts egen tabell viser 6 400–6 500 kroner lavere inntektsskatt i snitt for inntekter mellom 400 000 og 800 000 kroner."
+  }
+ ]
+}
