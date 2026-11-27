@@ -235,6 +235,29 @@ Bare Gaute kan gjøre:
 - Beehiiv-nøklene i Vercel og totrinnsinnlogging, hvis det ikke er gjort.
 - Godkjenne utkastene og si «lanser».
 
+## Forsiden: Grunnkurset løftet fram (27. november, kveld)
+
+Gaute ba om at forsiden kobles til Grunnkurset og det andre som er ferdig. Ligger på demoen.
+
+- **Ny kloss «Fremhevet»** (`fremhevet` i `Klosser.tsx`, `klosser.ts` og `.pages.yml`): svart felt med overskrift,
+  tekst, rosa knapp og nummerert liste. En linje uten lenke blir mellomtittel. Forsiden bruker den til Grunnkurset,
+  rett under toppfeltet. Tekstene er Gautes egne, hentet fra oversiktssiden. Redigeres i Pages CMS under Forsiden.
+- Peker klossen på en side som er utkast, vises merket «Utkast» på demoen, og feltet skjules etter lansering.
+- «Utforsk» gjentar ikke sider som er løftet fram. «Grunnkurs» står først i menyen.
+- Be Gaute laste Pages CMS på nytt før han redigerer forsiden.
+
+**Dette gjenstår før forsiden ser ferdig ut** (forslag, Gaute har ikke svart):
+
+1. Gaute må si hvilke sider som er godkjent. Etter lansering skjules alt som er utkast, og da står forsiden igjen
+   med toppfelt, «Nytt fra kildene» og «Samarbeid og tips».
+2. TestBanner og «Siste analyser» (eksempelinnlegg fra mars) ut, og «Analyser» ut av menyen.
+3. Påmelding til nyhetsbrev på forsiden (klossen `nyhetsbrev` finnes). Krever Beehiiv-nøklene i Vercel.
+4. post@valgogpolitikk.no må finnes før «Send en melding» virker.
+5. Bunnteksten: «OECD, SSB, Eurostat» står som tekst uten lenker.
+6. Søk og deling: sidetittel og beskrivelse i `src/app/layout.tsx` er fra prototypen, og demoen har verken
+   `sitemap.xml` eller `robots.txt`. Forsiden på vercel.app-adressen er ikke skjult for søkemotorer.
+7. På 320 piksler er forsiden fortsatt seks piksler for bred.
+
 ## Partienes alternative budsjetter (utkast, 27. november)
 
 Gaute vil ha en side der man ser hva hvert parti ville endret i statsbudsjettet, med tre innganger fra samme
