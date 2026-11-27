@@ -371,7 +371,12 @@ og ba om en sammenligning med partienes alternative budsjetter, del for del, med
 - **Grenen `budsjettavtale-utkast`** (bygger på `budsjettomat-utkast`). Ikke på demoen. Gaute må si fra først.
 - **Side:** `/statsbudsjett/partiene/avtalen`. Data: `public/data/budsjettavtale/2027.json`, skrevet for hånd.
 - **Innhold:** 18 saker. For hver: hva avtalen sier, hva regjeringen foreslo, og hva Sp, SV og Rødt ba om, med
-  merkene «Fikk det», «Fikk noe» og «Fikk ikke». Stillingen: Sp 0–3–1, SV 1–7–9, Rødt 1–6–9.
+  merkene «Fikk det», «Fikk noe» og «Fikk ikke». Hver sak har også regjeringens utfall (`regjeringen_utfall`):
+  «fikk viljen sin» (8 saker), «ga litt» (8) og «ga etter» (2: tannlege og månedskort).
+- **Gaute ba om (27. november):** stillingstabellen er fjernet, fordi tallene er for ulike til å telles sammen.
+  Mer vekt på hva regjeringen fikk gjennomslag for: de vinner når andre ville ha endring og det ikke ble noe.
+  Standardvisningen er ett tema om gangen med «Forrige» og «Neste» (`src/components/partibudsjett/Avtale.tsx`).
+  «Alle temaer» hopper til et tema, og «Vis som sammenhengende tekst» viser alt under hverandre.
 - **Funn:** en lønn på 600 000 kroner får 385 kroner høyere skatt med avtalen enn med regjeringens forslag
   (trygdeavgift 7,5 i stedet for 7,4 prosent, personfradrag +975 kroner). Norgespris er ikke nevnt. Formuesskatt,
   utbytteskatt, matmoms, barnetrygd, minsteytelser, bistand og skolemat er ikke med.
