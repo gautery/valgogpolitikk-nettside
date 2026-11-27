@@ -32,7 +32,9 @@ seksjoner:
     tekst: |-
       Tallet bygger på verdiene i skattemeldingen. De er ofte lavere enn det formuen faktisk er verdt. To ting betyr mest, og de trekker hver sin vei.
 
-      **Selskaper utenfor børs teller for lite.** De verdsettes etter regnskapet, ikke etter hva de kunne vært solgt for. SSB anslår at slike aksjer teller med for rundt en tredjedel av den reelle verdien når formuesskatten regnes ut. Ring, Seim og Zucman anslår en tidel. De aller rikeste har mesteparten av formuen sin i slike selskaper. Regnet til markedsverdi ville andelen deres blitt høyere.
+      **Selskaper utenfor børs teller for lite.** De verdsettes etter regnskapet, ikke etter hva de kunne vært solgt for. SSB anslår at slike aksjer teller med for rundt en tredjedel av den reelle verdien når formuesskatten regnes ut.
+
+      Disse aksjene er svært skjevt fordelt. Den rikeste prosenten av husholdningene eier rundt to tredjedeler av dem, og for de aller rikeste er de nesten hele formuen. Familiene på bladet Kapitals liste over de 400 rikeste står oppført med under en tredjedel av det Kapital anslår at de eier. Regnet til markedsverdi ville andelen til de rikeste altså blitt høyere.
 
       **Boligene teller også for lite.** I skattemeldingen står en vanlig bolig med rundt en firedel av markedsverdien. Boligen er det meste av formuen til folk flest. Det er store verdier, og de er jevnere fordelt. Når SSB-forskerne regner boligene til markedsverdi, faller andelen til den rikeste prosenten til 19 prosent (2016). Men i det regnestykket står selskapene fortsatt for lavt.
 
@@ -49,8 +51,9 @@ seksjoner:
     tekst: |-
       - Rolf Aaberge, Jørgen Modalsli og Edda Solbakken (2025): «Measuring long-run wealth inequality: Empirical results for Norway 1912–2019». SSB Discussion Papers 1028. [ssb.no](https://www.ssb.no/inntekt-og-forbruk/inntekt-og-formue/artikler/maling-av-langsiktig-ulikskap-i-formue-empiriske-resultat-fra-noreg-1912-2019). Tallet for 2019 står i tabellen over de fire fasene. Tallet med boligene til markedsverdi står i tabell A.2. Studien er et arbeidsnotat, og er ikke publisert i et tidsskrift ennå.
       - Martin Eckhoff Andresen og Erlend Eide Bø (2022): «Verdsetting av unoterte selskaper». SSB Rapporter 2022/31. [ssb.no](https://www.ssb.no/virksomheter-foretak-og-regnskap/skatt-for-naeringsvirksomhet/artikler/verdsetting-av-unoterte-selskaper). De anslår at aksjer utenfor børs verdsettes til rundt 35 prosent av reell verdi i formuesskatten, med rabatten som gjaldt i 2022.
+      - Morten Grindaker og Ola Lotherington Vestad (2025): «Latente eierinntekter og skatteforpliktelser på unoterte aksjer i perioden 2011–2022». SSB Rapporter 2025/21. [ssb.no](https://www.ssb.no/virksomheter-foretak-og-regnskap/skatt-for-naeringsvirksomhet/artikler/latente-eierinntekter-og-skatteforpliktelser-pa-unoterte-aksjer-i-perioden-20112022). Andelen til den rikeste prosenten er regnet ut av oss fra tabell 5.1, for årene 2022–2024. Den er 72 prosent målt med verdiene fra skattemeldingen, og 61 prosent med SSBs anslag på markedsverdi.
       - SSB (2025): «Vekst i husholdningenes finansformue i 2024». [ssb.no](https://www.ssb.no/inntekt-og-forbruk/inntekt-og-formue/statistikk/inntekts-og-formuesstatistikk-for-husholdninger/artikler/vekst-i-husholdningenes-finansformue-i-2024). Finansformue er bankinnskudd, aksjer og andre verdipapirer. Bolig er ikke med.
-      - Marius Ring, David Seim og Gabriel Zucman (2026): «Personal Holding Companies, Tax Progressivity, and Inequality». NBER Working Paper 35534. [nber.org/papers/w35534](https://www.nber.org/papers/w35534). Anslaget på en tidel står i innledningen. Både de og SSB bygger på hva lignende selskaper på børs er verdt.
+      - Marius Ring, David Seim og Gabriel Zucman (2026): «Personal Holding Companies, Tax Progressivity, and Inequality». NBER Working Paper 35534. [nber.org/papers/w35534](https://www.nber.org/papers/w35534). Figur A7 viser hva formuen på toppen består av. Figur A17 sammenligner den skattemessige formuen med Kapitals anslag for årene 2012–2023.
   - type: tekst
     overskrift: Videre i serien
     bakgrunn: lys

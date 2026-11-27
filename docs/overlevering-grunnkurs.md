@@ -173,3 +173,24 @@ skrevet om etter det. Han har ikke godkjent teksten.
 - **Råd:** ikke bruk «en tidel» som tall for unoterte aksjer generelt. SSBs tredjedel gjelder alle, og
   Kapital-sammenligningen gjelder de 400 rikeste.
 
+### Hvem eier de unoterte aksjene (SSB Rapporter 2025/21, tabell 5.1, regnet av Claude)
+
+Tabellen gir snitt per husholdning for alle, topp 10 og topp 1 prosent etter nettoformue, 2022–2024, i
+2023-kroner. Snitt ganger antall husholdninger gir summene. Kontroll: nettoformuen blir 9 940 mrd. og andelen til
+topp 1 prosent 22,0, som i tabell 10318.
+
+- **Ligningsverdi (2 217 mrd.):** topp 1 prosent eier 72 prosent, topp 10 prosent 89, de nederste 90 prosent 11.
+- **Predikert markedsverdi (4 733 mrd.):** topp 1 prosent 61 prosent, topp 10 prosent 82, de nederste 90 prosent 18.
+- **Oppjusteringen er minst på toppen:** faktor 1,8 for topp 1 prosent, 2,1 for alle og 3,4 for de nederste 90.
+  SSB skriver selv at metoden trolig gir for lave verdier for holdingselskaper og selskaper med eierskap i utlandet.
+- **Med markedsverdi på både bolig og selskaper:** andelen til topp 1 prosent går fra 22 til 28 prosent, og topp
+  10 prosent fra 52 til 57. Husholdningene er ikke rangert på nytt, så tallet er litt for lavt. Dette retter
+  opp det grovere anslaget lenger opp (28 til 39 prosent).
+- **Topp 0,1 prosent:** ikke oppgitt for unoterte aksjer. Av «aksjer og andre verdipapirer» i husholdnings-
+  statistikken (børs og unotert, skatteverdier) eier de rundt 43 prosent i 2024 (21,1 prosent av finansformuen,
+  hvorav 89 prosent aksjer, mot 44 prosent for alle).
+- **SSB tabell 09916 (personer, 2024):** den rikeste tidelen etter skattepliktig bruttoformue har 94 prosent av
+  «aksjer og verdipapirer» og 40 prosent av bankinnskuddene.
+- **Leksjon 3 er rettet:** tidelen er ute. Inne: SSBs tredjedel, «rundt to tredjedeler» til den rikeste
+  prosenten, «nesten hele formuen» for de aller rikeste, og Kapital-sammenligningen (under en tredjedel).
+
