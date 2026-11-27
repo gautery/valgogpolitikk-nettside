@@ -19,19 +19,33 @@ const UTFALL: Record<Utfall, { tekst: string; klasse: string }> = {
   delvis: { tekst: "Fikk noe", klasse: "border-black bg-white text-black" },
   ikke: { tekst: "Fikk ikke", klasse: "border-border bg-surface text-text-muted" },
 };
-const REG: Record<RegUtfall, string> = {
-  holdt: "Regjeringen fikk viljen sin",
-  litt: "Regjeringen ga litt",
-  etter: "Regjeringen ga etter",
-};
+const REKKEFOLGE = ["Sp", "SV", "Rødt"];
+const liste = (a: string[]) => a.join(", ").replace(/, ([^,]*)$/, " og $1");
+
+// Hvem vant saken: Ap når avtalen lar regjeringens forslag stå, ellers partiene som fikk noe.
+function vinner(s: AvtaleSak): { ap: boolean; tekst: string } {
+  const med = (u: Utfall) =>
+    s.krav.filter((k) => k.utfall === u).map((k) => k.parti).sort((a, b) => REKKEFOLGE.indexOf(a) - REKKEFOLGE.indexOf(b));
+  const fullt = med("fikk");
+  const noe = med("delvis");
+  if (s.regjeringen_utfall === "holdt" || fullt.length + noe.length === 0) return { ap: true, tekst: "Ap fikk viljen sin" };
+  const deler = [];
+  if (fullt.length) deler.push(`${liste(fullt)} fikk fullt gjennomslag`);
+  if (noe.length) deler.push(`${liste(noe)} fikk noe gjennomslag`);
+  return { ap: false, tekst: deler.join(". ") };
+}
+
+function Prikk({ ap }: { ap: boolean }) {
+  return <span aria-hidden="true" className={`h-[10px] w-[10px] shrink-0 ${ap ? "rounded-full bg-accent" : "rounded-[2px] bg-black"}`} />;
+}
 
 function Kort({ s, overskrift }: { s: AvtaleSak; overskrift: React.ReactNode }) {
   return (
     <>
       {overskrift}
       <p className="mt-3 flex items-center gap-2 text-[15px] font-semibold text-black">
-        <span aria-hidden="true" className="h-[10px] w-[10px] shrink-0 rounded-full bg-accent" />
-        {REG[s.regjeringen_utfall]}
+        <Prikk ap={vinner(s).ap} />
+        {vinner(s).tekst}
       </p>
       <p className="mt-3 text-[16.5px] leading-[1.5] text-black">
         <strong className="font-semibold">Avtalen:</strong> {s.avtalen}
@@ -84,9 +98,12 @@ export default function Avtale({ saker }: { saker: AvtaleSak[] }) {
         <ol className="border-b border-black py-2">
           {saker.map((s, i) => (
             <li key={s.tittel}>
-              <button type="button" onClick={() => gaTil(i)} className={`flex w-full items-baseline justify-between gap-4 py-2 text-left ${FOKUS}`}>
-                <span className={`text-[15.5px] font-semibold ${!tekst && i === nr ? "text-accent" : "text-black"}`}>{s.tittel}</span>
-                <span className="shrink-0 text-[13px] text-text-muted">{REG[s.regjeringen_utfall].replace("Regjeringen ", "")}</span>
+              <button type="button" onClick={() => gaTil(i)} className={`block w-full py-2 text-left ${FOKUS}`}>
+                <span className={`block text-[15.5px] font-semibold ${!tekst && i === nr ? "text-accent" : "text-black"}`}>{s.tittel}</span>
+                <span className="mt-0.5 flex items-center gap-2 text-[13.5px] text-text-secondary">
+                  <Prikk ap={vinner(s).ap} />
+                  {vinner(s).tekst}
+                </span>
               </button>
             </li>
           ))}

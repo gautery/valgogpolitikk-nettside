@@ -384,3 +384,6 @@ og ba om en sammenligning med partienes alternative budsjetter, del for del, med
   oppgir at oljepengebruken øker med 7,4 mrd. kroner, mens Ap skal ha omtalt nivået som uendret. Sp har bare fire
   saker med, fordi Sps budsjett er lest dårligst. Avtalens verbalforslag er ikke gjennomgått.
 - **Ikke gjort:** egen rad for avtalen på lønnsmottaker-sida og merkelapp i budsjettomaten.
+- **Hvem vant, i klartekst:** oversikten og kortene sier nå «Ap fikk viljen sin» eller hvilke partier som fikk noe
+  eller fullt gjennomslag («SV og Rødt fikk noe gjennomslag»). Teksten lages av `vinner()` i `Avtale.tsx` ut fra
+  merkene på partienes krav. Gaute ba om det 27. november.

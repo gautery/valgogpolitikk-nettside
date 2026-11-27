@@ -105,9 +105,8 @@ export default function AvtaleSide() {
           <div className="max-w-[720px] space-y-4 text-[15.5px] leading-[1.6] text-text-secondary">
             <h2 className="font-display text-[26px] text-black">Slik har vi gjort det</h2>
             <p>
-              «Regjeringen fikk viljen sin» betyr at avtalen ikke endrer regjeringens forslag, selv om andre partier
-              ville det. «Regjeringen ga litt» betyr at avtalen går et stykke i retning av de andre partiene.
-              «Regjeringen ga etter» betyr at avtalen har med et tiltak regjeringen ikke hadde foreslått.
+              «Ap fikk viljen sin» betyr at avtalen ikke endrer regjeringens forslag, selv om andre partier ville
+              det. Ellers står det hvilke partier som fikk noe eller fullt gjennomslag for det de foreslo.
             </p>
             <p>
               Vi har sammenlignet avtalen med det hvert parti foreslo i sitt eget alternative statsbudsjett. «Fikk
