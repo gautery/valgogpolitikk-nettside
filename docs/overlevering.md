@@ -216,3 +216,21 @@ Uavklart:
   Det kan være en teknisk flytting og må sjekkes mot innstillingen før noen leser det som et kutt.
 - Arbeiderpartiet og Senterpartiet har ingen egen kolonne i 2026-tabellen.
 - Tekstene på sidene er Claudes utkast.
+
+## Typetilfeller: skatt med hvert partis opplegg (prøve, 27. november)
+
+Gaute vil vise hvem som tjener og taper på partienes skatteopplegg. Bare SV og Rødt hadde full fordelingstabell
+i 2026-budsjettene, og FrP en delvis. Derfor regner vi selv, på konkrete typetilfeller i stedet for gjennomsnitt.
+
+- **Kode og regler:** `scripts/typetilfeller/`. `regler2026.json` har regjeringens forslag og hvert partis endringer,
+  med kilde og sidetall. `regn.py` regner tre typetilfeller. `kontroll.py` sammenligner med partienes egne tabeller.
+- **Kontroll:** Fra 400 000 kroner og opp treffer vi FrPs tabell innenfor avrundingen. Fire av Venstres fem
+  eksempler på formuesskatt treffes på krona. Under 400 000 er partienes gjennomsnitt lavere enn en ren lønnsmottaker,
+  fordi gruppene også har pensjonister og andre som betaler lite skatt fra før.
+- **Mangler:** Rødts satser. De står ikke i finansinnstillingen, og roedt.no slipper ikke arbeidsmiljøet inn.
+  Gaute må legge ved Rødts alternative budsjett.
+- **Forutsetninger som må godkjennes:** FrPs formuesskatt er lest som én sats på 0,8 prosent. Sps sammenslåtte trinn
+  er lest som 17,7 prosent fra 960 000. Venstres eksempler bruker bunnfradrag 2,25 mill., som ikke står i tiltakslista.
+  Lønnsmottakeren er ikke fagorganisert (FrP og Høyre kutter fagforeningsfradraget).
+- Ikke med: utbytteskatt, avgifter, klimabelønning, fagforeningsfradrag og ordninger for unge.
+- Ingen side er bygd ennå. Tallene gjelder budsjettene for 2026.

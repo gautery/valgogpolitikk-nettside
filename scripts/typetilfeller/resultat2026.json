@@ -1,0 +1,107 @@
+{
+ "aar": 2026,
+ "tilfeller": [
+  {
+   "navn": "Lønnsmottaker, 600 000 kr i lønn",
+   "regjeringen": 144255,
+   "partier": {
+    "frp": {
+     "skatt": 138278,
+     "endring": -5977
+    },
+    "hoyre": {
+     "skatt": 140555,
+     "endring": -3700
+    },
+    "sv": {
+     "skatt": 137921,
+     "endring": -6334
+    },
+    "sp": {
+     "skatt": 143655,
+     "endring": -600
+    },
+    "mdg": {
+     "skatt": 142481,
+     "endring": -1774
+    },
+    "krf": {
+     "skatt": 144255,
+     "endring": 0
+    },
+    "venstre": {
+     "skatt": 141715,
+     "endring": -2540
+    }
+   }
+  },
+  {
+   "navn": "Pensjonist, 350 000 kr i alderspensjon",
+   "regjeringen": 29735,
+   "partier": {
+    "frp": {
+     "skatt": 25008,
+     "endring": -4727
+    },
+    "hoyre": {
+     "skatt": 27735,
+     "endring": -2000
+    },
+    "sv": {
+     "skatt": 23401,
+     "endring": -6334
+    },
+    "sp": {
+     "skatt": 29735,
+     "endring": 0
+    },
+    "mdg": {
+     "skatt": 27361,
+     "endring": -2374
+    },
+    "krf": {
+     "skatt": 29735,
+     "endring": 0
+    },
+    "venstre": {
+     "skatt": 27194,
+     "endring": -2540
+    }
+   }
+  },
+  {
+   "navn": "Eier, 100 mill. kr i aksjer (formuesskatt)",
+   "regjeringen": 839500,
+   "partier": {
+    "frp": {
+     "skatt": 616000,
+     "endring": -223500
+    },
+    "hoyre": {
+     "skatt": 618500,
+     "endring": -221000
+    },
+    "sv": {
+     "skatt": 1318000,
+     "endring": 478500
+    },
+    "sp": {
+     "skatt": 838500,
+     "endring": -1000
+    },
+    "mdg": {
+     "skatt": 978500,
+     "endring": 139000
+    },
+    "krf": {
+     "skatt": 619500,
+     "endring": -220000
+    },
+    "venstre": {
+     "skatt": 709900,
+     "endring": -129600
+    }
+   }
+  }
+ ]
+}
