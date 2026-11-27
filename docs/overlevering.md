@@ -29,7 +29,10 @@ Faste regler:
 ## Teknisk oppsett
 
 - **Nettsiden:** repo gautery/valgogpolitikk-nettside, Next.js 16, Vercel, gren `master`.
-  Push til `master` gir ny forhåndsvisning på Vercel. Les `node_modules/next/dist/docs/` før kodeendringer
+  Push til `master` gir ny forhåndsvisning på Vercel.
+  **Avtalt 27. november 2026:** Gaute vil at endringer vi er blitt enige om, legges på demoen (`master`)
+  uten at han må be om det hver gang. Gjelder det han har bestemt eller sagt ja til. Forslag han ikke
+  har svart på, og nytt innhold han ikke har bedt om, ligger på en grein til han har sett det. Les `node_modules/next/dist/docs/` før kodeendringer
   (se AGENTS.md).
 - **Kildeovervåking:** repo gautery/kildeoverv-kning (gren `main`). Henter saker fra kildene i `kilder.yaml`
   og deler dem i tre spor: rapporter, tall og løpende nytt. Civita og Rødt er slått av.
