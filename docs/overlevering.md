@@ -1,7 +1,8 @@
 # Overlevering: valgogpolitikk.no
 
 Skrevet 22. november 2026 for å starte en ny samtale. Lim inn denne fila, eller be Claude lese
-`docs/overlevering.md` i repoet gautery/valgogpolitikk-nettside.
+`docs/overlevering.md` i repoet gautery/valgogpolitikk-nettside. Grunnkurset har et eget tillegg:
+`docs/overlevering-grunnkurs.md`. Les begge. Siste gjennomgang står nederst i denne fila.
 
 Alt som er merket **Uavklart** er ikke bestemt. Ikke bygg videre på det uten å spørre Gaute først.
 
@@ -144,7 +145,7 @@ Svakheter som står på siden:
 
 Claude gikk gjennom hele demoen på mobil (360, 375 og 390 piksler) og utkastet på grenen `offentlig-sektor-side`.
 
-Rettet (grenen `rettinger-apenbare-feil`):
+Rettet (ligger i `master`):
 
 - Lange ord i hovedoverskrifter deles med bindestrek (`h1` i `globals.css`). Før stakk overskriftene i leksjon 2,
   leksjon 4, holdingselskap-leksjonen og /stromleverandorer ut av skjermen på smale telefoner.
@@ -158,8 +159,8 @@ og to leksjoner fortsatt noen piksler for brede.
 Vurderinger Gaute må ta (ikke bygg på dem uten svar):
 
 1. Lansere en liten versjon før skattelistene 2. desember, eller vente til alt er klart?
-2. Leksjon 2: «for hundre år siden» i ingress og graftittel. Listen i leksjonen sier 13 prosent i 1920
-   og 22 prosent i 1882. Dagens 23 prosent tilsvarer 1880-tallet.
+2. Leksjon 2: avklart. Ingressen sier nå «som på 1880-tallet». Graftittelen i Datawrapper (`krafw`) sier
+   fortsatt «for hundre år siden» og må rettes i Gautes Chrome.
 3. Leksjon 1: ingressen sier «rundt 1/5», overskriften lenger ned «nesten en fjerdedel» (23 prosent).
 4. /tema/skatt bruker offisielle tall (21,7 prosent av formuen, 9–17 prosent skatt for de 0,1 prosent rikeste).
    Grunnkurset sier 37 prosent og 32 prosent.
@@ -180,7 +181,7 @@ Bare Gaute kan gjøre:
 
 - Skrive Om-teksten og leksjonen om privat forbruk i selskaper (begge har stikkord nå).
 - Lese og slette «Til deg, Gaute»-notatene i leksjon 6 og 8.
-- Rette graftittelen til leksjon 2 i Datawrapper.
+- Åpne Chrome på PC-en, så Claude kan rette graftittelen til leksjon 2 i Datawrapper.
 - Fylle inn eller godkjenne de seks «Legg inn …»-merknadene på /skatt-pa-de-rikeste.
 - Legge inn Instagram-lenker på de tre karusellsidene.
 - Sjekke bilderettigheter for fotoene i slidene.
