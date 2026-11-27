@@ -154,3 +154,22 @@ skrevet om etter det. Han har ikke godkjent teksten.
   av alle boliger. Den må gjelde toppen. SSB Rapporter 2022/31 viser til Kapital (2020): de 400 rikeste har
   mer enn fire ganger så stor reell som skattemessig formue.
 
+### Hva Ring, Seim og Zucman faktisk sier om «en tidel» (PDF-en lest direkte 27. november)
+
+- **Setningen står bare i innledningen (s. 3):** aksjer i private selskaper går inn i formuesskattegrunnlaget med
+  «only a tenth of their market value». Ingen tabell eller utregning viser forholdstallet for verdier.
+- **Grunnlaget er figur 6b og kap. 5.1 (2004–2006):** betalt formuesskatt som andel av økonomisk inntekt, faktisk
+  mot kontrafaktisk med markedsverdi. Teksten sier «an order of magnitude larger», over 8 mot under 1 prosent.
+  Lest av figuren av Claude: 1,4 mot 5,4 ved P99, 1,3 mot 7,1 ved P99,9, 1,0 mot 7,4 ved P99,99 og 0,7 mot 8,3
+  i den øverste gruppa. Altså 4 til 7 ganger for det meste av toppen, og rundt 12 ganger helt øverst.
+  Det er et forhold mellom skattebeløp, ikke verdier. Rabatten på børsaksjer er også fjernet i regnestykket.
+- **Metode (vedlegg A.1):** medianmultipler (P/E, EV/omsetning, P/B) for børsnoterte nordiske selskaper per
+  næring og år, snitt av de tre. Ingen rabatt for at unoterte aksjer er vanskeligere å selge.
+- **Figur A17 (2012–2023):** skattemessig formue for Kapital-familiene er rundt 0,25–0,35 av Kapitals anslag.
+  Forskernes egne multippelverdier ligger på 0,5–1,0 av Kapital i median og rundt 1 samlet. Det gir en faktor
+  på tre til fire for hele formuen, ikke ti.
+- **Figur A7:** private selskaper er rundt 45 prosent av skattepliktig bruttoformue ved P99, rundt 75 ved P99,9
+  og 90–95 fra P99,99 og opp (lest av figuren).
+- **Råd:** ikke bruk «en tidel» som tall for unoterte aksjer generelt. SSBs tredjedel gjelder alle, og
+  Kapital-sammenligningen gjelder de 400 rikeste.
+
