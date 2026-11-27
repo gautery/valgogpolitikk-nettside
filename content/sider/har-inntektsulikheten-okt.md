@@ -33,7 +33,7 @@ seksjoner:
 
 
       Her er tallene for utvalgte år, tallene etter 2001 viser inkludert
-      tilbakeholdt overskudd i selskaper og er bedre mer nøyaktige enn de før
+      tilbakeholdt overskudd i selskaper og er mer nøyaktige enn de før
       2001:
 
 
@@ -56,7 +56,7 @@ seksjoner:
       - **2022:** 23 prosent (med overskudd i selskapene)
 
 
-      Andelen falt altså i hundre år, og basert på de beste dataen vi har så ser
+      Andelen falt altså i hundre år, og basert på de beste dataene vi har så ser
       den ut til å ha flerdoblet seg siden 1980.
 
 

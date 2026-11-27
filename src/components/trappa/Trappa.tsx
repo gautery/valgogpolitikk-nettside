@@ -219,7 +219,8 @@ function Vegg({
           </div>
         </div>
 
-        <table className="sr-only">
+        <div className="sr-only">
+        <table>
           <caption>Snittinntekt per gruppe ({data.forskningsaar})</caption>
           <thead>
             <tr>
@@ -238,6 +239,7 @@ function Vegg({
             ))}
           </tbody>
         </table>
+        </div>
 
         <div className="mt-8 grid gap-6 text-[14px] leading-relaxed text-text-secondary md:grid-cols-2">
           <p>
