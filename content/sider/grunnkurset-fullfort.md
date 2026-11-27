@@ -29,7 +29,7 @@ seksjoner:
           forklaring: "De aller rikeste betaler 22 prosent i Norge og 24 prosent i USA. Formuesskatten gjør liten forskjell."
         - pastand: "Høyre og FrP sine velgere er enige i at skattene på de rike bør være lavere enn på oss andre."
           forklaring: "Velgerne til alle ni partiene vil at de rikeste skal betale mest. Høyre-velgerne vil ha 43 prosent på toppen, og FrP-velgerne 45."
-        - pastand: "Det er småpenger, fordi de rike er så få."
+        - pastand: "At de rikeste betaler mindre andel skatt enn oss andre utgjør småpenger for staten, fordi de rike er så få."
           forklaring: "De rike er riktignok få, alt etter hvem vi snakker om kan det være så få som noen hundre husholdninger, men de 1% rikeste tjener jo over en femtedel av all inntekt i Norge, og har en enda større andel av formuen, og derfor er det enorme summer. Antakeligvis over 100 milliarder."
       avsloring: "Sorry, kunne ikke dy meg, alle er selvfølgelig helt feil! Men de er vanlige påstander som spres i norsk offentlighet."
       resultatBra: "Tross mitt sleipe grep greide du {riktige} av {antall} rette. valgogpolitikk.no er imponert!"
