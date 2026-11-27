@@ -725,7 +725,7 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
     }
 
     case "samarbeid": {
-      const epost = (kloss.epost || "post@valgogpolitikk.no").trim();
+      const epost = (kloss.epost || "valgogpolitikk@proton.me").trim();
       return (
         <Seksjon bakgrunn={kloss.bakgrunn}>
           <div className="grid gap-6 border-t border-black pt-8 md:grid-cols-[minmax(0,1fr)_auto] md:items-end md:gap-12">

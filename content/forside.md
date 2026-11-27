@@ -50,7 +50,7 @@ seksjoner:
 
       Jeg vil særlig høre fra organisasjoner, forskere og andre som har noe nytt
       å melde.
-    epost: post@valgogpolitikk.no
+    epost: valgogpolitikk@proton.me
     knapp: Send en melding
     bakgrunn: hvit
 ---

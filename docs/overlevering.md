@@ -230,7 +230,7 @@ Bare Gaute kan gjøre:
 - Fylle inn eller godkjenne de seks «Legg inn …»-merknadene på /skatt-pa-de-rikeste.
 - Legge inn Instagram-lenker på de tre karusellsidene.
 - Sjekke bilderettigheter for fotoene i slidene.
-- Opprette post@valgogpolitikk.no, eller velge en annen adresse.
+- E-post er avklart: nettstedet bruker valgogpolitikk@proton.me inntil videre (Gaute, 27. november).
 - Bytte passord andre steder hvis passordet fra /kontrollsenter er brukt der.
 - Beehiiv-nøklene i Vercel og totrinnsinnlogging, hvis det ikke er gjort.
 - Godkjenne utkastene og si «lanser».
@@ -265,9 +265,8 @@ Gaute ba om at forsiden kobles til Grunnkurset og det andre som er ferdig. Ligge
    med toppfelt, «Nytt fra kildene» og «Samarbeid og tips». Nettstedskartet har nå bare forsiden og /kilder.
 2. «Til deg, Gaute»-notatet i leksjon 6 må slettes før kurset kan miste utkast-merket.
 3. Påmelding til nyhetsbrev på forsiden (klossen `nyhetsbrev` finnes). Krever Beehiiv-nøklene i Vercel.
-4. E-post: knappen «Send en melding» peker på post@valgogpolitikk.no, som ikke finnes ennå. Gaute har en
-   Proton-konto og vurderer en valgogpolitikk-adresse der, eller videresending fra post@ (MX- og TXT-poster
-   i Flux hos Gigahost). Adressen byttes i Pages CMS: Forsiden → Samarbeid og tips.
+4. E-post er avklart: «Send en melding» peker på valgogpolitikk@proton.me. Gaute bruker den inntil videre.
+   Adressen byttes i Pages CMS: Forsiden → Samarbeid og tips, og på Om-siden.
 
 ## Partienes alternative budsjetter (utkast, 27. november)
 

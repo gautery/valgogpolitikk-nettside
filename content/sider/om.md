@@ -125,7 +125,7 @@ seksjoner:
     overskrift: Samarbeid og tips
     tekst: Vil du samarbeide med valgogpolitikk, eller har du tips til kilder? Send
       en melding her.
-    epost: post@valgogpolitikk.no
+    epost: valgogpolitikk@proton.me
     knapp: Send en melding
     bakgrunn: hvit
 ---
