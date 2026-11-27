@@ -52,20 +52,9 @@ seksjoner:
       14 i Sverige.
     bakgrunn: lys
   - type: tekst
-    overskrift: Hva gjør USA annerledes?
-    tekst: >-
-      På ett punkt er USA strengere enn Europa. Siden 1930-tallet har USA hatt
-      en ekstra skatt på 20 prosent på overskudd som blir stående i personlige
-      holdingselskaper. Derfor er slike selskaper sjeldne der.
-
-
-      Det synes i tallene. Av inntekten til de aller rikeste amerikanerne kommer
-      40 prosent på skattemeldingen. I Norge og Sverige er det under 5 prosent.
-    bakgrunn: hvit
-  - type: tekst
-    overskrift: Hva koster det?
-    tekst: De aller rikeste betaler altså mindre enn folk flest, i Norge som i andre
-      land. Hvor mye penger er det snakk om?
+    overskrift: Hva koster det Norge å gi lavere skatt til de rikeste?
+    tekst: De aller rikeste betaler altså mye lavere andel skatt enn folk flest, i
+      Norge som i andre land. Hvor mye penger er det snakk om?
     knapp: Gå til neste leksjon
     knappLenke: /hva-koster-lav-skatt-pa-de-rikeste
     bakgrunn: lys
