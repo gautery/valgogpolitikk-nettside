@@ -8,7 +8,7 @@ import { Tilbake, Utkastlinje } from "@/components/partibudsjett/Felles";
 
 type Data = OmatData & { kilder: Record<string, string> };
 
-const TALLORD: Record<number, string> = { 5: "Fem", 10: "Ti", 12: "Tolv" };
+const TALLORD: Record<number, string> = { 5: "Fem", 10: "Ti", 12: "Tolv", 16: "Seksten", 20: "Tjue" };
 
 export const metadata: Metadata = {
   title: "Budsjettomaten: hvilket partis statsbudsjett ligger du nærmest? — valg og politikk",
@@ -21,6 +21,7 @@ export default function BudsjettomatSide() {
   const data = JSON.parse(
     fs.readFileSync(path.join(process.cwd(), "public", "data", "budsjettomat", `${TYPETILFELLE_AAR}.json`), "utf-8"),
   ) as Data;
+  const frpMangler = data.sporsmal.filter((s) => s.partier.frp?.verdi === null).length;
 
   return (
     <>
@@ -67,7 +68,8 @@ export default function BudsjettomatSide() {
             </p>
             <p>
               <strong className="font-semibold text-black">FrP er usikkert.</strong> Vi har ikke lest FrPs eget
-              dokument ennå. Plasseringene er hentet fra NTBs omtale, og to av spørsmålene er ikke omtalt der.
+              dokument ennå. Plasseringene er hentet fra NTBs omtale, og {frpMangler} av de {data.sporsmal.length}{" "}
+              spørsmålene er ikke omtalt der. FrP sammenlignes derfor på færre spørsmål enn de andre.
             </p>
             <h3 className="pt-2 font-display text-[19px] text-black">Kilder</h3>
             <ul className="space-y-1 text-[14.5px]">

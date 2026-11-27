@@ -318,7 +318,7 @@ export default function Budsjettomat({ data }: { data: OmatData }) {
         </button>
       </div>
       <p className="mt-6 max-w-[620px] text-[14px] leading-relaxed text-text-muted">
-        Dette er en prøve med {n} spørsmål. Disse er under arbeid: {data.ikke_med.join(", ").toLowerCase()}.
+        Dette er et utkast med {n} spørsmål. Disse temaene er ikke med ennå: {data.ikke_med.join(", ").toLowerCase()}.
       </p>
     </div>
   );

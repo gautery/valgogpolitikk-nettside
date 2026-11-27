@@ -415,28 +415,798 @@
      "tekst": ""
     }
    }
+  },
+  {
+   "id": "skatt-lonn",
+   "tittel": "Skatt på lønn",
+   "sporsmal": "Hvem skal få lavere skatt på lønn?",
+   "bakgrunn": "Regjeringen senker trygdeavgiften litt for alle.",
+   "valg": [
+    {
+     "verdi": -1,
+     "tekst": "Alle som jobber, like mye",
+     "pris": 14.0,
+     "pristekst": "Koster om lag 14 mrd. kroner"
+    },
+    {
+     "verdi": 0,
+     "tekst": "Ingen flere enn i regjeringens forslag",
+     "pris": 0,
+     "pristekst": "Som regjeringen"
+    },
+    {
+     "verdi": 1,
+     "tekst": "De som tjener under 800 000, betalt av dem som tjener mer",
+     "pris": 0,
+     "pristekst": "Går om lag i null"
+    }
+   ],
+   "partier": {
+    "hoyre": {
+     "verdi": -1,
+     "tekst": "gir alle i arbeid 7 700 kroner i lavere skatt (21,2 mrd. kroner), men går imot regjeringens egen lettelse",
+     "kilde": "s. 9–10"
+    },
+    "krf": {
+     "verdi": -0.5,
+     "tekst": "gir alle i arbeid et fradrag verdt 2 794 kroner, men går imot regjeringens egen lettelse",
+     "kilde": "s. 21"
+    },
+    "venstre": {
+     "verdi": -1,
+     "tekst": "gir alle som tjener over 223 000 kroner 5 000 kroner i lavere skatt (13,7 mrd. kroner)",
+     "kilde": "s. 29 og 58–59"
+    },
+    "sp": {
+     "verdi": 0.5,
+     "tekst": "øker personfradraget med 4 900 kroner og øker skatten på høye inntekter med 4,7 mrd. kroner",
+     "kilde": "s. 63"
+    },
+    "mdg": {
+     "verdi": 0.5,
+     "tekst": "senker satsene i trinn 1 og 2 og øker dem i trinn 3–5",
+     "kilde": "s. 75–76"
+    },
+    "sv": {
+     "verdi": 1,
+     "tekst": "fjerner trinn 1 og flytter trinn 2, som gir 5 000 kroner til de fleste som tjener under 800 000 kroner, og øker satsene over",
+     "kilde": "s. 42"
+    },
+    "rodt": {
+     "verdi": 1,
+     "tekst": "fjerner trinn 1, øker personfradraget og øker satsene over 800 000 kroner",
+     "kilde": "s. 33–34"
+    },
+    "frp": {
+     "verdi": -1,
+     "tekst": "øker personfradraget til 130 000 kroner og fjerner trinn 1 i trinnskatten",
+     "kilde": "NTB"
+    },
+    "ap": {
+     "verdi": 0,
+     "tekst": ""
+    }
+   }
+  },
+  {
+   "id": "utbytteskatt",
+   "tittel": "Skatt på utbytte",
+   "sporsmal": "Skal skatten på aksjeutbytte opp?",
+   "bakgrunn": "Utbytte til personer skattlegges med om lag 38 prosent.",
+   "valg": [
+    {
+     "verdi": -1,
+     "tekst": "Nei, senk den",
+     "pris": 0.6,
+     "pristekst": "Koster om lag 0,6 mrd. kroner"
+    },
+    {
+     "verdi": 0,
+     "tekst": "Behold den som i dag",
+     "pris": 0,
+     "pristekst": "Som regjeringen"
+    },
+    {
+     "verdi": 1,
+     "tekst": "Ja, øk den",
+     "pris": -8.6,
+     "pristekst": "Gir om lag 9 mrd. kroner"
+    }
+   ],
+   "partier": {
+    "hoyre": {
+     "verdi": 0,
+     "tekst": "",
+     "kilde": "ingen endring funnet"
+    },
+    "krf": {
+     "verdi": 0,
+     "tekst": "",
+     "kilde": "ingen endring funnet"
+    },
+    "venstre": {
+     "verdi": -1,
+     "tekst": "senker den, som koster 590 mill. kroner",
+     "kilde": "s. 60–61"
+    },
+    "sp": {
+     "verdi": 0,
+     "tekst": "",
+     "kilde": "ingen endring funnet"
+    },
+    "mdg": {
+     "verdi": 0,
+     "tekst": "",
+     "kilde": "ingen endring funnet"
+    },
+    "sv": {
+     "verdi": 1,
+     "tekst": "øker den slik at utbytte og lønn skattlegges likt på toppen",
+     "kilde": "s. 42"
+    },
+    "rodt": {
+     "verdi": 1,
+     "tekst": "øker den fra 38 til 44 prosent, som gir 8,6 mrd. kroner",
+     "kilde": "s. 32–33"
+    },
+    "frp": {
+     "verdi": null,
+     "tekst": "",
+     "kilde": "ikke omtalt hos NTB"
+    },
+    "ap": {
+     "verdi": 0,
+     "tekst": ""
+    }
+   }
+  },
+  {
+   "id": "oppdrett",
+   "tittel": "Skatt på oppdrett",
+   "sporsmal": "Hvor mye skal oppdrettsnæringen betale i grunnrenteskatt?",
+   "bakgrunn": "Oppdrettsselskapene betaler en egen skatt for å bruke fjordene. Satsen er 25 prosent.",
+   "valg": [
+    {
+     "verdi": -1,
+     "tekst": "Mindre",
+     "pris": 1.0,
+     "pristekst": "Koster om lag 1 mrd. kroner"
+    },
+    {
+     "verdi": 0,
+     "tekst": "Som i dag",
+     "pris": 0,
+     "pristekst": "Som regjeringen"
+    },
+    {
+     "verdi": 1,
+     "tekst": "Mer",
+     "pris": -3.0,
+     "pristekst": "Gir om lag 3 mrd. kroner"
+    }
+   ],
+   "partier": {
+    "hoyre": {
+     "verdi": -1,
+     "tekst": "senker satsen til 15 prosent og fjerner bunnfradraget, som koster 970 mill. kroner",
+     "kilde": "s. 9–10"
+    },
+    "krf": {
+     "verdi": -0.5,
+     "tekst": "vil senke satsen til 20 prosent",
+     "kilde": "s. 9 og 21"
+    },
+    "venstre": {
+     "verdi": 0,
+     "tekst": "",
+     "kilde": "ingen endring funnet"
+    },
+    "sp": {
+     "verdi": 0,
+     "tekst": "",
+     "kilde": "ingen endring funnet"
+    },
+    "mdg": {
+     "verdi": 1,
+     "tekst": "øker satsen til 40 prosent, som gir 2,5 mrd. kroner",
+     "kilde": "s. 8 og 60"
+    },
+    "sv": {
+     "verdi": 1,
+     "tekst": "øker satsen til 35 prosent og fjerner bunnfradraget, som gir 3,5 mrd. kroner",
+     "kilde": "s. 42"
+    },
+    "rodt": {
+     "verdi": 0,
+     "tekst": "",
+     "kilde": "ingen endring funnet"
+    },
+    "frp": {
+     "verdi": null,
+     "tekst": "",
+     "kilde": "ikke omtalt hos NTB"
+    },
+    "ap": {
+     "verdi": 0,
+     "tekst": ""
+    }
+   }
+  },
+  {
+   "id": "drivstoff",
+   "tittel": "Bensin og diesel",
+   "sporsmal": "Hva skal skje med avgiftene på bensin og diesel?",
+   "bakgrunn": "Regjeringen senker veibruksavgiften og øker CO2-avgiften. Til sammen er avgiftene på bensin 7,77 kroner per liter før moms.",
+   "valg": [
+    {
+     "verdi": -1,
+     "tekst": "Kutt dem",
+     "pris": 6.0,
+     "pristekst": "Koster om lag 6 mrd. kroner"
+    },
+    {
+     "verdi": 0,
+     "tekst": "Som regjeringen",
+     "pris": 0,
+     "pristekst": "Som regjeringen"
+    },
+    {
+     "verdi": 1,
+     "tekst": "Øk dem",
+     "pris": -6.0,
+     "pristekst": "Gir om lag 6 mrd. kroner"
+    }
+   ],
+   "partier": {
+    "hoyre": {
+     "verdi": 0,
+     "tekst": "",
+     "kilde": "ingen endring funnet"
+    },
+    "krf": {
+     "verdi": -0.5,
+     "tekst": "fjerner veibruksavgiften på bensin til 1. april",
+     "kilde": "s. 21"
+    },
+    "venstre": {
+     "verdi": 1,
+     "tekst": "går imot kuttet i veibruksavgiften og setter CO2-avgiften til 2 239 kroner per tonn",
+     "kilde": "s. 29 og 67"
+    },
+    "sp": {
+     "verdi": -1,
+     "tekst": "fjerner veibruksavgiften på bensin til 1. juli og går imot økningen i CO2-avgiften",
+     "kilde": "s. 13 og 63"
+    },
+    "mdg": {
+     "verdi": 1,
+     "tekst": "øker veibruksavgiften på bensin med 2,50 kroner per liter og øker CO2-avgiften",
+     "kilde": "s. 8–10 og 60"
+    },
+    "sv": {
+     "verdi": 0.5,
+     "tekst": "går imot kuttet i veibruksavgiften og øker CO2-avgiften raskere",
+     "kilde": "s. 43"
+    },
+    "rodt": {
+     "verdi": -0.5,
+     "tekst": "kutter veibruksavgiften, men øker CO2-avgiften. Partiet sier pumpeprisen blir om lag 1,70 kroner lavere",
+     "kilde": "s. 38–39"
+    },
+    "frp": {
+     "verdi": -1,
+     "tekst": "fjerner veibruksavgiften og går imot økningen i CO2-avgiften. Partiet sier bensinen blir 6,76 kroner billigere per liter",
+     "kilde": "NTB"
+    },
+    "ap": {
+     "verdi": 0,
+     "tekst": ""
+    }
+   }
+  },
+  {
+   "id": "strom",
+   "tittel": "Strøm",
+   "sporsmal": "Hva skal fastprisen på strøm, Norgespris, være?",
+   "bakgrunn": "Norgespris er 40 øre per kilowattime før moms i år. Regjeringen vil øke den til 45 øre.",
+   "valg": [
+    {
+     "verdi": -1,
+     "tekst": "Stram inn: dekk mindre av forbruket",
+     "pris": 0,
+     "pristekst": "Sparer penger. Beløpet har vi ikke funnet."
+    },
+    {
+     "verdi": 0,
+     "tekst": "45 øre",
+     "pris": 0,
+     "pristekst": "Som regjeringen"
+    },
+    {
+     "verdi": 1,
+     "tekst": "40 eller 41 øre",
+     "pris": 1.0,
+     "pristekst": "Koster om lag 1 mrd. kroner"
+    }
+   ],
+   "partier": {
+    "hoyre": {
+     "verdi": 1,
+     "tekst": "holder prisen på 41 øre (1 mrd. kroner)",
+     "kilde": "s. 9 og 11"
+    },
+    "krf": {
+     "verdi": 1,
+     "tekst": "holder prisen på 41 øre (1 mrd. kroner)",
+     "kilde": "s. 12 og 18"
+    },
+    "venstre": {
+     "verdi": -1,
+     "tekst": "senker taket for hvor mye strøm ordningen dekker",
+     "kilde": "s. 57"
+    },
+    "sp": {
+     "verdi": 1,
+     "tekst": "holder prisen på 41 øre",
+     "kilde": "s. 13"
+    },
+    "mdg": {
+     "verdi": 1,
+     "tekst": "bytter ut Norgespris med en strømbonus og bruker 7,5 mrd. kroner mer enn regjeringen",
+     "kilde": "s. 4 og 10"
+    },
+    "sv": {
+     "verdi": 0.5,
+     "tekst": "øker prisen bare med prisstigningen, og dekker mindre av forbruket",
+     "kilde": "s. 5"
+    },
+    "rodt": {
+     "verdi": 1,
+     "tekst": "fryser prisen på 40 øre (1,2 mrd. kroner)",
+     "kilde": "s. 7"
+    },
+    "frp": {
+     "verdi": 1,
+     "tekst": "vil ha 50 øre med moms, som er 40 øre før moms",
+     "kilde": "NTB"
+    },
+    "ap": {
+     "verdi": 0,
+     "tekst": ""
+    }
+   }
+  },
+  {
+   "id": "barnetrygd",
+   "tittel": "Barnetrygd",
+   "sporsmal": "Skal barnetrygden opp?",
+   "bakgrunn": "Barnetrygden er 2 012 kroner i måneden per barn. Regjeringen lar den stå stille.",
+   "valg": [
+    {
+     "verdi": 0,
+     "tekst": "Nei",
+     "pris": 0,
+     "pristekst": "Som regjeringen"
+    },
+    {
+     "verdi": 0.5,
+     "tekst": "Ja, i takt med prisene",
+     "pris": 0.8,
+     "pristekst": "Koster om lag 0,8 mrd. kroner"
+    },
+    {
+     "verdi": 1,
+     "tekst": "Ja, 100 kroner mer i måneden",
+     "pris": 1.3,
+     "pristekst": "Koster 1,3 mrd. kroner"
+    }
+   ],
+   "partier": {
+    "hoyre": {
+     "verdi": 0,
+     "tekst": "",
+     "kilde": "ingen endring funnet"
+    },
+    "krf": {
+     "verdi": 1,
+     "tekst": "øker den med 100 kroner i måneden (1,3 mrd. kroner)",
+     "kilde": "s. 5 og 15"
+    },
+    "venstre": {
+     "verdi": 0.5,
+     "tekst": "prisjusterer den (743 mill. kroner)",
+     "kilde": "s. 40–41"
+    },
+    "sp": {
+     "verdi": 0,
+     "tekst": "",
+     "kilde": "ingen endring funnet"
+    },
+    "mdg": {
+     "verdi": 0.5,
+     "tekst": "prisjusterer den (810 mill. kroner)",
+     "kilde": "s. 10 og 25"
+    },
+    "sv": {
+     "verdi": 0.5,
+     "tekst": "prisjusterer den",
+     "kilde": "s. 3 og 5"
+    },
+    "rodt": {
+     "verdi": 0.5,
+     "tekst": "prisjusterer den fra 1. februar (743 mill. kroner) og gir enslige forsørgere 6 000 kroner mer i året",
+     "kilde": "s. 7"
+    },
+    "frp": {
+     "verdi": null,
+     "tekst": "",
+     "kilde": "ikke omtalt hos NTB"
+    },
+    "ap": {
+     "verdi": 0,
+     "tekst": ""
+    }
+   }
+  },
+  {
+   "id": "minsteytelser",
+   "tittel": "Minstepensjon, uføre og AAP",
+   "sporsmal": "Skal de laveste trygdene opp?",
+   "bakgrunn": "Dette gjelder minstesatsene for pensjonister, uføre og folk på arbeidsavklaringspenger (AAP).",
+   "valg": [
+    {
+     "verdi": 0,
+     "tekst": "Nei",
+     "pris": 0,
+     "pristekst": "Som regjeringen"
+    },
+    {
+     "verdi": 0.5,
+     "tekst": "Ja, for noen grupper",
+     "pris": 0.5,
+     "pristekst": "Koster om lag 0,5 mrd. kroner (vårt anslag)"
+    },
+    {
+     "verdi": 1,
+     "tekst": "Ja, 15 000 kroner mer til alle tre",
+     "pris": 3.9,
+     "pristekst": "Koster 3,9 mrd. kroner"
+    }
+   ],
+   "partier": {
+    "hoyre": {
+     "verdi": 0,
+     "tekst": "",
+     "kilde": "ingen endring funnet"
+    },
+    "krf": {
+     "verdi": 0.5,
+     "tekst": "øker pensjonen for enslige minstepensjonister med 6 000 kroner",
+     "kilde": "s. 10"
+    },
+    "venstre": {
+     "verdi": 0,
+     "tekst": "",
+     "kilde": "ingen endring funnet"
+    },
+    "sp": {
+     "verdi": 0,
+     "tekst": "",
+     "kilde": "ingen endring funnet"
+    },
+    "mdg": {
+     "verdi": 0,
+     "tekst": "",
+     "kilde": "ingen endring funnet"
+    },
+    "sv": {
+     "verdi": 0.5,
+     "tekst": "øker minstesatsen i AAP med 10 000 kroner",
+     "kilde": "s. 17"
+    },
+    "rodt": {
+     "verdi": 1,
+     "tekst": "øker minstesatsene for pensjonister, uføre og folk på AAP med 15 000 kroner i året (3,9 mrd. kroner)",
+     "kilde": "s. 5 og 7"
+    },
+    "frp": {
+     "verdi": null,
+     "tekst": "",
+     "kilde": "ikke omtalt hos NTB"
+    },
+    "ap": {
+     "verdi": 0,
+     "tekst": ""
+    }
+   }
+  },
+  {
+   "id": "kommuner",
+   "tittel": "Kommunene",
+   "sporsmal": "Hvor mye mer skal kommunene få å rutte med?",
+   "bakgrunn": "Frie inntekter er penger kommunene selv bestemmer over, til skole, eldreomsorg og annet.",
+   "valg": [
+    {
+     "verdi": 0,
+     "tekst": "Ikke mer enn regjeringen foreslår",
+     "pris": 0,
+     "pristekst": "Som regjeringen"
+    },
+    {
+     "verdi": 0.5,
+     "tekst": "Litt mer",
+     "pris": 1.0,
+     "pristekst": "Koster om lag 1 mrd. kroner"
+    },
+    {
+     "verdi": 1,
+     "tekst": "Mye mer",
+     "pris": 4.5,
+     "pristekst": "Koster 4–5 mrd. kroner"
+    }
+   ],
+   "partier": {
+    "hoyre": {
+     "verdi": 0.5,
+     "tekst": "gir 1 mrd. kroner mer i frie inntekter",
+     "kilde": "s. 15"
+    },
+    "krf": {
+     "verdi": 1,
+     "tekst": "gir 4 mrd. kroner mer i frie inntekter",
+     "kilde": "s. 13"
+    },
+    "venstre": {
+     "verdi": 0.5,
+     "tekst": "gir 1,4 mrd. kroner mer i frie inntekter",
+     "kilde": "s. 51"
+    },
+    "sp": {
+     "verdi": 0.75,
+     "tekst": "gir om lag 3 mrd. kroner mer",
+     "kilde": "side ikke notert"
+    },
+    "mdg": {
+     "verdi": 0.75,
+     "tekst": "gir 3 mrd. kroner mer i innbyggertilskudd",
+     "kilde": "s. 5"
+    },
+    "sv": {
+     "verdi": 1,
+     "tekst": "gir 4 mrd. kroner mer i frie midler",
+     "kilde": "s. 3"
+    },
+    "rodt": {
+     "verdi": 1,
+     "tekst": "gir 5 mrd. kroner mer i frie inntekter",
+     "kilde": "s. 7"
+    },
+    "frp": {
+     "verdi": null,
+     "tekst": "",
+     "kilde": "ikke omtalt hos NTB"
+    },
+    "ap": {
+     "verdi": 0,
+     "tekst": ""
+    }
+   }
+  },
+  {
+   "id": "bemanning",
+   "tittel": "Ansatte i barnehagene",
+   "sporsmal": "Skal staten betale for flere ansatte i barnehagene?",
+   "bakgrunn": "Flere partier mener barnehagene har for få voksne.",
+   "valg": [
+    {
+     "verdi": 0,
+     "tekst": "Nei",
+     "pris": 0,
+     "pristekst": "Som regjeringen"
+    },
+    {
+     "verdi": 1,
+     "tekst": "Ja",
+     "pris": 1.3,
+     "pristekst": "Koster om lag 1,3 mrd. kroner"
+    }
+   ],
+   "partier": {
+    "hoyre": {
+     "verdi": 0,
+     "tekst": "",
+     "kilde": "ingen endring funnet"
+    },
+    "krf": {
+     "verdi": 0,
+     "tekst": "",
+     "kilde": "ingen endring funnet"
+    },
+    "venstre": {
+     "verdi": 1,
+     "tekst": "bruker inntektene fra høyere barnehagepris på flere ansatte",
+     "kilde": "s. 18"
+    },
+    "sp": {
+     "verdi": 0,
+     "tekst": "",
+     "kilde": "ingen endring funnet"
+    },
+    "mdg": {
+     "verdi": 0.5,
+     "tekst": "setter av 200 mill. kroner til barnehager i levekårsutsatte områder",
+     "kilde": "s. 25 og 57"
+    },
+    "sv": {
+     "verdi": 1,
+     "tekst": "setter av om lag 1,5 mrd. kroner",
+     "kilde": "s. 3"
+    },
+    "rodt": {
+     "verdi": 1,
+     "tekst": "setter av 1,3 mrd. kroner til flere ansatte i barnehage og SFO",
+     "kilde": "s. 7"
+    },
+    "frp": {
+     "verdi": null,
+     "tekst": "",
+     "kilde": "ikke omtalt hos NTB"
+    },
+    "ap": {
+     "verdi": 0,
+     "tekst": ""
+    }
+   }
+  },
+  {
+   "id": "skolemat",
+   "tittel": "Skolemat",
+   "sporsmal": "Skal staten betale for skolemat?",
+   "bakgrunn": "I dag er det opp til kommunene.",
+   "valg": [
+    {
+     "verdi": 0,
+     "tekst": "Nei",
+     "pris": 0,
+     "pristekst": "Som regjeringen"
+    },
+    {
+     "verdi": 1,
+     "tekst": "Ja",
+     "pris": 0.45,
+     "pristekst": "Koster om lag 0,4 mrd. kroner i første omgang"
+    }
+   ],
+   "partier": {
+    "hoyre": {
+     "verdi": 0,
+     "tekst": "",
+     "kilde": "ingen endring funnet"
+    },
+    "krf": {
+     "verdi": 0,
+     "tekst": "",
+     "kilde": "ingen endring funnet"
+    },
+    "venstre": {
+     "verdi": 0,
+     "tekst": "",
+     "kilde": "ingen endring funnet"
+    },
+    "sp": {
+     "verdi": 0,
+     "tekst": "",
+     "kilde": "ingen endring funnet"
+    },
+    "mdg": {
+     "verdi": 0.5,
+     "tekst": "oppretter en tilskuddsordning (220 mill. kroner)",
+     "kilde": "s. 25 og 55"
+    },
+    "sv": {
+     "verdi": 1,
+     "tekst": "innfører gratis skolemåltid på ungdomstrinnet (415 mill. kroner)",
+     "kilde": "s. 11"
+    },
+    "rodt": {
+     "verdi": 1,
+     "tekst": "faser inn gratis skolemat i grunnskolen (460 mill. kroner)",
+     "kilde": "s. 7"
+    },
+    "frp": {
+     "verdi": null,
+     "tekst": "",
+     "kilde": "ikke omtalt hos NTB"
+    },
+    "ap": {
+     "verdi": 0,
+     "tekst": ""
+    }
+   }
+  },
+  {
+   "id": "kvoteflyktninger",
+   "tittel": "Kvoteflyktninger",
+   "sporsmal": "Skal Norge ta imot flere kvoteflyktninger?",
+   "bakgrunn": "Kvoteflyktninger hentes til Norge gjennom FN.",
+   "valg": [
+    {
+     "verdi": 0,
+     "tekst": "Nei",
+     "pris": 0,
+     "pristekst": "Som regjeringen"
+    },
+    {
+     "verdi": 0.5,
+     "tekst": "Noen flere",
+     "pris": 0.4,
+     "pristekst": "Koster om lag 0,4 mrd. kroner"
+    },
+    {
+     "verdi": 1,
+     "tekst": "5 000 i året, som FN anbefaler",
+     "pris": 1.0,
+     "pristekst": "Koster om lag 1 mrd. kroner"
+    }
+   ],
+   "partier": {
+    "hoyre": {
+     "verdi": 0,
+     "tekst": "",
+     "kilde": "ingen endring funnet"
+    },
+    "krf": {
+     "verdi": 0.5,
+     "tekst": "setter av penger til 500 kvoteflyktninger",
+     "kilde": "s. 12"
+    },
+    "venstre": {
+     "verdi": 0.5,
+     "tekst": "tar imot 2 000 flere (396 mill. kroner)",
+     "kilde": "s. 37"
+    },
+    "sp": {
+     "verdi": 0,
+     "tekst": "",
+     "kilde": "ingen endring funnet"
+    },
+    "mdg": {
+     "verdi": 1,
+     "tekst": "øker til 5 000 (1 mrd. kroner)",
+     "kilde": "s. 29"
+    },
+    "sv": {
+     "verdi": 1,
+     "tekst": "vil ta imot 5 000 i året",
+     "kilde": "s. 25"
+    },
+    "rodt": {
+     "verdi": 1,
+     "tekst": "vil følge anbefalingene fra FNs høykommissær for flyktninger",
+     "kilde": "s. 28"
+    },
+    "frp": {
+     "verdi": null,
+     "tekst": "",
+     "kilde": "ikke omtalt hos NTB"
+    },
+    "ap": {
+     "verdi": 0,
+     "tekst": ""
+    }
+   }
   }
  ],
  "ikke_med": [
-  "Skatt på lønn",
-  "Skatt på utbytte",
-  "Skatt på bedrifter",
-  "Skatt på oppdrett",
   "Oljepengebruk",
-  "Drivstoffavgifter",
-  "Strøm",
-  "SFO",
-  "Barnetrygd og kontantstøtte",
-  "Minstepensjon, uføre og AAP",
-  "Sykelønn",
-  "Kommunene",
-  "Bolig",
-  "Ansatte i barnehage og skole",
-  "Skolemat",
-  "Klimatiltak",
   "Skatt på olje",
+  "Skatt på bedrifter",
+  "Kontantstøtte",
+  "SFO",
+  "Sykelønn",
+  "Bolig",
+  "Klimatiltak",
   "Landbruk",
-  "Kultur og NRK",
-  "Flyktninger og innvandring"
+  "Kultur og NRK"
  ]
 }

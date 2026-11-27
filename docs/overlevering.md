@@ -322,14 +322,21 @@ Gaute syntes oversiktssida («parti for parti») ikke fungerte så godt som håp
 ett spørsmål per avveining, kort forklaring etter hvert svar med vekt på partiene som skiller seg ut, løpende
 saldo, og partikort til slutt. Han liker også avstandskartet mellom budsjettene, som egen grafikk.
 
-- **Grenen `budsjettomat-utkast`** (bygger på `skatten-din-utkast`). Ikke på demoen. Gaute må si fra først.
+- **Lagt på demoen 27. november** etter at Gaute ba om det, sammen med 2027-versjonen av lønnsmottaker-sida.
+  Grenen heter `budsjettomat-utkast` (bygger på `skatten-din-utkast`).
 - **Side:** `/statsbudsjett/partiene/budsjettomat`. Komponent: `src/components/partibudsjett/Budsjettomat.tsx`.
-- **Saklista:** `scripts/budsjettomat/saker2027.json`. Fem spørsmål har status «ferdig» (tannlege, moms på mat,
-  barnehagepris, bistand, formuesskatt). Tjue har status «delvis», med det vi vet i feltet `kjent`.
+- **Saklista:** `scripts/budsjettomat/saker2027.json`. Seksten spørsmål har status «ferdig»: tannlege, moms på mat,
+  barnehagepris, bistand, formuesskatt, skatt på lønn, utbytteskatt, oppdrett, bensin og diesel, strøm, barnetrygd,
+  minsteytelser, kommunene, ansatte i barnehagene, skolemat og kvoteflyktninger. Ti har status «delvis», med
+  grunnen i feltet `kjent`: de fleste fordi bare ett eller to partier foreslår noe, eller fordi beløpene ikke er lest.
+  Oljepengebruk skiller ikke: alle partiene gjør opp med om lag samme oljepengebruk som regjeringen.
   `python3 bygg.py` lager `public/data/budsjettomat/2027.json` av de ferdige.
 - **Slik plasseres partiene:** `verdi` fra −1 til 1, der 0 er regjeringens forslag. Likhet er
   1 − |ditt svar − partiets verdi| / 2, i snitt over spørsmål der partiets forslag er kjent.
-- **Svakheter:** FrP er fra NTB og mangler på tannlege og barnehagepris. «Ingen endring funnet» betyr at søk i
+- **Svakheter:** FrP er fra NTB og mangler på 10 av 16 spørsmål. Gaute la ved en fil som skulle være FrPs, men den
+  var Rødts dokument en gang til. Plasseringene bygger på søk i dokumentene, ikke full gjennomlesing, og
+  Sps 3 mrd. til kommunene mangler sidetall. «Ingen endring funnet» betyr at søk i
   dokumentet ikke ga treff, ikke at alt er lest. Bistandskuttet til 0,7 prosent (15 mrd. kroner) er vårt anslag.
   Betalingsvalget til slutt teller ikke med i sammenligningen ennå. Alle tekster er Claudes utkast.
-- **Neste:** fylle ut de tjue spørsmålene (krever FrPs dokument), velge en kjerne på ti, og la betalingsvalget telle.
+- **Neste:** FrPs dokument, kontroll av hver plassering mot dokumentene, eventuelt en kjerne på ti spørsmål, og la
+  betalingsvalget telle.
