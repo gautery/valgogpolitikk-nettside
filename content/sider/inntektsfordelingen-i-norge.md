@@ -12,6 +12,7 @@ seksjoner:
       inntekt i Norge hvert år. Dette er de som eier de store bedriftene i
       Norge, og de som de fleste mener når de snakker om "de rike".
     bokrygger: false
+    konfetti: false
     farge: mork
   - type: tekst
     overskrift: Hvem er «de rike»?
@@ -27,48 +28,43 @@ seksjoner:
       overskudd i selskaper, bolig og verdipapirer. For de 0,01 prosent rikeste
       er andelen 97 prosent.
     bakgrunn: hvit
-  - type: nokkeltall
-    overskrift: Så mye av inntekten går til toppen
-    tall:
-      - tall: 46 %
-        tekst: går til de 10 prosent med høyest inntekt (2022).
-        kilde: SSB Rapporter 2024/32, figur 3.2
-      - tall: 23 %
-        tekst: går til den rikeste prosenten. Det er rundt 39 000 personer.
-        kilde: SSB Rapporter 2024/32, figur 3.2
-      - tall: 14 %
-        tekst: går til de 0,1 prosent rikeste. Det er under 4 000 personer.
-        kilde: SSB Rapporter 2024/32, figur 3.2
-    bakgrunn: hvit
   - type: tekst
     overskrift: Nesten en fjerdedel til én prosent
-    graf: https://datawrapper.dwcdn.net/69Erh/
-    grafBeskrivelse: "Liggende søylediagram. De 10 prosent rikeste får 46 prosent av inntektene i Norge, den rikeste prosenten 23 prosent og de 0,1 prosent rikeste 14 prosent."
     tekst: >-
       I en studie fra SSB fant de at for hver hundrelapp som tjenes i Norge, går
       23 kroner til den rikeste prosenten. De 0,1 prosent rikeste får 14 kroner.
       Det er en gruppe på under 4 000 personer.
 
 
-      De resterende 9% i topp 10% får også en betydelig andel, ca 23 %, men det er
-      tross alt bare rundt 2,5 ganger så mye som gjennomsnittet, og
-      internasjonalt vil dette bli ansett som små forskjeller.
+      De resterende 9% i topp 10% får også en betydelig andel, ca 23 %. Det er
+      cirka 2,5 ganger en med gjennomsnittsinntekt, og internasjonalt vil dette
+      bli ansett som små forskjeller.
 
 
       Den rikeste prosenten får til sammenligning 23 ganger så mye som
       gjennomsnittet, og de 0,1 prosent rikeste rundt 140 ganger så mye.
 
 
-      Norge er altså et land med relativt små lønnsforskjeller blant de 99% som
-      er lønnsmottakere, men vi har et enormt hopp opp til de som lever av å eie
-      selskaper.
+      Norge, blir det ofte sagt "er et land kjennetegnet av små forskjeller".
+      Dette stemmer altså i noen grad for de 99% som i hovedsak er
+      lønnsmottakere. Men når vi inkluderer de 1% rikeste får vi et annet bilde,
+      da ser konturene av en økonomi som gir enormt mye av det vi alle skaper
+      til de aller rikeste i landet.
+
+
+      Forskjellen går altså i hovedsak mellom dem som arbeider for en lønn og
+      dem som lever av å eie.
+    graf: https://datawrapper.dwcdn.net/69Erh/
+    grafBeskrivelse: Liggende søylediagram. De 10 prosent rikeste får 46 prosent av
+      inntektene i Norge, den rikeste prosenten 23 prosent og de 0,1 prosent
+      rikeste 14 prosent.
     bakgrunn: lys
   - type: tekst
     overskrift: Har det alltid vært slik?
-    knapp: Gå til neste leksjon
-    knappLenke: /har-inntektsulikheten-okt
     tekst: Den rikeste prosenten får altså over en femtedel av inntektene. Er det
       mye eller lite, sammenlignet med før? Det er neste leksjon.
+    knapp: Gå til neste leksjon
+    knappLenke: /har-inntektsulikheten-okt
     bakgrunn: lys
   - type: tekst
     overskrift: Hvorfor er tallene høyere enn i offisiell statistikk?
