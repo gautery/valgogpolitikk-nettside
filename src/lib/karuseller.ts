@@ -25,6 +25,8 @@ export type Karusell = {
   utkast: boolean;
   instagram: string;
   tema: string;
+  /** Publiseringsdato (ÅÅÅÅ-MM-DD). Tom hvis den ikke er fylt ut. */
+  dato: string;
   slides: Slide[];
   avsnitt: string[];
 };
@@ -49,6 +51,7 @@ export function lesKarusell(slug: string): Karusell | null {
     utkast: data.utkast !== false,
     instagram: data.instagram ?? "",
     tema: data.tema ?? "",
+    dato: data.dato instanceof Date ? data.dato.toISOString().slice(0, 10) : data.dato ? String(data.dato) : "",
     slides: (data.slides ?? [])
       .filter(Boolean)
       .map((s: Partial<Slide>) => ({

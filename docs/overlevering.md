@@ -259,19 +259,24 @@ Gaute ba om at forsiden kobles til Grunnkurset og det andre som er ferdig. Ligge
 - `next.config.ts` setter `X-Robots-Tag: noindex` på alle vercel.app-adresser, også etter lansering.
 - Lange ord i karuselltitlene deles, så forsiden og /karuseller holder 320 piksler.
 
-**Utkast til ny forside (27. november, sent):** Gaute ba om et fritt utkast. Det ligger på `/forside-utkast`,
-ved siden av dagens forside, og er ikke godkjent.
+**Ny forside (natt til 28. november), godkjent av Gaute:** utkastet er nå forsiden (`content/forside.md`).
+Siden `/forside-utkast` og filen bak er slettet.
 
-- Innholdet ligger i `content/forside-utkast.md` og redigeres i Pages CMS under «Forsiden (nytt utkast)».
-  Siden er `src/app/(site)/forside-utkast/page.tsx`. Godkjenner han det, flyttes seksjonene over i
-  `content/forside.md`, og siden, filen og oppføringen i `.pages.yml` slettes.
-- **Ny kloss «Hovedsak»** (`hovedsak`): rosa felt øverst med ett funn som tittel, to til fire søyler og knapp.
-  Utkastet bruker beskrivelsen og tallene fra leksjon 6 (47, 56 og 22 prosent, Ring, Seim og Zucman figur 5a).
-  Slagordet står som liten linje over. Bokraden er ute.
-- **«Fremhevet» har to nye felt:** `merknad` («Omtrent 25 minutter til sammen», Claudes anslag ut fra ordtallet)
-  og `seAlle`, som gjør at mobil bare viser første gruppe og en lenke til resten.
-- «Utforsk» er ute. Nyhetsbrev ligger mellom karusellene og kildene, med Gautes egne setninger som tekst.
-- Dagens forside er ikke endret, bortsett fra at nyhetsbrev-klossen ikke lenger blir for bred på 320 piksler.
+- **Hovedsaken øverst er en karusell, ikke en leksjon.** Gaute vil ikke at en leksjon fra Grunnkurset
+  selges inn som første sak. Kurset har sitt eget felt under.
+- **Kloss «Hovedsak»** (`hovedsak`): feltet `karusell` tar filnavnet til en karusell eller et skråblikk
+  (nå `skatt-pa-de-rikeste`). Tittel, ingress og de fire første slidene hentes derfra, og slidene kan sveipes.
+  Uten karusell kan klossen vise ett funn med søyler (`tall`). Er karusellen utkast, skjules hele hovedsaken
+  etter lansering.
+- **Karusellkortene** har samme oppsett overalt: bilde, merkelapp («Karusell» svart, «Skråblikk» rosa),
+  tittel, ingress og dato med antall slides. På mobil ligger bildet til venstre. Hovedsaken gjentas ikke i lista.
+- **Karuseller har fått feltet `dato`.** De to karusellene mangler dato. Gaute må fylle inn selv, Claude vet
+  ikke når de ble publisert.
+- **«Fremhevet»** (Grunnkurs-feltet): `merknad` («Omtrent 25 minutter til sammen», Claudes anslag) og `seAlle`,
+  som gjør at mobil viser første gruppe og en lenke til resten.
+- «Utforsk» er ute av forsiden. Nyhetsbrev ligger mellom karusellene og kildene.
+- Forbildene Gaute sa ja til: toppen fra VG (én stor sak), kortene fra NRK (likt oppsett, merkelapper),
+  detaljene fra NYT (sammendragslinje, dato, kilde).
 
 **Dette gjenstår før forsiden ser ferdig ut:**
 

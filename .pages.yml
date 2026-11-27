@@ -28,21 +28,6 @@ content:
         label: Seksjoner
         component: seksjoner
 
-  - name: forside_utkast
-    label: Forsiden (nytt utkast)
-    description: Forslag til ny forside. Vises på /forside-utkast, ved siden av dagens forside.
-    type: file
-    path: content/forside-utkast.md
-    format: yaml-frontmatter
-    fields:
-      - name: tittel
-        label: Navn (vises ikke)
-        type: string
-        hidden: true
-      - name: seksjoner
-        label: Seksjoner
-        component: seksjoner
-
   - name: sider
     label: Sider
     description: Egne sider bygd av byggeklosser, på adressen valgogpolitikk.no/<filnavn>.
@@ -302,6 +287,10 @@ content:
         description: Huk av så lenge siden ikke er klar. Utkast vises med et gult merke og skjules for søkemotorer.
         type: boolean
         default: true
+      - name: dato
+        label: Dato
+        description: Når karusellen ble publisert. Vises på kortet på forsiden.
+        type: date
       - name: instagram
         label: Lenke til karusellen på Instagram
         type: string
@@ -878,14 +867,18 @@ components:
         fields: []
 
       - name: hovedsak
-        label: Hovedsak (rosa felt øverst, ett funn med søyler)
+        label: Hovedsak (rosa felt øverst på forsiden)
         fields:
+          - name: karusell
+            label: Karusell som hovedsak
+            description: Filnavnet til karusellen eller skråblikket, f.eks. skatt-pa-de-rikeste. Tittel, ingress og de første slidene hentes derfra. La stå tomt for å bruke søyler i stedet.
+            type: string
           - name: overlinje
             label: Liten tekst over tittelen
             type: string
           - name: tittel
             label: Tittel
-            description: Selve funnet, som en setning eller to.
+            description: Tom gir tittelen på karusellen. Uten karusell er dette selve funnet, som en setning eller to.
             type: text
           - name: tekst
             label: Tekst under tittelen (valgfri)

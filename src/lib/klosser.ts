@@ -194,9 +194,14 @@ export type Fremhevet = {
   seAlle?: string;
 };
 
-/** Øverst på forsiden: ett funn som tittel, med noen få søyler og en knapp videre. */
+/** Øverst på forsiden: én hovedsak. Enten en karusell med slidene til å sveipe i, eller ett funn med søyler. */
 export type Hovedsak = {
   type: "hovedsak";
+  /**
+   * Filnavnet til en karusell eller et skråblikk, f.eks. «skatt-pa-de-rikeste».
+   * Da hentes tittel, ingress og de første slidene derfra, og knappen går til karusellen.
+   */
+  karusell?: string;
   overlinje?: string;
   tittel?: string;
   tekst?: string;

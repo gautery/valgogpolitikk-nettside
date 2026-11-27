@@ -12,11 +12,11 @@ import Konfetti from "@/components/Konfetti";
 import DatawrapperGraf from "@/components/klosser/DatawrapperGraf";
 import { datawrapperId, type Bakgrunn, type Kloss } from "@/lib/klosser";
 import { hentKildeoversikt } from "@/lib/kilder";
-import { hentAlleKaruseller } from "@/lib/karuseller";
+import { hentAlleKaruseller, lesKarusell } from "@/lib/karuseller";
 import { getAllPosts } from "@/lib/posts";
 import { erEkstern, lesInnstillinger, lesSide } from "@/lib/sider";
 import { hentAlleTema } from "@/lib/tema";
-import { hentAlleSkraablikk } from "@/lib/skraablikk";
+import { hentAlleSkraablikk, lesSkraablikk } from "@/lib/skraablikk";
 import { DEMO, UTKAST } from "@/lib/utkast";
 
 // Tegner en side bygd av byggeklosser. Hver kloss er en seksjon i full bredde.
@@ -29,6 +29,24 @@ export type KlossKontekst = {
   /** Sider som alt er løftet fram på samme side, og derfor ikke gjentas i «Utforsk». */
   fremhevet?: string[];
 };
+
+// Karusell eller skråblikk etter filnavn, i samme form, til hovedsaken på forsiden.
+function finnKarusell(navn?: string) {
+  const slug = (navn ?? "").trim().replace(/^\//, "").replace(/\.md$/, "");
+  if (!slug) return null;
+  const k = lesKarusell(slug);
+  if (k) return { href: `/${k.slug}`, tittel: k.tittel, ingress: k.ingress, utkast: k.utkast, slides: k.slides };
+  const b = lesSkraablikk(slug);
+  if (b) return { href: `/skraablikk/${b.slug}`, tittel: b.tittel, ingress: b.ingress, utkast: b.utkast, slides: b.slides };
+  return null;
+}
+
+// «2026-11-22» → «22. november 2026». Tom streng hvis datoen mangler eller er ugyldig.
+function langDato(dato?: string) {
+  if (!dato) return "";
+  const d = new Date(`${dato}T12:00:00`);
+  return Number.isNaN(d.getTime()) ? "" : d.toLocaleDateString("nb-NO", { day: "numeric", month: "long", year: "numeric" });
+}
 
 // «/grunnkurs-i-ulikhet» → siden i content/sider, hvis lenken går dit.
 function sideFraLenke(lenke?: string) {
@@ -328,8 +346,19 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
       );
 
     case "karuseller": {
-      // Karuseller og skråblikk i samme rad, nyeste først i hver gruppe.
-      type Omslag = { key: string; href: string; tittel: string; bilde?: string; under: string; utkast: boolean };
+      // Karuseller og skråblikk i samme liste. Samme oppsett på hvert kort: bilde, merkelapp, tittel,
+      // én til to linjer sammendrag, og dato og antall slides. Hovedsaken øverst gjentas ikke her.
+      type Omslag = {
+        key: string;
+        href: string;
+        tittel: string;
+        bilde?: string;
+        merke: "Karusell" | "Skråblikk";
+        ingress: string;
+        meta: string;
+        utkast: boolean;
+      };
+      const meta = (dato: string, antall: number) => [langDato(dato), `${antall} slides`].filter(Boolean).join(", ");
       const karuseller: Omslag[] = hentAlleKaruseller()
         .filter((k) => ktx.visUtkast || DEMO || !k.utkast)
         .map((k) => ({
@@ -337,7 +366,9 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
           href: `/${k.slug}`,
           tittel: k.tittel,
           bilde: k.slides[0]?.bilde,
-          under: `${k.slides.length} slides, alle tall med kilde`,
+          merke: "Karusell",
+          ingress: k.ingress,
+          meta: meta(k.dato, k.slides.length),
           utkast: k.utkast,
         }));
       const skraablikk: Omslag[] = hentAlleSkraablikk()
@@ -347,36 +378,53 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
           href: `/skraablikk/${s.slug}`,
           tittel: s.tittel,
           bilde: s.slides[0]?.bilde,
-          under: "Skråblikk, med forklaringer",
+          merke: "Skråblikk",
+          ingress: s.ingress,
+          meta: meta(s.dato, s.slides.length),
           utkast: s.utkast,
         }));
-      const liste = [...karuseller, ...skraablikk].slice(0, kloss.antall || 8);
+      const liste = [...karuseller, ...skraablikk]
+        .filter((o) => !ktx.fremhevet?.includes(o.href))
+        .slice(0, kloss.antall || 8);
       if (liste.length === 0) return null;
       return (
         <Seksjon bakgrunn={kloss.bakgrunn}>
           <Overskrift>{kloss.overskrift}</Overskrift>
-          <ul className="grid grid-cols-2 gap-x-4 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
+          <ul className="grid grid-cols-1 gap-y-8 sm:grid-cols-3 sm:gap-x-5 sm:gap-y-10 lg:grid-cols-4">
             {liste.map((o) => (
               <li key={o.key}>
-                <Link href={o.href} className="group block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black">
-                  {o.bilde ? (
-                    <Image
-                      src={o.bilde}
-                      alt=""
-                      width={1080}
-                      height={1350}
-                      sizes="(min-width: 1024px) 260px, (min-width: 640px) 33vw, 50vw"
-                      className="w-full rounded-[10px]"
-                    />
-                  ) : (
-                    <div className="aspect-[4/5] rounded-[10px] bg-surface" />
-                  )}
-                  <div className="mt-3 hyphens-auto break-words text-[17px] font-extrabold leading-snug tracking-[-0.01em] text-black group-hover:underline">
-                    {o.tittel}
+                <Link
+                  href={o.href}
+                  className="group flex gap-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black sm:block"
+                >
+                  <div className="w-[116px] shrink-0 sm:w-full">
+                    {o.bilde ? (
+                      <Image
+                        src={o.bilde}
+                        alt=""
+                        width={1080}
+                        height={1350}
+                        sizes="(min-width: 1024px) 260px, (min-width: 640px) 33vw, 116px"
+                        className="w-full rounded-[10px]"
+                      />
+                    ) : (
+                      <div className="aspect-[4/5] rounded-[10px] bg-surface" />
+                    )}
                   </div>
-                  <div className="mt-1 text-[13.5px] text-text-muted">
-                    {o.under}
-                    {o.utkast && <span className="ml-2 rounded bg-amber-100 px-1.5 py-0.5 text-amber-900">Utkast</span>}
+                  <div className="min-w-0 sm:mt-3">
+                    <div className="flex flex-wrap items-center gap-2 text-[12.5px] font-semibold">
+                      <span className={`rounded px-1.5 py-0.5 ${o.merke === "Skråblikk" ? "bg-rosa text-black" : "bg-black text-white"}`}>
+                        {o.merke}
+                      </span>
+                      {o.utkast && <span className="rounded bg-amber-100 px-1.5 py-0.5 font-normal text-amber-900">Utkast</span>}
+                    </div>
+                    <div className="mt-2 hyphens-auto break-words text-[17px] font-extrabold leading-snug tracking-[-0.01em] text-black group-hover:underline">
+                      {o.tittel}
+                    </div>
+                    {o.ingress && (
+                      <p className="mt-1.5 line-clamp-2 text-[14.5px] leading-snug text-text-secondary sm:line-clamp-3">{o.ingress}</p>
+                    )}
+                    <div className="mt-1.5 text-[13px] text-text-muted">{o.meta}</div>
                   </div>
                 </Link>
               </li>
@@ -615,7 +663,15 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
     }
 
     case "hovedsak": {
-      if (!kloss.tittel) return null;
+      const kar = finnKarusell(kloss.karusell);
+      // Etter lansering vises ikke en hovedsak som peker på en karusell som fortsatt er utkast.
+      if (kar?.utkast && !DEMO && !ktx.visUtkast) return null;
+      const tittel = kloss.tittel || kar?.tittel;
+      if (!tittel) return null;
+      const tekst = kloss.tekst || kar?.ingress;
+      const lenke = kloss.knappLenke || kar?.href;
+      const knapp = kloss.knapp || (kar ? "Se hele karusellen" : undefined);
+      const slides = (kar?.slides ?? []).filter((sl) => sl.bilde).slice(0, 4);
       const rader = (kloss.tall ?? [])
         .map((t) => ({
           etikett: t?.etikett?.trim() ?? "",
@@ -625,63 +681,98 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
         .filter((t) => t.etikett && Number.isFinite(t.verdi) && t.verdi > 0);
       const maks = Math.max(1, ...rader.map((r) => r.verdi));
       const enhet = kloss.enhet ?? "%";
-      const knappStil =
-        "rounded-[6px] bg-black px-6 py-3.5 text-[16px] font-semibold text-white hover:bg-white hover:text-black focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black";
-      const harKnapp = Boolean(kloss.knapp && kloss.knappLenke);
+      const fokus = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black";
+      const knappStil = `rounded-[6px] bg-black px-6 py-3.5 text-[16px] font-semibold text-white hover:bg-white hover:text-black ${fokus}`;
+      const harKnapp = Boolean(knapp && lenke);
+      const harSlides = slides.length > 0 && Boolean(lenke);
       return (
         <div className="bg-rosa px-6 pb-10 pt-8 md:py-16">
-          <div className="mx-auto grid max-w-[1100px] gap-8 md:grid-cols-[minmax(0,6fr)_minmax(0,5fr)] md:items-center md:gap-16">
+          <div className="mx-auto grid max-w-[1100px] grid-cols-1 gap-7 md:grid-cols-[minmax(0,6fr)_minmax(0,5fr)] md:items-center md:gap-16">
             <div>
               {kloss.overlinje && <p className="mb-4 text-[15px] font-semibold text-black">{kloss.overlinje}</p>}
-              <h1 className="font-display text-[31px] leading-[1.06] text-black sm:text-[44px] lg:text-[52px]">
-                {kloss.tittel}
-              </h1>
-              {kloss.tekst && <p className="mt-5 max-w-[520px] text-[18px] leading-[1.5] text-black">{kloss.tekst}</p>}
+              <h1 className="font-display text-[31px] leading-[1.06] text-black sm:text-[44px] lg:text-[52px]">{tittel}</h1>
+              {kar?.utkast && (
+                <span className="mt-4 inline-block rounded bg-amber-100 px-1.5 py-0.5 text-[13px] text-amber-900">Utkast</span>
+              )}
+              {tekst && (
+                <p className={`mt-5 max-w-[520px] text-[18px] leading-[1.5] text-black ${harSlides ? "hidden md:block" : ""}`}>
+                  {tekst}
+                </p>
+              )}
               {harKnapp && (
                 <Link
-                  href={kloss.knappLenke!}
+                  href={lenke!}
                   className={`mt-8 hidden md:inline-block ${knappStil}`}
                   data-umami-event="forside-hovedsak-knapp"
                 >
-                  {kloss.knapp}
+                  {knapp}
                 </Link>
               )}
             </div>
-            {rader.length > 0 && (
-              <figure>
-                <ul className="flex flex-col gap-4">
-                  {rader.map((r, i) => (
-                    <li key={r.etikett}>
-                      <div className="mb-1.5 text-[15px] font-semibold leading-snug text-black">{r.etikett}</div>
-                      <div className="flex items-center gap-3">
-                        <div className="h-8 min-w-0 flex-1">
-                          <div
-                            className={`soyle-voks h-full rounded-[3px] ${
-                              r.uthev ? "border-2 border-black bg-white" : "bg-black"
-                            }`}
-                            style={{ width: `${Math.max(4, (r.verdi / maks) * 100)}%`, animationDelay: `${i * 130}ms` }}
-                          />
+            {harSlides ? (
+              <ul
+                tabIndex={0}
+                aria-label={`De første slidene i karusellen, ${kar!.slides.length} i alt`}
+                className={`-mx-6 flex min-w-0 snap-x snap-mandatory gap-3 overflow-x-auto px-6 pb-2 [scrollbar-width:none] md:mx-0 md:px-0 md:[scrollbar-width:thin] ${fokus}`}
+              >
+                {slides.map((sl, i) => (
+                  <li key={sl.bilde} className="w-[62%] max-w-[250px] shrink-0 snap-start md:w-[230px]">
+                    <Link href={lenke!} tabIndex={-1} className="block" data-umami-event="forside-hovedsak-slide">
+                      <Image
+                        src={sl.bilde}
+                        alt={sl.tekst}
+                        width={1080}
+                        height={1350}
+                        priority={i < 2}
+                        sizes="250px"
+                        className="w-full rounded-[10px]"
+                      />
+                    </Link>
+                  </li>
+                ))}
+                <li className="flex w-[44%] max-w-[180px] shrink-0 snap-start items-center">
+                  <Link
+                    href={lenke!}
+                    tabIndex={-1}
+                    className="font-display text-[22px] leading-[1.1] text-black underline underline-offset-4"
+                  >
+                    Se alle {kar!.slides.length} slidene
+                  </Link>
+                </li>
+              </ul>
+            ) : (
+              rader.length > 0 && (
+                <figure>
+                  <ul className="flex flex-col gap-4">
+                    {rader.map((r, i) => (
+                      <li key={r.etikett}>
+                        <div className="mb-1.5 text-[15px] font-semibold leading-snug text-black">{r.etikett}</div>
+                        <div className="flex items-center gap-3">
+                          <div className="h-8 min-w-0 flex-1">
+                            <div
+                              className={`soyle-voks h-full rounded-[3px] ${
+                                r.uthev ? "border-2 border-black bg-white" : "bg-black"
+                              }`}
+                              style={{ width: `${Math.max(4, (r.verdi / maks) * 100)}%`, animationDelay: `${i * 130}ms` }}
+                            />
+                          </div>
+                          <div className="font-display w-[84px] shrink-0 text-right text-[28px] leading-none tabular-nums text-black">
+                            {r.verdi.toLocaleString("nb-NO")}
+                            {enhet ? `\u00a0${enhet}` : ""}
+                          </div>
                         </div>
-                        <div className="font-display w-[84px] shrink-0 text-right text-[28px] leading-none tabular-nums text-black">
-                          {r.verdi.toLocaleString("nb-NO")}
-                          {enhet ? `\u00a0${enhet}` : ""}
-                        </div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-                {kloss.forklaring && (
-                  <figcaption className="mt-4 text-[13px] leading-snug text-black/80">{kloss.forklaring}</figcaption>
-                )}
-              </figure>
+                      </li>
+                    ))}
+                  </ul>
+                  {kloss.forklaring && (
+                    <figcaption className="mt-4 text-[13px] leading-snug text-black/80">{kloss.forklaring}</figcaption>
+                  )}
+                </figure>
+              )
             )}
             {harKnapp && (
-              <Link
-                href={kloss.knappLenke!}
-                className={`justify-self-start md:hidden ${knappStil}`}
-                data-umami-event="forside-hovedsak-knapp"
-              >
-                {kloss.knapp}
+              <Link href={lenke!} className={`justify-self-start md:hidden ${knappStil}`} data-umami-event="forside-hovedsak-knapp">
+                {knapp}
               </Link>
             )}
           </div>
@@ -842,7 +933,12 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
 }
 
 export default function Klosser({ seksjoner, ktx = {} }: { seksjoner: Kloss[]; ktx?: KlossKontekst }) {
-  const fremhevet = seksjoner.flatMap((k) => (k.type === "fremhevet" && k.lenke ? [k.lenke.trim()] : []));
+  // Det som alt er løftet fram på siden (Grunnkurs-feltet, hovedsaken), gjentas ikke i listene under.
+  const fremhevet = seksjoner.flatMap((k) => {
+    if (k.type === "fremhevet" && k.lenke) return [k.lenke.trim()];
+    if (k.type === "hovedsak") return [finnKarusell(k.karusell)?.href ?? ""].filter(Boolean);
+    return [];
+  });
   const medFremhevet = { ...ktx, fremhevet };
   return (
     <>

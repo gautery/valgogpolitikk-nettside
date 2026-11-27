@@ -40,11 +40,6 @@ export function lesForside(): Side {
   );
 }
 
-/** Forslag til ny forside (content/forside-utkast.md), vist på /forside-utkast. */
-export function lesForsideUtkast(): Side | null {
-  return lesFil(path.join(INNHOLD, "forside-utkast.md"), "forside-utkast");
-}
-
 export function lesSide(slug: string): Side | null {
   return lesFil(path.join(INNHOLD, "sider", `${slug}.md`), slug);
 }

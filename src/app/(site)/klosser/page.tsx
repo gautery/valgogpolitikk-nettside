@@ -121,8 +121,8 @@ function katalog(): Oppføring[] {
     },
     {
       navn: "Hovedsak",
-      bruk: "Øverst på forsiden: ett funn som tittel, med noen få søyler og en knapp videre.",
-      felt: "Liten tekst, tittel, tekst, søyler (hvem, tall, uthev), enhet, forklaring, knapp",
+      bruk: "Øverst på forsiden: én hovedsak. Skriv filnavnet til en karusell, så hentes tittel og slides derfra. Uten karusell: ett funn med søyler.",
+      felt: "Karusell, liten tekst, tittel, tekst, søyler (hvem, tall, uthev), enhet, forklaring, knapp",
       kloss: {
         type: "hovedsak" as const,
         overlinje: "Liten tekst",

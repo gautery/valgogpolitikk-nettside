@@ -1,17 +1,15 @@
 ---
 tittel: Forside
 seksjoner:
-  - type: toppfelt
-    overlinje: "@valgogpolitikk"
-    tittel: Norsk politikk med tall og kilder
-    ingress: Analyser av norsk politikk, i hovedsak skatt, ulikhet og velferd. Jeg
-      leser rapportene slik at du slipper.
-    bokrygger: true
-    farge: rosa
+  - type: hovedsak
+    karusell: skatt-pa-de-rikeste
+    overlinje: Norsk politikk med tall og kilder
   - type: fremhevet
     overskrift: Grunnkurs i ulikhet
     tekst: Åtte korte sider om ulikhet i Norge, basert på noen av de viktigste
       rapportene som har kommet ut om temaet de siste årene.
+    merknad: Omtrent 25 minutter til sammen.
+    seAlle: Se alle åtte leksjonene
     lenke: /grunnkurs-i-ulikhet
     knapp: Start med leksjon 1
     knappLenke: /inntektsfordelingen-i-norge
@@ -38,9 +36,11 @@ seksjoner:
   - type: karuseller
     overskrift: Karusellene
     bakgrunn: hvit
-  - type: utforsk
-    overskrift: Utforsk
-    bakgrunn: hvit
+  - type: nyhetsbrev
+    overskrift: Jeg leser rapportene slik at du slipper
+    tekst: Meld deg på nyhetsbrevet for å få jevnlige oppdateringer om norsk
+      politikk fra et venstresideperspektiv.
+    bakgrunn: lys
   - type: kildeband
   - type: samarbeid
     overskrift: Samarbeid og tips
