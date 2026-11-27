@@ -315,3 +315,21 @@ fortsatt 2026-versjonen til Gaute sier «legg det på demoen».
 - **Finansinnstillingen:** trengs ikke for å vise sida, men partienes forslag til skatte- og avgiftsvedtak der har
   de nøyaktige satsene. Den vil avgjøre punkt 1, 2 og 5 over, og er eneste kilde til «parti for parti»-sidene.
 - **Rettet samtidig:** valggruppene på sida hadde id med mellomrom, så skjermlesere fikk ikke navnet på gruppa.
+
+### Budsjettomaten (prøve, 27. november)
+
+Gaute syntes oversiktssida («parti for parti») ikke fungerte så godt som håpet, og landet på en budsjettomat:
+ett spørsmål per avveining, kort forklaring etter hvert svar med vekt på partiene som skiller seg ut, løpende
+saldo, og partikort til slutt. Han liker også avstandskartet mellom budsjettene, som egen grafikk.
+
+- **Grenen `budsjettomat-utkast`** (bygger på `skatten-din-utkast`). Ikke på demoen. Gaute må si fra først.
+- **Side:** `/statsbudsjett/partiene/budsjettomat`. Komponent: `src/components/partibudsjett/Budsjettomat.tsx`.
+- **Saklista:** `scripts/budsjettomat/saker2027.json`. Fem spørsmål har status «ferdig» (tannlege, moms på mat,
+  barnehagepris, bistand, formuesskatt). Tjue har status «delvis», med det vi vet i feltet `kjent`.
+  `python3 bygg.py` lager `public/data/budsjettomat/2027.json` av de ferdige.
+- **Slik plasseres partiene:** `verdi` fra −1 til 1, der 0 er regjeringens forslag. Likhet er
+  1 − |ditt svar − partiets verdi| / 2, i snitt over spørsmål der partiets forslag er kjent.
+- **Svakheter:** FrP er fra NTB og mangler på tannlege og barnehagepris. «Ingen endring funnet» betyr at søk i
+  dokumentet ikke ga treff, ikke at alt er lest. Bistandskuttet til 0,7 prosent (15 mrd. kroner) er vårt anslag.
+  Betalingsvalget til slutt teller ikke med i sammenligningen ennå. Alle tekster er Claudes utkast.
+- **Neste:** fylle ut de tjue spørsmålene (krever FrPs dokument), velge en kjerne på ti, og la betalingsvalget telle.
