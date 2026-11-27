@@ -137,3 +137,20 @@ skrevet om etter det. Han har ikke godkjent teksten.
 - **Ikke gjort:** Datawrapper-grafen i leksjon 3 (`YpzU3`) har en fotnote som sier «nedre anslag». Den må
   rettes. Samme graf viser 20 prosent av inntektene (2020), mens Gautes leksjon 2 nå bruker 23 prosent (2022).
 
+### Holdingselskaper og størrelsene (gravd fram 27. november, ikke brukt i tekstene ennå)
+
+- **SSB Rapporter 2025/21, figur 4.1 (2022, i 2021-kroner):** personlige eieres andeler i unoterte selskaper er
+  verdt 2 139 mrd. målt med ligningsverdi og 4 607 mrd. med predikert markedsverdi. Eierkjeder er regnet
+  gjennom, så holdingselskapene og det de eier er med. Figur 4.3: 4 187 mrd. av markedsverdien er gevinst og
+  tilbakeholdt overskudd som ikke er skattlagt hos eierne (91 prosent). Latent skatt 1 614 mrd.
+- **SSB tabell 10315 (husholdninger):** bolig til markedsverdi 8 772 mrd. i 2022 og 9 159 mrd. i 2024
+  (primær- og sekundærbolig). Gjeld 4 270 mrd. og nettoformue 9 616 mrd. i 2022, 10 181 mrd. i 2024.
+- **SSB tabell 10318:** den rikeste prosenten av husholdningene har 22,3 prosent av nettoformuen i 2022 og
+  21,7 prosent i 2024, altså rundt 2 140 og 2 210 mrd. (andel ganger sum, regnet av Claude).
+- **Claudes regnestykke, ikke publisert noe sted:** differansen mellom markedsverdi og ligningsverdi er rundt
+  2 500 mrd. Legges den til, blir andelen til den rikeste prosenten 28 prosent hvis de eier halvparten av
+  den, og 39 prosent hvis de eier alt. Tallene har ulikt prisår og ulik avgrensning, så dette er en illustrasjon.
+- **Tidelen kan ikke gjelde alle unoterte aksjer.** Da ville de vært verdt om lag 16 000 mrd., nær det dobbelte
+  av alle boliger. Den må gjelde toppen. SSB Rapporter 2022/31 viser til Kapital (2020): de 400 rikeste har
+  mer enn fire ganger så stor reell som skattemessig formue.
+
