@@ -36,26 +36,41 @@ seksjoner:
       **Etter krigen** falt andelen jevnt i tretti år. På slutten av 1960-tallet var den nede i 20 prosent, under halvparten av nivået før krigen.
 
       **Fra midten av 1980-tallet** har den steget igjen. I 2019 var den 37 prosent, like høy som i 1912.
-
-      Forskerne skriver at utviklingen i Norge ligner mer på USA enn på de fleste andre land i Europa, der andelen har holdt seg mer stabil etter krigen.
   - type: tekst
-    overskrift: "Hvor sikre er tallene?"
+    overskrift: "Trenden er likevel tydelig"
     tekst: |-
-      De eldste tallene bygger på tabeller fra skattemyndighetene, og er anslag. Hele tallserien bruker verdiene fra formuesskatten, som setter selskaper utenfor børs lavt. Forskerne kaller derfor tallene et nedre anslag, også for de siste årene.
+      Tallserien måler formue slik skattemeldingene gjør. Som vi så i forrige leksjon, teller både boliger og selskaper utenfor børs for lite der. Endrer det bildet?
+
+      **Med boligene til markedsverdi** blir økningen mindre, men den er der. Da eide den rikeste prosenten 15 prosent i 1995 og 19 prosent i 2016. I tallserien fra skattemeldingene steg andelen fra 24 til 37 prosent i de samme årene.
+
+      **Selskapene utenfor børs** står for lavt i begge tallseriene. De eies for det meste av de rikeste.
+
+      **Inntektene peker samme vei.** Som vi så i leksjon 2, har den rikeste prosentens andel av inntektene steget fra 4 prosent i 1980 til 23 prosent i 2022. Høye inntekter år etter år blir til formue.
+
+      Begge tallseriene viser altså at formuen har blitt skjevere fordelt siden 1990-tallet. Hvor mye, er mer usikkert. De eldste tallene bygger på tabeller fra skattemyndighetene, og er anslag.
+  - type: tekst
+    overskrift: "Ligner Norge på USA?"
+    bakgrunn: lys
+    tekst: |-
+      Forskerne bak tallserien skriver at utviklingen i Norge ligner mer på USA enn på de fleste land i Europa. I Europa har andelen til den rikeste prosenten holdt seg ganske stabil etter krigen. I Norge og USA falt den først, og steg så kraftig igjen.
+
+      De tar selv forbehold. Forskjellen kan komme av at landene måler formue på ulike måter, og det er vanskelig å rangere land etter formuesulikhet. Sammenligningen gjelder utviklingen i tallserien fra skattemeldingene, ikke nivået i dag.
+
+      Ring, Seim og Zucman finner noe lignende for inntekt. Når overskuddet i holdingselskapene regnes med, forsvinner halvparten av forskjellen mellom Norden og USA i hvor mye den rikeste prosentens andel har vokst siden 1980.
   - type: tekst
     overskrift: "Del 2: Hva gjør skatten med det?"
-    bakgrunn: lys
     knapp: Gå til neste leksjon
     knappLenke: /hvor-mye-skatt-vil-nordmenn-at-de-rike-skal-betale
     tekst: |-
       Så langt har vi sett hvordan inntekt og formue er fordelt, og hvordan det har endret seg. I neste del ser vi på skatten. Vi begynner med et enkelt spørsmål: Hvor mye mener folk at de rikeste bør betale?
   - type: tekst
     overskrift: "Kildene"
+    bakgrunn: lys
     tekst: |-
-      - Rolf Aaberge, Jørgen Modalsli og Edda Solbakken (2025): «Measuring long-run wealth inequality: Empirical results for Norway 1912–2019». SSB Discussion Papers 1028. [ssb.no](https://www.ssb.no/inntekt-og-forbruk/inntekt-og-formue/artikler/maling-av-langsiktig-ulikskap-i-formue-empiriske-resultat-fra-noreg-1912-2019). Tallene for 1912, 1969 og 2019 står i tabellen over de fire fasene. Tallet for 1938 står i teksten. Studien er et arbeidsnotat, og er ikke publisert i et tidsskrift ennå.
+      - Rolf Aaberge, Jørgen Modalsli og Edda Solbakken (2025): «Measuring long-run wealth inequality: Empirical results for Norway 1912–2019». SSB Discussion Papers 1028. [ssb.no](https://www.ssb.no/inntekt-og-forbruk/inntekt-og-formue/artikler/maling-av-langsiktig-ulikskap-i-formue-empiriske-resultat-fra-noreg-1912-2019). Tallene for 1912, 1969 og 2019 står i tabellen over de fire fasene. Tallet for 1938 står i teksten. Tallene for 1995 og 2016 står i tabell A.1 og A.2. Sammenligningen med USA står i kapittel 4.1 og i avslutningen. Studien er et arbeidsnotat, og er ikke publisert i et tidsskrift ennå.
+      - Marius Ring, David Seim og Gabriel Zucman (2026): «Personal Holding Companies, Tax Progressivity, and Inequality». NBER Working Paper 35534. [nber.org/papers/w35534](https://www.nber.org/papers/w35534). Sammenligningen med USA står i sammendraget.
   - type: tekst
     overskrift: Videre i serien
-    bakgrunn: lys
     tekst: |-
       - Forrige: [Hvor skjevt er formuen fordelt i Norge?](/formuesfordelingen-i-norge)
       - Neste: [Hvor mye skatt vil nordmenn at folk med forskjellige inntekter skal betale?](/hvor-mye-skatt-vil-nordmenn-at-de-rike-skal-betale)

@@ -111,3 +111,29 @@ Gaute spurte om formuestallene er gode, og om de tar med verdiene som ligger i s
 - **Forslag:** leksjon 3 bruker 22 prosent som hovedtall og kaller det et nedre anslag, med 1,9-faktoren og
   Gini-tallene som forklaring. Leksjon 4 beholder den lange serien, men sier at den måler skattepliktig formue og
   viser utviklingen, ikke nivået. De to tallene må ikke blandes. Spørre SSB om toppandeler med markedsverdi.
+
+### Oppfølging samme dag: Gautes valg og nye utkast (grein `formue-utkast`, ikke på demoen)
+
+Gaute vil holde på den lange serien (37 prosent) som svaret, og forklare usikkerheten lenger ned. Utkastene er
+skrevet om etter det. Han har ikke godkjent teksten.
+
+- **Leksjon 3:** ingressen sier ikke lenger «forsiktig anslag». Nøkkeltallet «1/10» er tatt ut. Ny del
+  «To kompliserende faktorer»: selskaper utenfor børs (SSB: rundt en tredjedel av reell verdi i formuesskatten,
+  Ring, Seim og Zucman: en tidel) og bolig (rundt en firedel av markedsverdi).
+- **Leksjon 4:** «Hvor sikre er tallene?» er byttet ut med «Trenden er likevel tydelig», og setningen om USA har
+  fått egen del, «Ligner Norge på USA?».
+- **Tall fra DP 1028 som er nye i tekstene:** tabell A.2 (bolig til markedsverdi, «modern data»): den rikeste
+  prosenten 15 prosent i 1995 og 19 prosent i 2016, Gini 0,664 og 0,699. Tabell A.1 (skatteverdier): 24 prosent
+  i 1995, 37 i 2016. Forskerne skriver selv (s. 35) at økningen i toppandelen er «much lower» med bolig til
+  markedsverdi.
+- **Tidelen er omstridt.** Ring, Seim og Zucman skriver «only a tenth» i innledningen, uten at utregningen er
+  vist der. Tre SSB-rapporter (2022/31, 2022/37, 2025/21) finner at markedsverdien er rundt det dobbelte av
+  ligningsverdien, altså rundt 35 prosent av reell verdi med rabatten i 2022. Alle bruker multipler fra
+  børsnoterte selskaper. RSZ ble denne gangen lest gjennom søk i PDF-en, ikke side for side.
+- **USA:** DP 1028 (kap. 4.1 og s. 46) sammenligner utviklingen, ikke nivået, og sier selv at forskjellen kan
+  skyldes data og metode, og at land er vanskelige å rangere.
+- **Motstemme å kjenne til:** Mæland og Thorburn (NHH), kronikk i DN 23. juni 2026, «Rikere og likere enn vi
+  tror». De mener SSB-serien overdriver fordi bolig og pensjon teller for lite.
+- **Ikke gjort:** Datawrapper-grafen i leksjon 3 (`YpzU3`) har en fotnote som sier «nedre anslag». Den må
+  rettes. Samme graf viser 20 prosent av inntektene (2020), mens Gautes leksjon 2 nå bruker 23 prosent (2022).
+
