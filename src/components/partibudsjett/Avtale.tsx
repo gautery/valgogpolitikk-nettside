@@ -4,20 +4,19 @@ import { useRef, useState } from "react";
 
 // Budsjettavtalen sak for sak. Vanlig visning er ett kort om gangen, med knapper for
 // forrige og neste. «Alle temaer» hopper rett til et kort, og «Vis som tekst» viser alt
-// under hverandre. Dataene ligger i public/data/budsjettavtale.
+// under hverandre. Teksten ligger i content/budsjettavtalen.yml og redigeres i Pages CMS.
 
-type Utfall = "fikk" | "delvis" | "ikke";
-type RegUtfall = "holdt" | "litt" | "etter";
+type Utfall = "fikk det" | "fikk noe" | "fikk ikke";
 type Krav = { parti: string; krav: string; utfall: Utfall };
-export type AvtaleSak = { tittel: string; avtalen: string; regjeringen: string; regjeringen_utfall: RegUtfall; krav: Krav[] };
+export type AvtaleSak = { tittel: string; avtalen: string; regjeringen: string; krav: Krav[] };
 
 const FOKUS = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
 const KNAPP = `rounded-md border border-black px-5 py-3 text-[15.5px] font-semibold ${FOKUS}`;
 const LITEN = `rounded-md border border-black px-3.5 py-2 text-[14.5px] font-semibold ${FOKUS}`;
 const UTFALL: Record<Utfall, { tekst: string; klasse: string }> = {
-  fikk: { tekst: "Fikk det", klasse: "border-black bg-black text-white" },
-  delvis: { tekst: "Fikk noe", klasse: "border-black bg-white text-black" },
-  ikke: { tekst: "Fikk ikke", klasse: "border-border bg-surface text-text-muted" },
+  "fikk det": { tekst: "Fikk det", klasse: "border-black bg-black text-white" },
+  "fikk noe": { tekst: "Fikk noe", klasse: "border-black bg-white text-black" },
+  "fikk ikke": { tekst: "Fikk ikke", klasse: "border-border bg-surface text-text-muted" },
 };
 const REKKEFOLGE = ["Sp", "SV", "Rødt"];
 const liste = (a: string[]) => a.join(", ").replace(/, ([^,]*)$/, " og $1");
@@ -26,9 +25,9 @@ const liste = (a: string[]) => a.join(", ").replace(/, ([^,]*)$/, " og $1");
 function vinner(s: AvtaleSak): { ap: boolean; tekst: string } {
   const med = (u: Utfall) =>
     s.krav.filter((k) => k.utfall === u).map((k) => k.parti).sort((a, b) => REKKEFOLGE.indexOf(a) - REKKEFOLGE.indexOf(b));
-  const fullt = med("fikk");
-  const noe = med("delvis");
-  if (s.regjeringen_utfall === "holdt" || fullt.length + noe.length === 0) return { ap: true, tekst: "Ap fikk viljen sin" };
+  const fullt = med("fikk det");
+  const noe = med("fikk noe");
+  if (fullt.length + noe.length === 0) return { ap: true, tekst: "Ap fikk viljen sin" };
   const deler = [];
   if (fullt.length) deler.push(`${liste(fullt)} fikk fullt gjennomslag`);
   if (noe.length) deler.push(`${liste(noe)} fikk noe gjennomslag`);
@@ -59,8 +58,8 @@ function Kort({ s, overskrift }: { s: AvtaleSak; overskrift: React.ReactNode }) 
             <p className="text-[15.5px] leading-[1.5] text-text-secondary">
               <strong className="font-semibold text-black">{k.parti} ville:</strong> {k.krav}
             </p>
-            <span className={`inline-block shrink-0 rounded-[3px] border px-2 py-0.5 text-[12.5px] font-semibold leading-tight ${UTFALL[k.utfall].klasse}`}>
-              {UTFALL[k.utfall].tekst}
+            <span className={`inline-block shrink-0 rounded-[3px] border px-2 py-0.5 text-[12.5px] font-semibold leading-tight ${(UTFALL[k.utfall] ?? UTFALL["fikk ikke"]).klasse}`}>
+              {(UTFALL[k.utfall] ?? UTFALL["fikk ikke"]).tekst}
             </span>
           </li>
         ))}

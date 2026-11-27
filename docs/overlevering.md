@@ -369,7 +369,8 @@ Gaute la ved budsjettavtalen mellom Ap, Sp, SV og Rødt (forliksdokument 25. nov
 og ba om en sammenligning med partienes alternative budsjetter, del for del, med oppsummering øverst.
 
 - **Grenen `budsjettavtale-utkast`** (bygger på `budsjettomat-utkast`). Ikke på demoen. Gaute må si fra først.
-- **Side:** `/statsbudsjett/partiene/avtalen`. Data: `public/data/budsjettavtale/2027.json`, skrevet for hånd.
+- **Side:** `/statsbudsjett/partiene/avtalen`. All tekst ligger i `content/budsjettavtalen.yml` og redigeres i
+  Pages CMS under «Budsjettavtalen» (se neste punkt).
 - **Innhold:** 18 saker. For hver: hva avtalen sier, hva regjeringen foreslo, og hva Sp, SV og Rødt ba om, med
   merkene «Fikk det», «Fikk noe» og «Fikk ikke». Hver sak har også regjeringens utfall (`regjeringen_utfall`):
   «fikk viljen sin» (8 saker), «ga litt» (8) og «ga etter» (2: tannlege og månedskort).
@@ -387,3 +388,9 @@ og ba om en sammenligning med partienes alternative budsjetter, del for del, med
 - **Hvem vant, i klartekst:** oversikten og kortene sier nå «Ap fikk viljen sin» eller hvilke partier som fikk noe
   eller fullt gjennomslag («SV og Rødt fikk noe gjennomslag»). Teksten lages av `vinner()` i `Avtale.tsx` ut fra
   merkene på partienes krav. Gaute ba om det 27. november.
+- **Inn i Pages CMS (27. november):** Gaute ba om å kunne redigere teksten selv. Ingress, «Det viktigste», sakene,
+  «Slik har vi gjort det» og kildene ligger i `content/budsjettavtalen.yml`, med skjema i `.pages.yml` etter Trappa.
+  Tallene i teksten (385 kroner, 10,8 mrd.) er nå vanlig tekst og regnes ikke ut. Utfallet på et krav er
+  «fikk det», «fikk noe» eller «fikk ikke». Feltet `regjeringen_utfall` er fjernet: «Ap fikk viljen sin» vises når
+  ingen partier fikk noe i saken. `.pages.yml` ble lest med en YAML-leser etter endringen, og alle ni
+  innholdstypene lastet. Be Gaute laste Pages CMS på nytt før han redigerer.

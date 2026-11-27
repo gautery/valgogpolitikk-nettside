@@ -191,6 +191,76 @@ content:
           - { name: tittel, label: Tittel, type: string }
           - { name: punkter, label: Punkter, type: text, list: true }
 
+  - name: budsjettavtalen
+    label: Budsjettavtalen
+    description: >-
+      Teksten på siden /statsbudsjett/partiene/avtalen. Linja «Ap fikk viljen sin» eller «SV fikk noe
+      gjennomslag» lages automatisk fra utfallet på partienes krav. Tom linje gir nytt avsnitt.
+    type: file
+    path: content/budsjettavtalen.yml
+    format: yaml
+    fields:
+      - name: topp
+        label: Toppen av siden
+        type: object
+        fields:
+          - { name: tittel, label: Tittel, type: string }
+          - { name: ingress, label: Ingress, type: text }
+      - name: viktigste
+        label: Det viktigste
+        type: object
+        fields:
+          - { name: overskrift, label: Overskrift, type: string }
+          - name: punkter
+            label: Punkter
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+            fields:
+              - { name: tittel, label: Uthevet start på punktet, type: string }
+              - { name: tekst, label: Tekst, type: text }
+      - name: saker
+        label: Sak for sak
+        type: object
+        fields:
+          - { name: overskrift, label: Overskrift, type: string }
+          - name: liste
+            label: Saker
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+            fields:
+              - { name: tittel, label: Tema, type: string }
+              - { name: avtalen, label: Avtalen, type: text }
+              - { name: regjeringen, label: Regjeringen foreslo, type: text }
+              - name: krav
+                label: Hva partiene ville
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                fields:
+                  - name: parti
+                    label: Parti
+                    type: select
+                    options:
+                      values: [Sp, SV, Rødt]
+                  - { name: krav, label: Hva partiet ville, type: text }
+                  - name: utfall
+                    label: Utfall
+                    type: select
+                    options:
+                      values: [fikk det, fikk noe, fikk ikke]
+      - name: metode
+        label: «Slik har vi gjort det»
+        type: object
+        fields:
+          - { name: overskrift, label: Overskrift, type: string }
+          - { name: tekst, label: Tekst, type: text }
+      - { name: kilder, label: Kilder, type: string, list: true }
+
   - name: karuseller
     label: Karusellsider
     description: Én kildeside per karusell, på adressen valgogpolitikk.no/<filnavn>.

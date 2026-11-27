@@ -1,0 +1,224 @@
+topp:
+  tittel: 'Budsjettavtalen: hvem fikk viljen sin?'
+  ingress: |-
+    Arbeiderpartiet, Senterpartiet, SV og Rødt ble 25. november 2026 enige om statsbudsjettet for 2027. Regjeringen fikk beholde det meste av sitt eget forslag. Avtalen flytter 10,8 mrd. kroner, og skatteopplegget står nesten urørt.
+
+    Sp, SV og Rødt fikk mest der regjeringen ikke hadde foreslått noe selv: tannlegerabatt for de eldste, billigere månedskort og litt billigere barnehage. Uten MDG har avtalen ikke flertall.
+viktigste:
+  overskrift: Det viktigste
+  punkter:
+  - tittel: Regjeringen holdt på skattene.
+    tekst: SV og Rødt ville hente inn om lag 16 mrd. kroner mer i formuesskatt hver, og øke utbytteskatten. Avtalen
+      rører ingen av delene.
+  - tittel: Lønnsmottakere får litt mindre.
+    tekst: En som tjener 600 000 kroner, betaler 385 kroner mer i skatt med avtalen enn med regjeringens forslag,
+      fordi trygdeavgiften kuttes mindre. SV og Rødt ville gi samme person om lag 5 000 kroner i lettelse.
+  - tittel: Regjeringen holdt på strømprisen.
+    tekst: Sp, SV og Rødt gikk alle imot å øke Norgespris til 45 øre. Avtalen nevner ikke strøm, så økningen står.
+  - tittel: Regjeringen ga etter på tannlege og månedskort.
+    tekst: Avtalen bruker 1,9 mrd. kroner på tannlegerabatt for alle over 75 år og 1,3 mrd. kroner på billigere
+      månedskort. Ingen av delene sto i regjeringens forslag.
+  - tittel: Oljepenger.
+    tekst: Forliksdokumentet oppgir at avtalen bruker 7,4 mrd. kroner mer enn regjeringens forslag.
+saker:
+  overskrift: Sak for sak
+  liste:
+  - tittel: Skatt på lønn
+    avtalen: Trygdeavgiften blir 7,5 prosent, ikke 7,4. Personfradraget øker med 975 kroner. Trinn 4 og 5 øker med
+      0,1 prosentenhet.
+    regjeringen: Trygdeavgiften ned fra 7,6 til 7,4 prosent.
+    krav:
+    - parti: Sp
+      krav: Mindre kutt i trygdeavgiften og 4 900 kroner høyere personfradrag.
+      utfall: fikk noe
+    - parti: SV
+      krav: Fjerne trinn 1, flytte trinn 2 og øke skatten på inntekter over 800 000 kroner.
+      utfall: fikk ikke
+    - parti: Rødt
+      krav: Fjerne trinn 1, øke personfradraget med 3 000 kroner og øke skatten over 800 000 kroner.
+      utfall: fikk ikke
+  - tittel: Skatt på formue, utbytte og oppdrett
+    avtalen: Ingen endring.
+    regjeringen: Som i dag.
+    krav:
+    - parti: SV
+      krav: 16,1 mrd. kroner mer i formuesskatt, høyere utbytteskatt og 3,5 mrd. kroner mer fra oppdrett.
+      utfall: fikk ikke
+    - parti: Rødt
+      krav: Om lag 16 mrd. kroner mer i formuesskatt og 8,6 mrd. kroner mer i utbytteskatt.
+      utfall: fikk ikke
+  - tittel: Strøm
+    avtalen: Ikke nevnt i avtalen. Norgespris øker til 45 øre.
+    regjeringen: Norgespris opp fra 40 til 45 øre.
+    krav:
+    - parti: Sp
+      krav: 41 øre.
+      utfall: fikk ikke
+    - parti: Rødt
+      krav: Fryse prisen på 40 øre.
+      utfall: fikk ikke
+    - parti: SV
+      krav: Øke prisen bare med prisstigningen.
+      utfall: fikk ikke
+  - tittel: Moms på mat
+    avtalen: Ingen endring.
+    regjeringen: 15 prosent, som i dag.
+    krav:
+    - parti: Rødt
+      krav: Ned til 10 prosent fra 1. juli.
+      utfall: fikk ikke
+  - tittel: Tannlege
+    avtalen: Alle over 75 år får 75 prosent rabatt (1,9 mrd. kroner).
+    regjeringen: Ingen endring.
+    krav:
+    - parti: Rødt
+      krav: Staten dekker 40 prosent av regninger over 2 500 kroner for alle (3,4 mrd. kroner).
+      utfall: fikk noe
+    - parti: SV
+      krav: Rabatt for 29- og 30-åringer og gratis tannregulering for barn (1,2 mrd. kroner).
+      utfall: fikk noe
+  - tittel: Månedskort
+    avtalen: 1,3 mrd. kroner til billigere månedskort i kollektivtrafikken.
+    regjeringen: Ingen egen satsing.
+    krav:
+    - parti: Rødt
+      krav: Fryse prisen på månedskort (1 mrd. kroner).
+      utfall: fikk det
+    - parti: SV
+      krav: Billigere månedskort.
+      utfall: fikk det
+  - tittel: Barnehagepris
+    avtalen: Prisen går ned med 200 kroner i måneden fra 1. august (242 mill. kroner).
+    regjeringen: 1 200 kroner i måneden, som i dag.
+    krav:
+    - parti: SV
+      krav: 600 kroner lavere pris fra 1. august.
+      utfall: fikk noe
+  - tittel: Ansatte i barnehagene
+    avtalen: 500 mill. kroner til flere ansatte.
+    regjeringen: Ingen egen satsing.
+    krav:
+    - parti: SV
+      krav: Om lag 1,5 mrd. kroner.
+      utfall: fikk noe
+    - parti: Rødt
+      krav: 1,3 mrd. kroner til barnehage og SFO.
+      utfall: fikk noe
+  - tittel: SFO
+    avtalen: Gratis halvdagsplass i 4. klasse i de minst sentrale kommunene fra 1. august (328 mill. kroner).
+    regjeringen: Gratis bare for 1.–3. klasse.
+    krav:
+    - parti: SV
+      krav: Gratis halvdagsplass i 4. klasse i hele landet.
+      utfall: fikk noe
+  - tittel: Kommunene
+    avtalen: '2 mrd. kroner mer i frie midler: 1,7 mrd. til kommunene og 0,3 mrd. til fylkene.'
+    regjeringen: Ingen ekstra penger.
+    krav:
+    - parti: Sp
+      krav: Om lag 3 mrd. kroner mer.
+      utfall: fikk noe
+    - parti: SV
+      krav: 4 mrd. kroner mer.
+      utfall: fikk noe
+    - parti: Rødt
+      krav: 5 mrd. kroner mer.
+      utfall: fikk noe
+  - tittel: Sykehusene
+    avtalen: 1 mrd. kroner mer.
+    regjeringen: Ingen ekstra penger.
+    krav:
+    - parti: SV
+      krav: 1,5 mrd. kroner til sykehusøkonomi og grunnbemanning.
+      utfall: fikk noe
+    - parti: Rødt
+      krav: 2,1 mrd. kroner til sykehus og kommunehelsetjeneste.
+      utfall: fikk noe
+  - tittel: Bolig
+    avtalen: Husbanken får låne ut 5 mrd. kroner mer, og 200 mill. kroner går til utleieboliger i kommunene.
+    regjeringen: Ingen ekstra penger.
+    krav:
+    - parti: SV
+      krav: Husbanken får låne ut 20 mrd. kroner mer.
+      utfall: fikk noe
+    - parti: Rødt
+      krav: Husbanken får låne ut 10 mrd. kroner mer.
+      utfall: fikk noe
+  - tittel: Bensin og diesel
+    avtalen: Veibruksavgiften på diesel kuttes midlertidig med 1 krone per liter (1,85 mrd. kroner). Bensin er ikke
+      med.
+    regjeringen: Lavere veibruksavgift og høyere CO2-avgift.
+    krav:
+    - parti: Sp
+      krav: Fjerne veibruksavgiften på bensin til 1. juli og stanse økningen i CO2-avgiften.
+      utfall: fikk noe
+    - parti: Rødt
+      krav: Om lag 1,70 kroner lavere pumpepris.
+      utfall: fikk noe
+    - parti: SV
+      krav: Høyere avgifter enn regjeringen foreslo.
+      utfall: fikk ikke
+  - tittel: Barnetrygd
+    avtalen: Ingen endring i barnetrygden. Engangsstønaden øker (106 mill. kroner).
+    regjeringen: Barnetrygden står stille.
+    krav:
+    - parti: SV
+      krav: Øke den i takt med prisene.
+      utfall: fikk ikke
+    - parti: Rødt
+      krav: Øke den i takt med prisene, og mer til enslige forsørgere.
+      utfall: fikk ikke
+  - tittel: Minstepensjon, uføre og AAP
+    avtalen: Ingen økning i minstesatsene. Uføre slipper egenandel på blå resept (233 mill. kroner).
+    regjeringen: Ingen økning utover vanlig regulering.
+    krav:
+    - parti: Rødt
+      krav: 15 000 kroner mer i året til minstepensjonister, uføre og folk på AAP (3,9 mrd. kroner).
+      utfall: fikk ikke
+    - parti: SV
+      krav: 10 000 kroner høyere minstesats i AAP.
+      utfall: fikk ikke
+  - tittel: Bistand
+    avtalen: Ingen økning i 2027.
+    regjeringen: 0,93 prosent av bruttonasjonalinntekten.
+    krav:
+    - parti: SV
+      krav: 1 prosent.
+      utfall: fikk ikke
+    - parti: Rødt
+      krav: 3,9 mrd. kroner mer.
+      utfall: fikk ikke
+  - tittel: Skolemat
+    avtalen: Ikke med.
+    regjeringen: Ingen statlig ordning.
+    krav:
+    - parti: SV
+      krav: Gratis skolemåltid på ungdomstrinnet (415 mill. kroner).
+      utfall: fikk ikke
+    - parti: Rødt
+      krav: Fase inn gratis skolemat i grunnskolen (460 mill. kroner).
+      utfall: fikk ikke
+  - tittel: Kvoteflyktninger
+    avtalen: Ikke med.
+    regjeringen: Ingen økning.
+    krav:
+    - parti: SV
+      krav: 5 000 i året.
+      utfall: fikk ikke
+    - parti: Rødt
+      krav: Følge FNs anbefaling.
+      utfall: fikk ikke
+metode:
+  overskrift: Slik har vi gjort det
+  tekst: |-
+    «Ap fikk viljen sin» betyr at avtalen ikke endrer regjeringens forslag, selv om andre partier ville det. Ellers står det hvilke partier som fikk noe eller fullt gjennomslag for det de foreslo.
+
+    Vi har sammenlignet avtalen med det hvert parti foreslo i sitt eget alternative statsbudsjett. «Fikk det» betyr at avtalen gir omtrent det partiet ba om. «Fikk noe» betyr at avtalen går samme vei, men kortere eller for en annen gruppe. «Fikk ikke» betyr at avtalen ikke endrer noe, eller går motsatt vei.
+
+    Gjennomgangen dekker sakene vi har lest i partienes budsjetter, ikke alt partiene ba om. Senterpartiet har færre saker med enn SV og Rødt. Hva som teller som «noe», er en vurdering.
+
+    Regnestykket for skatt: trygdeavgiften blir 0,1 prosentenhet høyere enn i regjeringens forslag, som er 600 kroner av 600 000 kroner. Personfradraget øker med 975 kroner, som gir 215 kroner lavere skatt.
+kilder:
+- Forliksdokument 25. november 2026 (tallene i avtalen)
+- Budsjettavtale og verbalforslag for 2027 mellom Arbeiderpartiet, Senterpartiet, SV og Rødt
+- Partienes alternative statsbudsjetter for 2027
