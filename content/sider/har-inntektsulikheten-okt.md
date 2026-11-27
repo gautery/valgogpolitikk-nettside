@@ -8,7 +8,7 @@ seksjoner:
     overlinje: Grunnkurs i ulikhet, leksjon 2 av 8
     tittel: Har inntektsulikheten i Norge økt?
     ingress: Andelen de rikeste tjente gikk ned og ned i nesten 100 år etter
-      demokratiseringen av Norge, men fra 80-tallet av så har den steget
+      demokratiseringen av Norge, men fra 90-tallet av så har den steget
       dramatisk. Nå er vi tilbake til omtrent samme nivå som for hundre år
       siden.
     bokrygger: false
@@ -56,7 +56,7 @@ seksjoner:
       - **2022:** 23 prosent (med overskudd i selskapene)
 
 
-      Andelen falt altså i hundre år, og basert på de beste dataen vi har så ser
+      Andelen falt altså i hundre år, og basert på de beste dataene vi har så ser
       den ut til å ha flerdoblet seg siden 1980.
 
 
@@ -100,20 +100,13 @@ seksjoner:
       selskapene hadde et uvanlig godt år.
     bakgrunn: lys
   - type: tekst
-    overskrift: Hva med boligprisene?
-    tekst: SSB har også målt ulikheten med et bredere inntektsmål, der både
-      overskudd i selskaper og prisstigning på bolig er med. Med det målet økte
-      inntektsulikheten i Norge med 29 prosent fra 2001 til 2018, med store
-      svingninger underveis.
-    bakgrunn: hvit
-  - type: tekst
     overskrift: Inntekt er én ting, formue en annen
     tekst: Inntekt er det du tjener i løpet av et år. Formue er det du eier. Når
       noen tjener mye år etter år, hoper det seg opp. Hvordan er formuen
       fordelt?
     knapp: Gå til neste leksjon
     knappLenke: /formuesfordelingen-i-norge
-    bakgrunn: lys
+    bakgrunn: hvit
   - type: tekst
     overskrift: Hvorfor er tallene høyere enn i offisiell statistikk?
     tekst: >-
@@ -134,19 +127,18 @@ seksjoner:
       overskuddet i selskapene er regnet med. Med den gamle metoden er tallet
       for 2017 10 prosent, altså halvparten av de 20 prosentene vi får når
       overskuddet regnes med.
-    bakgrunn: hvit
+    bakgrunn: lys
   - type: tekst
     overskrift: Kildene
     tekst: |+
-      - Rolf Aaberge, Anthony B. Atkinson og Jørgen Modalsli (2020): «Estimating long-run income inequality from mixed tabular data: Empirical evidence from Norway, 1875–2017». SSB Discussion Papers 928. [ssb.no](https://www.ssb.no/en/forskning/discussion-papers/estimating-long-run-income-inequality-from-mixed-tabular-data-empirical-evidence-from-norway-1875-2017). Tallene for 1882, 1939, 1953, 1980 og 2017 står i kapittel 4.1.
+      - Rolf Aaberge, Anthony B. Atkinson og Jørgen Modalsli (2020): «Estimating long-run income inequality from mixed tabular data: Empirical evidence from Norway, 1875–2017». SSB Discussion Papers 928. [ssb.no](https://www.ssb.no/en/forskning/discussion-papers/estimating-long-run-income-inequality-from-mixed-tabular-data-empirical-evidence-from-norway-1875-2017). Tallene for 1882, 1939, 1953, 1980 og 2017 står i kapittel 4.1. Tallene for 1920, 1990 og 1995 er lest av figur A10 og er omtrentlige. For 1920 er det snittet av forskernes øvre og nedre anslag, som er rundt 14 og 11 prosent.
       - Rolf Aaberge, Jørgen Heibø Modalsli og Ola Lotherington Vestad (2020): «Ulikheten – betydelig større enn statistikken viser». SSB analyse 2020/13. [ssb.no](https://www.ssb.no/inntekt-og-forbruk/artikler-og-publikasjoner/ulikheten-betydelig-storre-enn-statistikken-viser). Tallene for 2001–2018 er fra figur 3. De gjelder markedsinntekt for personer over 25 år, medregnet eiernes andel av overskuddet i selskapene.
       - Ola Lotherington Vestad (2024): «Utviklingen i inntektsulikhet i perioden 2016–2022». SSB Rapporter 2024/32. [ssb.no](https://www.ssb.no/inntekt-og-forbruk/inntekt-og-formue/artikler/utviklingen-i-inntektsulikhet-i-perioden-20162022). Den fortsetter tallserien fra SSB analyse 2020/13 med samme inntektsmål. Tallene for 2019–2022 er lest av figur 3.2 og avrundet.
       - Den lange grafen: Tallene for 1875–2000 er lest av figur A10 i SSB Discussion Papers 928, som snittet av forskernes øvre og nedre anslag. De er derfor omtrentlige.
-      - Rolf Aaberge, Magne Mogstad, Ola L. Vestad og Arnstein Vestre (2021): «Økonomisk ulikhet i Norge i det 21. århundre». SSB Rapporter 2021/33. [ssb.no](https://www.ssb.no/inntekt-og-forbruk/inntekt-og-formue/artikler/okonomisk-ulikhet-i-norge-i-det-21.arhundre). Økningen på 29 prosent gjelder Gini-koeffisienten for inntekt etter skatt, figur 2.5.
       - Marius Ring, David Seim og Gabriel Zucman (2026), [NBER Working Paper 35534](https://www.nber.org/papers/w35534), finner omtrent samme utvikling med en annen metode: fra rundt 11 prosent i 2002 til rundt 20 prosent i 2020.
       - Kildene måler inntekt på ulik måte. Tallene til og med 2000 er uten overskudd som blir stående i selskapene, og tallene fra 2001 er med. De kan derfor ikke sammenlignes direkte.
 
-    bakgrunn: lys
+    bakgrunn: hvit
   - type: tekst
     overskrift: Videre i serien
     tekst: >+
