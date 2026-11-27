@@ -358,3 +358,6 @@ lønnsmottaker-sida og i budsjettomaten.
   nederst så «Neste spørsmål» alltid er ett trykk unna. Prislappene har pluss for «koster» og minus for «sparer/gir».
   Gaute foreslo grønt for mer forbruk og rødt for mindre. Claude valgte tegn i stedet, fordi grønt og rødt leses som
   bra og dårlig, og fordi fargene er vanskelige for fargeblinde. Gaute har ikke tatt stilling til det ennå.
+- **På grenen, ikke på demoen ennå:** etter at man har svart, står partinavnene som merkelapper på hvert svarvalg, og
+  knapperaden nederst sier «Samme valg som …». Partier som ligger mellom to valg, står i en egen linje. Gaute syntes
+  forklaringslista ble lett å glemme etter at knapperaden kom. Han må si «legg det på demoen».

@@ -97,6 +97,20 @@ export default function Budsjettomat({ data }: { data: OmatData }) {
     const ukjent = med.filter((p) => p.verdi === null);
     const perInnbygger = v ? Math.round((Math.abs(v.pris) * 1000) / data.innbyggere_mill / 50) * 50 : 0;
 
+    // Hvem står bak hvert svarvalg. Et parti hører til et valg når forslaget ligger tett på det.
+    // Partier som ligger mellom to valg, står for seg selv under knappene.
+    const hvem = q.valg.map(() => [] as string[]);
+    const mellom: string[] = [];
+    for (const p of data.partier) {
+      const pv = q.partier[p.id].verdi;
+      if (pv === null || p.id === "ap") continue;
+      const i = q.valg.reduce((b, o, j) => (Math.abs(o.verdi - pv) < Math.abs(q.valg[b].verdi - pv) ? j : b), 0);
+      if (Math.abs(q.valg[i].verdi - pv) < 0.3) hvem[i].push(p.navn);
+      else mellom.push(p.navn);
+    }
+    const liste = (a: string[]) => a.join(", ").replace(/, ([^,]*)$/, " og $1");
+    const mine = v ? [...(v.verdi === 0 ? ["regjeringen"] : []), ...hvem[svar[steg] as number]] : [];
+
     return (
       <div>
         <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-b border-black pb-3">
@@ -139,14 +153,33 @@ export default function Budsjettomat({ data }: { data: OmatData }) {
                   ) : null}
                   <span>{o.verdi === 0 ? "Regjeringens forslag" : o.pristekst}</span>
                 </span>
+                {v && hvem[i].length > 0 && (
+                  <span className="mt-2 flex flex-wrap gap-1.5">
+                    {hvem[i].map((navn) => (
+                      <span
+                        key={navn}
+                        className={`rounded-[3px] border px-1.5 py-0.5 text-[12.5px] font-semibold leading-tight ${paa ? "border-white/70 text-white" : "border-black text-black"}`}
+                      >
+                        {navn}
+                      </span>
+                    ))}
+                  </span>
+                )}
               </button>
             );
           })}
         </div>
 
+        {v && mellom.length > 0 && (
+          <p className="mt-3 text-[14px] text-text-secondary">
+            <strong className="font-semibold text-black">Mellom to av valgene:</strong> {liste(mellom)}.
+          </p>
+        )}
+
         <div aria-live="polite" className="mt-7">
           {v && (
             <div className="border-t border-black pt-5">
+              <h3 className="mb-3 font-display text-[19px] text-black">Dette foreslår partiene</h3>
               {v.pris !== 0 && perInnbygger > 0 && (
                 <p className="mb-4 text-[14.5px] text-text-secondary">
                   Det er om lag {perInnbygger.toLocaleString("nb-NO")} kroner per innbygger.
@@ -174,7 +207,19 @@ export default function Budsjettomat({ data }: { data: OmatData }) {
           )}
         </div>
 
-        <div className="sticky bottom-0 z-10 -mx-6 mt-7 flex items-center justify-between gap-3 border-t border-black bg-white px-6 py-3">
+        <div className="sticky bottom-0 z-10 -mx-6 mt-7 border-t border-black bg-white px-6 py-3">
+          {v && (
+            <p className="mb-2.5 text-[13.5px] leading-snug text-text-secondary">
+              {mine.length > 0 ? (
+                <>
+                  Samme valg som <strong className="font-semibold text-black">{liste(mine)}</strong>.
+                </>
+              ) : (
+                "Ingen partier foreslår akkurat dette."
+              )}
+            </p>
+          )}
+          <div className="flex items-center justify-between gap-3">
           {steg > 0 ? (
             <button type="button" onClick={() => gaTil(steg - 1)} className={`${KNAPP} bg-white px-4 text-black hover:bg-surface`}>
               Tilbake
@@ -190,6 +235,7 @@ export default function Budsjettomat({ data }: { data: OmatData }) {
           >
             {steg === n - 1 ? "Gjør opp budsjettet" : "Neste spørsmål"}
           </button>
+          </div>
         </div>
       </div>
     );
