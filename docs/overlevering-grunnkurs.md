@@ -88,3 +88,26 @@ Deleknappene peker på `https://valgogpolitikk.no/<slug>`. Instagram og TikTok k
   En ugyldig linje 26. november gjorde at Pages CMS ikke lastet nye felt, og grafer og knapper forsvant ved lagring.
 - **Etter endringer i filer eller felt:** be Gaute laste Pages CMS på nytt før han redigerer.
 - **Flere samtaler i samme repo:** hent siste `master` før sammenslåing.
+
+## Formuestallene: gjennomgang 27. november (ikke avklart med Gaute)
+
+Gaute spurte om formuestallene er gode, og om de tar med verdiene som ligger i selskapene. Kildene er lest på nytt.
+
+- **Leksjon 3 og 4 bruker «benchmark»-serien i SSB Discussion Papers 1028:** skattepliktig formue per skatteenhet
+  (ektepar eller enslig), 1912–2019. Tabell 1: Gini 0,862 og 37,3 prosent til den rikeste prosenten i 2019.
+  Både bolig og unoterte aksjer står til skatteverdi.
+- **Det er ikke et «nedre anslag».** Rapporten sier (s. 7–8 og 46) at serien med markedsverdi på bolig er nedre
+  grense, fordi unoterte selskaper står til bokført verdi. Markedsverdi på bolig gir lavere ulikhet (Gini 0,66 i
+  1995 og 0,70 i 2016), fordi boligen er folk flests formue. Leksjon 3 sier «forsiktig anslag» om 37 prosent, og
+  det stemmer ikke med kilden.
+- **Med markedsverdi på bolig:** SSB Rapporter 2021/33, figur 3.4: den rikeste prosenten av husholdningene eide
+  20 prosent av nettoformuen i 2001 og 22 prosent i 2018. Unoterte aksjer til bokført verdi. Samme nivå i 2024,
+  regnet av Claude fra SSBs tall: snitt 85 mill. for den rikeste prosenten (tabell 10318) mot 3,9 mill. for alle.
+- **Med markedsverdi også på selskapene finnes bare Gini, ikke andeler:** 2021/33, figur 3.1: 69 med bokført verdi
+  i 2018, 82 med kapitalisering (årsresultat delt på fire prosent), og en egen serie justert for Kapital 400 og
+  nasjonalregnskapet. SSB Rapporter 2022/31 (Andresen og Bø): unoterte selskaper er undervurdert med en faktor på
+  om lag 1,9 mot ligningsverdi, eierne skattlegges for om lag 35 prosent av reell verdi med rabatten i 2022, og
+  Gini øker fra 68 til 75 i 2020. SSB Rapporter 2025/21 (Grindaker og Vestad) har verdier for 2011–2022.
+- **Forslag:** leksjon 3 bruker 22 prosent som hovedtall og kaller det et nedre anslag, med 1,9-faktoren og
+  Gini-tallene som forklaring. Leksjon 4 beholder den lange serien, men sier at den måler skattepliktig formue og
+  viser utviklingen, ikke nivået. De to tallene må ikke blandes. Spørre SSB om toppandeler med markedsverdi.
