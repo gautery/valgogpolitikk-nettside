@@ -164,6 +164,14 @@ export default function PartieneSide() {
                 Prøv budsjettomaten
               </Link>
             </p>
+            <p className="mt-3">
+              <Link
+                href={`${ROT}/avtalen`}
+                className="inline-block rounded-md border border-black bg-white px-5 py-3 text-[15px] font-semibold text-black hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              >
+                Budsjettavtalen: hvem fikk viljen sin?
+              </Link>
+            </p>
             <p className="mt-5 text-[13.5px] leading-relaxed text-text-muted">
               Arbeiderpartiet og Senterpartiet har ingen egen kolonne i tabellen. De står bak flertallets forslag
               sammen med Rødt.

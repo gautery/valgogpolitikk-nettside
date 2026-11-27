@@ -362,3 +362,20 @@ lønnsmottaker-sida og i budsjettomaten.
   og knapperaden nederst sier «Samme valg som …». Partier som ligger mellom to valg, står i en egen linje. Partier
   som bare delvis passer med valget, har stjerne og én linje med forbeholdet (feltet `forbehold` i saklista, elleve
   i alt). Forklaringslista er foldet sammen bak «Les hva partiene foreslår». Gaute godkjente løsningen.
+
+### «Hvem fikk viljen sin?» (utkast, 27. november)
+
+Gaute la ved budsjettavtalen mellom Ap, Sp, SV og Rødt (forliksdokument 25. november og avtale med verbalforslag)
+og ba om en sammenligning med partienes alternative budsjetter, del for del, med oppsummering øverst.
+
+- **Grenen `budsjettavtale-utkast`** (bygger på `budsjettomat-utkast`). Ikke på demoen. Gaute må si fra først.
+- **Side:** `/statsbudsjett/partiene/avtalen`. Data: `public/data/budsjettavtale/2027.json`, skrevet for hånd.
+- **Innhold:** 18 saker. For hver: hva avtalen sier, hva regjeringen foreslo, og hva Sp, SV og Rødt ba om, med
+  merkene «Fikk det», «Fikk noe» og «Fikk ikke». Stillingen: Sp 0–3–1, SV 1–7–9, Rødt 1–6–9.
+- **Funn:** en lønn på 600 000 kroner får 385 kroner høyere skatt med avtalen enn med regjeringens forslag
+  (trygdeavgift 7,5 i stedet for 7,4 prosent, personfradrag +975 kroner). Norgespris er ikke nevnt. Formuesskatt,
+  utbytteskatt, matmoms, barnetrygd, minsteytelser, bistand og skolemat er ikke med.
+- **Må sjekkes av Gaute:** merkene er Claudes vurdering. Oppsummeringen øverst er Claudes utkast. Forliksdokumentet
+  oppgir at oljepengebruken øker med 7,4 mrd. kroner, mens Ap skal ha omtalt nivået som uendret. Sp har bare fire
+  saker med, fordi Sps budsjett er lest dårligst. Avtalens verbalforslag er ikke gjennomgått.
+- **Ikke gjort:** egen rad for avtalen på lønnsmottaker-sida og merkelapp i budsjettomaten.
