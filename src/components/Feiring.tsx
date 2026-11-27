@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import Fyrverkeri from "@/components/Fyrverkeri";
 import Konfetti from "@/components/Konfetti";
 
@@ -20,21 +20,73 @@ export type FeiringProps = {
   knappLenke?: string;
   lenke?: string;
   lenkeTil?: string;
+  /** Vises øverst i kortet, f.eks. resultatet av quizen. Får fokus når siden vises. */
+  forst?: ReactNode;
   children?: ReactNode;
 };
+
+/** Bakgrunnsbildet og det hvite kortet. Brukes også av quizen før feiringen. */
+export function FeiringRamme({
+  bilde,
+  bildetekst,
+  fotokreditt,
+  utenfor,
+  children,
+}: Pick<FeiringProps, "bilde" | "bildetekst" | "fotokreditt"> & { utenfor?: ReactNode; children: ReactNode }) {
+  return (
+    <div className="relative isolate flex min-h-[calc(100svh-150px)] items-center overflow-hidden bg-black px-4 pt-5 pb-16 sm:px-6 sm:pb-12">
+      {bilde && <Image src={bilde} alt="" fill priority sizes="100vw" className="-z-10 object-cover" />}
+
+      <div className="mx-auto w-full max-w-[790px] rounded-[10px] border-2 border-black bg-white p-6 sm:px-9 sm:py-7">
+        {children}
+      </div>
+
+      {(bildetekst || fotokreditt) && (
+        <p className="absolute bottom-0 left-0 right-0 bg-black/75 px-4 py-2 text-center text-[13px] leading-snug text-white">
+          {bildetekst} {fotokreditt}
+        </p>
+      )}
+
+      {utenfor}
+    </div>
+  );
+}
 
 export default function Feiring(p: FeiringProps) {
   // Ny nøkkel starter konfettien på nytt.
   const [runde, setRunde] = useState(0);
   const [smell, setSmell] = useState(0);
 
-  return (
-    <div className="relative isolate flex min-h-[calc(100svh-150px)] items-center overflow-hidden bg-black px-4 pt-5 pb-16 sm:px-6 sm:pb-12">
-      {p.bilde && (
-        <Image src={p.bilde} alt="" fill priority sizes="100vw" className="-z-10 object-cover" />
-      )}
+  // Etter quizen: flytt fokus til resultatet, så skjermlesere leser det først.
+  const forstRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!forstRef.current) return;
+    // Uten rulling: toppmenyen ligger fast og ville dekket boksen.
+    forstRef.current.focus({ preventScroll: true });
+    window.scrollTo({ top: 0 });
+  }, []);
 
-      <div className="mx-auto w-full max-w-[790px] rounded-[10px] border-2 border-black bg-white p-6 sm:px-9 sm:py-7">
+  return (
+    <FeiringRamme
+      bilde={p.bilde}
+      bildetekst={p.bildetekst}
+      fotokreditt={p.fotokreditt}
+      utenfor={
+        <>
+          <Fyrverkeri key={`f${smell}`} runde={smell} />
+          <Konfetti key={runde} antall={340} stor />
+        </>
+      }
+    >
+        {p.forst && (
+          <div
+            ref={forstRef}
+            tabIndex={-1}
+            className="mb-5 rounded-md bg-black p-4 text-[17px] leading-[1.45] text-white focus:outline-none"
+          >
+            {p.forst}
+          </div>
+        )}
         {p.overlinje && <p className="mb-3 text-[15px] font-semibold text-black">{p.overlinje}</p>}
         {p.tittel && (
           <h1 className="font-display text-[36px] leading-[1.02] text-black sm:text-[44px]">{p.tittel}</h1>
@@ -72,16 +124,6 @@ export default function Feiring(p: FeiringProps) {
             Mer fyrverkeri
           </button>
         </div>
-      </div>
-
-      {(p.bildetekst || p.fotokreditt) && (
-        <p className="absolute bottom-0 left-0 right-0 bg-black/75 px-4 py-2 text-center text-[13px] leading-snug text-white">
-          {p.bildetekst} {p.fotokreditt}
-        </p>
-      )}
-
-      <Fyrverkeri key={`f${smell}`} runde={smell} />
-      <Konfetti key={runde} antall={340} stor />
-    </div>
+    </FeiringRamme>
   );
 }

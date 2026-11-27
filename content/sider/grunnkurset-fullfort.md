@@ -15,4 +15,26 @@ seksjoner:
     knappLenke: /holdingselskap-og-utsatt-skatt
     lenke: Tilbake til oversikten
     lenkeTil: /grunnkurs-i-ulikhet
+    quiz:
+      tittel: "Før du er ferdig: Stemmer dette?"
+      ingress: "Sju påstander om ulikhet og skatt i Norge. Stemmer de, eller er de feil?"
+      pastander:
+        - pastand: "De rike i Norge er leger, advokater og direktører med høy lønn."
+          forklaring: "De aller rikeste lever av å eie, ikke av lønn. For de 0,01 prosent rikeste kommer 97 prosent av inntekten fra eierskap."
+        - pastand: "Forskjellene i Norge har vært omtrent like store siden 1980-tallet."
+          forklaring: "Den rikeste prosenten fikk 4 prosent av inntektene i 1980. Nå får de 23."
+        - pastand: "De rikeste har formuen sin i bolig og bank, akkurat som oss andre."
+          forklaring: "Folk flest har formuen i boligen. De aller rikeste har nesten alt i selskaper, og den rikeste prosenten eier to tredjedeler av aksjene utenfor børs."
+        - pastand: "Hele skattesystemet i Norge er progressivt. De rikeste betaler høyest andel skatt."
+          forklaring: "Dette er en kjent (og kjær, for høyresida) påstand om det norske skattesystemet. Inntektsskatten er progressiv, men hele skattesystemet er det ikke. Skatten stiger til 56 prosent for dem rett under den rikeste prosenten. Så faller den til 22 prosent helt på toppen."
+        - pastand: "De rikeste i Norge betaler høyere skatt enn i andre land, og det er i stor grad på grunn av formuesskatten."
+          forklaring: "De aller rikeste betaler 22 prosent i Norge og 24 prosent i USA. Formuesskatten gjør liten forskjell."
+        - pastand: "Høyre og FrP sine velgere er enige i at skattene på de rike bør være lavere enn på oss andre."
+          forklaring: "Velgerne til alle ni partiene vil at de rikeste skal betale mest. Høyre-velgerne vil ha 43 prosent på toppen, og FrP-velgerne 45."
+        - pastand: "Det er uansett småpenger. Staten ville ikke fått inn noe særlig om de rikeste betalte mer."
+          forklaring: "Hvis skatten ikke falt på toppen, ville det gitt 7,6 prosent mer i skatteinntekter. Et grovt overslag er over 100 milliarder kroner i året."
+      avsloring: "Sorry, kunne ikke dy meg, alle er selvfølgelig helt feil! Men de er vanlige påstander som spres i norsk offentlighet."
+      resultatBra: "Tross mitt sleipe grep greide du {riktige} av {antall} rette. valgogpolitikk.no er imponert!"
+      resultatSvakt: "Mitt sleipe grep fintet deg kanskje ut, men her er en feiring av fullført kurs uansett!"
+      grense: 4
 ---

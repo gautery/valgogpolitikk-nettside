@@ -7,6 +7,7 @@ import NewsletterForm from "@/components/NewsletterForm";
 import PostList from "@/components/PostList";
 import { KildeBand, TEMAFARGER } from "@/components/SisteFraKildene";
 import Feiring from "@/components/Feiring";
+import FeiringMedQuiz from "@/components/FeiringMedQuiz";
 import Konfetti from "@/components/Konfetti";
 import DatawrapperGraf from "@/components/klosser/DatawrapperGraf";
 import { datawrapperId, type Bakgrunn, type Kloss } from "@/lib/klosser";
@@ -524,9 +525,11 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
       );
     }
 
-    case "feiring":
+    case "feiring": {
+      const Komponent = kloss.quiz?.pastander?.some((x) => x.pastand?.trim()) ? FeiringMedQuiz : Feiring;
       return (
-        <Feiring
+        <Komponent
+          quiz={kloss.quiz ?? {}}
           overlinje={kloss.overlinje}
           tittel={kloss.tittel}
           ingress={kloss.ingress}
@@ -549,8 +552,9 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
           lenkeTil={kloss.lenkeTil}
         >
           <NewsletterForm />
-        </Feiring>
+        </Komponent>
       );
+    }
 
     case "nyhetsbrev":
       return (

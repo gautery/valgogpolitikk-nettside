@@ -194,3 +194,22 @@ topp 1 prosent 22,0, som i tabell 10318.
 - **Leksjon 3 er rettet:** tidelen er ute. Inne: SSBs tredjedel, «rundt to tredjedeler» til den rikeste
   prosenten, «nesten hele formuen» for de aller rikeste, og Kapital-sammenligningen (under en tredjedel).
 
+## Quizen før feiringen (27. november)
+
+Siden `/grunnkurset-fullfort` viser nå en quiz før konfettien. Gaute ville ha påstander som alle er feil, og at
+det røpes til slutt, som en bro til teksten «nå kan du nok til å irritere deg over feilene».
+
+- **Kode:** `src/components/FeiringMedQuiz.tsx` (klientkomponent). `Feiring.tsx` har fått `FeiringRamme` (felles
+  bilde og kort) og feltet `forst` (svart boks øverst med avsløring og resultat). `Klosser.tsx` velger quizen når
+  feiringsklossen har påstander. Uten påstander vises feiringen som før.
+- **Tekst:** alt ligger i klossen «Feiring» i `content/sider/grunnkurset-fullfort.md`, under `quiz`, og kan
+  redigeres i Pages CMS («Quiz før feiringen»). `{riktige}` og `{antall}` byttes ut med tallene.
+  `grense: 4` styrer hvilken av de to resultattekstene som vises.
+- **Gautes egne tekster:** avsløringen og de to resultattekstene, og påstand 4–6. Resten er Claudes utkast:
+  overskrift og ingress, påstand 1–3 og 7, og forklaringene (forklaring 4 bygger på Gautes formulering).
+- **Tatt ut etter ønske:** påstanden om at den rikeste prosenten får ti prosent av inntektene.
+- **Tilgjengelighet:** fokus flyttes til fasiten etter svar, til neste påstand etter «Neste påstand» og til
+  resultatboksen til slutt. «Hopp over quizen» går rett til feiringen uten resultat.
+- **Test:** `python3 /home/claude/skript/test_quiz.py <adresse> <mappe>` går gjennom 5, 0, 4 og 3 rette,
+  hopp over og tastatur.
+

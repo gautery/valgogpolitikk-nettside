@@ -137,6 +137,21 @@ export type FeiringKloss = {
   knappLenke?: string;
   lenke?: string;
   lenkeTil?: string;
+  /** Valgfri quiz som vises før feiringen. Alle påstandene skal være feil. */
+  quiz?: FeiringQuiz;
+};
+
+export type FeiringQuiz = {
+  tittel?: string;
+  ingress?: string;
+  pastander?: { pastand?: string; forklaring?: string }[];
+  /** Vises til slutt, før resultatet. */
+  avsloring?: string;
+  /** {riktige} og {antall} byttes ut med tallene. */
+  resultatBra?: string;
+  resultatSvakt?: string;
+  /** Så mange rette trengs for «resultatBra». Standard: 4. */
+  grense?: number;
 };
 
 export type Nyhetsbrev = {

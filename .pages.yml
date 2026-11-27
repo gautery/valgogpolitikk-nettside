@@ -970,6 +970,46 @@ components:
           - name: lenkeTil
             label: Hvor lenken går
             type: string
+          - name: quiz
+            label: Quiz før feiringen
+            description: Valgfri. Alle påstandene skal være feil. Uten påstander vises feiringen med en gang.
+            type: object
+            fields:
+              - name: tittel
+                label: Overskrift over quizen
+                type: string
+              - name: ingress
+                label: Tekst under overskriften
+                type: text
+              - name: pastander
+                label: Påstander
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{pastand}"
+                fields:
+                  - name: pastand
+                    label: Påstand
+                    description: Skriv uten anførselstegn. De legges på automatisk.
+                    type: text
+                  - name: forklaring
+                    label: Forklaring som vises etter svaret
+                    description: "Over forklaringen står det «Riktig. Påstanden er feil.» eller «Nei, påstanden er feil.»"
+                    type: text
+              - name: avsloring
+                label: Avsløringen til slutt
+                type: text
+              - name: resultatBra
+                label: Tekst til dem som klarte mange
+                description: "Skriv {riktige} og {antall} der tallene skal stå."
+                type: text
+              - name: resultatSvakt
+                label: Tekst til dem som klarte få
+                type: text
+              - name: grense
+                label: Hvor mange rette som trengs for den første teksten
+                type: number
 
       - name: nyhetsbrev
         label: Nyhetsbrev
