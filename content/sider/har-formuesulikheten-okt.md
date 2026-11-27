@@ -56,20 +56,20 @@ seksjoner:
   - type: tekst
     overskrift: "Del 2: Hva med skattene? Er det ulikhet her også?"
     tekst: >+
-      Så langt har vi fått en kjapp oversikt over hvordan inntekt of formue er
+      Så langt har vi fått en kjapp oversikt over hvordan inntekt og formue er
       fordelt, og hvordan det har endret seg de siste drøye 100 årene.
 
 
       Kort oppsummert er funnene:
 
 
-      - De 1% rikeste tjener mer en hver femte krone i Norge i dag.
+      - De 1% rikeste tjener mer enn hver femte krone i Norge i dag.
 
       - Det har endret seg dramatisk siden 80-tallet.
 
-      - De rikeste 1% eier kanskje over 1/3 av alle verdier i Norge.
+      - De rikeste 1% eier kanskje rundt 1/3 av den private formuen i Norge.
 
-      - Det har mer enn doblet seg siden 70-tallet.
+      - Det har nesten doblet seg siden 70-tallet.
 
 
       Nå går vi videre til hvorvidt skattebyrden også er ulikt fordelt i Norge,
@@ -82,8 +82,7 @@ seksjoner:
   - type: tekst
     overskrift: Kildene
     tekst: |+
-      - Rolf Aaberge, Jørgen Modalsli og Edda Solbakken (2025): «Measuring long-run wealth inequality: Empirical results for Norway 1912–2019». SSB Discussion Papers 1028. [ssb.no](https://www.ssb.no/inntekt-og-forbruk/inntekt-og-formue/artikler/maling-av-langsiktig-ulikskap-i-formue-empiriske-resultat-fra-noreg-1912-2019). Tallene for 1912, 1969 og 2019 står i tabellen over de fire fasene. Tallet for 1938 står i teksten. Tallene for 1995 og 2016 står i tabell A.1 og A.2. Sammenligningen med USA står i kapittel 4.1 og i avslutningen. Studien er et arbeidsnotat, og er ikke publisert i et tidsskrift ennå.
-      - Marius Ring, David Seim og Gabriel Zucman (2026): «Personal Holding Companies, Tax Progressivity, and Inequality». NBER Working Paper 35534. [nber.org/papers/w35534](https://www.nber.org/papers/w35534). Sammenligningen med USA står i sammendraget.
+      - Rolf Aaberge, Jørgen Modalsli og Edda Solbakken (2025): «Measuring long-run wealth inequality: Empirical results for Norway 1912–2019». SSB Discussion Papers 1028. [ssb.no](https://www.ssb.no/inntekt-og-forbruk/inntekt-og-formue/artikler/maling-av-langsiktig-ulikskap-i-formue-empiriske-resultat-fra-noreg-1912-2019). Tallene for 1912, 1969 og 2019 står i tabellen over de fire fasene. Tallet for 1938 står i teksten. Studien er et arbeidsnotat, og er ikke publisert i et tidsskrift ennå.
 
     bakgrunn: lys
   - type: tekst

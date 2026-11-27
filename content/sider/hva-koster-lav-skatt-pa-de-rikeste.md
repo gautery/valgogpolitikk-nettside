@@ -10,7 +10,7 @@ seksjoner:
     ingress: Det at de rikeste betaler så mye lavere skatter enn oss andre har en
       ganske reell kostnad. Forskerne regnet ut hvor stor den kostnaden var, og
       kom frem til at det var over 7% av alle skatteinntektene i Norge. Det
-      utgjør ca ?? milliarder kroner i året.
+      utgjør over 100 milliarder kroner i året.
     bokrygger: false
     konfetti: false
     farge: mork

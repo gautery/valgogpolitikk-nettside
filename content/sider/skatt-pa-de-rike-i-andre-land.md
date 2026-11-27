@@ -41,7 +41,7 @@ seksjoner:
     overskrift: Fra "folkhem" til "skatteparadis for de rike"?
     tekst: >-
       Sverige skiller seg ut som et lavskatteland for milliardærene, og ellers
-      erskatteandelen for de rikeste ganske lik mellom land.
+      er skatteandelen for de rikeste ganske lik mellom land.
 
 
       Norge har formuesskatten, men den utgjør altså ikke noen særlig forskjell
