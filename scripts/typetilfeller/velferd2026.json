@@ -1,0 +1,33 @@
+{
+ "grunnlag": {
+  "barnehage_makspris_mnd": 1200, "barnehage_maaneder": 11, "soskenmoderasjon_barn2": 0.30,
+  "sfo_4_klasse_aar": 20600,
+  "barnetrygd_mnd": 1968,
+  "foreldrefradrag": {"forste": 15000, "neste": 10000},
+  "tannlege_full_pris": 1500, "tannlege_egenandel_21_28": 0.25,
+  "kilde": "Makspris i barnehage, gratis SFO for 1.–3. trinn og barnetrygd: regjeringens forslag til statsbudsjett for 2026 (Prop. 1 S (2025–2026) og Barne- og familiedepartementet 15.10.2025). Foreldrefradraget: FrPs alternative budsjett s. 12, som gjengir regjeringens forslag. Prisen på SFO i 4. klasse er SVs tall. Tannlege: SSBs forbruksundersøkelse 2022 viser 1 494 kroner i snitt for aleneboende."
+ },
+ "partier": {
+  "frp": {"foreldrefradrag": {"forste": 25000, "neste": 15000},
+          "kilde": "FrPs alternative statsbudsjett 2026, s. 12",
+          "merknad": "FrP går imot regjeringens kutt i foreldrefradraget."},
+  "hoyre": {"barnetrygd_aar": 582, "barnetrygd_anslag": true, "tannlege_egenandel_21_28": 1.0,
+          "kilde": "Høyres alternative statsbudsjett 2026, s. 5, 7 og 21",
+          "merknad": "Høyre prisjusterer barnetrygden fra 1. februar. Beløpet per barn er anslått ut fra provenyet. Høyre fjerner den reduserte egenandelen hos tannlegen for 21–28-åringer."},
+  "sv": {"barnehage_makspris_mnd": 0, "sfo_4_klasse_aar": 0, "barnetrygd_aar": 1728, "tannlege_rabatt_29_30": 0.75,
+          "kilde": "SVs alternative statsbudsjett 2026, s. 3, 5, 8 og 10–11 i PDF-en",
+          "merknad": "SV gjør barnehagen gratis fra 1. september og gir gratis halvdagsplass på SFO i 4. klasse. Barnetrygden øker med 144 kroner i måneden fra 1. mai. 29–30-åringer får 75 prosent rabatt hos tannlegen fra 1. juli. Her vises virkningen for et helt år."},
+  "sp": {"foreldrefradrag": {"forste": 25000, "neste": 15000},
+          "kilde": "Senterpartiets alternative statsbudsjett 2026, s. 8 og 23",
+          "merknad": "Sp går imot regjeringens kutt i foreldrefradraget. Sp vil ha dobbel barnetrygd for tredje barn, som ikke er med her."},
+  "mdg": {"barnetrygd_aar": 14400, "foreldrefradrag": "ingen",
+          "kilde": "MDGs alternative statsbudsjett 2026, s. 19–21",
+          "merknad": "MDG dobler barnetrygden, skattlegger den og fjerner foreldrefradraget. Beløpet per barn er fra MDGs eget eksempel med to voksne som tjener 600 000–700 000 kroner hver."},
+  "krf": {"barnetrygd_aar": 3384, "foreldrefradrag": {"uten_krav_barn_1_og_2": 50000, "uten_krav_fra_barn_3": 100000}, "tannlege_egenandel_21_28": 1.0,
+          "kilde": "KrFs alternative statsbudsjett 2026, s. 9, og Innst. 2 S (2025–2026), KrFs tabell for rammeområde 18",
+          "merknad": "KrF øker barnetrygden til 2 250 kroner i måneden og foreldrefradraget til 50 000 kroner per barn for de to første og 100 000 kroner fra det tredje, uten krav om å dokumentere utgifter. KrF fjerner den reduserte egenandelen hos tannlegen for 21–28-åringer."},
+  "venstre": {"barnehage_makspris_mnd": 1500,
+          "kilde": "Venstres alternative statsbudsjett 2026, s. 31 og 43–44",
+          "merknad": "Venstre øker barnehageprisen til 1 500 kroner i måneden og gjør barnehagen gratis for husholdninger som tjener under 800 000 kroner. Venstre vil også øke og skattlegge barnetrygden. Det har vi ikke tallfestet."}
+ }
+}

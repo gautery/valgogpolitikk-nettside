@@ -242,5 +242,15 @@ i 2026-budsjettene, og FrP en delvis. Derfor regner vi selv, på konkrete typeti
   partienes eksempler og proveny), og MDGs matmoms (SSBs varegrupper passer ikke helt).
 - **Ikke med:** strøm, flyreiser (MDGs flyseteavgift og klimabelønningen den betaler for), utbytteskatt og ordninger
   for unge og barnefamilier. Gaute har foreslått flere brytere. Flyreiser er den som skiller mest, men krever satser.
-- Siden sier tydelig at den bare viser det man betaler inn, ikke hva partiene bruker pengene på.
+- **Velferdsgoder (lagt til 27. november):** barnehage, SFO i 4. klasse, barnetrygd, foreldrefradrag og tannlege, fra
+  `velferd2026.json`. Valg på sida: alder (21–28, 29–30, 31 eller eldre), barn i barnehage (0–2) og ett barn i
+  4. klasse på SFO. Tallene på sida er nå gevinst: pluss betyr bedre råd enn med regjeringens forslag.
+- **Forutsetninger Gaute ba om at skal stå tydelig, og som står på sida:** makspris 1 200 kr i 11 måneder, 30 prosent
+  søskenmoderasjon for barn nummer to, SFO-halvdagsplass i 4. klasse til 20 600 kr (SVs tall), barnetrygd 1 968 kr
+  i måneden, tannlege 1 500 kr i året til full pris, og en husholdning med to voksne som tjener over 800 000 kr.
+- **Må avklares:** Skatt, mat og bil gjelder én voksen, mens barnehage, SFO og barnetrygd gjelder hele husholdningen.
+  En egen familie med to inntekter ville vært ryddigere. Venstres barnetrygd er ikke tallfestet. MDGs barnetrygd er
+  partiets eget tall for inntekter på 600 000–700 000 kr. Høyres barnetrygd er anslått fra provenyet.
+- Siden sier tydelig hva som ikke er med, og at det meste partiene bruker penger på ikke kan regnes per husholdning.
+- Grenen `skatten-din-utkast` er ikke lagt på demoen. Gaute må si fra først.
 - Pensjonisten og eieren er regnet (`regn.py`), men har ingen side ennå. Tallene gjelder budsjettene for 2026.

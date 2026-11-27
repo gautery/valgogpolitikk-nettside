@@ -6,106 +6,374 @@
   "mat": 40146,
   "km": 12000,
   "liter": 840,
-  "fagforeningsfradrag": 8700
+  "fagforeningsfradrag": 8700,
+  "barnehage_mnd": 1200,
+  "barnehage_aar": 13200,
+  "soskenmoderasjon": 0.3,
+  "sfo_aar": 20600,
+  "barnetrygd_mnd": 1968,
+  "tannlege": 1500,
+  "tannlege_egenandel_21_28": 0.25
  },
  "kilder": [
   "Finansdepartementet: Skattesatser, fradrag og beløpsgrenser i 2025 og regjeringens forslag for 2026 (Prop. 1 LS (2025–2026)). Personfradrag og minstefradrag er kontrollert mot Innst. 3 S (2025–2026), formuesskatten mot skattevedtaket § 2-1 i samme innstilling.",
   "SSB, forbruksundersøkelsen 2022, tabell 14152, aleneboende. Beløpene er i 2022-kroner.",
-  "Fagforeningsfradraget: Finansdepartementets satstabell for 2026. CO2-avgiften på bensin i regjeringens forslag er 3,77 kr per liter (Innst. 3 S (2025–2026)), som tilsvarer 1 625 kr per tonn."
+  "Fagforeningsfradraget: Finansdepartementets satstabell for 2026. CO2-avgiften på bensin i regjeringens forslag er 3,77 kr per liter (Innst. 3 S (2025–2026)), som tilsvarer 1 625 kr per tonn.",
+  "Makspris i barnehage, gratis SFO for 1.–3. trinn og barnetrygd: regjeringens forslag til statsbudsjett for 2026 (Prop. 1 S (2025–2026) og Barne- og familiedepartementet 15.10.2025). Foreldrefradraget: FrPs alternative budsjett s. 12, som gjengir regjeringens forslag. Prisen på SFO i 4. klasse er SVs tall. Tannlege: SSBs forbruksundersøkelse 2022 viser 1 494 kroner i snitt for aleneboende."
  ],
  "partier": [
   {
    "id": "frp",
    "navn": "FrP",
-   "skatt": -5977,
-   "mat": -2618,
+   "skatt": 5977,
+   "mat": 2618,
    "mat_anslag": false,
    "utbetaling": 0,
-   "bil": -2520,
+   "bil": 2520,
    "bil_anslag": false,
-   "fagforening": 1914,
+   "fagforening": -1914,
+   "barn": [
+    [
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 0,
+      "foreldrefradrag": 0
+     },
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 0,
+      "foreldrefradrag": 1232
+     }
+    ],
+    [
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 0,
+      "foreldrefradrag": 0
+     },
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 0,
+      "foreldrefradrag": 1936
+     }
+    ],
+    [
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 0,
+      "foreldrefradrag": 0
+     },
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 0,
+      "foreldrefradrag": 1769
+     }
+    ]
+   ],
+   "barnetrygd_anslag": false,
+   "tannlege": {
+    "21-28": 0,
+    "29-30": 0,
+    "31+": 0
+   },
    "merknader": [
     "FrP skriver «senke satsen til 0,8 prosent». Vi har lest det som én sats for all formue over bunnfradraget. FrP fjerner også fagforeningsfradraget, som ikke er med her.",
-    "FrP halverer matmomsen fra 1. april. Her vises virkningen for et helt år. FrP vil også ha makspris på strøm, som ikke er med."
+    "FrP halverer matmomsen fra 1. april. Her vises virkningen for et helt år. FrP vil også ha makspris på strøm, som ikke er med.",
+    "FrP går imot regjeringens kutt i foreldrefradraget."
    ],
    "kilder": [
     "FrPs alternative statsbudsjett 2026, s. 8–9 og 12–13",
-    "FrPs alternative statsbudsjett 2026, s. 9–10 og 46"
+    "FrPs alternative statsbudsjett 2026, s. 9–10 og 46",
+    "FrPs alternative statsbudsjett 2026, s. 12"
    ]
   },
   {
    "id": "hoyre",
    "navn": "Høyre",
-   "skatt": -3700,
+   "skatt": 3700,
    "mat": 0,
    "mat_anslag": false,
    "utbetaling": 0,
    "bil": 0,
    "bil_anslag": false,
-   "fagforening": 1067,
+   "fagforening": -1067,
+   "barn": [
+    [
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 0,
+      "foreldrefradrag": 0
+     },
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 582,
+      "foreldrefradrag": 0
+     }
+    ],
+    [
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 582,
+      "foreldrefradrag": 0
+     },
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 1164,
+      "foreldrefradrag": 0
+     }
+    ],
+    [
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 1164,
+      "foreldrefradrag": 0
+     },
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 1746,
+      "foreldrefradrag": 0
+     }
+    ]
+   ],
+   "barnetrygd_anslag": true,
+   "tannlege": {
+    "21-28": -1125,
+    "29-30": 0,
+    "31+": 0
+   },
    "merknader": [
     "Høyre oppgir jobbfradraget og pensjonsfradraget som kroner i lavere skatt (4 300 og 2 000). Høyre går imot regjeringens kutt i trygdeavgiften og setter fagforeningsfradraget ned, som ikke er med her.",
-    "Høyre setter fagforeningsfradraget til 2021-nivå, som var 3 850 kroner."
+    "Høyre setter fagforeningsfradraget til 2021-nivå, som var 3 850 kroner.",
+    "Høyre prisjusterer barnetrygden fra 1. februar. Beløpet per barn er anslått ut fra provenyet. Høyre fjerner den reduserte egenandelen hos tannlegen for 21–28-åringer."
    ],
    "kilder": [
     "Høyres alternative statsbudsjett 2026, s. 5 og 17",
-    "Høyres alternative statsbudsjett 2026, s. 17"
+    "Høyres alternative statsbudsjett 2026, s. 17",
+    "Høyres alternative statsbudsjett 2026, s. 5, 7 og 21"
    ]
   },
   {
    "id": "sv",
    "navn": "SV",
-   "skatt": -6334,
+   "skatt": 6334,
    "mat": 0,
    "mat_anslag": false,
    "utbetaling": 0,
-   "bil": 731,
+   "bil": -731,
    "bil_anslag": true,
    "fagforening": 0,
+   "barn": [
+    [
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 0,
+      "foreldrefradrag": 0
+     },
+     {
+      "barnehage": 0,
+      "sfo": 20600,
+      "barnetrygd": 1728,
+      "foreldrefradrag": -3300
+     }
+    ],
+    [
+     {
+      "barnehage": 13200,
+      "sfo": 0,
+      "barnetrygd": 1728,
+      "foreldrefradrag": -2904
+     },
+     {
+      "barnehage": 13200,
+      "sfo": 20600,
+      "barnetrygd": 3456,
+      "foreldrefradrag": -5500
+     }
+    ],
+    [
+     {
+      "barnehage": 22440,
+      "sfo": 0,
+      "barnetrygd": 3456,
+      "foreldrefradrag": -4937
+     },
+     {
+      "barnehage": 22440,
+      "sfo": 20600,
+      "barnetrygd": 5184,
+      "foreldrefradrag": -7700
+     }
+    ]
+   ],
+   "barnetrygd_anslag": false,
+   "tannlege": {
+    "21-28": 0,
+    "29-30": 1125,
+    "31+": 0
+   },
    "merknader": [
     "SV øker også utbytteskatten, som ikke er med her.",
-    "SV øker veibruksavgiften på bensin med 25 øre per liter og trapper opp CO2-avgiften. CO2-delen er regnet ut fra SVs eget eksempel med dieselbil (751 kroner i året)."
+    "SV øker veibruksavgiften på bensin med 25 øre per liter og trapper opp CO2-avgiften. CO2-delen er regnet ut fra SVs eget eksempel med dieselbil (751 kroner i året).",
+    "SV gjør barnehagen gratis fra 1. september og gir gratis halvdagsplass på SFO i 4. klasse. Barnetrygden øker med 144 kroner i måneden fra 1. mai. 29–30-åringer får 75 prosent rabatt hos tannlegen fra 1. juli. Her vises virkningen for et helt år."
    ],
    "kilder": [
     "SVs alternative statsbudsjett 2026, s. 72–73 i dokumentet (s. 37 i PDF-en)",
-    "SVs alternative statsbudsjett 2026, s. 5 og 37 i PDF-en"
+    "SVs alternative statsbudsjett 2026, s. 5 og 37 i PDF-en",
+    "SVs alternative statsbudsjett 2026, s. 3, 5, 8 og 10–11 i PDF-en"
    ]
   },
   {
    "id": "sp",
    "navn": "Sp",
-   "skatt": -600,
-   "mat": -1745,
+   "skatt": 600,
+   "mat": 1745,
    "mat_anslag": false,
    "utbetaling": 0,
-   "bil": -638,
+   "bil": 638,
    "bil_anslag": true,
    "fagforening": 0,
+   "barn": [
+    [
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 0,
+      "foreldrefradrag": 0
+     },
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 0,
+      "foreldrefradrag": 1232
+     }
+    ],
+    [
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 0,
+      "foreldrefradrag": 0
+     },
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 0,
+      "foreldrefradrag": 1936
+     }
+    ],
+    [
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 0,
+      "foreldrefradrag": 0
+     },
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 0,
+      "foreldrefradrag": 1769
+     }
+    ]
+   ],
+   "barnetrygd_anslag": false,
+   "tannlege": {
+    "21-28": 0,
+    "29-30": 0,
+    "31+": 0
+   },
    "merknader": [
     "Sp slår sammen trinn 4 og 5. Vi har lest det som at satsen i trinn 5 (17,7 prosent) gjelder fra 960 000 kroner.",
-    "Sp kutter matmomsen fra 1. september. Her vises virkningen for et helt år. Sp vil holde bensinavgiftene reelt uendret og kutte 25 øre til. Den første delen er anslått ut fra provenyet."
+    "Sp kutter matmomsen fra 1. september. Her vises virkningen for et helt år. Sp vil holde bensinavgiftene reelt uendret og kutte 25 øre til. Den første delen er anslått ut fra provenyet.",
+    "Sp går imot regjeringens kutt i foreldrefradraget. Sp vil ha dobbel barnetrygd for tredje barn, som ikke er med her."
    ],
    "kilder": [
-    "Senterpartiets alternative statsbudsjett 2026, s. 8 og 80"
+    "Senterpartiets alternative statsbudsjett 2026, s. 8 og 80",
+    "Senterpartiets alternative statsbudsjett 2026, s. 8 og 23"
    ]
   },
   {
    "id": "mdg",
    "navn": "MDG",
-   "skatt": -1774,
-   "mat": 1005,
+   "skatt": 1774,
+   "mat": -1005,
    "mat_anslag": true,
-   "utbetaling": -160,
-   "bil": 3536,
+   "utbetaling": 160,
+   "bil": -3536,
    "bil_anslag": true,
    "fagforening": 0,
+   "barn": [
+    [
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 0,
+      "foreldrefradrag": 0
+     },
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 14400,
+      "foreldrefradrag": -3300
+     }
+    ],
+    [
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 14400,
+      "foreldrefradrag": -2904
+     },
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 28800,
+      "foreldrefradrag": -5500
+     }
+    ],
+    [
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 28800,
+      "foreldrefradrag": -4937
+     },
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 43200,
+      "foreldrefradrag": -7700
+     }
+    ]
+   ],
+   "barnetrygd_anslag": false,
+   "tannlege": {
+    "21-28": 0,
+    "29-30": 0,
+    "31+": 0
+   },
    "merknader": [
     "MDG betaler i tillegg ut klimabelønning, som ikke er skatt og ikke er med her.",
-    "MDG øker veibruksavgiften på bensin med 2,50 kroner per liter og den generelle CO2-avgiften. CO2-delen er anslått ut fra provenyet. Utbetalingen er klimabelønningen som kommer fra bilavgiftene. MDGs flyseteavgift og klimabelønningen den betaler for, er ikke med."
+    "MDG øker veibruksavgiften på bensin med 2,50 kroner per liter og den generelle CO2-avgiften. CO2-delen er anslått ut fra provenyet. Utbetalingen er klimabelønningen som kommer fra bilavgiftene. MDGs flyseteavgift og klimabelønningen den betaler for, er ikke med.",
+    "MDG dobler barnetrygden, skattlegger den og fjerner foreldrefradraget. Beløpet per barn er fra MDGs eget eksempel med to voksne som tjener 600 000–700 000 kroner hver."
    ],
    "kilder": [
     "MDGs alternative statsbudsjett 2026, s. 19, 79 og 82",
-    "MDGs alternative statsbudsjett 2026, s. 80–81"
+    "MDGs alternative statsbudsjett 2026, s. 80–81",
+    "MDGs alternative statsbudsjett 2026, s. 19–21"
    ]
   },
   {
@@ -118,32 +386,136 @@
    "bil": 0,
    "bil_anslag": false,
    "fagforening": 0,
+   "barn": [
+    [
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 0,
+      "foreldrefradrag": 0
+     },
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 3384,
+      "foreldrefradrag": 7700
+     }
+    ],
+    [
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 3384,
+      "foreldrefradrag": 8096
+     },
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 6768,
+      "foreldrefradrag": 16500
+     }
+    ],
+    [
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 6768,
+      "foreldrefradrag": 17063
+     },
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 10152,
+      "foreldrefradrag": 36300
+     }
+    ]
+   ],
+   "barnetrygd_anslag": false,
+   "tannlege": {
+    "21-28": -1125,
+    "29-30": 0,
+    "31+": 0
+   },
    "merknader": [
     "KrFs lettelser i inntektsskatten gjelder unge født 1991–2006 og barnefamilier, og treffer ikke disse typetilfellene.",
-    "Vi fant ingen endringer i matmoms eller drivstoffavgifter. KrF vil ha makspris på strøm, som ikke er med."
+    "Vi fant ingen endringer i matmoms eller drivstoffavgifter. KrF vil ha makspris på strøm, som ikke er med.",
+    "KrF øker barnetrygden til 2 250 kroner i måneden og foreldrefradraget til 50 000 kroner per barn for de to første og 100 000 kroner fra det tredje, uten krav om å dokumentere utgifter. KrF fjerner den reduserte egenandelen hos tannlegen for 21–28-åringer."
    ],
    "kilder": [
     "Innst. 2 S (2025–2026), s. 77 i dokumentet (KrFs tabell for rammeområde 21)",
-    "Innst. 2 S (2025–2026), KrFs tabell for rammeområde 21"
+    "Innst. 2 S (2025–2026), KrFs tabell for rammeområde 21",
+    "KrFs alternative statsbudsjett 2026, s. 9, og Innst. 2 S (2025–2026), KrFs tabell for rammeområde 18"
    ]
   },
   {
    "id": "venstre",
    "navn": "Venstre",
-   "skatt": -2540,
-   "mat": -430,
+   "skatt": 2540,
+   "mat": 430,
    "mat_anslag": false,
    "utbetaling": 0,
-   "bil": 1840,
+   "bil": -1840,
    "bil_anslag": true,
    "fagforening": 0,
+   "barn": [
+    [
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 0,
+      "foreldrefradrag": 0
+     },
+     {
+      "barnehage": 0,
+      "sfo": 0,
+      "barnetrygd": 0,
+      "foreldrefradrag": 0
+     }
+    ],
+    [
+     {
+      "barnehage": -3300,
+      "sfo": 0,
+      "barnetrygd": 0,
+      "foreldrefradrag": 396
+     },
+     {
+      "barnehage": -3300,
+      "sfo": 0,
+      "barnetrygd": 0,
+      "foreldrefradrag": 0
+     }
+    ],
+    [
+     {
+      "barnehage": -5610,
+      "sfo": 0,
+      "barnetrygd": 0,
+      "foreldrefradrag": 563
+     },
+     {
+      "barnehage": -5610,
+      "sfo": 0,
+      "barnetrygd": 0,
+      "foreldrefradrag": 0
+     }
+    ]
+   ],
+   "barnetrygd_anslag": false,
+   "tannlege": {
+    "21-28": 0,
+    "29-30": 0,
+    "31+": 0
+   },
    "merknader": [
     "Venstres egne eksempler (tabell 27) ser ut til å regne med et bunnfradrag på 2,25 mill. kroner, som ikke står i tiltakslista.",
-    "Venstre fjerner momsen på frukt og grønt og setter full moms på kjøtt. CO2-avgiften settes til 1 842 kroner per tonn. Økningen i veibruksavgiften er anslått ut fra provenyet. Venstre holder også elavgiften høyere enn regjeringen, som ikke er med."
+    "Venstre fjerner momsen på frukt og grønt og setter full moms på kjøtt. CO2-avgiften settes til 1 842 kroner per tonn. Økningen i veibruksavgiften er anslått ut fra provenyet. Venstre holder også elavgiften høyere enn regjeringen, som ikke er med.",
+    "Venstre øker barnehageprisen til 1 500 kroner i måneden og gjør barnehagen gratis for husholdninger som tjener under 800 000 kroner. Venstre vil også øke og skattlegge barnetrygden. Det har vi ikke tallfestet."
    ],
    "kilder": [
     "Venstres alternative statsbudsjett 2026, s. 117 og 119",
-    "Venstres alternative statsbudsjett 2026, s. 81, 85 og 122"
+    "Venstres alternative statsbudsjett 2026, s. 81, 85 og 122",
+    "Venstres alternative statsbudsjett 2026, s. 31 og 43–44"
    ]
   }
  ],
