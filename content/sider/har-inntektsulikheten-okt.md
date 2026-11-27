@@ -27,13 +27,13 @@ seksjoner:
       tallet ytterligere. Tallet på fire prosent undervurderer nok faktiske
       forhold noe, fordi de ikke regner med overskudd som ble tilbakeholdt i
       selskapene, men skattesystemet insentiverte dette i ganske begrenset grad,
-      og derfor var det nok ikke et veldig stort problem. Men det er rimelig å
-      anta at reelt nivå kanskje var 6-7 prosent på det laveste (på 80-tallet).
+      og derfor var det nok ikke stort problem. (Men det er rimelig å anta at
+      faktisk andel var noe høyere,: etter skattereformen i 1991, der utbytte
+      fra selskapene ikke ble skattlagt, ser vi at andelen øker noe, til 7-8%.)
 
 
       Her er tallene for utvalgte år, tallene etter 2001 viser inkludert
-      tilbakeholdt overskudd i selskaper og er mer nøyaktige enn de før
-      2001:
+      tilbakeholdt overskudd i selskaper og er mer nøyaktige enn de før 2001:
 
 
       - **1882:** 22 prosent
@@ -55,8 +55,8 @@ seksjoner:
       - **2022:** 23 prosent (med overskudd i selskapene)
 
 
-      Andelen falt altså i hundre år, og basert på de beste dataene vi har så ser
-      den ut til å ha flerdoblet seg siden 1980.
+      Andelen falt altså i hundre år, og basert på de beste dataene vi har så
+      ser den ut til å ha flerdoblet seg siden 1980.
 
 
       - De eldste tallene er anslag. De bygger på tabeller over skattytere, ikke
@@ -83,26 +83,10 @@ seksjoner:
         kilde: SSB Rapporter 2024/32, figur 3.2
     bakgrunn: hvit
   - type: tekst
-    overskrift: De siste tjue årene
-    tekst: >-
-      Fra 2001 finnes det bedre tall. Forskere i SSB har koblet eierne til
-      selskapene deres, og regnet med overskuddet som blir stående der.
-
-
-      I 2001 fikk den rikeste prosenten rundt 11 prosent av inntektene i Norge.
-      I 2022 var andelen 23 prosent.
-
-
-      Andelen svinger mye fra år til år, fordi overskuddet i selskapene følger
-      konjunkturene. Den var rundt 22 prosent i 2006 og falt til 14 prosent
-      under finanskrisen i 2008. I 2021 var den hele 28 prosent, fordi
-      selskapene hadde et uvanlig godt år.
-    bakgrunn: lys
-  - type: tekst
-    overskrift: Inntekt er én ting, formue en annen
-    tekst: Inntekt er det du tjener i løpet av et år. Formue er det du eier. Når
-      noen tjener mye år etter år, hoper det seg opp. Hvordan er formuen
-      fordelt?
+    overskrift: Men hva med formuesulikhet?
+    tekst: Det du tjener hvert år er en del av svaret på spørsmålet om "hvor ulikt
+      er Norge?"; den andre viktige delen er hvor jevnt fordelt formue er. Det
+      er neste leksjon ->
     knapp: Gå til neste leksjon
     knappLenke: /formuesfordelingen-i-norge
     bakgrunn: hvit
