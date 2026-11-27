@@ -252,5 +252,29 @@ i 2026-budsjettene, og FrP en delvis. Derfor regner vi selv, på konkrete typeti
   En egen familie med to inntekter ville vært ryddigere. Venstres barnetrygd er ikke tallfestet. MDGs barnetrygd er
   partiets eget tall for inntekter på 600 000–700 000 kr. Høyres barnetrygd er anslått fra provenyet.
 - Siden sier tydelig hva som ikke er med, og at det meste partiene bruker penger på ikke kan regnes per husholdning.
-- Grenen `skatten-din-utkast` er ikke lagt på demoen. Gaute må si fra først.
+- Lagt på demoen 27. november etter at Gaute ba om det: `/statsbudsjett/partiene/lonnsmottaker`.
 - Pensjonisten og eieren er regnet (`regn.py`), men har ingen side ennå. Tallene gjelder budsjettene for 2026.
+
+### Dette mangler på lønnsmottaker-sida (vurdert 27. november)
+
+Forslag fra Claude. Gaute har ikke tatt stilling til dem.
+
+1. **Årets tall.** Sida bruker budsjettene for 2026. Stortingets liste over alternative budsjetter for 2027
+   (oppdatert 26. november 2026) lenker til SV, Sp, Rødt, MDG, Høyre, KrF og Venstre. FrP sto ikke der ennå.
+   Finansinnstillingen for 2027 fant vi ikke på Stortingets sider 27. november. Reglene må leses inn på nytt
+   (`regler2027.json`, `avgifter2027.json`, `velferd2027.json`), og `AAR` og `PROVEDATA` endres.
+2. **Rødt.** roedt.no slipper ikke arbeidsmiljøet inn. Gaute må legge ved Rødts dokument.
+3. **Anslagene.** Bensin for SV, Sp, Venstre og MDG, MDGs matmoms og Høyres barnetrygd er anslag. Partienes
+   forslag til avgiftsvedtak i Innst. 3 S har satsene og bør brukes i stedet.
+4. **Flere inntekter.** Sida viser bare 600 000 kroner. Regnemotoren tar alle lønninger, så et valg mellom
+   for eksempel 400 000, 600 000, 900 000 og 1,5 mill. viser fordelingen, som er hovedpoenget.
+5. **Eieren og pensjonisten.** De er regnet, men har ingen side. Eieren med 100 mill. i aksjer gir de største utslagene.
+6. **Hva det koster.** Sida viser bare gevinsten i lommeboka. Hver partirad bør lenke til partiets største kutt
+   og vise oljepengebruken, ellers ser det dyreste opplegget alltid best ut.
+7. **Det som ble vedtatt.** Budsjettforliket mangler som egen linje.
+8. **En ryddig familie.** Skatt, mat og bil gjelder én voksen, barnegodene hele husholdningen.
+9. **Ikke med:** strøm (makspris hos FrP og KrF, elavgift hos Venstre), flyreiser, Venstres barnetrygd,
+   Sps barnetrygd for tredje barn, KrFs lettelser for unge.
+10. **Kontroll utenfra.** Sende hvert parti tallene sine før publisering og be om rettelser.
+11. **Deling.** Ingen delingsknapp, ikke eget delingsbilde, og sida ligger ikke i menyen.
+12. **Tekstene** er Claudes utkast og må godkjennes av Gaute.
