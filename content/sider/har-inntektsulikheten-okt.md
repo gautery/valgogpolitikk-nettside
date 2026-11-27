@@ -32,7 +32,7 @@ seksjoner:
 
 
       Her er tallene for utvalgte år, tallene etter 2001 viser inkludert
-      tilbakeholdt overskudd i selskaper og er bedre mer nøyaktige enn de før
+      tilbakeholdt overskudd i selskaper og er mer nøyaktige enn de før
       2001:
 
 

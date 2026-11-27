@@ -39,6 +39,18 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Hovedoverskrifter: lange sammensatte ord («formuesulikheten», «holdingselskaper»)
+   deles med bindestrek i stedet for å stikke ut av skjermen på smale telefoner.
+   Bare ord på 15 tegn eller mer deles, så «valgogpolitikk» og vanlige ord står hele. */
+h1 {
+  overflow-wrap: anywhere;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphenate-limit-chars: 15 6 5;
+  -webkit-hyphenate-limit-before: 6;
+  -webkit-hyphenate-limit-after: 5;
+}
+
 /* Trappa til toppen: hvert trinn flyttes mot høyre jo høyere opp det står */
 .trinn {
   margin-left: calc(var(--niva) * clamp(10px, 5vw, 64px));

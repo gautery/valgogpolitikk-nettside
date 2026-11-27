@@ -139,3 +139,52 @@ Svakheter som står på siden:
   - sider før kommunevalget 2027
   - flere tekster fra /trappa i Pages CMS: etikettene på søylene, tekstene nedover formuestrappa
     og resultatteksten i kalkulatoren
+
+## Gjennomgang 27. november
+
+Claude gikk gjennom hele demoen på mobil (360, 375 og 390 piksler) og utkastet på grenen `offentlig-sektor-side`.
+
+Rettet (grenen `rettinger-apenbare-feil`):
+
+- Lange ord i hovedoverskrifter deles med bindestrek (`h1` i `globals.css`). Før stakk overskriftene i leksjon 2,
+  leksjon 4, holdingselskap-leksjonen og /stromleverandorer ut av skjermen på smale telefoner.
+- Den skjulte tabellen på /trappa gjorde siden 492 piksler bred. Den ligger nå i en `sr-only`-boks.
+- /kontrollsenter er slettet. Siden var en rest fra den første prototypen, og passordet sto i koden.
+- Skrivefeil: «ulihet» på forsiden, «bedre mer nøyaktige» og «de beste dataen» i leksjon 2.
+
+Ikke rettet: På 320 piksler (de aller smaleste telefonene) er forsiden, /statsbudsjett, /trappa, /karuseller
+og to leksjoner fortsatt noen piksler for brede.
+
+Vurderinger Gaute må ta (ikke bygg på dem uten svar):
+
+1. Lansere en liten versjon før skattelistene 2. desember, eller vente til alt er klart?
+2. Leksjon 2: «for hundre år siden» i ingress og graftittel. Listen i leksjonen sier 13 prosent i 1920
+   og 22 prosent i 1882. Dagens 23 prosent tilsvarer 1880-tallet.
+3. Leksjon 1: ingressen sier «rundt 1/5», overskriften lenger ned «nesten en fjerdedel» (23 prosent).
+4. /tema/skatt bruker offisielle tall (21,7 prosent av formuen, 9–17 prosent skatt for de 0,1 prosent rikeste).
+   Grunnkurset sier 37 prosent og 32 prosent.
+5. Leksjon 8: 108 milliarder i teksten, 127 milliarder i karusellen.
+6. Leksjon 6: SSB-tallene 8 og 11,5 prosent (Aaberge mfl. 2021) er tatt ut fordi de ikke er sjekket.
+7. Fjerne eksempelinnleggene og «Analyser» fra meny og forside til det finnes ekte tekster?
+8. Meny: Grunnkurs, Trappa og Statsbudsjett inn, Instagram og TikTok ned i bunnteksten.
+   Bunnteksten: «OECD, SSB, Eurostat» ut.
+9. Forsiden: inntektsfeltet fra Trappa øverst, og kort for Trappa, Grunnkurs og Statsbudsjett rett under.
+10. Nyhetsbrev-påmelding på forsiden, i bunnteksten og etter leksjoner og karusellsider.
+11. Deleknapp på resultatet i Trappa-kalkulatoren.
+12. Karusellsidene: store slides som på Skråblikk, og skjule «Argument, ingen nye tall».
+13. /kilder: vise bare utvalgte saker, og fjerne duplikater og utenlandske artikler utenfor tema.
+14. De tre rikeste med navn i formuestrappa.
+15. /offentlig-sektor: flytte til nytt design før eller etter lansering?
+
+Bare Gaute kan gjøre:
+
+- Skrive Om-teksten og leksjonen om privat forbruk i selskaper (begge har stikkord nå).
+- Lese og slette «Til deg, Gaute»-notatene i leksjon 6 og 8.
+- Rette graftittelen til leksjon 2 i Datawrapper.
+- Fylle inn eller godkjenne de seks «Legg inn …»-merknadene på /skatt-pa-de-rikeste.
+- Legge inn Instagram-lenker på de tre karusellsidene.
+- Sjekke bilderettigheter for fotoene i slidene.
+- Opprette post@valgogpolitikk.no, eller velge en annen adresse.
+- Bytte passord andre steder hvis passordet fra /kontrollsenter er brukt der.
+- Beehiiv-nøklene i Vercel og totrinnsinnlogging, hvis det ikke er gjort.
+- Godkjenne utkastene og si «lanser».

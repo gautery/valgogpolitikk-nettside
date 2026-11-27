@@ -4,7 +4,7 @@ seksjoner:
   - type: toppfelt
     overlinje: "@valgogpolitikk"
     tittel: Norsk politikk med tall og kilder
-    ingress: Analyser av norsk politikk, i hovedsak skatt, ulihet og velferd. Jeg
+    ingress: Analyser av norsk politikk, i hovedsak skatt, ulikhet og velferd. Jeg
       leser rapportene slik at du slipper.
     bokrygger: true
     farge: rosa
