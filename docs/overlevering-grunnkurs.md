@@ -3,6 +3,43 @@
 Skrevet 27. november 2026. Tillegg til `docs/overlevering.md`, som har arbeidsreglene og det tekniske oppsettet.
 Dette notatet dekker bare grunnkurset, feiringssiden og Datawrapper-grafene.
 
+## Status og åpne punkter (oppdatert 27. november 2026, kveld)
+
+Alt under ligger på demoen. Delene lenger ned er skrevet underveis og forteller hvordan vi kom hit. Der de
+sier «ikke på demoen» eller «ikke avklart», er det denne lista som gjelder.
+
+**Bestemt av Gaute**
+
+- Leksjon 3 og 4 holder på den lange serien fra skattemeldingene (37 prosent). Leksjon 3 forklarer de «to
+  kompliserende faktorene» og gir «kanskje rundt 30 %» som anslag når begge rettes opp.
+- Han tok ut delene «Trenden er likevel tydelig» og «Ligner Norge på USA?» fra leksjon 4 fordi de kompliserte.
+  Ikke legg dem inn igjen.
+- «En tidel» (Ring, Seim og Zucman) brukes ikke som tall for unoterte aksjer.
+- Quizen har seks påstander, uten navn på hvem som har sagt dem.
+
+**Åpne punkter**
+
+- **Datawrapper-grafen i leksjon 3 (`YpzU3`)** har fotnoten «nedre anslag» og viser 20 prosent av inntektene.
+  Leksjon 2 sier 23. Grafen må rettes i Datawrapper.
+- **Leksjon 4:** Claude foreslo én setning om at tallene bygger på skattemeldingene og at økningen er mindre
+  med bolig til markedsverdi (15 til 19 prosent fra 1995 til 2016). Gaute har ikke svart.
+- **Leksjon 6:** ingressen begynner med «Studien tar med alle skatter …» før studien er nevnt. Setningene ser
+  ut til å ha byttet plass. Notatet «Til deg, Gaute» står fortsatt i teksten og må slettes før lansering.
+- **Leksjon 8:** tannhelsereform til 9 mrd. og kollektivkort til 4–5 mrd. mangler kilde.
+- **Quizen:** om «Sagt av …» med lenke skal vises etter hvert svar. Kildene står nederst i dette notatet.
+- **28 prosent** (bolig og selskaper til markedsverdi, regnet fra SSB) står bare som «rundt 30 %» i leksjon 3.
+- **Gaute kan skrive til SSB** og be om toppandeler med markedsverdi på selskapene. Forskerne bak Rapporter
+  2022/31 og 2025/21 har dataene.
+
+**Kildene må lastes ned på nytt i en ny samtale**
+
+- SSB Discussion Papers 1028: ssb.no/inntekt-og-forbruk/inntekt-og-formue/artikler/maling-av-langsiktig-ulikskap-i-formue-empiriske-resultat-fra-noreg-1912-2019
+- SSB Rapporter 2022/31: ssb.no/virksomheter-foretak-og-regnskap/skatt-for-naeringsvirksomhet/artikler/verdsetting-av-unoterte-selskaper
+- SSB Rapporter 2025/21: ssb.no/virksomheter-foretak-og-regnskap/skatt-for-naeringsvirksomhet/artikler/latente-eierinntekter-og-skatteforpliktelser-pa-unoterte-aksjer-i-perioden-20112022
+- SSB Rapporter 2021/33: «Økonomisk ulikhet i Norge i det 21. århundre» (søk på tittelen på ssb.no)
+- Ring, Seim og Zucman: gabriel-zucman.eu/files/RSZ2026.pdf (nber.org slipper ikke PDF-en gjennom)
+- SSB-tabellene 10315, 10318 og 09916: `https://data.ssb.no/api/v0/no/table/<nummer>`
+
 ## Arbeidsregler som gjelder kurset
 
 - **Gautes egen tekst skal stå ordrett.** Han skriver om leksjonene med sin egen stemme. Rett bare åpenbare feil
@@ -22,13 +59,13 @@ Alle sidene ligger i `content/sider/` og har `utkast: true`.
 | Oversikt | `grunnkurs-i-ulikhet.md` | | Gautes egen innledning |
 | 1 | `inntektsfordelingen-i-norge.md` | `69Erh` | Skrevet om av Gaute |
 | 2 | `har-inntektsulikheten-okt.md` | `krafw` | Delvis skrevet om av Gaute |
-| 3 | `formuesfordelingen-i-norge.md` | `YpzU3` | Claudes utkast |
-| 4 | `har-formuesulikheten-okt.md` | `kbfVb` | Claudes utkast |
+| 3 | `formuesfordelingen-i-norge.md` | `YpzU3` | Skrevet om av Gaute 27. november |
+| 4 | `har-formuesulikheten-okt.md` | `kbfVb` | Skrevet om av Gaute 27. november |
 | 5 | `hvor-mye-skatt-vil-nordmenn-at-de-rike-skal-betale.md` | `Xplnc`, `Oo9nN` | Gautes egen tekst |
 | 6 | `skatt-etter-inntekt-i-norge.md` | `dFq7w` | Gautes egen tekst |
-| 7 | `skatt-pa-de-rike-i-andre-land.md` | `2obCo` | Claudes utkast |
-| 8 | `hva-koster-lav-skatt-pa-de-rikeste.md` | | Claudes utkast |
-| Feiring | `grunnkurset-fullfort.md` | | Ferdig, se under |
+| 7 | `skatt-pa-de-rike-i-andre-land.md` | `2obCo` | Skrevet om av Gaute 27. november |
+| 8 | `hva-koster-lav-skatt-pa-de-rikeste.md` | | Skrevet om av Gaute 27. november |
+| Feiring | `grunnkurset-fullfort.md` | | Quiz og feiring, se under |
 | Påbygging 1 | `holdingselskap-og-utsatt-skatt.md` | `ulURW` | Claudes utkast |
 | Påbygging 2 | `privat-forbruk-i-selskaper.md` | | Bare stikkord. På vent, minn Gaute på den |
 
@@ -89,7 +126,7 @@ Deleknappene peker på `https://valgogpolitikk.no/<slug>`. Instagram og TikTok k
 - **Etter endringer i filer eller felt:** be Gaute laste Pages CMS på nytt før han redigerer.
 - **Flere samtaler i samme repo:** hent siste `master` før sammenslåing.
 
-## Formuestallene: gjennomgang 27. november (ikke avklart med Gaute)
+## Formuestallene: gjennomgang 27. november (bakgrunn, se status øverst)
 
 Gaute spurte om formuestallene er gode, og om de tar med verdiene som ligger i selskapene. Kildene er lest på nytt.
 
@@ -112,7 +149,7 @@ Gaute spurte om formuestallene er gode, og om de tar med verdiene som ligger i s
   Gini-tallene som forklaring. Leksjon 4 beholder den lange serien, men sier at den måler skattepliktig formue og
   viser utviklingen, ikke nivået. De to tallene må ikke blandes. Spørre SSB om toppandeler med markedsverdi.
 
-### Oppfølging samme dag: Gautes valg og nye utkast (grein `formue-utkast`, ikke på demoen)
+### Oppfølging samme dag: Gautes valg og nye utkast (siden lagt på demoen og skrevet om av Gaute)
 
 Gaute vil holde på den lange serien (37 prosent) som svaret, og forklare usikkerheten lenger ned. Utkastene er
 skrevet om etter det. Han har ikke godkjent teksten.
@@ -137,7 +174,7 @@ skrevet om etter det. Han har ikke godkjent teksten.
 - **Ikke gjort:** Datawrapper-grafen i leksjon 3 (`YpzU3`) har en fotnote som sier «nedre anslag». Den må
   rettes. Samme graf viser 20 prosent av inntektene (2020), mens Gautes leksjon 2 nå bruker 23 prosent (2022).
 
-### Holdingselskaper og størrelsene (gravd fram 27. november, ikke brukt i tekstene ennå)
+### Holdingselskaper og størrelsene (gravd fram 27. november, bare to tredjedeler og 30 prosent er brukt)
 
 - **SSB Rapporter 2025/21, figur 4.1 (2022, i 2021-kroner):** personlige eieres andeler i unoterte selskaper er
   verdt 2 139 mrd. målt med ligningsverdi og 4 607 mrd. med predikert markedsverdi. Eierkjeder er regnet
@@ -210,7 +247,7 @@ det røpes til slutt, som en bro til teksten «nå kan du nok til å irritere de
 - **Tatt ut etter ønske:** påstanden om at den rikeste prosenten får ti prosent av inntektene.
 - **Tilgjengelighet:** fokus flyttes til fasiten etter svar, til neste påstand etter «Neste påstand» og til
   resultatboksen til slutt. «Hopp over quizen» går rett til feiringen uten resultat.
-- **Test:** `python3 /home/claude/skript/test_quiz.py <adresse> <mappe>` går gjennom 5, 0, 4 og 3 rette,
+- **Test:** `python3 scripts/test/quiz.py <adresse> <mappe for skjermbilder>` går gjennom 5, 0, 4 og 3 rette,
   hopp over og tastatur.
 
 ### Quizen spisset mot påstander som faktisk blir sagt (27. november, kveld)

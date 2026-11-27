@@ -6,6 +6,48 @@ Skrevet 22. november 2026 for å starte en ny samtale. Lim inn denne fila, eller
 
 Alt som er merket **Uavklart** er ikke bestemt. Ikke bygg videre på det uten å spørre Gaute først.
 
+## Start her (oppdatert 27. november 2026, kveld)
+
+Notatene er skrevet lagvis gjennom flere dager. Der to avsnitt sier forskjellige ting, gjelder det nyeste.
+Denne delen er fasiten for hvor vi står.
+
+**På demoen nå** (`master`, valgogpolitikk-nettside.vercel.app), alt merket som utkast:
+
+- Grunnkurs i ulikhet, åtte leksjoner. Gaute skrev om leksjon 3–8 i Pages CMS 27. november.
+- Quiz før feiringen, seks påstander som alle er feil (`/grunnkurset-fullfort`).
+- Lønnsmottaker-sida, budsjettomaten og «Hvem fikk viljen sin?» med tall for 2027.
+- Parti for parti-sidene, fortsatt med prøvedata for 2026.
+
+Ingen greiner har arbeid som ikke ligger i `master`.
+
+**Slik svarer du Gaute**
+
+- Han skriver fra mobilen. Svar kort, på norsk, med svaret først og punktlister.
+- Han vil ha forslag, ikke endringer, i tekst han har skrevet selv. Åpenbare feil kan rettes, og meldes.
+- Han ber ofte om at tall graves fram. Vær nøyaktig, les kilden selv og si fra når et tall er ditt eget
+  regnestykke.
+
+**Slik jobber vi i repoet**
+
+- Hent `master` først, hver gang. Gaute lagrer ofte fra Pages CMS mens vi jobber.
+- Avtalte endringer legges rett på `master`. Sikkerhetsfilteret i arbeidsmiljøet kan likevel nekte et push
+  som ikke er uttrykkelig bestilt. Legg det da på en grein og be Gaute si «legg det på demoen».
+- Vent rundt 90 sekunder etter push, og kontroller siden på demoen før du sier at den ligger ute.
+- `npx next build` feiler av og til første gang på Google Fonts. Kjør én gang til.
+- Test med Playwright og Chrome som finnes i arbeidsmiljøet (`/usr/bin/google-chrome`, `--no-sandbox`).
+  Mot demoen må nettleseren bruke proxyen i `HTTPS_PROXY`. Lokalt: `--no-proxy-server`.
+- Skript og nedlastede filer i arbeidsmiljøet forsvinner med samtalen. Det som skal brukes igjen, ligger i
+  `scripts/` i repoet. Kildene må lastes ned på nytt, se lenkene i grunnkurs-notatet.
+- Commit-meldinger avsluttes med linjene som samtalen selv oppgir (Co-Authored-By og Claude-Session).
+
+**Venter på svar fra Gaute**
+
+- Grunnkurset: se «Åpne punkter» øverst i `docs/overlevering-grunnkurs.md`.
+- Budsjettsidene: sjekke tallet 7,4 mrd. i oljepenger mot Aps uttalelse, se over dommene på «Hvem fikk
+  viljen sin?», og si om avtalen skal inn som egen rad på lønnsmottaker-sida og i budsjettomaten.
+- Innst. 2 S (2026–2027) fra finanskomiteen ventes 30. november. Da kan parti for parti-sidene få tall for
+  2027, og anslagene på lønnsmottaker-sida kan byttes ut med satsene i innstillingen.
+
 ---
 
 ## Om Gaute og arbeidsreglene
