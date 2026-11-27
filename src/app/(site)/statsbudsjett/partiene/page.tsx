@@ -153,7 +153,7 @@ export default function PartieneSide() {
                 href={`${ROT}/lonnsmottaker`}
                 className="inline-block rounded-md bg-black px-5 py-3 text-[15px] font-semibold text-white hover:bg-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
-                Se hva det betyr for en lønn på 600 000 kroner
+                Se hva budsjettene for 2027 betyr for en lønn på 600 000 kroner
               </Link>
             </p>
             <p className="mt-5 text-[13.5px] leading-relaxed text-text-muted">

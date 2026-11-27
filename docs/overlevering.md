@@ -278,3 +278,40 @@ Forslag fra Claude. Gaute har ikke tatt stilling til dem.
 10. **Kontroll utenfra.** Sende hvert parti tallene sine før publisering og be om rettelser.
 11. **Deling.** Ingen delingsknapp, ikke eget delingsbilde, og sida ligger ikke i menyen.
 12. **Tekstene** er Claudes utkast og må godkjennes av Gaute.
+
+### Lønnsmottaker-sida bruker budsjettene for 2027 (27. november)
+
+Gaute ba om årets tall og la ved Rødts dokument. Grenen `skatten-din-utkast` har 2027-versjonen. Demoen viser
+fortsatt 2026-versjonen til Gaute sier «legg det på demoen».
+
+- **Filer:** `scripts/typetilfeller/regler2027.json`, `avgifter2027.json` og `velferd2027.json`, med kilde og sidetall
+  for hvert parti. `python3 bygg.py` lager `public/data/typetilfeller/2027.json` (`python3 bygg.py 2026` lager fjorårets).
+  `kontroll2027.py` sammenligner med partienes egne tall. Sida leser året fra `TYPETILFELLE_AAR` i
+  `src/lib/partibudsjett.ts`. «Parti for parti»-sidene bruker fortsatt 2026 (`AAR`), fordi finansinnstillingen
+  for 2027 ikke var ute.
+- **Dokumentene:** SV, Sp, MDG, Høyre, KrF og Venstre er lastet ned fra lenkene på Stortingets side. Rødt er lagt ved
+  av Gaute. **FrP mangler:** frp.no stenger arbeidsmiljøet ute, så FrPs tall er fra NTBs omtale (Dagsavisen
+  25. november). Gaute må legge ved FrPs dokument. Da må også fagforeningsfradrag, foreldrefradrag, trygdeavgift og
+  barnetrygd sjekkes.
+- **Grunnlaget (regjeringens forslag for 2027):** personfradrag 120 180, trygdeavgift 7,4 prosent, minstefradrag
+  maks 99 550, trinnskatt fra 235 150 / 331 050 / 754 050 / 1 019 300 / 1 525 900, fagforeningsfradrag 8 950,
+  makspris barnehage 1 200, barnetrygd 2 012 i måneden, veibruksavgift bensin 3,37 og CO2-avgift 4,40 kr per liter.
+  Satsene er lest fra Smarte Penger og Regnskap Norge, ikke fra proposisjonen selv.
+- **Kontroll:** MDGs tabell over inntektsskatt treffes på krona for alle 18 inntektsnivåer. Rødts eksempel for
+  600 000 kroner sier 5 800, vi får 5 660 med satsene i Rødts tabell 1. KrFs egne tall for foreldrefradraget
+  (16 500 og 36 300 kroner) treffes.
+- **Tolkninger Gaute bør se på:**
+  1. Høyre og KrF går imot «regjeringens generelle lettelse» uten å oppgi satser. Lest som trygdeavgift 7,6 prosent
+     og lønnsjustert personfradrag (119 100), som trekker fra om lag 1 440 kroner.
+  2. Sp kutter trygdeavgiften «mindre» uten å oppgi sats. Anslått til 7,45 prosent ut fra provenyet. Sps «økt skatt
+     på høye inntekter» er antatt å ligge over 600 000 kroner.
+  3. SVs tabell og eksempler er snitt og inkluderer formuesskatt. Vi bruker satsene: 5 000 kroner.
+  4. MDGs klimabelønning er lagt inn med sone 3 av 6 (2 506 kr per voksen, 2 255 per barn).
+  5. Bensin: FrP og Rødt er partienes egne tall. SV, Sp, MDG, KrF og Venstre er anslag. Midlertidige kutt (Sp til
+     1. juli, KrF til 1. april) er regnet for den tida de varer.
+  6. KrFs sukker- og brusavgift er anslått til 650 kroner per person ut fra provenyet.
+- **Ikke med, men skiller i år:** Norgespris (regjeringen 45 øre, Høyre, Sp og KrF 41, Rødt og FrP 40, MDG
+  strømbonus), MDGs avgifter på klær og plast, månedskort, skolemat.
+- **Finansinnstillingen:** trengs ikke for å vise sida, men partienes forslag til skatte- og avgiftsvedtak der har
+  de nøyaktige satsene. Den vil avgjøre punkt 1, 2 og 5 over, og er eneste kilde til «parti for parti»-sidene.
+- **Rettet samtidig:** valggruppene på sida hadde id med mellomrom, så skjermlesere fikk ikke navnet på gruppa.

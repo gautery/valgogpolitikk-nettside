@@ -15,14 +15,22 @@ export function Utkastlinje({ provedata, aar }: { provedata: boolean; aar: numbe
   );
 }
 
-export function Tilbake({ aar, tekst = "Alle partiene og områdene" }: { aar: number; tekst?: string }) {
+export function Tilbake({
+  aar,
+  tekst = "Alle partiene og områdene",
+  lenke,
+}: {
+  aar: number;
+  tekst?: string;
+  lenke?: string;
+}) {
   return (
     <p className="mb-5 text-[15px] font-semibold text-black">
       <Link
         href={ROT}
         className="underline decoration-border-light underline-offset-[4px] hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
-        Statsbudsjettet {aar}, parti for parti
+        {lenke ?? `Statsbudsjettet ${aar}, parti for parti`}
       </Link>
       <span className="sr-only">. {tekst}</span>
     </p>

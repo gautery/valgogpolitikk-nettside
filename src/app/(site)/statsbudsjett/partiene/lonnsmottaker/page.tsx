@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import type { Metadata } from "next";
 import { SKJULT_FOR_SOK, UTKAST } from "@/lib/utkast";
-import { AAR, PROVEDATA } from "@/lib/partibudsjett";
+import { AAR, TYPETILFELLE_AAR } from "@/lib/partibudsjett";
 import Lommebok, { type LommebokParti } from "@/components/partibudsjett/Lommebok";
 import { Tilbake, Utkastlinje } from "@/components/partibudsjett/Felles";
 
@@ -25,7 +25,7 @@ type Data = {
   };
   kilder: string[];
   partier: LommebokParti[];
-  mangler: { navn: string; tekst: string }[];
+  merk: { tittel: string; tekst: string }[];
 };
 
 const tall = (x: number) => x.toLocaleString("nb-NO").replace(/\s/g, " ");
@@ -33,29 +33,30 @@ const tall = (x: number) => x.toLocaleString("nb-NO").replace(/\s/g, " ");
 export const metadata: Metadata = {
   title: "En lønn på 600 000 kroner: hva ville partiene endret? — valg og politikk",
   description:
-    "Skatt, avgifter, barnehage, SFO, barnetrygd og tannlege for en lønnsmottaker med hvert partis alternative statsbudsjett, sammenlignet med regjeringens forslag.",
+    "Skatt, avgifter, barnehage, SFO, barnetrygd og tannlege for en lønnsmottaker med hvert partis alternative statsbudsjett for 2027, sammenlignet med regjeringens forslag.",
   robots: UTKAST.partibudsjett ? SKJULT_FOR_SOK : undefined,
 };
 
 export default function LonnsmottakerSide() {
   const data = JSON.parse(
-    fs.readFileSync(path.join(process.cwd(), "public", "data", "typetilfeller", `${AAR}.json`), "utf-8"),
+    fs.readFileSync(path.join(process.cwd(), "public", "data", "typetilfeller", `${TYPETILFELLE_AAR}.json`), "utf-8"),
   ) as Data;
   const f = data.forutsetninger;
 
   return (
     <>
-      <Utkastlinje provedata={PROVEDATA} aar={data.aar} />
+      <Utkastlinje provedata={false} aar={data.aar} />
 
       <div className="border-b border-black bg-white px-6 py-14 md:py-20">
         <div className="mx-auto max-w-[1100px]">
-          <Tilbake aar={data.aar} />
+          <Tilbake aar={AAR} lenke={`Parti for parti: rammene i budsjettene for ${AAR}`} />
           <h1 className="max-w-[760px] font-display text-[42px] leading-[1.02] text-black sm:text-[56px]">
             En lønn på {tall(data.lonn)} kroner: hva ville partiene endret?
           </h1>
           <p className="mt-6 max-w-[560px] text-[18px] leading-[1.55] text-text-secondary">
-            Skatt, avgifter og noen velferdsgoder for en som tjener {tall(data.lonn)} kroner, sammenlignet med
-            regjeringens forslag. Velg det som gjelder deg.
+            Skatt, avgifter og noen velferdsgoder for en som tjener {tall(data.lonn)} kroner, med partienes
+            alternative budsjetter for {data.aar}. Alt er sammenlignet med regjeringens forslag. Velg det som gjelder
+            deg.
           </p>
         </div>
       </div>
@@ -68,9 +69,9 @@ export default function LonnsmottakerSide() {
             </h2>
             <Lommebok partier={data.partier} liter={f.liter} />
 
-            {data.mangler.map((m) => (
-              <p key={m.navn} className="mt-6 text-[14.5px] leading-relaxed text-text-secondary">
-                <strong className="font-semibold text-black">{m.navn} mangler.</strong> {m.tekst}
+            {data.merk.map((m) => (
+              <p key={m.tittel} className="mt-6 text-[14.5px] leading-relaxed text-text-secondary">
+                <strong className="font-semibold text-black">{m.tittel}</strong> {m.tekst}
               </p>
             ))}
           </div>
@@ -85,7 +86,8 @@ export default function LonnsmottakerSide() {
             </h2>
             <p className="mt-4 text-[16.5px] leading-[1.65] text-text-primary">
               Alle tall er kroner i året, sammenlignet med regjeringens forslag. Pluss betyr at du får bedre råd.
-              Der partiene innfører noe midt i året, viser vi virkningen for et helt år.
+              Der partiene innfører noe varig midt i året, viser vi virkningen for et helt år. Midlertidige kutt er
+              regnet for den tida de varer.
             </p>
 
             <h3 className="mt-9 font-display text-[21px]">Deg</h3>
@@ -109,7 +111,7 @@ export default function LonnsmottakerSide() {
                 Tannlege: du bruker {tall(f.tannlege)} kroner i året til full pris, omtrent én vanlig undersøkelse, og
                 går til den offentlige tannhelsetjenesten. I regjeringens forslag betaler de mellom 21 og 28 år{" "}
                 {Math.round(f.tannlege_egenandel_21_28 * 100)} prosent av prisen. For dem som er 31 år eller eldre,
-                foreslo ingen av partiene her noen endring.
+                slår ingen av forslagene ut ved så lave utgifter.
               </li>
             </ul>
 
@@ -126,7 +128,7 @@ export default function LonnsmottakerSide() {
               </li>
               <li>
                 SFO: barnet går i 4. klasse og har halvdagsplass, som koster {tall(f.sfo_aar)} kroner i året. Prisen er
-                SVs tall. For 1.–3. klasse er tolv timer i uka gratis hos alle partiene.
+                SVs tall. For 1.–3. klasse er tolv timer i uka gratis fra før.
               </li>
               <li>
                 Barnetrygd: {tall(f.barnetrygd_mnd)} kroner i måneden per barn i regjeringens forslag.
@@ -140,13 +142,15 @@ export default function LonnsmottakerSide() {
             <h3 className="mt-9 font-display text-[21px]">Anslag</h3>
             <p className="mt-3 text-[15.5px] leading-relaxed text-text-primary">
               Tall merket «anslag» har vi regnet ut fra partiets egne eksempler eller fra hvor mye partiet venter å få
-              inn. De er mer usikre enn resten.
+              inn, eller vi har måttet tolke hva partiet mener. De er mer usikre enn resten. Stortingets
+              finansinnstilling, som kommer senere, har de nøyaktige satsene.
             </p>
 
             <h3 className="mt-9 font-display text-[21px]">Ikke med</h3>
             <p className="mt-3 text-[15.5px] leading-relaxed text-text-primary">
-              Dette er ikke hele bildet. Strøm, flyreiser, utbytte og formue er ikke med, og heller ikke ordninger som
-              bare gjelder unge. Det meste partiene bruker penger på, som bemanning i barnehager, sykehus, pensjoner og
+              Dette er ikke hele bildet. Strøm, flyreiser, månedskort, klær, utbytte og formue er ikke med, og heller
+              ikke ordninger som bare gjelder unge. På strøm skiller partiene seg i år: regjeringen vil øke Norgespris
+              til 45 øre per kilowattime før moms, mens flere partier vil holde den på 40 eller 41 øre. Det meste partiene bruker penger på, som bemanning i barnehager, sykehus, pensjoner og
               kommuneøkonomi, kan ikke regnes om til kroner for én husholdning.
             </p>
 

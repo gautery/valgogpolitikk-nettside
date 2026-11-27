@@ -26,9 +26,12 @@
    "id": "frp",
    "navn": "FrP",
    "skatt": 5977,
+   "skatt_anslag": false,
    "mat": 2618,
    "mat_anslag": false,
    "utbetaling": 0,
+   "utbetaling_navn": "Utbetaling",
+   "utbetaling_anslag": true,
    "bil": 2520,
    "bil_anslag": false,
    "fagforening": -1914,
@@ -38,12 +41,14 @@
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 0,
+      "utbetaling": 0,
       "foreldrefradrag": 0
      },
      {
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 0,
+      "utbetaling": 0,
       "foreldrefradrag": 1232
      }
     ],
@@ -52,12 +57,14 @@
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 0,
+      "utbetaling": 0,
       "foreldrefradrag": 0
      },
      {
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 0,
+      "utbetaling": 0,
       "foreldrefradrag": 1936
      }
     ],
@@ -66,12 +73,14 @@
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 0,
+      "utbetaling": 0,
       "foreldrefradrag": 0
      },
      {
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 0,
+      "utbetaling": 0,
       "foreldrefradrag": 1769
      }
     ]
@@ -97,9 +106,12 @@
    "id": "hoyre",
    "navn": "Høyre",
    "skatt": 3700,
+   "skatt_anslag": false,
    "mat": 0,
    "mat_anslag": false,
    "utbetaling": 0,
+   "utbetaling_navn": "Utbetaling",
+   "utbetaling_anslag": true,
    "bil": 0,
    "bil_anslag": false,
    "fagforening": -1067,
@@ -109,12 +121,14 @@
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 0,
+      "utbetaling": 0,
       "foreldrefradrag": 0
      },
      {
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 582,
+      "utbetaling": 0,
       "foreldrefradrag": 0
      }
     ],
@@ -123,12 +137,14 @@
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 582,
+      "utbetaling": 0,
       "foreldrefradrag": 0
      },
      {
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 1164,
+      "utbetaling": 0,
       "foreldrefradrag": 0
      }
     ],
@@ -137,12 +153,14 @@
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 1164,
+      "utbetaling": 0,
       "foreldrefradrag": 0
      },
      {
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 1746,
+      "utbetaling": 0,
       "foreldrefradrag": 0
      }
     ]
@@ -168,9 +186,12 @@
    "id": "sv",
    "navn": "SV",
    "skatt": 6334,
+   "skatt_anslag": false,
    "mat": 0,
    "mat_anslag": false,
    "utbetaling": 0,
+   "utbetaling_navn": "Utbetaling",
+   "utbetaling_anslag": true,
    "bil": -731,
    "bil_anslag": true,
    "fagforening": 0,
@@ -180,12 +201,14 @@
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 0,
+      "utbetaling": 0,
       "foreldrefradrag": 0
      },
      {
       "barnehage": 0,
       "sfo": 20600,
       "barnetrygd": 1728,
+      "utbetaling": 0,
       "foreldrefradrag": -3300
      }
     ],
@@ -194,12 +217,14 @@
       "barnehage": 13200,
       "sfo": 0,
       "barnetrygd": 1728,
+      "utbetaling": 0,
       "foreldrefradrag": -2904
      },
      {
       "barnehage": 13200,
       "sfo": 20600,
       "barnetrygd": 3456,
+      "utbetaling": 0,
       "foreldrefradrag": -5500
      }
     ],
@@ -208,12 +233,14 @@
       "barnehage": 22440,
       "sfo": 0,
       "barnetrygd": 3456,
+      "utbetaling": 0,
       "foreldrefradrag": -4937
      },
      {
       "barnehage": 22440,
       "sfo": 20600,
       "barnetrygd": 5184,
+      "utbetaling": 0,
       "foreldrefradrag": -7700
      }
     ]
@@ -239,9 +266,12 @@
    "id": "sp",
    "navn": "Sp",
    "skatt": 600,
+   "skatt_anslag": false,
    "mat": 1745,
    "mat_anslag": false,
    "utbetaling": 0,
+   "utbetaling_navn": "Utbetaling",
+   "utbetaling_anslag": true,
    "bil": 638,
    "bil_anslag": true,
    "fagforening": 0,
@@ -251,12 +281,14 @@
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 0,
+      "utbetaling": 0,
       "foreldrefradrag": 0
      },
      {
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 0,
+      "utbetaling": 0,
       "foreldrefradrag": 1232
      }
     ],
@@ -265,12 +297,14 @@
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 0,
+      "utbetaling": 0,
       "foreldrefradrag": 0
      },
      {
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 0,
+      "utbetaling": 0,
       "foreldrefradrag": 1936
      }
     ],
@@ -279,12 +313,14 @@
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 0,
+      "utbetaling": 0,
       "foreldrefradrag": 0
      },
      {
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 0,
+      "utbetaling": 0,
       "foreldrefradrag": 1769
      }
     ]
@@ -309,9 +345,12 @@
    "id": "mdg",
    "navn": "MDG",
    "skatt": 1774,
+   "skatt_anslag": false,
    "mat": -1005,
    "mat_anslag": true,
    "utbetaling": 160,
+   "utbetaling_navn": "Utbetaling",
+   "utbetaling_anslag": true,
    "bil": -3536,
    "bil_anslag": true,
    "fagforening": 0,
@@ -321,12 +360,14 @@
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 0,
+      "utbetaling": 0,
       "foreldrefradrag": 0
      },
      {
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 14400,
+      "utbetaling": 0,
       "foreldrefradrag": -3300
      }
     ],
@@ -335,12 +376,14 @@
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 14400,
+      "utbetaling": 0,
       "foreldrefradrag": -2904
      },
      {
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 28800,
+      "utbetaling": 0,
       "foreldrefradrag": -5500
      }
     ],
@@ -349,12 +392,14 @@
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 28800,
+      "utbetaling": 0,
       "foreldrefradrag": -4937
      },
      {
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 43200,
+      "utbetaling": 0,
       "foreldrefradrag": -7700
      }
     ]
@@ -380,9 +425,12 @@
    "id": "krf",
    "navn": "KrF",
    "skatt": 0,
+   "skatt_anslag": false,
    "mat": 0,
    "mat_anslag": false,
    "utbetaling": 0,
+   "utbetaling_navn": "Utbetaling",
+   "utbetaling_anslag": true,
    "bil": 0,
    "bil_anslag": false,
    "fagforening": 0,
@@ -392,12 +440,14 @@
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 0,
+      "utbetaling": 0,
       "foreldrefradrag": 0
      },
      {
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 3384,
+      "utbetaling": 0,
       "foreldrefradrag": 7700
      }
     ],
@@ -406,12 +456,14 @@
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 3384,
+      "utbetaling": 0,
       "foreldrefradrag": 8096
      },
      {
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 6768,
+      "utbetaling": 0,
       "foreldrefradrag": 16500
      }
     ],
@@ -420,12 +472,14 @@
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 6768,
+      "utbetaling": 0,
       "foreldrefradrag": 17063
      },
      {
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 10152,
+      "utbetaling": 0,
       "foreldrefradrag": 36300
      }
     ]
@@ -451,9 +505,12 @@
    "id": "venstre",
    "navn": "Venstre",
    "skatt": 2540,
+   "skatt_anslag": false,
    "mat": 430,
    "mat_anslag": false,
    "utbetaling": 0,
+   "utbetaling_navn": "Utbetaling",
+   "utbetaling_anslag": true,
    "bil": -1840,
    "bil_anslag": true,
    "fagforening": 0,
@@ -463,12 +520,14 @@
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 0,
+      "utbetaling": 0,
       "foreldrefradrag": 0
      },
      {
       "barnehage": 0,
       "sfo": 0,
       "barnetrygd": 0,
+      "utbetaling": 0,
       "foreldrefradrag": 0
      }
     ],
@@ -477,12 +536,14 @@
       "barnehage": -3300,
       "sfo": 0,
       "barnetrygd": 0,
+      "utbetaling": 0,
       "foreldrefradrag": 396
      },
      {
       "barnehage": -3300,
       "sfo": 0,
       "barnetrygd": 0,
+      "utbetaling": 0,
       "foreldrefradrag": 0
      }
     ],
@@ -491,12 +552,14 @@
       "barnehage": -5610,
       "sfo": 0,
       "barnetrygd": 0,
+      "utbetaling": 0,
       "foreldrefradrag": 563
      },
      {
       "barnehage": -5610,
       "sfo": 0,
       "barnetrygd": 0,
+      "utbetaling": 0,
       "foreldrefradrag": 0
      }
     ]
@@ -519,9 +582,9 @@
    ]
   }
  ],
- "mangler": [
+ "merk": [
   {
-   "navn": "Rødt",
+   "tittel": "Rødt mangler.",
    "tekst": "Rødts satser står ikke i finansinnstillingen, og vi har ikke fått lest Rødts eget dokument ennå. Rødts egen tabell viser 6 400–6 500 kroner lavere inntektsskatt i snitt for inntekter mellom 400 000 og 800 000 kroner."
   }
  ]

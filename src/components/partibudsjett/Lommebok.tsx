@@ -8,15 +8,18 @@ import { Stolpe } from "./Felles";
 // forslag. Tallene lages av scripts/typetilfeller/bygg.py.
 
 type Alder = "21-28" | "29-30" | "31+";
-type Barn = { barnehage: number; sfo: number; barnetrygd: number; foreldrefradrag: number };
+type Barn = { barnehage: number; sfo: number; barnetrygd: number; utbetaling: number; foreldrefradrag: number };
 
 export type LommebokParti = {
   id: string;
   navn: string;
   skatt: number;
+  skatt_anslag: boolean;
   mat: number;
   mat_anslag: boolean;
   utbetaling: number;
+  utbetaling_navn: string;
+  utbetaling_anslag: boolean;
   bil: number;
   bil_anslag: boolean;
   fagforening: number;
@@ -65,12 +68,14 @@ function Valg<T extends string | number>({
   sett: (v: T) => void;
   valg: [T, string][];
 }) {
+  // En id kan ikke ha mellomrom: aria-labelledby leser dem som flere id-er.
+  const id = `valg-${navn.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
   return (
     <div className="rounded-md border border-black bg-white px-4 py-3">
-      <p className="text-[15.5px] font-semibold text-black" id={`valg-${navn}`}>
+      <p className="text-[15.5px] font-semibold text-black" id={id}>
         {navn}
       </p>
-      <div className="mt-2.5 flex flex-wrap gap-2" role="radiogroup" aria-labelledby={`valg-${navn}`}>
+      <div className="mt-2.5 flex flex-wrap gap-2" role="radiogroup" aria-labelledby={id}>
         {valg.map(([v, tekst]) => (
           <button
             key={String(v)}
@@ -102,9 +107,9 @@ export default function Lommebok({ partier, liter }: { partier: LommebokParti[];
     .map((p) => {
       const b = p.barn[bhg][sfo ? 1 : 0];
       const deler = [
-        { navn: "Skatt på lønn", v: p.skatt, anslag: false },
+        { navn: "Skatt på lønn", v: p.skatt, anslag: p.skatt_anslag },
         { navn: "Mat og drikke", v: p.mat, anslag: p.mat_anslag },
-        ...(p.utbetaling ? [{ navn: "Utbetaling", v: p.utbetaling, anslag: true }] : []),
+        ...(p.utbetaling ? [{ navn: p.utbetaling_navn, v: p.utbetaling, anslag: p.utbetaling_anslag }] : []),
         ...(bil ? [{ navn: `Bensin, ${liter} liter`, v: p.bil, anslag: p.bil_anslag }] : []),
         ...(fag ? [{ navn: "Fagforeningsfradrag", v: p.fagforening, anslag: false }] : []),
         ...(alder !== "31+" ? [{ navn: "Tannlege", v: p.tannlege[alder], anslag: false }] : []),
@@ -113,6 +118,7 @@ export default function Lommebok({ partier, liter }: { partier: LommebokParti[];
         ...(harBarn
           ? [
               { navn: "Barnetrygd", v: b.barnetrygd, anslag: p.barnetrygd_anslag },
+              ...(b.utbetaling ? [{ navn: `${p.utbetaling_navn} for barna`, v: b.utbetaling, anslag: p.utbetaling_anslag }] : []),
               { navn: "Foreldrefradrag", v: b.foreldrefradrag, anslag: false },
             ]
           : []),

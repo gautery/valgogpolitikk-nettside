@@ -11,6 +11,9 @@ const DIR = path.join(process.cwd(), "public", "data", "partibudsjett");
 export const AAR = 2026;
 // Sant så lenge siden viser fjorårets tall som prøve.
 export const PROVEDATA = true;
+// Året lønnsmottaker-sida viser. Den leser partienes egne alternative budsjetter
+// (scripts/typetilfeller) og kan derfor være ett år foran finansinnstillingen.
+export const TYPETILFELLE_AAR = 2027;
 
 export function hentPartibudsjett(aar = AAR): Partibudsjett {
   return JSON.parse(fs.readFileSync(path.join(DIR, `${aar}.json`), "utf-8")) as Partibudsjett;
