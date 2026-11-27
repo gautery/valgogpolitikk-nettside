@@ -95,7 +95,7 @@
   {
    "tittel": "Kommunene",
    "avtalen": "2 mrd. kroner mer i frie midler: 1,7 mrd. til kommunene og 0,3 mrd. til fylkene.",
-   "regjeringen": "Regjeringens opprinnelige ramme.",
+   "regjeringen": "Ingen ekstra penger.",
    "krav": [
     {
      "parti": "Sp",
@@ -117,7 +117,7 @@
   {
    "tittel": "Sykehusene",
    "avtalen": "1 mrd. kroner mer.",
-   "regjeringen": "Regjeringens opprinnelige ramme.",
+   "regjeringen": "Ingen ekstra penger.",
    "krav": [
     {
      "parti": "SV",
@@ -134,7 +134,7 @@
   {
    "tittel": "Bolig",
    "avtalen": "Husbanken får låne ut 5 mrd. kroner mer, og 200 mill. kroner går til utleieboliger i kommunene.",
-   "regjeringen": "Regjeringens opprinnelige ramme.",
+   "regjeringen": "Ingen ekstra penger.",
    "krav": [
     {
      "parti": "SV",
@@ -314,7 +314,7 @@
   {
    "tittel": "Kvoteflyktninger",
    "avtalen": "Ikke med.",
-   "regjeringen": "Regjeringens opprinnelige tall.",
+   "regjeringen": "Ingen økning.",
    "krav": [
     {
      "parti": "SV",
