@@ -55,6 +55,12 @@ content:
         description: Huk av så lenge siden ikke er klar.
         type: boolean
         default: true
+      - name: mal
+        label: Sidemal
+        description: «kommentar» gir kommentaroppsettet (merkelapp, dato, lesebredde). Sider med adresse som begynner på kommentar- får det av seg selv. Siden må da bestå av ett toppfelt og tekstklosser.
+        type: select
+        options:
+          values: [kommentar]
       - name: seksjoner
         label: Seksjoner
         component: seksjoner

@@ -14,7 +14,7 @@ import { datawrapperId, type Bakgrunn, type Kloss } from "@/lib/klosser";
 import { hentKildeoversikt } from "@/lib/kilder";
 import { hentAlleKaruseller, lesKarusell } from "@/lib/karuseller";
 import { AVTALE_LENKE, avsnitt, avtaleSaker, lesBudsjettavtalen } from "@/lib/budsjettavtalen";
-import { KOLONNER, RadInnhold, REKKEFOLGE, Tegnforklaring, vinner } from "@/components/partibudsjett/avtale-felles";
+import TavleSmakebit from "@/components/partibudsjett/TavleSmakebit";
 import { getAllPosts } from "@/lib/posts";
 import { erEkstern, lesInnstillinger, lesSide, tilknyttetSide, utenMerke } from "@/lib/sider";
 import { hentAlleTema } from "@/lib/tema";
@@ -724,33 +724,7 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
               )}
             </div>
             {harTavle ? (
-              <div>
-                <Link
-                  href={lenke!}
-                  tabIndex={-1}
-                  aria-hidden="true"
-                  className="block overflow-hidden rounded-[10px] bg-white"
-                  data-umami-event="forside-hovedsak-tavle"
-                >
-                  <div className={`${KOLONNER} border-b border-black px-3 py-2 text-[13px] font-semibold text-black`}>
-                    <span>Sak</span>
-                    {REKKEFOLGE.map((p) => (
-                      <span key={p} className="text-center">
-                        {p}
-                      </span>
-                    ))}
-                  </div>
-                  {avtaleRader.slice(0, 6).map((r) => (
-                    <div
-                      key={r.tittel}
-                      className={`${KOLONNER} border-b border-border-light px-3 py-2.5 last:border-b-0 ${vinner(r).ap ? "bg-[#ffd1ee]" : "bg-white"}`}
-                    >
-                      <RadInnhold s={r} />
-                    </div>
-                  ))}
-                </Link>
-                <Tegnforklaring className="mt-3 text-black" />
-              </div>
+              <TavleSmakebit hendelse="forside-hovedsak-tavle" />
             ) : harSlides ? (
               <ul
                 tabIndex={0}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import KarusellSide from "@/components/KarusellSide";
+import KommentarSide, { passerSomKommentar } from "@/components/KommentarSide";
 import Klosser from "@/components/klosser/Klosser";
 import { hentAlleKaruseller, lesKarusell } from "@/lib/karuseller";
 import { hentAlleSider, lesSide } from "@/lib/sider";
@@ -58,7 +59,7 @@ export default async function Side({ params }: { params: Promise<{ side: string 
           </p>
         </div>
       )}
-      <Klosser seksjoner={s.seksjoner} ktx={{ utkastSide: s.utkast }} />
+      {passerSomKommentar(s) ? <KommentarSide s={s} /> : <Klosser seksjoner={s.seksjoner} ktx={{ utkastSide: s.utkast }} />}
     </>
   );
 }

@@ -304,6 +304,14 @@ Siden `/forside-utkast` og filen bak er slettet.
     «Vi jobber i snitt fortsatt like mye som på 70-tallet» stemmer ikke per sysselsatt (SSB: ned 23 prosent
     1970–2006). Sitatet fra Klassekampens leder er ikke kontrollert. Setningen «Det har en god grunn til å si …»
     henger ikke sammen. Datoen i toppfeltet er 29. november.
+- **Kommentaroppsett (28. november):** `src/components/KommentarSide.tsx`. Sider med adresse som begynner på
+  `kommentar-`, eller med `mal: kommentar` (feltet «Sidemal» i Pages CMS), vises med merkelapp og dato over
+  tittelen, linja «Dette er en kommentar. Den gir uttrykk for skribentens egne meninger.», brødtekst i lesebredde
+  med større første avsnitt, og nyhetsbrev-klossen fra forsiden til slutt. Sitat i teksten (`>`) blir uthevet
+  sitat. Har en tekstkloss knapp til siden om budsjettavtalen, vises de fem første radene av tavla som
+  «Bakgrunn» ved siden av teksten (under på mobil), i stedet for knappen. Oppsettet brukes bare når siden er
+  ett toppfelt fulgt av tekstklosser uten graf. Ellers vises siden som vanlig. Innholdsfilen er ikke endret.
+  `TavleSmakebit.tsx` er felles for forsiden og kommentaren.
 - **Lenker:** linja «Kommentar» under hovedsaken (`tilknyttetLenke` på `hovedsak`) og under ingressen på siden om
   avtalen (`topp.kommentarLenke` i `content/budsjettavtalen.yml`). Tittelen hentes fra toppfeltet på
   kommentarsiden (`tilknyttetSide()` i `src/lib/sider.ts`), så den endres bare ett sted. Kommentaren har en

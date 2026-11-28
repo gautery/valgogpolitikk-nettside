@@ -13,6 +13,8 @@ export type Side = {
   tittel: string;
   beskrivelse: string;
   utkast: boolean;
+  /** «kommentar» gir kommentaroppsettet. Sider med adresse som begynner på «kommentar-» får det også. */
+  mal: string;
   seksjoner: Kloss[];
 };
 
@@ -24,6 +26,7 @@ function lesFil(fil: string, slug: string): Side | null {
     tittel: data.tittel ?? "",
     beskrivelse: data.beskrivelse ?? "",
     utkast: data.utkast === true,
+    mal: data.mal === "kommentar" || slug.startsWith("kommentar-") ? "kommentar" : "",
     seksjoner: (data.seksjoner ?? []).filter((s: Kloss | null) => s && s.type),
   };
 }
@@ -35,6 +38,7 @@ export function lesForside(): Side {
       tittel: "",
       beskrivelse: "",
       utkast: false,
+      mal: "",
       seksjoner: [],
     }
   );
