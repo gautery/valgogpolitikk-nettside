@@ -305,6 +305,8 @@ Siden `/forside-utkast` og filen bak er slettet.
     trygdeavgift 2 470). «En del av dette var avgiftskutt» var derfor feil og ble 28.11 ettermiddag endret til
     «I tillegg kom avgiftskutt». Gaute er fortalt det. Setningen «En del av de drøye 13 milliardene er også
     penger som fagforeninger …» stemmer (sykehus, kommuner og barnehagebemanning ligger i de 10,8).
+  - **Avgjort av Gaute 28.11 kl. 12.08:** Vi bruker 10,8 milliarder. Kommentaren sier «10,8 milliarder» begge steder.
+    Sida om avtalen sier «10,8 mrd. kroner (pluss 2,5 mrd. kroner bare for 2026)». Ikke bytt tilbake til 13.
   - Står igjen: «Mimir» uten etternavn. Overskriften spør om FrP, men teksten nevner ikke FrP.
     «Vi jobber i snitt fortsatt like mye som på 70-tallet» stemmer ikke per sysselsatt (SSB: ned 23 prosent
     1970–2006). Sitatet fra Klassekampens leder er ikke kontrollert. Setningen «Det har en god grunn til å si …»

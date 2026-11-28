@@ -22,12 +22,12 @@ seksjoner:
 
 
       Samtidig kan en se på den samme gjennomgangen og se at de tre partiene til
-      sammen bare fikk flyttet på drøye 13 milliarder kroner. I tillegg kom avgiftskutt, som Rødt kanskje er for, men som knapt kan kalles å være
+      sammen bare fikk flyttet på 10,8 milliarder kroner. I tillegg kom avgiftskutt, som Rødt kanskje er for, men som knapt kan kalles å være
       en kjernesak for venstresida: både partier til høyre og venstre støtter
       dette.
 
 
-      En del av de drøye 13 milliardene er også penger som fagforeninger og
+      En del av de 10,8 milliardene er også penger som fagforeninger og
       andre har etterspurt, bare for å sikre en forsvarlig drift av
       velferdsstaten. Det gjelder 1 milliard til sykehusene, 2 milliarder til
       kommunene og fylkene, og en halv milliard til bemanning i barnehagene. Til
