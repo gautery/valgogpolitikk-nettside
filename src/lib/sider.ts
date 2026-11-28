@@ -97,6 +97,15 @@ export function tilknyttetSide(lenke?: string): { tittel: string; utkast: boolea
   return { tittel: (topp && "tittel" in topp && topp.tittel) || side.tittel, utkast: side.utkast };
 }
 
+/** «Kommentar: Er dette …» → «Er dette …» når merkelappen foran allerede sier «Kommentar». */
+export function utenMerke(tittel: string, merke: string) {
+  const m = merke.trim().toLowerCase();
+  const t = tittel.trim();
+  if (!m || !t.toLowerCase().startsWith(m)) return t;
+  const rest = t.slice(m.length).replace(/^\s*[:–—-]\s*/, "");
+  return rest && rest !== t.slice(m.length) ? rest : t;
+}
+
 export function erEkstern(lenke?: string) {
   return !!lenke && /^https?:\/\//.test(lenke);
 }

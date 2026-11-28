@@ -289,16 +289,21 @@ Siden `/forside-utkast` og filen bak er slettet.
   han er ikke fornøyd med overskriften. Forslag fra Claude er gitt i samtalen, ikke lagt inn.
   Tall å avklare: teksten sier «over 2300 milliarder», mens statsbudsjettsiden har 2 287 mrd. for 2027.
 - **Huskeliste for kommentaren (Gaute ba 28. november om at dette sjekkes når han spør senere).** Les
-  `content/sider/kommentar-budsjettavtalen.md` og si hva som er endret og hva som står igjen:
-  1. Overskriften. Han var ikke fornøyd med «Tredje budsjettavtale: blir det nok politisk endring ut av dette?».
-     Claudes forslag: «Kostnaden ved å være strålende fornøyd», «Under 10 milliarder av 2300. Var det dette
-     velgerne stemte for?», «Er dette endringen Rødt- og SV-velgerne stemte for?».
-  2. Klammen «[bilde på tvetydighet]» i første setning. Han vurderer Rorschach-test, vippebilde eller lignende.
-  3. Poenget «under 10 milliarder av 2300» står i fjerde avsnitt. Forslag: løft det opp.
-  4. «over 2300 milliarder»: statsbudsjettsiden har 2 287 mrd. for regjeringens forslag. Forslag: «nesten 2300».
-  5. «Under 10 milliarder»: kan presiseres til rundt 9 (10,8 minus dieselkuttet på 1,85, Claudes regnestykke).
-  6. Setningen «På kort sikt derimot …» henger ikke sammen grammatisk.
-  7. «Mimir» uten etternavn. Forslag: fullt navn første gang.
+  `content/sider/kommentar-budsjettavtalen.md` og si hva som er endret og hva som står igjen.
+  Status 28. november kl. 11.30, etter at Gaute skrev om teksten i Pages CMS:
+  - Gjort av Gaute: ny overskrift («Er dette svaret på et rekordstort FrP?»), «Rorschach-test» i første setning,
+    «nesten 2300 milliarder», og avsnittet «På kort sikt derimot …» er skrevet om.
+  - Tall lagt inn av Claude på Gautes bestilling, fra forliksdokumentet (Forlik 2027, lenket fra
+    arbeiderpartiet.no/aktuelt/enighet-om-budsjett): sykehus 1 000 mill., kommuner 1 700 + fylker 300,
+    toppet bemanning i barnehagene 500, tannhelse 1 925, månedskort 1 310, barnehagepris 242 + SFO 328.
+    «Under 4 milliarder» er summen av tannhelse, månedskort, barnehagepris og SFO (3,8 mrd.).
+  - **Rettet:** «litt over 10 milliarder» ble «drøye 13 milliarder». Forliket er på 13 350 mill. samlet, og
+    10 850 mill. av det er utgifter. Dieselkuttet (1 850 mill.) ligger utenfor de 10,8. Claudes regnestykke
+    «rundt 9 milliarder står igjen» fra natta før var derfor feil. Siden om avtalen sier fortsatt «flytter 10,8 mrd.».
+  - Står igjen: «Mimir» uten etternavn. Overskriften spør om FrP, men teksten nevner ikke FrP.
+    «Vi jobber i snitt fortsatt like mye som på 70-tallet» stemmer ikke per sysselsatt (SSB: ned 23 prosent
+    1970–2006). Sitatet fra Klassekampens leder er ikke kontrollert. Setningen «Det har en god grunn til å si …»
+    henger ikke sammen. Datoen i toppfeltet er 29. november.
 - **Lenker:** linja «Kommentar» under hovedsaken (`tilknyttetLenke` på `hovedsak`) og under ingressen på siden om
   avtalen (`topp.kommentarLenke` i `content/budsjettavtalen.yml`). Tittelen hentes fra toppfeltet på
   kommentarsiden (`tilknyttetSide()` i `src/lib/sider.ts`), så den endres bare ett sted. Kommentaren har en

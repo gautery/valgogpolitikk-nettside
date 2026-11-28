@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { DEMO, SKJULT_FOR_SOK, UTKAST } from "@/lib/utkast";
-import { tilknyttetSide } from "@/lib/sider";
+import { tilknyttetSide, utenMerke } from "@/lib/sider";
 import { AAR, TYPETILFELLE_AAR } from "@/lib/partibudsjett";
 import { avsnitt, avtaleSaker, lesBudsjettavtalen } from "@/lib/budsjettavtalen";
 import Avtale from "@/components/partibudsjett/Avtale";
@@ -51,7 +51,7 @@ export default function AvtaleSide() {
                   className="font-extrabold underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black"
                   data-umami-event="avtalen-kommentar"
                 >
-                  {kommentar.tittel}
+                  {utenMerke(kommentar.tittel, "Kommentar")}
                 </Link>
               </p>
             )}

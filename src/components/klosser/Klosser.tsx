@@ -16,7 +16,7 @@ import { hentAlleKaruseller, lesKarusell } from "@/lib/karuseller";
 import { AVTALE_LENKE, avsnitt, avtaleSaker, lesBudsjettavtalen } from "@/lib/budsjettavtalen";
 import { KOLONNER, RadInnhold, REKKEFOLGE, Tegnforklaring, vinner } from "@/components/partibudsjett/avtale-felles";
 import { getAllPosts } from "@/lib/posts";
-import { erEkstern, lesInnstillinger, lesSide, tilknyttetSide } from "@/lib/sider";
+import { erEkstern, lesInnstillinger, lesSide, tilknyttetSide, utenMerke } from "@/lib/sider";
 import { hentAlleTema } from "@/lib/tema";
 import { hentAlleSkraablikk, lesSkraablikk } from "@/lib/skraablikk";
 import { DEMO, UTKAST } from "@/lib/utkast";
@@ -827,7 +827,7 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
                   className={`font-extrabold underline underline-offset-4 ${fokus}`}
                   data-umami-event="forside-hovedsak-tilknyttet"
                 >
-                  {tilTittel}
+                  {utenMerke(tilTittel ?? "", kloss.tilknyttetMerke?.trim() || "Kommentar")}
                 </Link>
               </p>
             )}

@@ -11,7 +11,7 @@ seksjoner:
     farge: mork
   - type: tekst
     tekst: >-
-      Budsjettavtalen er kanskje et slags Rorschach-test: på den ene siden kan
+      Budsjettavtalen er kanskje en slags Rorschach-test: på den ene siden kan
       en, som Klassekampen gjør på lederplass, argumentere for at dette viser
       "et offensivt rødgrønt prosjekt".
 
@@ -22,21 +22,19 @@ seksjoner:
 
 
       Samtidig kan en se på den samme gjennomgangen og se at de tre partiene til
-      sammen bare fikk flyttet på litt over 10 milliarder kroner. En del av
+      sammen bare fikk flyttet på drøye 13 milliarder kroner. En del av
       dette var avgiftskutt, som Rødt kanskje er for, men som knapt kan kalles å
       være en kjernesak for venstresida: både partier til høyre og venstre
       støtter dette.
 
 
-      En del av de drøye 10 milliardene er også penger som fagforeninger og
+      En del av de drøye 13 milliardene er også penger som fagforeninger og
       andre har etterspurt, bare for å sikre en forsvarlig drift av
-      velferdsstaten. Det gjelder ? milliard til sykehusene, ? milliarder til
-      kommunene, og ? til barnehagedekning. Til venstresidas satsninger sitter
-      en igjen med ca ?? til tannhelse og ?? til billigere kollektivkort, i
-      tillegg til ?? for lavere barnehagepriser og gratis SFO.
+      velferdsstaten. Det gjelder 1 milliard til sykehusene, 2 milliarder til kommunene og fylkene, og en halv milliard til bemanning i barnehagene. Til venstresidas satsninger sitter
+      en igjen med ca 1,9 milliarder til tannhelse og 1,3 milliarder til billigere kollektivkort, i tillegg til 0,6 milliarder for lavere barnehagepriser og gratis SFO.
 
 
-      ? milliarder altså, i et statsbudsjett på nesten 2300 milliarder. Er det
+      Under 4 milliarder altså, i et statsbudsjett på nesten 2300 milliarder. Er det
       virkelig den endringen velgerne til Rødt og SV stemte på?
 
 
