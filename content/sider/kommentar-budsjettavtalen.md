@@ -60,7 +60,7 @@ seksjoner:
 
       Argumentet fra folk i Rødt og SV som støtter denne strategien er
       selvfølgelig, og lett å skjønne. Det er den samme strategien som de fleste
-      aprtier har brukt: få viktige gjennomslag, vis at du er å stole på, kjemp
+      partier har brukt: få viktige gjennomslag, vis at du er å stole på, kjemp
       hardt for dine grupper slik at flere vil ha deg på laget sitt.
 
 
