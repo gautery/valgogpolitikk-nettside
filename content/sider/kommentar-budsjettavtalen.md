@@ -42,10 +42,11 @@ seksjoner:
 
       De rikeste 1% vil fortsatt eie 30% eller så av alle verdier i Norge og
       tjene over hver femte krone som tjenes. Skatteprosenten på de rikeste har
-      knapt blitt økt. Boligmarkedet vil fortsatt være ute av kontroll.
-      Ulikheten vil fortsette å øke i Norge. Men dette er altså venstresidas
-      tydelige prosjekt, og noe som er egnet til å gi folk optimisme om at
-      venstresida kan gi dem svar på dagens utfordringer?
+      knapt blitt økt. Boligmarkedet vil fortsatt være ute av kontroll. Vi
+      jobber i snitt fortsatt like mye som på 70-tallet. Ulikheten vil fortsette
+      å øke i Norge. Men dette er altså venstresidas tydelige prosjekt, og noe
+      som er egnet til å gi folk optimisme om at venstresida kan gi dem svar på
+      dagens utfordringer?
 
 
       Argumentet fra folk i Rødt og SV som støtter denne strategien er
@@ -63,13 +64,14 @@ seksjoner:
       for et parti å bli større på.
 
 
-      På kort sikt derimot, blir det mest "trygg styring", samtidig som de store
-      utfordringene i vår tid forblir uløste.
+      På kort sikt derimot, kommer fortsatt unge ut i et samfunn som ikke helt
+      stemmer med barnehistorien vi blir fortalt om det egalitære Norge: et
+      samfunn der penger bestemmer mye, blant annet hvor du kan bo, om du har
+      nok plass til å få barn og hvor mye tid du har til venner og familie.
 
 
-      Da kan det være det er vanskelig å overbevise folk som syns at verden i
-      dag, der konsekvensene av enorm ulikhet og klimakrise blir stadig mer
-      synlige, at venstresida representerer noe alternativ i det hele tatt.
+      Da kan det være det er vanskelig å overbevise folk at venstresida
+      representerer noe alternativ i det hele tatt.
 
 
       Men det er litt av kostnaden ved å si at du er strålende fornøyd.
