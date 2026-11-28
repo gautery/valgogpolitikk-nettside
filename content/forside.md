@@ -2,7 +2,7 @@
 tittel: Forside
 seksjoner:
   - type: hovedsak
-    karusell: skatt-pa-de-rikeste
+    tavle: budsjettavtalen
     overlinje: Norsk politikk med tall og kilder
   - type: fremhevet
     overskrift: Grunnkurs i ulikhet

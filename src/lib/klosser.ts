@@ -202,6 +202,15 @@ export type Hovedsak = {
    * Da hentes tittel, ingress og de første slidene derfra, og knappen går til karusellen.
    */
   karusell?: string;
+  /**
+   * «budsjettavtalen» viser de første radene av tavla fra siden om budsjettavtalen,
+   * og henter tittel, ingress og lenke derfra.
+   */
+  tavle?: string;
+  /** En sak som hører til hovedsaken, f.eks. en kommentar. Vises som egen linje under knappen. */
+  tilknyttetMerke?: string;
+  tilknyttetTittel?: string;
+  tilknyttetLenke?: string;
   overlinje?: string;
   tittel?: string;
   tekst?: string;

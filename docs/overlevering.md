@@ -278,6 +278,19 @@ Siden `/forside-utkast` og filen bak er slettet.
 - Forbildene Gaute sa ja til: toppen fra VG (én stor sak), kortene fra NRK (likt oppsett, merkelapper),
   detaljene fra NYT (sammendragslinje, dato, kilde).
 
+**Toppsak 28. november: budsjettavtalen.** Gaute ba om at «Hvem fikk viljen sin?» blir hovedsak på forsiden.
+
+- `hovedsak` i `content/forside.md` har nå `tavle: budsjettavtalen` i stedet for `karusell`. Da vises de seks
+  første radene av tavla, med tittel, første avsnitt av ingressen og knappen «Se alle 18 sakene» hentet fra
+  `content/budsjettavtalen.yml`. Skattekarusellen ligger igjen i lista under.
+- **Kommentar fra Gaute:** han vil skrive en egen kommentar om budsjettenigheten. Avtalt oppsett: egen side,
+  merket «Kommentar», lenket fra en linje rett under hovedsaken. Feltene finnes på `hovedsak`:
+  `tilknyttetMerke`, `tilknyttetTittel`, `tilknyttetLenke`. De står tomme til han har skrevet teksten.
+  Kommentaren skal også lenkes fra siden om avtalen, og tilbake. Ikke gjort ennå.
+- Tavla og innlesingen er skilt ut i `src/components/partibudsjett/avtale-felles.tsx` og
+  `src/lib/budsjettavtalen.ts`, så forsiden og siden bruker samme kode.
+- Hovedsaken skjules etter lansering så lenge `UTKAST.partibudsjett` er `true`.
+
 **Dette gjenstår før forsiden ser ferdig ut:**
 
 1. Gaute må si hvilke sider som er godkjent. Etter lansering skjules alt som er utkast, og da står forsiden igjen

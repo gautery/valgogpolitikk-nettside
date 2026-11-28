@@ -885,12 +885,30 @@ components:
             label: Karusell som hovedsak
             description: Filnavnet til karusellen eller skråblikket, f.eks. skatt-pa-de-rikeste. Tittel, ingress og de første slidene hentes derfra. La stå tomt for å bruke søyler i stedet.
             type: string
+          - name: tavle
+            label: Tavle som hovedsak
+            description: Velg «budsjettavtalen» for å vise de første radene av tavla fra siden om budsjettavtalen. Tittel, ingress og knapp hentes derfra. La karusell-feltet stå tomt da.
+            type: select
+            options:
+              values: [budsjettavtalen]
+          - name: tilknyttetMerke
+            label: Tilknyttet sak, merkelapp
+            description: F.eks. Kommentar. Tom gir «Kommentar».
+            type: string
+          - name: tilknyttetTittel
+            label: Tilknyttet sak, tittel
+            description: Vises som egen linje under knappen, f.eks. tittelen på kommentaren din.
+            type: string
+          - name: tilknyttetLenke
+            label: Tilknyttet sak, lenke
+            description: F.eks. /kommentar-budsjettavtalen
+            type: string
           - name: overlinje
             label: Liten tekst over tittelen
             type: string
           - name: tittel
             label: Tittel
-            description: Tom gir tittelen på karusellen. Uten karusell er dette selve funnet, som en setning eller to.
+            description: Tom gir tittelen på karusellen eller tavla. Uten noen av dem er dette selve funnet, som en setning eller to.
             type: text
           - name: tekst
             label: Tekst under tittelen (valgfri)

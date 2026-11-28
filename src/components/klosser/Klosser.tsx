@@ -13,6 +13,8 @@ import DatawrapperGraf from "@/components/klosser/DatawrapperGraf";
 import { datawrapperId, type Bakgrunn, type Kloss } from "@/lib/klosser";
 import { hentKildeoversikt } from "@/lib/kilder";
 import { hentAlleKaruseller, lesKarusell } from "@/lib/karuseller";
+import { AVTALE_LENKE, avsnitt, avtaleSaker, lesBudsjettavtalen } from "@/lib/budsjettavtalen";
+import { KOLONNER, RadInnhold, REKKEFOLGE, Tegnforklaring, vinner } from "@/components/partibudsjett/avtale-felles";
 import { getAllPosts } from "@/lib/posts";
 import { erEkstern, lesInnstillinger, lesSide } from "@/lib/sider";
 import { hentAlleTema } from "@/lib/tema";
@@ -664,13 +666,20 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
 
     case "hovedsak": {
       const kar = finnKarusell(kloss.karusell);
-      // Etter lansering vises ikke en hovedsak som peker på en karusell som fortsatt er utkast.
-      if (kar?.utkast && !DEMO && !ktx.visUtkast) return null;
-      const tittel = kloss.tittel || kar?.tittel;
+      // Tavla fra siden om budsjettavtalen: de seks første sakene som smakebit.
+      const avtale = kloss.tavle === "budsjettavtalen" ? lesBudsjettavtalen() : null;
+      const avtaleRader = avtale ? avtaleSaker(avtale) : [];
+      // Etter lansering vises ikke en hovedsak som peker på noe som fortsatt er utkast.
+      const utkast = avtale ? UTKAST.partibudsjett : kar?.utkast === true;
+      if (utkast && !DEMO && !ktx.visUtkast) return null;
+      const tittel = kloss.tittel || avtale?.topp.tittel || kar?.tittel;
       if (!tittel) return null;
-      const tekst = kloss.tekst || kar?.ingress;
-      const lenke = kloss.knappLenke || kar?.href;
-      const knapp = kloss.knapp || (kar ? "Se hele karusellen" : undefined);
+      const tekst = kloss.tekst || (avtale ? avsnitt(avtale.topp.ingress)[0] : kar?.ingress);
+      const lenke = kloss.knappLenke || (avtale ? AVTALE_LENKE : kar?.href);
+      const knapp =
+        kloss.knapp || (avtale ? `Se alle ${avtaleRader.length} sakene` : kar ? "Se hele karusellen" : undefined);
+      const harTavle = avtaleRader.length > 0;
+      const tilknyttet = kloss.tilknyttetTittel?.trim() && kloss.tilknyttetLenke?.trim();
       const slides = (kar?.slides ?? []).filter((sl) => sl.bilde).slice(0, 4);
       const rader = (kloss.tall ?? [])
         .map((t) => ({
@@ -691,11 +700,11 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
             <div>
               {kloss.overlinje && <p className="mb-4 text-[15px] font-semibold text-black">{kloss.overlinje}</p>}
               <h1 className="font-display text-[31px] leading-[1.06] text-black sm:text-[44px] lg:text-[52px]">{tittel}</h1>
-              {kar?.utkast && (
+              {utkast && (
                 <span className="mt-4 inline-block rounded bg-amber-100 px-1.5 py-0.5 text-[13px] text-amber-900">Utkast</span>
               )}
               {tekst && (
-                <p className={`mt-5 max-w-[520px] text-[18px] leading-[1.5] text-black ${harSlides ? "hidden md:block" : ""}`}>
+                <p className={`mt-5 max-w-[520px] text-[18px] leading-[1.5] text-black ${harSlides || harTavle ? "hidden md:block" : ""}`}>
                   {tekst}
                 </p>
               )}
@@ -709,7 +718,35 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
                 </Link>
               )}
             </div>
-            {harSlides ? (
+            {harTavle ? (
+              <div>
+                <Link
+                  href={lenke!}
+                  tabIndex={-1}
+                  aria-hidden="true"
+                  className="block overflow-hidden rounded-[10px] bg-white"
+                  data-umami-event="forside-hovedsak-tavle"
+                >
+                  <div className={`${KOLONNER} border-b border-black px-3 py-2 text-[13px] font-semibold text-black`}>
+                    <span>Sak</span>
+                    {REKKEFOLGE.map((p) => (
+                      <span key={p} className="text-center">
+                        {p}
+                      </span>
+                    ))}
+                  </div>
+                  {avtaleRader.slice(0, 6).map((r) => (
+                    <div
+                      key={r.tittel}
+                      className={`${KOLONNER} border-b border-border-light px-3 py-2.5 last:border-b-0 ${vinner(r).ap ? "bg-[#ffd1ee]" : "bg-white"}`}
+                    >
+                      <RadInnhold s={r} />
+                    </div>
+                  ))}
+                </Link>
+                <Tegnforklaring className="mt-3 text-black" />
+              </div>
+            ) : harSlides ? (
               <ul
                 tabIndex={0}
                 aria-label={`De første slidene i karusellen, ${kar!.slides.length} i alt`}
@@ -774,6 +811,20 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
               <Link href={lenke!} className={`justify-self-start md:hidden ${knappStil}`} data-umami-event="forside-hovedsak-knapp">
                 {knapp}
               </Link>
+            )}
+            {tilknyttet && (
+              <p className="border-t border-black pt-4 text-[17px] leading-snug text-black md:col-span-2">
+                <span className="mr-2 rounded bg-black px-1.5 py-0.5 text-[12.5px] font-semibold text-white">
+                  {kloss.tilknyttetMerke?.trim() || "Kommentar"}
+                </span>
+                <Link
+                  href={kloss.tilknyttetLenke!.trim()}
+                  className={`font-extrabold underline underline-offset-4 ${fokus}`}
+                  data-umami-event="forside-hovedsak-tilknyttet"
+                >
+                  {kloss.tilknyttetTittel}
+                </Link>
+              </p>
             )}
           </div>
         </div>

@@ -1,15 +1,14 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { KOLONNER, RadInnhold, REKKEFOLGE, Tegnforklaring, vinner, type AvtaleSak, type Utfall } from "./avtale-felles";
+
+export type { AvtaleSak };
 
 // Budsjettavtalen sak for sak. Øverst står tavla: alle sakene som rader, med ett merke per
 // parti. Et trykk på en rad åpner kortet for saken. Vanlig visning er ett kort om gangen,
 // med knapper for forrige og neste, og «Vis som tekst» viser alt under hverandre.
 // Teksten ligger i content/budsjettavtalen.yml og redigeres i Pages CMS.
-
-type Utfall = "fikk det" | "fikk noe" | "fikk ikke";
-type Krav = { parti: string; krav: string; utfall: Utfall };
-export type AvtaleSak = { tittel: string; avtalen: string; regjeringen: string; krav: Krav[] };
 
 const FOKUS = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
 const KNAPP = `rounded-md border border-black px-5 py-3 text-[15.5px] font-semibold ${FOKUS}`;
@@ -19,45 +18,10 @@ const UTFALL: Record<Utfall, { tekst: string; klasse: string }> = {
   "fikk noe": { tekst: "Fikk noe", klasse: "border-black bg-white text-black" },
   "fikk ikke": { tekst: "Fikk ikke", klasse: "border-border bg-surface text-text-muted" },
 };
-const REKKEFOLGE = ["Sp", "SV", "Rødt"];
-const liste = (a: string[]) => a.join(", ").replace(/, ([^,]*)$/, " og $1");
-
-// Hvem vant saken: Ap når avtalen lar regjeringens forslag stå, ellers partiene som fikk noe.
-function vinner(s: AvtaleSak): { ap: boolean; tekst: string } {
-  const med = (u: Utfall) =>
-    s.krav.filter((k) => k.utfall === u).map((k) => k.parti).sort((a, b) => REKKEFOLGE.indexOf(a) - REKKEFOLGE.indexOf(b));
-  const fullt = med("fikk det");
-  const noe = med("fikk noe");
-  if (fullt.length + noe.length === 0) return { ap: true, tekst: "Ap fikk viljen sin" };
-  const deler = [];
-  if (fullt.length) deler.push(`${liste(fullt)} fikk fullt gjennomslag`);
-  if (noe.length) deler.push(`${liste(noe)} fikk noe gjennomslag`);
-  return { ap: false, tekst: deler.join(". ") };
-}
-
-// Merket i tavla: fylt sirkel = fikk det, halv = fikk noe, tom = fikk ikke, strek = ingen krav med.
-function Merke({ u }: { u?: Utfall }) {
-  if (!u) return <span aria-hidden="true" className="block h-px w-2.5 bg-text-muted" />;
-  return (
-    <svg aria-hidden="true" viewBox="0 0 18 18" className="h-[18px] w-[18px]">
-      {u === "fikk noe" && <path d="M9 2a7 7 0 0 0 0 14z" fill="#000" />}
-      <circle
-        cx="9"
-        cy="9"
-        r="7"
-        fill={u === "fikk det" ? "#000" : "none"}
-        stroke={u === "fikk ikke" ? "#5f5f5f" : "#000"}
-        strokeWidth="1.5"
-      />
-    </svg>
-  );
-}
-
 function Tavle({ saker, valgt, velg }: { saker: AvtaleSak[]; valgt: number | null; velg: (i: number) => void }) {
-  const kolonner = "grid grid-cols-[minmax(0,1fr)_repeat(3,38px)] items-center";
   return (
     <div>
-      <div aria-hidden="true" className={`${kolonner} border-b border-black px-2 pb-2 text-[13px] font-semibold text-black`}>
+      <div aria-hidden="true" className={`${KOLONNER} border-b border-black px-2 pb-2 text-[13px] font-semibold text-black`}>
         <span>Trykk på en sak</span>
         {REKKEFOLGE.map((p) => (
           <span key={p} className="text-center">
@@ -66,50 +30,22 @@ function Tavle({ saker, valgt, velg }: { saker: AvtaleSak[]; valgt: number | nul
         ))}
       </div>
       <ol>
-        {saker.map((s, i) => {
-          const v = vinner(s);
-          const utfall = (parti: string) => s.krav.find((k) => k.parti === parti)?.utfall;
-          return (
-            <li key={s.tittel} className="border-b border-border-light">
-              <button
-                type="button"
-                onClick={() => velg(i)}
-                aria-current={valgt === i ? "true" : undefined}
-                className={`${kolonner} w-full px-2 py-2.5 text-left hover:shadow-[inset_3px_0_0_#000] ${FOKUS} ${v.ap ? "bg-rosa/30" : "bg-white"} ${
-                  valgt === i ? "shadow-[inset_3px_0_0_#000]" : ""
-                }`}
-              >
-                <span className="pr-3 text-[15px] font-semibold leading-snug text-black">
-                  {s.tittel}
-                  <span className="sr-only">. {v.tekst}.</span>
-                </span>
-                {REKKEFOLGE.map((p) => (
-                  <span key={p} className="flex justify-center">
-                    <Merke u={utfall(p)} />
-                    <span className="sr-only">
-                      {p}: {utfall(p) ?? "ingen krav med"}.
-                    </span>
-                  </span>
-                ))}
-              </button>
-            </li>
-          );
-        })}
+        {saker.map((s, i) => (
+          <li key={s.tittel} className="border-b border-border-light">
+            <button
+              type="button"
+              onClick={() => velg(i)}
+              aria-current={valgt === i ? "true" : undefined}
+              className={`${KOLONNER} w-full px-2 py-2.5 text-left hover:shadow-[inset_3px_0_0_#000] ${FOKUS} ${vinner(s).ap ? "bg-[#ffd1ee]" : "bg-white"} ${
+                valgt === i ? "shadow-[inset_3px_0_0_#000]" : ""
+              }`}
+            >
+              <RadInnhold s={s} />
+            </button>
+          </li>
+        ))}
       </ol>
-      <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-[13.5px] text-text-secondary">
-        <li className="flex items-center gap-1.5">
-          <Merke u="fikk det" /> Fikk det
-        </li>
-        <li className="flex items-center gap-1.5">
-          <Merke u="fikk noe" /> Fikk noe
-        </li>
-        <li className="flex items-center gap-1.5">
-          <Merke u="fikk ikke" /> Fikk ikke
-        </li>
-        <li className="flex items-center gap-1.5">
-          <span aria-hidden="true" className="h-[14px] w-[22px] bg-rosa/30 outline outline-1 outline-border-light" /> Ap fikk viljen sin
-        </li>
-      </ul>
+      <Tegnforklaring className="mt-4 text-text-secondary" />
     </div>
   );
 }

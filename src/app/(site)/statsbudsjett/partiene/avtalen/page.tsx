@@ -1,30 +1,13 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { SKJULT_FOR_SOK, UTKAST } from "@/lib/utkast";
 import { AAR, TYPETILFELLE_AAR } from "@/lib/partibudsjett";
-import Avtale, { type AvtaleSak } from "@/components/partibudsjett/Avtale";
+import { avsnitt, avtaleSaker, lesBudsjettavtalen } from "@/lib/budsjettavtalen";
+import Avtale from "@/components/partibudsjett/Avtale";
 import { Tilbake, Utkastlinje } from "@/components/partibudsjett/Felles";
 
 // Budsjettavtalen mot partienes egne alternative budsjetter. All tekst ligger i
 // content/budsjettavtalen.yml og redigeres i Pages CMS (se .pages.yml).
-
-type Innhold = {
-  topp: { tittel: string; ingress: string; bilde?: string; bildetekst?: string; fotokreditt?: string };
-  viktigste: { overskrift: string; punkter: { tittel: string; tekst: string }[] };
-  saker: { overskrift: string; liste: AvtaleSak[] };
-  metode: { overskrift: string; tekst: string };
-  kilder: string[];
-};
-
-function les(): Innhold {
-  const fil = path.join(process.cwd(), "content", "budsjettavtalen.yml");
-  return matter(`---\n${fs.readFileSync(fil, "utf-8")}\n---`).data as Innhold;
-}
-// Tom linje i teksten gir nytt avsnitt.
-const avsnitt = (t: string) => (t ?? "").split(/\n\s*\n/).map((a) => a.trim()).filter(Boolean);
 
 export const metadata: Metadata = {
   title: "Budsjettavtalen for 2027: hvem fikk viljen sin? — valg og politikk",
@@ -34,9 +17,8 @@ export const metadata: Metadata = {
 };
 
 export default function AvtaleSide() {
-  const d = les();
-  // Saker uten krav eller med tomme felt skal ikke velte siden mens de redigeres.
-  const saker = (d.saker?.liste ?? []).filter((s) => s?.tittel).map((s) => ({ ...s, krav: (s.krav ?? []).filter((k) => k?.parti) }));
+  const d = lesBudsjettavtalen();
+  const saker = avtaleSaker(d);
 
   return (
     <>
