@@ -16,7 +16,7 @@ import { hentAlleKaruseller, lesKarusell } from "@/lib/karuseller";
 import { AVTALE_LENKE, avsnitt, avtaleSaker, lesBudsjettavtalen } from "@/lib/budsjettavtalen";
 import { KOLONNER, RadInnhold, REKKEFOLGE, Tegnforklaring, vinner } from "@/components/partibudsjett/avtale-felles";
 import { getAllPosts } from "@/lib/posts";
-import { erEkstern, lesInnstillinger, lesSide } from "@/lib/sider";
+import { erEkstern, lesInnstillinger, lesSide, tilknyttetSide } from "@/lib/sider";
 import { hentAlleTema } from "@/lib/tema";
 import { hentAlleSkraablikk, lesSkraablikk } from "@/lib/skraablikk";
 import { DEMO, UTKAST } from "@/lib/utkast";
@@ -679,7 +679,12 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
       const knapp =
         kloss.knapp || (avtale ? `Se alle ${avtaleRader.length} sakene` : kar ? "Se hele karusellen" : undefined);
       const harTavle = avtaleRader.length > 0;
-      const tilknyttet = kloss.tilknyttetTittel?.trim() && kloss.tilknyttetLenke?.trim();
+      // Tilknyttet sak, f.eks. en kommentar. Tittelen hentes fra siden hvis feltet står tomt,
+      // og linja skjules etter lansering så lenge siden den peker på er utkast.
+      const tilSide = tilknyttetSide(kloss.tilknyttetLenke);
+      const tilTittel = kloss.tilknyttetTittel?.trim() || tilSide?.tittel;
+      const tilknyttet =
+        Boolean(tilTittel && kloss.tilknyttetLenke?.trim()) && !(tilSide?.utkast && !DEMO && !ktx.visUtkast);
       const slides = (kar?.slides ?? []).filter((sl) => sl.bilde).slice(0, 4);
       const rader = (kloss.tall ?? [])
         .map((t) => ({
@@ -822,7 +827,7 @@ async function EnKloss({ kloss, ktx }: { kloss: Kloss; ktx: KlossKontekst }) {
                   className={`font-extrabold underline underline-offset-4 ${fokus}`}
                   data-umami-event="forside-hovedsak-tilknyttet"
                 >
-                  {kloss.tilknyttetTittel}
+                  {tilTittel}
                 </Link>
               </p>
             )}

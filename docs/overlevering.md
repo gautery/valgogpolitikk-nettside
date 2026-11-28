@@ -283,10 +283,15 @@ Siden `/forside-utkast` og filen bak er slettet.
 - `hovedsak` i `content/forside.md` har nå `tavle: budsjettavtalen` i stedet for `karusell`. Da vises de seks
   første radene av tavla, med tittel, første avsnitt av ingressen og knappen «Se alle 18 sakene» hentet fra
   `content/budsjettavtalen.yml`. Skattekarusellen ligger igjen i lista under.
-- **Kommentar fra Gaute:** han vil skrive en egen kommentar om budsjettenigheten. Avtalt oppsett: egen side,
-  merket «Kommentar», lenket fra en linje rett under hovedsaken. Feltene finnes på `hovedsak`:
-  `tilknyttetMerke`, `tilknyttetTittel`, `tilknyttetLenke`. De står tomme til han har skrevet teksten.
-  Kommentaren skal også lenkes fra siden om avtalen, og tilbake. Ikke gjort ennå.
+- **Kommentar fra Gaute (28. november):** teksten er hans egen og ligger på `/kommentar-budsjettavtalen`
+  (`content/sider/kommentar-budsjettavtalen.md`, utkast). Claude rettet bare fire skrivefeil («et et», «kasnkje»,
+  «Sv-velgere», «entuastisk»). «[bilde på tvetydighet]» står i klammer fordi Gaute leter etter et bilde, og
+  han er ikke fornøyd med overskriften. Forslag fra Claude er gitt i samtalen, ikke lagt inn.
+  Tall å avklare: teksten sier «over 2300 milliarder», mens statsbudsjettsiden har 2 287 mrd. for 2027.
+- **Lenker:** linja «Kommentar» under hovedsaken (`tilknyttetLenke` på `hovedsak`) og under ingressen på siden om
+  avtalen (`topp.kommentarLenke` i `content/budsjettavtalen.yml`). Tittelen hentes fra toppfeltet på
+  kommentarsiden (`tilknyttetSide()` i `src/lib/sider.ts`), så den endres bare ett sted. Kommentaren har en
+  knapp tilbake til avtalen. Linjene skjules etter lansering så lenge kommentarsiden er utkast.
 - Tavla og innlesingen er skilt ut i `src/components/partibudsjett/avtale-felles.tsx` og
   `src/lib/budsjettavtalen.ts`, så forsiden og siden bruker samme kode.
 - Hovedsaken skjules etter lansering så lenge `UTKAST.partibudsjett` er `true`.

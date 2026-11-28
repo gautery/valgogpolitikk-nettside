@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { SKJULT_FOR_SOK, UTKAST } from "@/lib/utkast";
+import Link from "next/link";
+import { DEMO, SKJULT_FOR_SOK, UTKAST } from "@/lib/utkast";
+import { tilknyttetSide } from "@/lib/sider";
 import { AAR, TYPETILFELLE_AAR } from "@/lib/partibudsjett";
 import { avsnitt, avtaleSaker, lesBudsjettavtalen } from "@/lib/budsjettavtalen";
 import Avtale from "@/components/partibudsjett/Avtale";
@@ -19,6 +21,9 @@ export const metadata: Metadata = {
 export default function AvtaleSide() {
   const d = lesBudsjettavtalen();
   const saker = avtaleSaker(d);
+  // Kommentaren vises ikke etter lansering så lenge siden den ligger på er utkast.
+  const kommentar = tilknyttetSide(d.topp.kommentarLenke);
+  const visKommentar = kommentar && (DEMO || !kommentar.utkast);
 
   return (
     <>
@@ -38,6 +43,18 @@ export default function AvtaleSide() {
                 <p key={a}>{a}</p>
               ))}
             </div>
+            {visKommentar && (
+              <p className="mt-7 max-w-[620px] border-t border-black pt-4 text-[17px] leading-snug text-black">
+                <span className="mr-2 rounded bg-black px-1.5 py-0.5 text-[12.5px] font-semibold text-white">Kommentar</span>
+                <Link
+                  href={d.topp.kommentarLenke!.trim()}
+                  className="font-extrabold underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black"
+                  data-umami-event="avtalen-kommentar"
+                >
+                  {kommentar.tittel}
+                </Link>
+              </p>
+            )}
           </div>
           {d.topp.bilde && (
             <figure>

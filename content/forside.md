@@ -3,6 +3,8 @@ tittel: Forside
 seksjoner:
   - type: hovedsak
     tavle: budsjettavtalen
+    tilknyttetMerke: Kommentar
+    tilknyttetLenke: /kommentar-budsjettavtalen
     overlinje: Norsk politikk med tall og kilder
   - type: fremhevet
     overskrift: Grunnkurs i ulikhet

@@ -218,6 +218,10 @@ content:
             label: Fotokreditt
             description: "F.eks. Foto: Stortinget"
             type: string
+          - name: kommentarLenke
+            label: Lenke til kommentar
+            description: F.eks. /kommentar-budsjettavtalen. Tittelen hentes fra kommentarsiden.
+            type: string
       - name: viktigste
         label: Det viktigste
         type: object
@@ -897,7 +901,7 @@ components:
             type: string
           - name: tilknyttetTittel
             label: Tilknyttet sak, tittel
-            description: Vises som egen linje under knappen, f.eks. tittelen på kommentaren din.
+            description: Vises som egen linje under knappen. Tom gir tittelen som står øverst på siden lenken peker på.
             type: string
           - name: tilknyttetLenke
             label: Tilknyttet sak, lenke

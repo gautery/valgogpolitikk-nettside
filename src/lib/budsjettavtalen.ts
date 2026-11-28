@@ -9,7 +9,15 @@ import type { AvtaleSak } from "@/components/partibudsjett/avtale-felles";
 export const AVTALE_LENKE = "/statsbudsjett/partiene/avtalen";
 
 export type AvtaleInnhold = {
-  topp: { tittel: string; ingress: string; bilde?: string; bildetekst?: string; fotokreditt?: string };
+  topp: {
+    tittel: string;
+    ingress: string;
+    bilde?: string;
+    bildetekst?: string;
+    fotokreditt?: string;
+    /** Lenke til en kommentar om avtalen, f.eks. /kommentar-budsjettavtalen. */
+    kommentarLenke?: string;
+  };
   viktigste: { overskrift: string; punkter: { tittel: string; tekst: string }[] };
   saker: { overskrift: string; liste: AvtaleSak[] };
   metode: { overskrift: string; tekst: string };

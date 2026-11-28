@@ -84,6 +84,19 @@ export function lesInnstillinger(): Innstillinger {
   };
 }
 
+/**
+ * Siden en intern lenke peker på («/kommentar-budsjettavtalen»), med tittelen slik den står øverst på siden.
+ * Brukes der en sak lenker til en tilknyttet sak, så tittelen bare må endres ett sted.
+ */
+export function tilknyttetSide(lenke?: string): { tittel: string; utkast: boolean } | null {
+  const slug = (lenke ?? "").trim().replace(/^\//, "").replace(/\/$/, "");
+  if (!slug || slug.includes("/")) return null;
+  const side = lesSide(slug);
+  if (!side) return null;
+  const topp = side.seksjoner.find((k) => k.type === "toppfelt");
+  return { tittel: (topp && "tittel" in topp && topp.tittel) || side.tittel, utkast: side.utkast };
+}
+
 export function erEkstern(lenke?: string) {
   return !!lenke && /^https?:\/\//.test(lenke);
 }
