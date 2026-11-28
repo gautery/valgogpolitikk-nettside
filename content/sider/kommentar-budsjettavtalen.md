@@ -22,20 +22,23 @@ seksjoner:
 
 
       Samtidig kan en se på den samme gjennomgangen og se at de tre partiene til
-      sammen bare fikk flyttet på drøye 13 milliarder kroner. En del av
-      dette var avgiftskutt, som Rødt kanskje er for, men som knapt kan kalles å
-      være en kjernesak for venstresida: både partier til høyre og venstre
-      støtter dette.
+      sammen bare fikk flyttet på drøye 13 milliarder kroner. En del av dette
+      var avgiftskutt, som Rødt kanskje er for, men som knapt kan kalles å være
+      en kjernesak for venstresida: både partier til høyre og venstre støtter
+      dette.
 
 
       En del av de drøye 13 milliardene er også penger som fagforeninger og
       andre har etterspurt, bare for å sikre en forsvarlig drift av
-      velferdsstaten. Det gjelder 1 milliard til sykehusene, 2 milliarder til kommunene og fylkene, og en halv milliard til bemanning i barnehagene. Til venstresidas satsninger sitter
-      en igjen med ca 1,9 milliarder til tannhelse og 1,3 milliarder til billigere kollektivkort, i tillegg til 0,6 milliarder for lavere barnehagepriser og gratis SFO.
+      velferdsstaten. Det gjelder 1 milliard til sykehusene, 2 milliarder til
+      kommunene og fylkene, og en halv milliard til bemanning i barnehagene. Til
+      venstresidas satsninger sitter en igjen med ca 1,9 milliarder til
+      tannhelse og 1,3 milliarder til billigere kollektivkort, i tillegg til 0,6
+      milliarder for lavere barnehagepriser og gratis SFO.
 
 
-      Under 4 milliarder altså, i et statsbudsjett på nesten 2300 milliarder. Er det
-      virkelig den endringen velgerne til Rødt og SV stemte på?
+      Under 4 milliarder altså, i et statsbudsjett på nesten 2300 milliarder. Er
+      det virkelig den endringen velgerne til Rødt og SV stemte på?
 
 
       De rikeste 1% vil fortsatt eie 30% eller så av alle verdier i Norge og
@@ -58,8 +61,9 @@ seksjoner:
       er Rødt med en entusiastisk og strålende fornøyd Mimir i front.
 
 
-      Kan strategien funke på lang sikt? Helt sikkert, det er helt vanlig måte
-      for et parti å bli større på.
+      Kan strategien funke på lang sikt? Helt sikkert, og kanskje er det på lang
+      sikt den beste strategien for å vise at venstresida faktisk kan skape
+      endring.
 
 
       På kort sikt derimot, kommer fortsatt unge ut i et samfunn som ikke
