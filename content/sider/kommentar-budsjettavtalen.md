@@ -22,8 +22,7 @@ seksjoner:
 
 
       Samtidig kan en se på den samme gjennomgangen og se at de tre partiene til
-      sammen bare fikk flyttet på drøye 13 milliarder kroner. En del av dette
-      var avgiftskutt, som Rødt kanskje er for, men som knapt kan kalles å være
+      sammen bare fikk flyttet på drøye 13 milliarder kroner. I tillegg kom avgiftskutt, som Rødt kanskje er for, men som knapt kan kalles å være
       en kjernesak for venstresida: både partier til høyre og venstre støtter
       dette.
 

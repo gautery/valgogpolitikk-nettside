@@ -297,9 +297,14 @@ Siden `/forside-utkast` og filen bak er slettet.
     arbeiderpartiet.no/aktuelt/enighet-om-budsjett): sykehus 1 000 mill., kommuner 1 700 + fylker 300,
     toppet bemanning i barnehagene 500, tannhelse 1 925, månedskort 1 310, barnehagepris 242 + SFO 328.
     «Under 4 milliarder» er summen av tannhelse, månedskort, barnehagepris og SFO (3,8 mrd.).
-  - **Rettet:** «litt over 10 milliarder» ble «drøye 13 milliarder». Forliket er på 13 350 mill. samlet, og
-    10 850 mill. av det er utgifter. Dieselkuttet (1 850 mill.) ligger utenfor de 10,8. Claudes regnestykke
-    «rundt 9 milliarder står igjen» fra natta før var derfor feil. Siden om avtalen sier fortsatt «flytter 10,8 mrd.».
+  - **Rettet to ganger, les dette:** «litt over 10 milliarder» ble «drøye 13 milliarder» 28.11 kl. 11.21. Tallet
+    13 350 mill. er forlikets samlede størrelse, men Claude forklarte det feil. Riktig oppbygging:
+    10 849,5 mill. i utgifter i 2027-budsjettet + 2 500 mill. i nysalderingen av 2026-budsjettet (Enova 1 850,
+    skogvern 300, bistand 250, landbruk 100). Avgiftskuttene (diesel 1 850, fiskeflåten 950, personfradrag 841)
+    ligger utenfor begge tallene og er dekket krone for krone av skatte- og avgiftsøkninger (3 705 mill., mest
+    trygdeavgift 2 470). «En del av dette var avgiftskutt» var derfor feil og ble 28.11 ettermiddag endret til
+    «I tillegg kom avgiftskutt». Gaute er fortalt det. Setningen «En del av de drøye 13 milliardene er også
+    penger som fagforeninger …» stemmer (sykehus, kommuner og barnehagebemanning ligger i de 10,8).
   - Står igjen: «Mimir» uten etternavn. Overskriften spør om FrP, men teksten nevner ikke FrP.
     «Vi jobber i snitt fortsatt like mye som på 70-tallet» stemmer ikke per sysselsatt (SSB: ned 23 prosent
     1970–2006). Sitatet fra Klassekampens leder er ikke kontrollert. Setningen «Det har en god grunn til å si …»
@@ -545,3 +550,28 @@ og ba om en sammenligning med partienes alternative budsjetter, del for del, med
   «fikk det», «fikk noe» eller «fikk ikke». Feltet `regjeringen_utfall` er fjernet: «Ap fikk viljen sin» vises når
   ingen partier fikk noe i saken. `.pages.yml` ble lest med en YAML-leser etter endringen, og alle ni
   innholdstypene lastet. Be Gaute laste Pages CMS på nytt før han redigerer.
+
+
+### Kontroll mot kildene 28. november 2026
+
+Hele `content/budsjettavtalen.yml` er kontrollert mot de to dokumentene på
+arbeiderpartiet.no/aktuelt/enighet-om-budsjett: «Forlik 2027» (tabellen) og «Avtale og verbaler» (70 punkter,
+om lag 48 verbalforslag og 22 merknader).
+
+- **Stemte:** alle beløpene i de 18 sakene (tannhelse 1 925, månedskort 1 310, barnehagepris 242, bemanning 500,
+  SFO 328,3, kommuner 1 700 + fylker 300, sykehus 1 000, Husbanken +5 mrd., diesel 1 850, engangsstønad 106,
+  blå resept 233), skattesatsene og 7,4 mrd. i oljepenger (10 849,5 − 3 438,7).
+- **Rettet:** Bistand sa «ingen økning», men forliket gir 250 mill. i nysalderingen. SV og Rødt er satt til
+  «fikk noe» der (vurdering, Gaute må si om han er enig). Ingressen og «Det viktigste» forklarer nå 10,8 + 2,5 mrd.,
+  at skatt og avgift går i null, og inndekningen.
+- **Uavklart i kildene:** utleieboliger står med 200 mill. i tabellen (kap. 581 post 76) og 100 mill. i avtaleteksten
+  (punkt 30). Sida oppgir begge. Sjekk mot Innst. 2 S når den kommer.
+- **Lagt til i kortene:** 499 kroner og våren 2027 (månedskort), mål om hele befolkningen i 2033 og gratis
+  tannregulering fra 2028 (tannlege), 1 100 boliger og forbud mot korttidsutleie (bolig), frosne egenandeler
+  190 mill., sykehusmilliarden delvis midlertidig støtte.
+- **Ny del `ogsaa` («Dette står også i avtalen»):** klima og natur, fiskeflåten, jernbane, Posten, toll på klær,
+  landbruket og utredninger. Disse er ikke sammenlignet med partienes budsjetter og har ingen merker.
+- **Ikke kontrollert på nytt:** det hvert parti krevde (kolonnene «krav»). De er lest fra partienes alternative
+  budsjetter i en tidligere chat. Sp har fortsatt få saker; diesel, fiskeflåten, Posten og landbruk kan være
+  Sp-krav, men det er ikke sjekket.
+- Dokumentet «Avtale og verbaler» skriver selv «24. november 2027» om datoen for forliket (trykkfeil i kilden).

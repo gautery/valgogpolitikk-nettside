@@ -1,26 +1,32 @@
 topp:
   tittel: 'Budsjettavtalen: hvem fikk viljen sin?'
   ingress: |-
-    Arbeiderpartiet, Senterpartiet, SV og Rødt ble 25. november 2026 enige om statsbudsjettet for 2027. Regjeringen fikk beholde det meste av sitt eget forslag. Avtalen flytter 10,8 mrd. kroner, og skatteopplegget står nesten urørt.
+    Arbeiderpartiet, Senterpartiet, SV og Rødt ble 25. november 2026 enige om statsbudsjettet for 2027. Regjeringen fikk beholde det meste av sitt eget forslag. Avtalen flytter 10,8 mrd. kroner i budsjettet for 2027, og 2,5 mrd. kroner til i nysalderingen av budsjettet for 2026. Formuesskatten og utbytteskatten står urørt, men regjeringens kutt i trygdeavgiften ble halvert.
 
     Sp, SV og Rødt fikk mest der regjeringen ikke hadde foreslått noe selv: tannlegerabatt for de eldste, billigere månedskort og litt billigere barnehage. Uten MDG har avtalen ikke flertall.
   kommentarLenke: /kommentar-budsjettavtalen
 viktigste:
   overskrift: Det viktigste
   punkter:
-  - tittel: Regjeringen holdt på skattene.
+  - tittel: Regjeringen holdt på formuesskatten.
     tekst: SV og Rødt ville hente inn om lag 16 mrd. kroner mer i formuesskatt hver, og øke utbytteskatten. Avtalen
       rører ingen av delene.
   - tittel: Lønnsmottakere får litt mindre.
     tekst: En som tjener 600 000 kroner, betaler 385 kroner mer i skatt med avtalen enn med regjeringens forslag,
       fordi trygdeavgiften kuttes mindre. SV og Rødt ville gi samme person om lag 5 000 kroner i lettelse.
+  - tittel: Avgiftskutt og skatteøkninger går i null.
+    tekst: Avtalen kutter skatter og avgifter med 3,7 mrd. kroner og øker dem like mye. Den største økningen er at
+      trygdeavgiften blir 2,5 mrd. kroner høyere enn regjeringen foreslo. De største kuttene er billigere diesel
+      (1,85 mrd. kroner) og avgiftsfritak for fiskeflåten (0,95 mrd. kroner).
   - tittel: Regjeringen holdt på strømprisen.
     tekst: Sp, SV og Rødt gikk alle imot å øke Norgespris til 45 øre. Avtalen nevner ikke strøm, så økningen står.
   - tittel: Regjeringen ga etter på tannlege og månedskort.
     tekst: Avtalen bruker 1,9 mrd. kroner på tannlegerabatt for alle over 75 år og 1,3 mrd. kroner på billigere
       månedskort. Ingen av delene sto i regjeringens forslag.
   - tittel: Oljepenger.
-    tekst: Forliksdokumentet oppgir at avtalen bruker 7,4 mrd. kroner mer enn regjeringens forslag.
+    tekst: Avtalen øker utgiftene med 10,8 mrd. kroner. 3,4 mrd. kroner dekkes inn med kutt og nye anslag, blant
+      annet 1,1 mrd. kroner i høyere utbytte fra Statkraft. Resten, 7,4 mrd. kroner, er mer oljepenger enn i
+      regjeringens forslag. Arbeiderpartiet oppgir at uttaket fra oljefondet likevel blir 2,7 prosent, som i forslaget.
 saker:
   overskrift: Sak for sak
   liste:
@@ -69,7 +75,8 @@ saker:
       krav: Ned til 10 prosent fra 1. juli.
       utfall: fikk ikke
   - tittel: Tannlege
-    avtalen: Alle over 75 år får 75 prosent rabatt (1,9 mrd. kroner).
+    avtalen: Alle over 75 år får 75 prosent rabatt (1,9 mrd. kroner). Partiene har som mål at hele befolkningen er
+      omfattet i 2033. Regjeringen skal foreslå hvordan tannregulering kan bli gratis til og med 18 år fra 2028.
     regjeringen: Ingen endring.
     krav:
     - parti: Rødt
@@ -79,7 +86,8 @@ saker:
       krav: Rabatt for 29- og 30-åringer og gratis tannregulering for barn (1,2 mrd. kroner).
       utfall: fikk noe
   - tittel: Månedskort
-    avtalen: 1,3 mrd. kroner til billigere månedskort i kollektivtrafikken.
+    avtalen: 1,3 mrd. kroner til billigere månedskort i kollektivtrafikken. Målet er månedskort til 499 kroner i
+      snitt i alle fylker fra våren 2027.
     regjeringen: Ingen egen satsing.
     krav:
     - parti: Rødt
@@ -126,7 +134,7 @@ saker:
       krav: 5 mrd. kroner mer.
       utfall: fikk noe
   - tittel: Sykehusene
-    avtalen: 1 mrd. kroner mer.
+    avtalen: 1 mrd. kroner mer, delvis som midlertidig støtte til helseforetak med særlig vanskelig økonomi.
     regjeringen: Ingen ekstra penger.
     krav:
     - parti: SV
@@ -136,7 +144,9 @@ saker:
       krav: 2,1 mrd. kroner til sykehus og kommunehelsetjeneste.
       utfall: fikk noe
   - tittel: Bolig
-    avtalen: Husbanken får låne ut 5 mrd. kroner mer, og 200 mill. kroner går til utleieboliger i kommunene.
+    avtalen: Husbanken får låne ut 5 mrd. kroner mer, som partiene anslår kan gi 1 100 boliger. Tilskuddet til
+      kommunale utleieboliger kommer tilbake (200 mill. kroner i forlikstabellen, 100 mill. kroner i avtaleteksten).
+      Regjeringen skal innen september 2027 foreslå at kommunene kan forby korttidsutleie.
     regjeringen: Ingen ekstra penger.
     krav:
     - parti: SV
@@ -170,7 +180,8 @@ saker:
       krav: Øke den i takt med prisene, og mer til enslige forsørgere.
       utfall: fikk ikke
   - tittel: Minstepensjon, uføre og AAP
-    avtalen: Ingen økning i minstesatsene. Uføre slipper egenandel på blå resept (233 mill. kroner).
+    avtalen: Ingen økning i minstesatsene. Uføre slipper egenandel på blå resept (233 mill. kroner), og egenandelene
+      for helsetjenester og medisiner fryses (190 mill. kroner).
     regjeringen: Ingen økning utover vanlig regulering.
     krav:
     - parti: Rødt
@@ -180,15 +191,16 @@ saker:
       krav: 10 000 kroner høyere minstesats i AAP.
       utfall: fikk ikke
   - tittel: Bistand
-    avtalen: Ingen økning i 2027.
+    avtalen: Ingen økning i budsjettet for 2027. Bistanden får 250 mill. kroner ekstra i nysalderingen av budsjettet
+      for 2026.
     regjeringen: 0,93 prosent av bruttonasjonalinntekten.
     krav:
     - parti: SV
       krav: 1 prosent.
-      utfall: fikk ikke
+      utfall: fikk noe
     - parti: Rødt
       krav: 3,9 mrd. kroner mer.
-      utfall: fikk ikke
+      utfall: fikk noe
   - tittel: Skolemat
     avtalen: Ikke med.
     regjeringen: Ingen statlig ordning.
@@ -209,6 +221,31 @@ saker:
     - parti: Rødt
       krav: Følge FNs anbefaling.
       utfall: fikk ikke
+ogsaa:
+  overskrift: Dette står også i avtalen
+  ingress: Disse punktene har vi ikke sammenlignet med partienes egne budsjetter.
+  punkter:
+  - tittel: Klima og natur.
+    tekst: Enova får 1,85 mrd. kroner i nysalderingen av budsjettet for 2026, til kutt i utslipp fra tungtransport
+      og fra blandede og biogene kilder. Frivillig skogvern får 300 mill. kroner samme sted. I 2027 går 200 mill.
+      kroner til naturrestaurering, og CO2-avgiften på sokkelen øker.
+  - tittel: Fiskeflåten.
+    tekst: CO2-avgiften for fiskeflåten fjernes midlertidig (950 mill. kroner). Regjeringen skal vurdere avgiften på
+      nytt senest i 2030.
+  - tittel: Jernbane.
+    tekst: 400 mill. kroner mer til fornying av jernbanen. Styringen og organiseringen av jernbanesektoren skal
+      evalueres eksternt i 2027.
+  - tittel: Posten.
+    tekst: 200 mill. kroner til et landsdekkende prøveprosjekt der eldre over 75 år får posten levert på døra, mens
+      Posten omstilles.
+  - tittel: Klær og billigvarer.
+    tekst: Regjeringens kutt i tollen på klær og tekstiler er ikke med i avtalen (675 mill. kroner). Regjeringen skal
+      i revidert budsjett for 2027 utrede toll eller gebyr på lavverdivarer.
+  - tittel: Landbruket.
+    tekst: 100 mill. kroner i investeringsmidler i nysalderingen av budsjettet for 2026.
+  - tittel: Utredninger.
+    tekst: Regjeringen skal utrede regler mot krympflasjon, høyere elavgift for datasentre og avgift på
+      plastemballasje (senest i budsjettet for 2029), og vurdere om solidaransvaret i arbeidslivet skal utvides til bestilleren.
 metode:
   overskrift: Slik har vi gjort det
   tekst: |-
@@ -219,7 +256,10 @@ metode:
     Gjennomgangen dekker sakene vi har lest i partienes budsjetter, ikke alt partiene ba om. Senterpartiet har færre saker med enn SV og Rødt. Hva som teller som «noe», er en vurdering.
 
     Regnestykket for skatt: trygdeavgiften blir 0,1 prosentenhet høyere enn i regjeringens forslag, som er 600 kroner av 600 000 kroner. Personfradraget øker med 975 kroner, som gir 215 kroner lavere skatt.
+
+    Tallene i avtalen er kontrollert mot forlikstabellen og avtaleteksten 28. november 2026. Forlikstabellen har 150 utgiftslinjer, og avtaleteksten har 70 punkter med verbalforslag og merknader. Her står de største postene og de som svarer på krav fra partiene.
 kilder:
-- Forliksdokument 25. november 2026 (tallene i avtalen)
-- Budsjettavtale og verbalforslag for 2027 mellom Arbeiderpartiet, Senterpartiet, SV og Rødt
+- 'Forlik 2027: tabellen med alle endringene i avtalen (25. november 2026)'
+- 'Avtale og verbaler: budsjettavtalen med 70 verbalforslag og merknader mellom Arbeiderpartiet, Senterpartiet, SV og Rødt'
+- Begge dokumentene ligger på arbeiderpartiet.no/aktuelt/enighet-om-budsjett
 - Partienes alternative statsbudsjetter for 2027

@@ -20,6 +20,8 @@ export type AvtaleInnhold = {
   };
   viktigste: { overskrift: string; punkter: { tittel: string; tekst: string }[] };
   saker: { overskrift: string; liste: AvtaleSak[] };
+  /** Andre punkter i avtalen, som ikke er sammenlignet med partienes budsjetter. */
+  ogsaa?: { overskrift?: string; ingress?: string; punkter?: { tittel: string; tekst: string }[] };
   metode: { overskrift: string; tekst: string };
   kilder: string[];
 };

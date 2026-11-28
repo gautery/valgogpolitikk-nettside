@@ -242,6 +242,22 @@ content:
             fields:
               - { name: tittel, label: Uthevet start på punktet, type: string }
               - { name: tekst, label: Tekst, type: text }
+      - name: ogsaa
+        label: Dette står også i avtalen
+        description: Punkter som ikke er sammenlignet med partienes egne budsjetter. Vises under «Det viktigste».
+        type: object
+        fields:
+          - { name: overskrift, label: Overskrift, type: string }
+          - { name: ingress, label: Linje under overskriften, type: string }
+          - name: punkter
+            label: Punkter
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+            fields:
+              - { name: tittel, label: Uthevet start på punktet, type: string }
+              - { name: tekst, label: Tekst, type: text }
       - name: saker
         label: Sak for sak
         type: object

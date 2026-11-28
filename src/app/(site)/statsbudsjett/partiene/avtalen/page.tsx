@@ -97,6 +97,24 @@ export default function AvtaleSide() {
         </div>
       </section>
 
+      {(d.ogsaa?.punkter ?? []).length > 0 && (
+        <section className="border-b border-black bg-white px-6 py-12">
+          <div className="mx-auto max-w-[1100px]">
+            <div className="max-w-[720px]">
+              <h2 className="font-display text-[28px] leading-[1.1] text-black sm:text-[34px]">{d.ogsaa!.overskrift}</h2>
+              {d.ogsaa!.ingress && <p className="mt-3 text-[15px] leading-[1.55] text-text-secondary">{d.ogsaa!.ingress}</p>}
+              <ul className="mt-5 space-y-3.5 text-[16px] leading-[1.55] text-text-secondary">
+                {d.ogsaa!.punkter!.map((p) => (
+                  <li key={p.tittel}>
+                    <strong className="font-semibold text-black">{p.tittel}</strong> {p.tekst}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="bg-surface px-6 py-12">
         <div className="mx-auto max-w-[1100px]">
           <div className="max-w-[720px] space-y-4 text-[15.5px] leading-[1.6] text-text-secondary">
