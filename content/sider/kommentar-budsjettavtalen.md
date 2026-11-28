@@ -16,7 +16,7 @@ seksjoner:
       "et offensivt rødgrønt prosjekt".
 
 
-      Det har en god grunn til å si fordi en for første gang på flere tiår er
+      Det har en god grunn til å si fordi en for første gang på flere tiår tas
       det skritt mot nye velferdsgoder i form av at tannhelse og et nasjonalt
       kollektivkort, og en nærmer seg å gjøre både barnehagene og SFO gratis.
 
@@ -74,10 +74,12 @@ seksjoner:
 
 
       Da kan det være det er vanskelig å overbevise folk at venstresida
-      representerer noe alternativ i det hele tatt.
+      representerer noe alternativ i det hele tatt, og lykkes en ikke med det,
+      så vil det bli vanskelig å stagge et rekordstort FrP som for mange nå
+      representerer det eneste alternativet.
 
 
-      Men det er litt av kostnaden ved å si at du er strålende fornøyd.
+      Men det er kanskje litt av kostnaden ved å si at du er strålende fornøyd.
     knapp: Se avtalen sak for sak
     knappLenke: /statsbudsjett/partiene/avtalen
     bakgrunn: hvit
