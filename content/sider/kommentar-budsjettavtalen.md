@@ -14,8 +14,10 @@ seksjoner:
       Budsjettavtalen er kanskje en slags Rorschach-test: på den ene siden kan
       en argumentere for at dette er et offensivt rødgrønt prosjekt; på den
       andre siden kan det fremstå som et prosjekt som ikke gjør noe med de store
-      utfordringene mange, særlig unge, ser i samfunnet i dag. Det er dilemmaet
-      som de rødgrønne, og særlig Rødt og SV, står i.
+      utfordringene mange, særlig unge, ser i samfunnet i dag.
+
+
+      Det er dilemmaet som de rødgrønne, og særlig Rødt og SV, står i.
 
 
       Førstnevnte er det Klassekampen som gjør på lederplass, etter at de har
