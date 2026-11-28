@@ -12,13 +12,13 @@ seksjoner:
   - type: tekst
     tekst: >-
       Budsjettavtalen er kanskje et slags Rorschach-test: på den ene siden kan
-      en, som Klassekampen sier på lederplass, argumentere for at dette viser et
-      tydelig og ambisiøst politisk prosjekt.
+      en, som Klassekampen gjør på lederplass, argumentere for at dette viser
+      "et offensivt rødgrønt prosjekt".
 
 
-      Det har en god grunn til å si fordi en for første gang på flere tiår
-      kommer med nye velferdsgoder i form av at tannhelse og et nasjonalt
-      kollektivkort.
+      Det har en god grunn til å si fordi en for første gang på flere tiår er
+      det skritt mot nye velferdsgoder i form av at tannhelse og et nasjonalt
+      kollektivkort, og en nærmer seg å gjøre både barnehagene og SFO gratis.
 
 
       Samtidig kan en se på den samme gjennomgangen og se at de tre partiene til
@@ -31,9 +31,9 @@ seksjoner:
       En del av de drøye 10 milliardene er også penger som fagforeninger og
       andre har etterspurt, bare for å sikre en forsvarlig drift av
       velferdsstaten. Det gjelder ? milliard til sykehusene, ? milliarder til
-      kommunene, og ? til barnehagedekking. Til venstresidas satsninger sitter
+      kommunene, og ? til barnehagedekning. Til venstresidas satsninger sitter
       en igjen med ca ?? til tannhelse og ?? til billigere kollektivkort, i
-      tillegg til ?? for lavere barnehagepriser.
+      tillegg til ?? for lavere barnehagepriser og gratis SFO.
 
 
       ? milliarder altså, i et statsbudsjett på nesten 2300 milliarder. Er det
@@ -68,8 +68,8 @@ seksjoner:
 
 
       Da kan det være det er vanskelig å overbevise folk som syns at verden i
-      dag, med konsekvensene av enorm ulikhet og klimakrise stadig mer synlige,
-      at venstresida representerer noe alternativ i det hele tatt.
+      dag, der konsekvensene av enorm ulikhet og klimakrise blir stadig mer
+      synlige, at venstresida representerer noe alternativ i det hele tatt.
 
 
       Men det er litt av kostnaden ved å si at du er strålende fornøyd.
