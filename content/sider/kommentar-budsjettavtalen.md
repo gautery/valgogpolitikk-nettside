@@ -64,10 +64,11 @@ seksjoner:
       for et parti å bli større på.
 
 
-      På kort sikt derimot, kommer fortsatt unge ut i et samfunn som ikke helt
-      stemmer med barnehistorien vi blir fortalt om det egalitære Norge: et
-      samfunn der penger bestemmer mye, blant annet hvor du kan bo, om du har
-      nok plass til å få barn og hvor mye tid du har til venner og familie.
+      På kort sikt derimot, kommer fortsatt unge ut i et samfunn som ikke
+      stemmer så godt med barnehistorien vi blir fortalt om det egalitære Norge:
+      istedenfor møter de et samfunn der penger bestemmer mye, blant annet hvor
+      du kan bo, om du får nok plass til å få barn og hvor mye tid du har til
+      venner og familie.
 
 
       Da kan det være det er vanskelig å overbevise folk at venstresida
