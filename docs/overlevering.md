@@ -288,6 +288,17 @@ Siden `/forside-utkast` og filen bak er slettet.
   «Sv-velgere», «entuastisk»). «[bilde på tvetydighet]» står i klammer fordi Gaute leter etter et bilde, og
   han er ikke fornøyd med overskriften. Forslag fra Claude er gitt i samtalen, ikke lagt inn.
   Tall å avklare: teksten sier «over 2300 milliarder», mens statsbudsjettsiden har 2 287 mrd. for 2027.
+- **Huskeliste for kommentaren (Gaute ba 28. november om at dette sjekkes når han spør senere).** Les
+  `content/sider/kommentar-budsjettavtalen.md` og si hva som er endret og hva som står igjen:
+  1. Overskriften. Han var ikke fornøyd med «Tredje budsjettavtale: blir det nok politisk endring ut av dette?».
+     Claudes forslag: «Kostnaden ved å være strålende fornøyd», «Under 10 milliarder av 2300. Var det dette
+     velgerne stemte for?», «Er dette endringen Rødt- og SV-velgerne stemte for?».
+  2. Klammen «[bilde på tvetydighet]» i første setning. Han vurderer Rorschach-test, vippebilde eller lignende.
+  3. Poenget «under 10 milliarder av 2300» står i fjerde avsnitt. Forslag: løft det opp.
+  4. «over 2300 milliarder»: statsbudsjettsiden har 2 287 mrd. for regjeringens forslag. Forslag: «nesten 2300».
+  5. «Under 10 milliarder»: kan presiseres til rundt 9 (10,8 minus dieselkuttet på 1,85, Claudes regnestykke).
+  6. Setningen «På kort sikt derimot …» henger ikke sammen grammatisk.
+  7. «Mimir» uten etternavn. Forslag: fullt navn første gang.
 - **Lenker:** linja «Kommentar» under hovedsaken (`tilknyttetLenke` på `hovedsak`) og under ingressen på siden om
   avtalen (`topp.kommentarLenke` i `content/budsjettavtalen.yml`). Tittelen hentes fra toppfeltet på
   kommentarsiden (`tilknyttetSide()` i `src/lib/sider.ts`), så den endres bare ett sted. Kommentaren har en
