@@ -206,6 +206,18 @@ content:
         fields:
           - { name: tittel, label: Tittel, type: string }
           - { name: ingress, label: Ingress, type: text }
+          - name: bilde
+            label: Bilde øverst (valgfritt)
+            description: Liggende bilde. Vises ved siden av tittelen på PC og under ingressen på mobil.
+            type: image
+          - name: bildetekst
+            label: Beskrivelse av bildet
+            description: Leses opp for blinde og svaksynte.
+            type: string
+          - name: fotokreditt
+            label: Fotokreditt
+            description: "F.eks. Foto: Stortinget"
+            type: string
       - name: viktigste
         label: Det viktigste
         type: object

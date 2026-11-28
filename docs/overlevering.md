@@ -481,6 +481,18 @@ og ba om en sammenligning med partienes alternative budsjetter, del for del, med
 - **Må sjekkes av Gaute:** merkene er Claudes vurdering. Oppsummeringen øverst er Claudes utkast. Forliksdokumentet
   oppgir at oljepengebruken øker med 7,4 mrd. kroner, mens Ap skal ha omtalt nivået som uendret. Sp har bare fire
   saker med, fordi Sps budsjett er lest dårligst. Avtalens verbalforslag er ikke gjennomgått.
+- **Ny topp og tavle (28. november, Gaute sa ja):** toppen er rosa, og linja over tittelen sier «Partienes
+  alternative budsjetter» (ikke «for 2026»). Rett under står **tavla** (`Tavle` i `Avtale.tsx`): alle sakene som
+  rader, med ett merke per parti (fylt = fikk det, halv = fikk noe, tom = fikk ikke, strek = ingen krav med).
+  Rader der Ap fikk viljen sin er rosa. Et trykk åpner kortet. På PC står tavla til venstre og kortet til høyre.
+  Tavla erstatter «Alle temaer»-knappen. «Det viktigste» ligger nå under kortene.
+- **Bilde øverst:** `topp.bilde`, `bildetekst` og `fotokreditt` i `content/budsjettavtalen.yml` (valgfritt, i
+  Pages CMS). Gaute har ikke foto. Stortingets egne bilder kan brukes redaksjonelt mot kreditering, se
+  stortinget.no «Vilkår for bruk av Stortingets fotografier». Claude legger ikke inn bilder av politikere selv.
+- Siden har eget delingsbilde (`opengraph-image.tsx`).
+- **Kandidat til toppsak på forsiden**, men ferskvare: avtalen manglet flertall 27. november fordi MDG sto
+  utenfor. Dommene må ses over av Gaute først. Aps egen omtale sier oljepengebruken er 2,7 prosent, som i
+  regjeringens forslag, mens forliksdokumentet sier 7,4 mrd. mer. Posten er med i avtalen, men ikke på siden.
 - **Ikke gjort:** egen rad for avtalen på lønnsmottaker-sida og merkelapp i budsjettomaten.
 - **Hvem vant, i klartekst:** oversikten og kortene sier nå «Ap fikk viljen sin» eller hvilke partier som fikk noe
   eller fullt gjennomslag («SV og Rødt fikk noe gjennomslag»). Teksten lages av `vinner()` i `Avtale.tsx` ut fra

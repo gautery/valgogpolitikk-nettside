@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import type { Metadata } from "next";
+import Image from "next/image";
 import { SKJULT_FOR_SOK, UTKAST } from "@/lib/utkast";
 import { AAR, TYPETILFELLE_AAR } from "@/lib/partibudsjett";
 import Avtale, { type AvtaleSak } from "@/components/partibudsjett/Avtale";
@@ -11,7 +12,7 @@ import { Tilbake, Utkastlinje } from "@/components/partibudsjett/Felles";
 // content/budsjettavtalen.yml og redigeres i Pages CMS (se .pages.yml).
 
 type Innhold = {
-  topp: { tittel: string; ingress: string };
+  topp: { tittel: string; ingress: string; bilde?: string; bildetekst?: string; fotokreditt?: string };
   viktigste: { overskrift: string; punkter: { tittel: string; tekst: string }[] };
   saker: { overskrift: string; liste: AvtaleSak[] };
   metode: { overskrift: string; tekst: string };
@@ -41,17 +42,46 @@ export default function AvtaleSide() {
     <>
       <Utkastlinje provedata={false} aar={TYPETILFELLE_AAR} />
 
-      <div className="border-b border-black bg-white px-6 py-14 md:py-20">
-        <div className="mx-auto max-w-[1100px]">
-          <Tilbake aar={AAR} lenke={`Parti for parti: rammene i budsjettene for ${AAR}`} />
-          <h1 className="max-w-[760px] font-display text-[42px] leading-[1.02] text-black sm:text-[56px]">{d.topp.tittel}</h1>
-          <div className="mt-6 max-w-[620px] space-y-4 text-[18px] leading-[1.55] text-text-secondary">
-            {avsnitt(d.topp.ingress).map((a) => (
-              <p key={a}>{a}</p>
-            ))}
+      <div className="bg-rosa px-6 py-12 md:py-16">
+        <div
+          className={`mx-auto grid max-w-[1100px] grid-cols-1 gap-9 ${
+            d.topp.bilde ? "md:grid-cols-[minmax(0,6fr)_minmax(0,5fr)] md:items-center md:gap-14" : ""
+          }`}
+        >
+          <div>
+            <Tilbake aar={AAR} lenke="Partienes alternative budsjetter" />
+            <h1 className="max-w-[760px] font-display text-[38px] leading-[1.03] text-black sm:text-[56px]">{d.topp.tittel}</h1>
+            <div className="mt-6 max-w-[620px] space-y-4 text-[18px] leading-[1.55] text-black">
+              {avsnitt(d.topp.ingress).map((a) => (
+                <p key={a}>{a}</p>
+              ))}
+            </div>
           </div>
+          {d.topp.bilde && (
+            <figure>
+              <Image
+                src={d.topp.bilde}
+                alt={d.topp.bildetekst ?? ""}
+                width={1200}
+                height={800}
+                priority
+                sizes="(min-width: 768px) 480px, 100vw"
+                className="aspect-[3/2] w-full rounded-[10px] object-cover"
+              />
+              {d.topp.fotokreditt && <figcaption className="mt-2 text-[13px] text-black/80">{d.topp.fotokreditt}</figcaption>}
+            </figure>
+          )}
         </div>
       </div>
+
+      <section className="border-b border-black bg-white px-6 py-12">
+        <div className="mx-auto max-w-[1100px]">
+          <h2 className="font-display text-[28px] leading-[1.1] text-black sm:text-[34px]">{d.saker.overskrift}</h2>
+          <div className="mt-6">
+            <Avtale saker={saker} />
+          </div>
+        </div>
+      </section>
 
       <section className="border-b border-black bg-white px-6 py-12">
         <div className="mx-auto max-w-[1100px]">
@@ -64,17 +94,6 @@ export default function AvtaleSide() {
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-b border-black bg-white px-6 py-12">
-        <div className="mx-auto max-w-[1100px]">
-          <div className="max-w-[720px]">
-            <h2 className="font-display text-[28px] leading-[1.1] text-black sm:text-[34px]">{d.saker.overskrift}</h2>
-            <div className="mt-6">
-              <Avtale saker={saker} />
-            </div>
           </div>
         </div>
       </section>
